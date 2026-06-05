@@ -28,7 +28,7 @@ for i in data:
     if i.get('symbol') == 'IR_GOLD_18K':
         gold18 = i.get('price')
 
-text = f'💵 دلار: {dollar} تومان\n🟡 طلای ۱۸: {gold18} تومان'
+text = f'💵 دلار آزاد: {dollar} تومان\n🟡 طلای ۱۸ عیار: {gold18} تومان'
 
 requests.get(
     f'https://api.telegram.org/bot{TOKEN}/sendMessage',
