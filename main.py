@@ -1,0 +1,24 @@
+import requests
+import os
+
+TOKEN = os.environ["BOT_TOKEN"]
+CHAT_ID = os.environ["CHAT_ID"]
+
+url = "https://brsapi.ir/Api/Market/Gold_Currency.php?key=free"
+data = requests.get(url).json()
+
+dollar = "N/A"
+gold18 = "N/A"
+
+for i in data:
+    if i.get("symbol") == "USD":
+        dollar = i.get("price")
+    if i.get("symbol") == "IR_GOLD_18K":
+        gold18 = i.get("price")
+
+text = f"💵 دلار آزاد: {dollar} تومان\n🟡 طلای ۱۸ عیار: {gold18} تومان"
+
+requests.get(
+    f"https://api.telegram.org/bot{TOKEN}/sendMessage",
+    params={"chat_id": CHAT_ID, "text": text}
+  )
