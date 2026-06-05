@@ -16,13 +16,12 @@ jobs:
       - name: Install requests
         run: pip install requests
 
-      - name: Run bot
+      - name: Run script
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
         run: |
-          python - << 'EOF'
-import requests
+          echo "import requests
 import os
 
 TOKEN = os.environ['BOT_TOKEN']
@@ -40,10 +39,9 @@ for i in data:
     if i.get('symbol') == 'IR_GOLD_18K':
         gold18 = i.get('price')
 
-text = f"💵 دلار آزاد: {dollar} تومان\n🟡 طلای ۱۸: {gold18} تومان"
+text = f'💵 دلار: {dollar} تومان\n🟡 طلا ۱۸: {gold18} تومان'
 
-requests.get(
-    f"https://api.telegram.org/bot{TOKEN}/sendMessage",
-    params={"chat_id": CHAT_ID, "text": text}
-)
-EOF
+requests.get(f'https://api.telegram.org/bot{TOKEN}/sendMessage', params={'chat_id': CHAT_ID, 'text': text})
+" > bot.py
+
+          python bot.py
