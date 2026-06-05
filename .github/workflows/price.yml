@@ -8,13 +8,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Send price to Telegram
-        run: |
-          python -c "
-import requests
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-TOKEN = '${{ secrets.BOT_TOKEN }}'
-CHAT_ID = '${{ secrets.CHAT_ID }}'
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run bot
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: |
+          python - << 'EOF'
+import requests
+import os
+
+TOKEN = os.environ['BOT_TOKEN']
+CHAT_ID = os.environ['CHAT_ID']
 
 url = 'https://brsapi.ir/Api/Market/Gold_Currency.php?key=free'
 data = requests.get(url).json()
@@ -28,13 +40,10 @@ for i in data:
     if i.get('symbol') == 'IR_GOLD_18K':
         gold18 = i.get('price')
 
-text = f'💵 دلار آزاد: {dollar} تومان\n🟡 طلای ۱۸ عیار: {gold18} تومان'
+text = f"💵 دلار آزاد: {dollar} تومان\n🟡 طلای ۱۸: {gold18} تومان"
 
 requests.get(
-    f'https://api.telegram.org/bot{TOKEN}/sendMessage',
-    params={'chat_id': CHAT_ID, 'text': text}
+    f"https://api.telegram.org/bot{TOKEN}/sendMessage",
+    params={"chat_id": CHAT_ID, "text": text}
 )
-"
-        env:
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          CHAT_ID: ${{ secrets.CHAT_ID }}
+EOF
