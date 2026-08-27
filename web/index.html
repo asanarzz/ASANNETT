@@ -2,22 +2,21 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title>ASANNET | آسان‌نت</title>
   <meta name="description" content="آسان‌نت — پلتفرم آزمون‌های غربالگری و استعدادیابی دانش‌آموزان" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --primary: #4F46E5;
       --primary-dark: #3730A3;
       --primary-light: #818CF8;
-      --accent: #06B6D4;
-      --bg: #F4F5FB;
+      --bg: #F4F6FB;
       --surface: #FFFFFF;
       --text: #1E1B2E;
       --muted: #6B7280;
-      --radius: 16px;
+      --radius: 18px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.06);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,373 +25,435 @@
       font-family: 'Vazirmatn', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
+      line-height: 1.6;
+      padding-bottom: 90px;
     }
 
-    header {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #4F46E5 0%, #3730A3 100%);
+      padding: 1.4rem 1.2rem 2.2rem;
       color: white;
-      padding: 1.2rem 1.5rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 4px 20px rgba(79, 70, 229, 0.25);
-    }
-
-    .nav {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .logo span {
-      background: rgba(255,255,255,0.2);
-      padding: 0.25rem 0.6rem;
-      border-radius: 8px;
-      font-size: 0.9rem;
-    }
-
-    .hero {
-      background: linear-gradient(160deg, #4F46E5 0%, #3730A3 50%, #1E1B2E 100%);
-      color: white;
-      padding: 5rem 1.5rem 6rem;
-      text-align: center;
+      border-radius: 0 0 28px 28px;
       position: relative;
       overflow: hidden;
     }
 
-    .hero::before {
+    .header::after {
       content: '';
       position: absolute;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(129,140,248,0.3) 0%, transparent 70%);
-      top: -100px;
-      right: -100px;
+      width: 180px;
+      height: 180px;
+      background: rgba(255,255,255,0.08);
       border-radius: 50%;
+      top: -60px;
+      left: -40px;
     }
 
-    .hero h1 {
-      font-size: clamp(2.2rem, 6vw, 3.5rem);
-      font-weight: 800;
-      margin-bottom: 1rem;
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.6rem;
       position: relative;
+      z-index: 2;
     }
 
-    .hero p {
-      font-size: 1.15rem;
-      opacity: 0.9;
-      max-width: 560px;
-      margin: 0 auto 2.5rem;
-      font-weight: 300;
-    }
-
-    .btn {
-      display: inline-block;
-      background: white;
-      color: var(--primary);
-      padding: 0.9rem 2.2rem;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 1.05rem;
-      transition: all 0.25s ease;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: white;
-      border: 2px solid rgba(255,255,255,0.5);
-      margin-right: 0.8rem;
-    }
-
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: white;
-    }
-
-    .section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 4.5rem 1.5rem;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 1.9rem;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
       font-weight: 800;
-      margin-bottom: 0.6rem;
+      font-size: 1.35rem;
     }
 
-    .section-sub {
-      text-align: center;
-      color: var(--muted);
-      margin-bottom: 3rem;
-      font-size: 1.05rem;
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
     }
 
-    .features {
+    .header h1 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      opacity: 0.95;
+      position: relative;
+      z-index: 2;
+    }
+
+    .header p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-top: 0.3rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Main categories */
+    .main-cats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.7rem;
+      margin: -1.4rem 1rem 0;
+      position: relative;
+      z-index: 5;
     }
 
-    .card {
-      background: var(--surface);
-      border-radius: var(--radius);
-      padding: 1.8rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-      border: 1px solid rgba(0,0,0,0.04);
-      transition: all 0.25s ease;
+    .main-cat {
+      background: white;
+      border-radius: 16px;
+      padding: 1rem 0.4rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.2s;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(79, 70, 229, 0.12);
-    }
+    .main-cat:active { transform: scale(0.96); }
 
-    .card-icon {
-      width: 52px;
-      height: 52px;
-      background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    .main-cat-icon {
+      width: 44px;
+      height: 44px;
       border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 1.2rem;
+      margin: 0 auto 0.5rem;
+      font-size: 1.35rem;
       color: white;
     }
 
-    .card h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .about {
-      background: white;
-      border-radius: 24px;
-      padding: 2.5rem;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.05);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    @media (max-width: 700px) {
-      .about { grid-template-columns: 1fr; }
-    }
-
-    .about-text h2 {
-      font-size: 1.7rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-
-    .about-text p {
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .stat {
-      background: var(--bg);
-      border-radius: 14px;
-      padding: 1.3rem;
-      text-align: center;
-    }
-
-    .stat strong {
+    .main-cat span {
+      font-size: 0.72rem;
+      font-weight: 600;
       display: block;
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--primary);
+      line-height: 1.3;
     }
 
-    .stat span {
-      font-size: 0.85rem;
-      color: var(--muted);
+    .c1 { background: #4F46E5; }
+    .c2 { background: #06B6D4; }
+    .c3 { background: #8B5CF6; }
+    .c4 { background: #10B981; }
+
+    /* Section */
+    .section {
+      padding: 1.8rem 1.1rem 0.5rem;
     }
 
-    .cta {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: white;
-      text-align: center;
-      padding: 4rem 1.5rem;
-      border-radius: 24px;
-      margin: 2rem 0;
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .cta h2 {
-      font-size: 1.9rem;
-      font-weight: 800;
-      margin-bottom: 0.8rem;
-    }
-
-    .cta p {
-      opacity: 0.9;
-      margin-bottom: 2rem;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2.5rem 1.5rem;
-      color: var(--muted);
-      font-size: 0.9rem;
-      border-top: 1px solid rgba(0,0,0,0.05);
-    }
-
-    footer a {
+    .section-title a {
+      font-size: 0.8rem;
       color: var(--primary);
       text-decoration: none;
       font-weight: 600;
+    }
+
+    /* Services grid */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.85rem;
+    }
+
+    .service {
+      background: white;
+      border-radius: 16px;
+      padding: 1.1rem 0.3rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+
+    .service:active { transform: scale(0.95); }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0.55rem;
+      font-size: 1.4rem;
+      background: #F0F0FF;
+      color: var(--primary);
+    }
+
+    .service span {
+      font-size: 0.72rem;
+      font-weight: 600;
+      display: block;
+      line-height: 1.3;
+    }
+
+    /* Banner */
+    .banner {
+      margin: 1.5rem 1.1rem;
+      background: linear-gradient(135deg, #4F46E5, #3730A3);
+      border-radius: 20px;
+      padding: 1.4rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 8px 25px rgba(79,70,229,0.3);
+    }
+
+    .banner-text {
+      flex: 1;
+    }
+
+    .banner-text h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .banner-text p {
+      font-size: 0.8rem;
+      opacity: 0.85;
+      margin-bottom: 0.9rem;
+    }
+
+    .banner-btn {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 0.45rem 1rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .banner-img {
+      font-size: 3.2rem;
+      opacity: 0.9;
+    }
+
+    /* Info cards */
+    .info-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem;
+      padding: 0 1.1rem 1.5rem;
+    }
+
+    .info-card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .info-card h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+    }
+
+    .info-card p {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .info-card .num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.2rem;
+    }
+
+    /* Bottom nav */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 0.7rem 0.5rem 1.1rem;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+      z-index: 100;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.7rem;
+      font-weight: 600;
+      min-width: 60px;
+    }
+
+    .nav-item.active {
+      color: var(--primary);
+    }
+
+    .nav-item .icon {
+      font-size: 1.35rem;
+    }
+
+    .nav-item.active .icon-bg {
+      background: #EEF2FF;
+      width: 42px;
+      height: 32px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="nav">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-top">
       <div class="logo">
+        <div class="logo-icon">📚</div>
         ASANNET
-        <span>آسان‌نت</span>
       </div>
     </div>
-  </header>
-
-  <section class="hero">
     <h1>آسان‌نت</h1>
-    <p>
-      پلتفرم هوشمند آزمون‌های غربالگری و استعدادیابی دانش‌آموزان
-      <br />
-      ساده، سریع و قابل‌اعتماد
-    </p>
-    <div>
-      <a href="#features" class="btn">آشنایی بیشتر</a>
-      <a href="https://github.com/asanarzz/ASANNET-APP" class="btn btn-outline" target="_blank">دانلود اپ</a>
+    <p>آزمون‌های غربالگری و استعدادیابی دانش‌آموزان</p>
+  </div>
+
+  <!-- Main 4 categories -->
+  <div class="main-cats">
+    <a href="#tests" class="main-cat">
+      <div class="main-cat-icon c1">📝</div>
+      <span>آزمون‌ها</span>
+    </a>
+    <a href="#talent" class="main-cat">
+      <div class="main-cat-icon c2">🎯</div>
+      <span>استعدادیابی</span>
+    </a>
+    <a href="https://github.com/asanarzz/ASANNET-APP" class="main-cat" target="_blank">
+      <div class="main-cat-icon c3">📱</div>
+      <span>دانلود اپ</span>
+    </a>
+    <a href="#about" class="main-cat">
+      <div class="main-cat-icon c4">ℹ️</div>
+      <span>درباره ما</span>
+    </a>
+  </div>
+
+  <!-- Services -->
+  <div class="section">
+    <div class="section-title">
+      خدمات پرطرفدار
     </div>
-  </section>
-
-  <section class="section" id="features">
-    <h2 class="section-title">امکانات آسان‌نت</h2>
-    <p class="section-sub">همه‌چیز برای ارزیابی دقیق و سریع دانش‌آموزان</p>
-
-    <div class="features">
-      <div class="card">
-        <div class="card-icon">📝</div>
-        <h3>آزمون‌های غربالگری</h3>
-        <p>طراحی و اجرای آزمون‌های استاندارد برای شناسایی نقاط قوت و ضعف دانش‌آموزان</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🎯</div>
-        <h3>استعدادیابی</h3>
-        <p>کشف استعدادهای پنهان با ابزارهای علمی و محتوای تخصصی</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📱</div>
-        <h3>اپلیکیشن اندروید</h3>
-        <p>دسترسی آسان از طریق اپ موبایل با رابط کاربری ساده و روان</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">🔒</div>
-        <h3>ثبت‌نام امن</h3>
-        <p>سیستم ثبت‌نام با کد ملی و رمز عبور برای حفظ حریم خصوصی کاربران</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📊</div>
-        <h3>پنل مدیریت</h3>
-        <p>مدیریت کامل محتوا، آزمون‌ها و فایل‌ها بدون نیاز به دانش برنامه‌نویسی</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">☁️</div>
-        <h3>بروزرسانی آنلاین</h3>
-        <p>محتوا به‌صورت زنده از سرور به‌روز می‌شود؛ نیازی به نصب مجدد اپ نیست</p>
-      </div>
+    <div class="services">
+      <a href="#" class="service">
+        <div class="service-icon">📝</div>
+        <span>آزمون غربالگری</span>
+      </a>
+      <a href="#" class="service">
+        <div class="service-icon">🧠</div>
+        <span>تست هوش</span>
+      </a>
+      <a href="#" class="service">
+        <div class="service-icon">🎨</div>
+        <span>استعداد هنری</span>
+      </a>
+      <a href="#" class="service">
+        <div class="service-icon">⚽</div>
+        <span>استعداد ورزشی</span>
+      </a>
+      <a href="#" class="service">
+        <div class="service-icon">🔢</div>
+        <span>ریاضی و منطق</span>
+      </a>
+      <a href="#" class="service">
+        <div class="service-icon">📖</div>
+        <span>مهارت خواندن</span>
+      </a>
+      <a href="#" class="service">
+        <div class="service-icon">🗣️</div>
+        <span>مهارت کلامی</span>
+      </a>
+      <a href="#" class="service">
+        <div class="service-icon">📂</div>
+        <span>فایل‌ها</span>
+      </a>
     </div>
-  </section>
+  </div>
 
-  <section class="section">
-    <div class="about">
-      <div class="about-text">
-        <h2>درباره آسان‌نت</h2>
-        <p>
-          آسان‌نت یک سیستم دو بخشی است: اپلیکیشن اندروید برای دانش‌آموزان و پنل مدیریت وب برای مدیران.
-        </p>
-        <p>
-          محتوا (آزمون، لینک، عکس، ویدیو و فایل) از طریق پنل مدیریت اضافه می‌شود و به‌صورت خودکار در اختیار همه کاربران اپ قرار می‌گیرد.
-        </p>
-      </div>
-      <div class="stats">
-        <div class="stat">
-          <strong>۱۰۰٪</strong>
-          <span>رایگان برای شروع</span>
-        </div>
-        <div class="stat">
-          <strong>آنلاین</strong>
-          <span>محتوای زنده</span>
-        </div>
-        <div class="stat">
-          <strong>امن</strong>
-          <span>ثبت‌نام با کد ملی</span>
-        </div>
-        <div class="stat">
-          <strong>ساده</strong>
-          <span>بدون پیچیدگی</span>
-        </div>
-      </div>
+  <!-- Banner -->
+  <div class="banner">
+    <div class="banner-text">
+      <h3>اپلیکیشن آسان‌نت</h3>
+      <p>آزمون‌ها و محتوا را مستقیم روی گوشی انجام دهید</p>
+      <a href="https://github.com/asanarzz/ASANNET-APP" class="banner-btn" target="_blank">دانلود اپ</a>
     </div>
-  </section>
+    <div class="banner-img">📱</div>
+  </div>
 
-  <section class="section">
-    <div class="cta">
-      <h2>آماده شروع هستید؟</h2>
-      <p>اپلیکیشن آسان‌نت را دانلود کنید و تجربه ارزیابی هوشمند را آغاز کنید.</p>
-      <a href="https://github.com/asanarzz/ASANNET-APP" class="btn" target="_blank">مشاهده پروژه در گیت‌هاب</a>
+  <!-- Info -->
+  <div class="info-cards" id="about">
+    <div class="info-card">
+      <div class="num">۱۰۰٪</div>
+      <h4>رایگان</h4>
+      <p>شروع بدون هزینه</p>
     </div>
-  </section>
+    <div class="info-card">
+      <div class="num">آنلاین</div>
+      <h4>محتوای زنده</h4>
+      <p>همیشه به‌روز</p>
+    </div>
+    <div class="info-card">
+      <div class="num">امن</div>
+      <h4>ثبت‌نام</h4>
+      <p>با کد ملی</p>
+    </div>
+    <div class="info-card">
+      <div class="num">ساده</div>
+      <h4>استفاده آسان</h4>
+      <p>بدون پیچیدگی</p>
+    </div>
+  </div>
 
-  <footer>
-    <p>
-      ساخته‌شده با ❤️ برای <strong>ASANNET</strong>
-      <br />
-      <a href="https://github.com/asanarzz/ASANNETT" target="_blank">ریپازیتوری سایت</a>
-      ·
-      <a href="https://github.com/asanarzz/ASANNET-APP" target="_blank">ریپازیتوری اپ</a>
-    </p>
-  </footer>
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="#" class="nav-item active">
+      <div class="icon-bg"><span class="icon">🏠</span></div>
+      <span>خانه</span>
+    </a>
+    <a href="#tests" class="nav-item">
+      <span class="icon">📝</span>
+      <span>آزمون‌ها</span>
+    </a>
+    <a href="https://github.com/asanarzz/ASANNET-APP" class="nav-item" target="_blank">
+      <span class="icon">📱</span>
+      <span>اپ</span>
+    </a>
+    <a href="#about" class="nav-item">
+      <span class="icon">ℹ️</span>
+      <span>درباره</span>
+    </a>
+  </nav>
 
 </body>
   </html>
