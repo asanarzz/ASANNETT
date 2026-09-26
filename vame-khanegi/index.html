@@ -218,6 +218,16 @@
 </head>
 <body>
 
+<div id="storageBar" style="width:100%; max-width:720px; margin:0 auto 14px; display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; font-size:13px;">
+  <span id="storageStatus" style="font-weight:600; color:#6b7280;">در حال بررسی وضعیت ذخیره‌سازی...</span>
+  <button id="googleSignInBtn" type="button" style="display:none; background:#2563eb; color:#fff; border:none; border-radius:8px; padding:6px 14px; font-size:13px; font-family:inherit; cursor:pointer;">
+    ورود با گوگل (ذخیره‌ی دائمی)
+  </button>
+  <button id="googleSignOutBtn" type="button" style="display:none; background:#f3f4f6; color:#374151; border:1px solid #d1d5db; border-radius:8px; padding:6px 14px; font-size:13px; font-family:inherit; cursor:pointer;">
+    خروج از گوگل
+  </button>
+</div>
+
 <div id="captureArea" style="width:100%; display:flex; flex-direction:column; align-items:center;">
 
 <h1>جدول اقساط وام خانگی</h1>
@@ -305,6 +315,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 
 <script>
   const toPersianDigits = (num) => num.toString().replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
@@ -391,6 +402,14 @@
     updateAddButtonState();
     updateAll();
     scheduleSave();
+  }
+
+  function clearAllRows() {
+    while (rows.length) {
+      const r = rows.pop();
+      r.tr.remove();
+      r.paidTr.remove();
+    }
   }
 
   function addRow(initialData) {
@@ -650,15 +669,23 @@
   });
 
   // --- Persistent storage (survives a wiped browser or a lost phone) ---
-  // Data is kept server-side, tied to this artifact / the person's Claude
-  // account, via the "db" capability. If that isn't available (e.g. the
-  // file was saved and opened directly instead of through its Claude link),
-  // it falls back to this browser's localStorage only.
-  const STORAGE_DOC_PATH = 'loan/state';
+  // Signed-in users' data is saved to a private, hidden file in their own
+  // Google Drive (the "appDataFolder" — not visible in their regular Drive,
+  // only this app can read/write it). Until they sign in, everything is
+  // kept in this browser's localStorage only.
+  const GOOGLE_CLIENT_ID = '144704530639-bj8q43kmpj96vjl8nh04ti3ko4sbdg2k.apps.googleusercontent.com';
+  const DRIVE_SCOPE = 'https://www.googleapis.com/auth/drive.appdata';
+  const DRIVE_FILE_NAME = 'loan-table-state.json';
   const LOCAL_FALLBACK_KEY = 'loan-table-state-v2';
-  let dbHandle = null;
-  let downloadsHandle = null;
+
+  const googleSignInBtn = document.getElementById('googleSignInBtn');
+  const googleSignOutBtn = document.getElementById('googleSignOutBtn');
+
+  let tokenClient = null;
+  let accessToken = null;
+  let driveFileId = null;
   let saveTimer = null;
+  let googleAuthRetries = 25; // ~5s of polling for the async GSI script to load
 
   function buildState() {
     return {
@@ -676,36 +703,123 @@
     };
   }
 
+  function loadStateIntoUI(state) {
+    clearAllRows();
+    if (state.installment) monthlyInstallment.value = state.installment;
+    if (state.mode === 'fixed' || state.mode === 'interest') currentMode = state.mode;
+    if (state.interestRate) interestRate.value = state.interestRate;
+    if (typeof state.roundAmounts === 'boolean') roundAmounts.checked = state.roundAmounts;
+    if (typeof state.nextRowId === 'number') nextRowId = state.nextRowId;
+    applyModeUI();
+    if (Array.isArray(state.rows) && state.rows.length > 0) {
+      state.rows.forEach((rowData) => addRow(rowData));
+    } else {
+      for (let i = 0; i < 20; i++) addRow();
+    }
+    updateAll();
+  }
+
   function setStorageStatus(kind) {
-    if (!storageStatusEl) return;
     if (kind === 'cloud-ok') {
-      storageStatusEl.textContent = '✅ ذخیره‌سازی آنلاین است — با پاک شدن مرورگر یا گم‌شدن گوشی از بین نمی‌رود.';
+      storageStatusEl.textContent = '✅ ذخیره‌سازی روی گوگل درایو شماست — با پاک شدن مرورگر یا گم‌شدن گوشی از بین نمی‌رود.';
       storageStatusEl.style.color = '#065f46';
+      googleSignInBtn.style.display = 'none';
+      googleSignOutBtn.style.display = 'inline-block';
     } else if (kind === 'cloud-error') {
-      storageStatusEl.textContent = '⚠️ ذخیره‌ی آنلاین با خطا مواجه شد؛ یک نسخه‌ی پشتیبان روی همین مرورگر ذخیره شد.';
+      storageStatusEl.textContent = '⚠️ ذخیره‌ی گوگل درایو با خطا مواجه شد؛ یک نسخه‌ی پشتیبان روی همین مرورگر ذخیره شد.';
       storageStatusEl.style.color = '#b45309';
     } else if (kind === 'local-only') {
-      storageStatusEl.textContent = '⚠️ این نسخه فقط روی همین مرورگر ذخیره می‌شود. برای ذخیره‌ی همیشگی، از لینک Claude این صفحه استفاده کنید.';
+      storageStatusEl.textContent = '⚠️ فقط روی همین مرورگر ذخیره می‌شود. برای ذخیره‌ی همیشگی وارد گوگل شوید.';
       storageStatusEl.style.color = '#b45309';
+      googleSignInBtn.style.display = 'inline-block';
+      googleSignOutBtn.style.display = 'none';
     } else {
       storageStatusEl.textContent = 'در حال بررسی وضعیت ذخیره‌سازی...';
       storageStatusEl.style.color = '#6b7280';
     }
   }
 
+  async function driveFindFile() {
+    const res = await fetch(
+      'https://www.googleapis.com/drive/v3/files?spaces=appDataFolder&q=' +
+        encodeURIComponent(`name='${DRIVE_FILE_NAME}'`) +
+        '&fields=files(id,name)',
+      { headers: { Authorization: 'Bearer ' + accessToken } }
+    );
+    if (!res.ok) throw new Error('drive find failed');
+    const data = await res.json();
+    return (data.files && data.files.length > 0) ? data.files[0].id : null;
+  }
+
+  async function driveReadFile(fileId) {
+    const res = await fetch(
+      `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media`,
+      { headers: { Authorization: 'Bearer ' + accessToken } }
+    );
+    if (!res.ok) return null;
+    try { return await res.json(); } catch (e) { return null; }
+  }
+
+  async function driveCreateFile(content) {
+    const metadata = { name: DRIVE_FILE_NAME, parents: ['appDataFolder'] };
+    const boundary = 'loantableboundary';
+    const body =
+      `--${boundary}\r\nContent-Type: application/json\r\n\r\n` +
+      JSON.stringify(metadata) +
+      `\r\n--${boundary}\r\nContent-Type: application/json\r\n\r\n` +
+      JSON.stringify(content) +
+      `\r\n--${boundary}--`;
+
+    const res = await fetch(
+      'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id',
+      {
+        method: 'POST',
+        headers: {
+          Authorization: 'Bearer ' + accessToken,
+          'Content-Type': `multipart/related; boundary=${boundary}`
+        },
+        body
+      }
+    );
+    if (!res.ok) throw new Error('drive create failed');
+    const data = await res.json();
+    return data.id;
+  }
+
+  async function driveUpdateFile(fileId, content) {
+    const res = await fetch(
+      `https://www.googleapis.com/upload/drive/v3/files/${fileId}?uploadType=media`,
+      {
+        method: 'PATCH',
+        headers: {
+          Authorization: 'Bearer ' + accessToken,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(content)
+      }
+    );
+    if (!res.ok) throw new Error('drive update failed');
+  }
+
   async function doSave() {
     const state = buildState();
-    if (dbHandle) {
-      try {
-        await dbHandle.doc(STORAGE_DOC_PATH).set(state);
-        setStorageStatus('cloud-ok');
-        return;
-      } catch (e) {
-        setStorageStatus('cloud-error');
-      }
-    }
     try { localStorage.setItem(LOCAL_FALLBACK_KEY, JSON.stringify(state)); } catch (e) {}
-    if (!dbHandle) setStorageStatus('local-only');
+
+    if (!accessToken) {
+      setStorageStatus('local-only');
+      return;
+    }
+    try {
+      if (!driveFileId) driveFileId = await driveFindFile();
+      if (driveFileId) {
+        await driveUpdateFile(driveFileId, state);
+      } else {
+        driveFileId = await driveCreateFile(state);
+      }
+      setStorageStatus('cloud-ok');
+    } catch (e) {
+      setStorageStatus('cloud-error');
+    }
   }
 
   function scheduleSave() {
@@ -713,54 +827,80 @@
     saveTimer = setTimeout(doSave, 600);
   }
 
-  async function initApp() {
+  async function syncFromDrive() {
     setStorageStatus('checking');
-
-    if (window.claude && typeof window.claude.use === 'function') {
-      try { dbHandle = await window.claude.use('db'); } catch (e) { dbHandle = null; }
-      try { downloadsHandle = await window.claude.use('downloads'); } catch (e) { downloadsHandle = null; }
-    }
-
-    let state = null;
-
-    if (dbHandle) {
-      try {
-        const snap = await dbHandle.doc(STORAGE_DOC_PATH).get();
-        if (snap.exists) state = snap.data();
-      } catch (e) {
-        // fall through to local fallback below
+    try {
+      driveFileId = await driveFindFile();
+      if (driveFileId) {
+        const remoteState = await driveReadFile(driveFileId);
+        if (remoteState) loadStateIntoUI(remoteState);
+      } else {
+        driveFileId = await driveCreateFile(buildState());
       }
+      setStorageStatus('cloud-ok');
+    } catch (e) {
+      setStorageStatus('cloud-error');
     }
+  }
 
-    if (!state) {
-      try {
-        const raw = localStorage.getItem(LOCAL_FALLBACK_KEY);
-        if (raw) state = JSON.parse(raw);
-      } catch (e) {}
+  function initGoogleAuth() {
+    if (typeof google === 'undefined' || !google.accounts || !google.accounts.oauth2) {
+      // Google Identity Services loads with `async`, so it may simply not be
+      // ready yet on a slow connection — give it a few seconds before
+      // falling back to local-only.
+      googleAuthRetries--;
+      if (googleAuthRetries > 0) {
+        setTimeout(initGoogleAuth, 200);
+      } else {
+        setStorageStatus('local-only');
+      }
+      return;
     }
+    tokenClient = google.accounts.oauth2.initTokenClient({
+      client_id: GOOGLE_CLIENT_ID,
+      scope: DRIVE_SCOPE,
+      callback: (resp) => {
+        if (resp && resp.access_token) {
+          accessToken = resp.access_token;
+          syncFromDrive();
+        } else {
+          setStorageStatus('local-only');
+        }
+      }
+    });
+    // Try a silent sign-in first (works if the person already granted access
+    // before); if there's no prior session, this quietly does nothing and
+    // the person can use the sign-in button instead.
+    tokenClient.requestAccessToken({ prompt: '' });
+  }
 
-    if (state) {
-      if (state.installment) monthlyInstallment.value = state.installment;
-      if (state.mode === 'fixed' || state.mode === 'interest') currentMode = state.mode;
-      if (state.interestRate) interestRate.value = state.interestRate;
-      if (typeof state.roundAmounts === 'boolean') roundAmounts.checked = state.roundAmounts;
-      if (typeof state.nextRowId === 'number') nextRowId = state.nextRowId;
+  googleSignInBtn.addEventListener('click', () => {
+    if (!tokenClient) { initGoogleAuth(); return; }
+    tokenClient.requestAccessToken({ prompt: 'consent' });
+  });
+
+  googleSignOutBtn.addEventListener('click', () => {
+    if (accessToken && google && google.accounts && google.accounts.oauth2) {
+      google.accounts.oauth2.revoke(accessToken, () => {});
     }
+    accessToken = null;
+    driveFileId = null;
+    setStorageStatus('local-only');
+  });
 
-    applyModeUI();
+  function initApp() {
+    // Render instantly from whatever's on this browser, without waiting on
+    // any network round-trip — then try to sync with Google Drive.
+    let localState = null;
+    try {
+      const raw = localStorage.getItem(LOCAL_FALLBACK_KEY);
+      if (raw) localState = JSON.parse(raw);
+    } catch (e) {}
 
-    if (state && Array.isArray(state.rows) && state.rows.length > 0) {
-      state.rows.forEach((rowData) => addRow(rowData));
-    } else {
-      for (let i = 0; i < 20; i++) addRow();
-    }
+    loadStateIntoUI(localState || {});
+    setStorageStatus('local-only');
 
-    updateAll();
-    setStorageStatus(dbHandle ? 'cloud-ok' : 'local-only');
-
-    // Persist once at the end, so a first-time visit (default 20 rows) is
-    // saved immediately rather than only after the first edit.
-    scheduleSave();
+    initGoogleAuth();
   }
 
   initApp();
@@ -799,19 +939,7 @@
     exportImageBtn.textContent = 'در حال آماده‌سازی...';
     captureTable((canvas) => {
       canvas.toBlob(async (blob) => {
-        if (!blob) {
-          exportImageBtn.disabled = false;
-          exportImageBtn.textContent = '📷 دانلود عکس';
-          return;
-        }
-        if (downloadsHandle) {
-          try {
-            await downloadsHandle.save({ filename: 'جدول-وام-خانگی.png', data: blob });
-          } catch (e) {
-            // declined or failed — nothing more to do, the viewer already
-            // saw a prompt (or the capability itself is unusable here)
-          }
-        } else {
+        if (blob) {
           const link = document.createElement('a');
           link.download = 'جدول-وام-خانگی.png';
           link.href = canvas.toDataURL('image/png');
@@ -845,13 +973,6 @@
             });
           } catch (err) {
             // user cancelled the share sheet — nothing to do
-          }
-        } else if (downloadsHandle) {
-          try {
-            await downloadsHandle.save({ filename: 'جدول-وام-خانگی.png', data: blob });
-            alert('اشتراک‌گذاری مستقیم روی این دستگاه پشتیبانی نمی‌شود؛ عکس ذخیره شد تا خودتان به اشتراک بگذارید.');
-          } catch (e) {
-            // declined or failed — nothing more to do
           }
         } else {
           const link = document.createElement('a');
