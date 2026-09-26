@@ -1,1 +1,872 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جدول وام خانگی</title>
+<style>
+  body {
+    font-family: Tahoma, 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 24px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: 20px;
+    color: #1f2937;
+    margin-bottom: 4px;
+  }
+  .summary {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 14px;
+    color: #374151;
+  }
+  .summary b { color: #111827; }
+  .summary-input {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    border: 1px solid transparent;
+    background: transparent;
+    border-radius: 6px;
+    padding: 3px 8px;
+    text-align: center;
+    width: 150px;
+  }
+  .summary-input:hover {
+    border-color: #d1d5db;
+  }
+  .summary-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.15);
+  }
+  .summary-input.narrow {
+    width: 70px;
+  }
+  .readonly-input {
+    background: #f3f4f6;
+    cursor: default;
+  }
+  .readonly-input:hover {
+    border-color: transparent;
+  }
+  .unit-label {
+    font-weight: 600;
+    color: #111827;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 720px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+    table-layout: fixed;
+  }
+  th, td {
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+  }
+  th:nth-child(1), td:nth-child(1) { width: 10%; }
+  #loanTable th:nth-child(2), #loanTable td:nth-child(2) { width: 20%; }
+  #loanTable th:nth-child(3), #loanTable td:nth-child(3) { width: 22%; }
+  #loanTable th:nth-child(4), #loanTable td:nth-child(4) { width: 38%; }
+  #loanTable th:nth-child(5), #loanTable td:nth-child(5) { width: 10%; }
+  th {
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #f9fafb; }
+  input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    text-align: center;
+  }
+  #loanTable td:nth-child(4) input[type="text"] {
+    font-size: 15px;
+    padding: 9px 6px;
+  }
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.15);
+  }
+  .amount { font-weight: 600; color: #065f46; }
+  h2.section-title {
+    font-size: 16px;
+    color: #1f2937;
+    margin: 28px 0 10px;
+    align-self: flex-start;
+  }
+  #paymentsTable th:nth-child(1), #paymentsTable td:nth-child(1) { width: 8%; }
+  #paymentsTable th:nth-child(2), #paymentsTable td:nth-child(2) { width: 28%; }
+  #paymentsTable th:nth-child(3), #paymentsTable td:nth-child(3) { width: 22%; }
+  #paymentsTable th:nth-child(4), #paymentsTable td:nth-child(4) { width: 21%; }
+  #paymentsTable th:nth-child(5), #paymentsTable td:nth-child(5) { width: 21%; }
+  .paid-name {
+    font-weight: 600;
+    color: #1f2937;
+  }
+  .paid-name.placeholder-name {
+    font-weight: 400;
+    color: #9ca3af;
+  }
+  .remaining-amount { color: #b45309; font-weight: 600; }
+  .paid-amount { color: #065f46; font-weight: 600; }
+  .capture-text {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    text-align: center;
+    background: #fff;
+    color: #111827;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .capture-placeholder {
+    color: #9ca3af;
+  }
+  .delete-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid #fca5a5;
+    background: #fef2f2;
+    color: #dc2626;
+    font-size: 15px;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .delete-btn:hover {
+    background: #fee2e2;
+    border-color: #f87171;
+  }
+  .mode-row {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #374151;
+  }
+  .mode-btn {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid #d1d5db;
+    background: #f3f4f6;
+    color: #4b5563;
+    cursor: pointer;
+  }
+  .mode-btn.active {
+    background: #2563eb;
+    border-color: #2563eb;
+    color: #fff;
+  }
+  #interestRateWrap {
+    display: none;
+    align-items: center;
+    gap: 8px;
+  }
+  footer {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #9ca3af;
+  }
+</style>
+</head>
+<body>
 
+<div id="captureArea" style="width:100%; display:flex; flex-direction:column; align-items:center;">
+
+<h1>جدول اقساط وام خانگی</h1>
+
+<div class="summary">
+  <div>جمع کل: <b id="totalAmount">۱ میلیارد تومان</b></div>
+  <div>قسط ماهانه هر نفر: <input type="text" inputmode="numeric" id="monthlyInstallment" class="summary-input" value="2.500.000"> <span class="unit-label">تومان</span></div>
+  <div>مدت: <input type="text" id="loanDuration" class="summary-input narrow readonly-input" value="20" readonly> <span class="unit-label">ماه (= تعداد ردیف‌ها)</span></div>
+</div>
+
+<div class="mode-row">
+  <span>نوع مبلغ دریافتی:</span>
+  <button type="button" id="modeFixedBtn" class="mode-btn">ثابت برای همه</button>
+  <button type="button" id="modeInterestBtn" class="mode-btn active">افزایشی (سود بانکی سالانه)</button>
+  <span id="interestRateWrap">
+    <span>نرخ سود سالانه:</span>
+    <input type="text" inputmode="numeric" id="interestRate" class="summary-input narrow" value="18">
+    <span class="unit-label">%</span>
+  </span>
+</div>
+
+<div class="mode-row">
+  <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+    <input type="checkbox" id="roundAmounts" style="width:16px; height:16px; cursor:pointer;">
+    <span>رند کردن مبلغ دریافتی (نزدیک‌ترین ۰٫۵ میلیون)</span>
+  </label>
+</div>
+
+<table id="loanTable">
+  <thead>
+    <tr>
+      <th>نوبت</th>
+      <th>ماه</th>
+      <th>مبلغ دریافتی</th>
+      <th>نام فرد</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody id="tableBody">
+  </tbody>
+</table>
+
+<div id="addRowWrap" style="margin-top:14px;">
+  <button id="addRowBtn" type="button" style="
+      background:#2563eb;color:#fff;border:none;border-radius:8px;
+      padding:10px 18px;font-size:14px;font-family:inherit;cursor:pointer;
+      box-shadow:0 1px 4px rgba(0,0,0,0.15);">
+    + افزودن ردیف
+  </button>
+</div>
+
+<h2 class="section-title">وضعیت اقساط پرداختی هر نفر</h2>
+
+<table id="paymentsTable">
+  <thead>
+    <tr>
+      <th>نوبت</th>
+      <th>نام فرد</th>
+      <th>تعداد قسط پرداخت‌شده</th>
+      <th>مبلغ پرداختی</th>
+      <th>مانده</th>
+    </tr>
+  </thead>
+  <tbody id="paymentsBody">
+  </tbody>
+</table>
+
+<footer>نام افراد، ماه‌ها و اقساط به‌صورت خودکار ذخیره می‌شود (وضعیت دقیق بالای صفحه). حداکثر ۱۰۰ ردیف.</footer>
+
+</div>
+
+<div id="exportWrap" style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+  <button id="exportImageBtn" type="button" style="
+      background:#059669;color:#fff;border:none;border-radius:8px;
+      padding:10px 18px;font-size:14px;font-family:inherit;cursor:pointer;
+      box-shadow:0 1px 4px rgba(0,0,0,0.15);">
+    📷 دانلود عکس
+  </button>
+  <button id="exportShareBtn" type="button" style="
+      background:#7c3aed;color:#fff;border:none;border-radius:8px;
+      padding:10px 18px;font-size:14px;font-family:inherit;cursor:pointer;
+      box-shadow:0 1px 4px rgba(0,0,0,0.15);">
+    📤 اشتراک‌گذاری
+  </button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script>
+  const toPersianDigits = (num) => num.toString().replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+  const MAX_ROWS = 100;
+  let nextRowId = 0;
+  const rows = []; // {rowId, tr, tdNum, tdAmount, monthInput, nameInput, monthKey, nameKey}
+
+  const tbody = document.getElementById('tableBody');
+  const paymentsBody = document.getElementById('paymentsBody');
+  const addRowBtn = document.getElementById('addRowBtn');
+
+  function toLatinDigits(str) {
+    return str.replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d))
+              .replace(/٫/g, '.');
+  }
+
+  function extractNumber(str) {
+    const latin = toLatinDigits(str || '');
+    const digitsOnly = latin.replace(/[^\d]/g, '');
+    return digitsOnly ? parseInt(digitsOnly, 10) : 0;
+  }
+
+  function formatWithSeparators(rawDigits) {
+    if (!rawDigits) return '';
+    return rawDigits.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  }
+
+  function formatTomanTotal(totalToman) {
+    if (totalToman >= 1000000000) {
+      const billions = totalToman / 1000000000;
+      const rounded = Math.round(billions * 100) / 100;
+      const str = (Number.isInteger(rounded) ? rounded.toString() : rounded.toString().replace('.', '٫'));
+      return toPersianDigits(str) + ' میلیارد تومان';
+    }
+    if (totalToman >= 1000000) {
+      const millions = totalToman / 1000000;
+      const rounded = Math.round(millions * 100) / 100;
+      const str = (Number.isInteger(rounded) ? rounded.toString() : rounded.toString().replace('.', '٫'));
+      return toPersianDigits(str) + ' میلیون تومان';
+    }
+    return toPersianDigits(formatWithSeparators(totalToman.toString())) + ' تومان';
+  }
+
+  function formatRowAmount(toman) {
+    if (toman >= 1000000) {
+      const millions = toman / 1000000;
+      const rounded = Math.round(millions * 10) / 10;
+      const str = (Number.isInteger(rounded) ? rounded.toString() : rounded.toString().replace('.', '٫'));
+      return toPersianDigits(str) + ' میلیون';
+    }
+    return toPersianDigits(formatWithSeparators(Math.round(toman).toString())) + ' تومان';
+  }
+
+  function renumberRows() {
+    rows.forEach((r, i) => {
+      r.tdNum.textContent = toPersianDigits(i + 1);
+      r.tdNumPaid.textContent = toPersianDigits(i + 1);
+    });
+    loanDuration.value = rows.length.toString();
+  }
+
+  function updateAddButtonState() {
+    if (rows.length >= MAX_ROWS) {
+      addRowBtn.disabled = true;
+      addRowBtn.textContent = 'به حداکثر ۱۰۰ ردیف رسیدید';
+      addRowBtn.style.opacity = '0.6';
+      addRowBtn.style.cursor = 'default';
+    } else {
+      addRowBtn.disabled = false;
+      addRowBtn.textContent = '+ افزودن ردیف';
+      addRowBtn.style.opacity = '1';
+      addRowBtn.style.cursor = 'pointer';
+    }
+  }
+
+  function deleteRow(rowId) {
+    const idx = rows.findIndex(r => r.rowId === rowId);
+    if (idx === -1) return;
+    const row = rows[idx];
+    row.tr.remove();
+    row.paidTr.remove();
+    rows.splice(idx, 1);
+    renumberRows();
+    updateAddButtonState();
+    updateAll();
+    scheduleSave();
+  }
+
+  function addRow(initialData) {
+    initialData = initialData || {};
+    if (rows.length >= MAX_ROWS) return;
+
+    let rowId;
+    if (typeof initialData.id === 'number') {
+      rowId = initialData.id;
+      if (rowId >= nextRowId) nextRowId = rowId + 1;
+    } else {
+      rowId = nextRowId++;
+    }
+
+    const tr = document.createElement('tr');
+
+    const tdNum = document.createElement('td');
+
+    const tdMonth = document.createElement('td');
+    const monthInput = document.createElement('input');
+    monthInput.type = 'text';
+    monthInput.placeholder = 'مثلاً مهر';
+    monthInput.value = initialData.month || '';
+
+    monthInput.addEventListener('input', () => {
+      scheduleSave();
+    });
+
+    tdMonth.appendChild(monthInput);
+
+    const tdAmount = document.createElement('td');
+    tdAmount.className = 'amount';
+
+    const tdName = document.createElement('td');
+    const nameInput = document.createElement('input');
+    nameInput.type = 'text';
+    nameInput.placeholder = 'نام فرد...';
+    nameInput.value = initialData.name || '';
+
+    nameInput.addEventListener('input', () => {
+      scheduleSave();
+    });
+
+    tdName.appendChild(nameInput);
+
+    const tdDelete = document.createElement('td');
+    const delBtn = document.createElement('button');
+    delBtn.type = 'button';
+    delBtn.className = 'delete-btn';
+    delBtn.textContent = '×';
+    delBtn.title = 'حذف این ردیف';
+    delBtn.addEventListener('click', () => deleteRow(rowId));
+    tdDelete.appendChild(delBtn);
+
+    tr.appendChild(tdNum);
+    tr.appendChild(tdMonth);
+    tr.appendChild(tdAmount);
+    tr.appendChild(tdName);
+    tr.appendChild(tdDelete);
+    tbody.appendChild(tr);
+
+    // Matching row in the "installments paid / remaining" table
+    const paidTr = document.createElement('tr');
+
+    const tdNumPaid = document.createElement('td');
+
+    const tdNamePaid = document.createElement('td');
+    const paidNameDisplay = document.createElement('span');
+    paidNameDisplay.className = 'paid-name placeholder-name';
+    paidNameDisplay.textContent = 'نام فرد...';
+    tdNamePaid.appendChild(paidNameDisplay);
+
+    function refreshPaidNameDisplay() {
+      if (nameInput.value) {
+        paidNameDisplay.textContent = nameInput.value;
+        paidNameDisplay.classList.remove('placeholder-name');
+      } else {
+        paidNameDisplay.textContent = 'نام فرد...';
+        paidNameDisplay.classList.add('placeholder-name');
+      }
+    }
+    refreshPaidNameDisplay();
+    nameInput.addEventListener('input', refreshPaidNameDisplay);
+
+    const tdPaidCount = document.createElement('td');
+    const paidInput = document.createElement('input');
+    paidInput.type = 'text';
+    paidInput.inputMode = 'numeric';
+    paidInput.value = (typeof initialData.paid === 'number' ? initialData.paid : 0).toString();
+
+    paidInput.addEventListener('input', () => {
+      const digitsOnly = toLatinDigits(paidInput.value).replace(/[^\d]/g, '');
+      paidInput.value = digitsOnly;
+      updatePaymentsDisplay();
+      scheduleSave();
+    });
+
+    tdPaidCount.appendChild(paidInput);
+
+    const tdPaidAmount = document.createElement('td');
+    tdPaidAmount.className = 'paid-amount';
+
+    const tdRemaining = document.createElement('td');
+    tdRemaining.className = 'remaining-amount';
+
+    paidTr.appendChild(tdNumPaid);
+    paidTr.appendChild(tdNamePaid);
+    paidTr.appendChild(tdPaidCount);
+    paidTr.appendChild(tdPaidAmount);
+    paidTr.appendChild(tdRemaining);
+    paymentsBody.appendChild(paidTr);
+
+    rows.push({
+      rowId, tr, tdNum, tdAmount, monthInput, nameInput,
+      paidTr, tdNumPaid, paidInput, tdPaidAmount, tdRemaining
+    });
+
+    renumberRows();
+    updateAddButtonState();
+  }
+
+  function updatePaymentsDisplay() {
+    const installmentToman = extractNumber(monthlyInstallment.value);
+    const durationMonths = rows.length;
+
+    rows.forEach((r) => {
+      let paidCount = extractNumber(r.paidInput.value);
+      if (paidCount > durationMonths) paidCount = durationMonths;
+      if (paidCount < 0) paidCount = 0;
+      const paidCountStr = paidCount.toString();
+      if (r.paidInput.value !== paidCountStr) r.paidInput.value = paidCountStr;
+
+      const paidToman = paidCount * installmentToman;
+      const remainingToman = (durationMonths - paidCount) * installmentToman;
+
+      r.tdPaidAmount.textContent = formatRowAmount(paidToman);
+      r.tdRemaining.textContent = formatRowAmount(remainingToman);
+    });
+  }
+
+  function updateAll() {
+    const installmentToman = extractNumber(monthlyInstallment.value);
+    const durationMonths = extractNumber(loanDuration.value);
+    const peopleCount = rows.length;
+    const totalToman = installmentToman * durationMonths * peopleCount;
+
+    totalAmount.textContent = formatTomanTotal(totalToman);
+
+    if (peopleCount === 0) return;
+    const avg = totalToman / peopleCount;
+    const rounding = roundAmounts && roundAmounts.checked;
+
+    if (currentMode === 'fixed') {
+      const displayAvg = rounding ? Math.round(avg / 500000) * 500000 : avg;
+      rows.forEach((r) => {
+        r.tdAmount.textContent = formatRowAmount(displayAvg);
+      });
+      updatePaymentsDisplay();
+      return;
+    }
+
+    // interest mode
+    const annualRate = extractNumber(interestRate.value) / 100;
+    const monthlyRate = annualRate / 12;
+    const center = (peopleCount + 1) / 2;
+
+    if (rounding) {
+      // Use a constant step (rounded to a full million) so every row differs
+      // from its neighbor by exactly the same amount after rounding.
+      let step = avg * monthlyRate;
+      step = Math.round(step / 1000000) * 1000000;
+      const avgRounded = Math.round(avg / 500000) * 500000;
+
+      rows.forEach((r, idx) => {
+        const i = idx + 1;
+        const amount = avgRounded + step * (i - center);
+        r.tdAmount.textContent = formatRowAmount(amount);
+      });
+      updatePaymentsDisplay();
+      return;
+    }
+
+    // not rounding: true compound growth, scaled so the rows still sum to totalToman
+    const rawValues = rows.map((r, idx) => Math.pow(1 + monthlyRate, (idx + 1) - center));
+    const rawSum = rawValues.reduce((a, b) => a + b, 0);
+
+    rows.forEach((r, idx) => {
+      const amount = rawSum > 0 ? (rawValues[idx] * totalToman) / rawSum : avg;
+      r.tdAmount.textContent = formatRowAmount(amount);
+    });
+    updatePaymentsDisplay();
+  }
+
+  addRowBtn.addEventListener('click', () => {
+    addRow();
+    updateAll();
+    scheduleSave();
+  });
+
+  // Summary field references
+  const monthlyInstallment = document.getElementById('monthlyInstallment');
+  const loanDuration = document.getElementById('loanDuration');
+  const totalAmount = document.getElementById('totalAmount');
+  const interestRate = document.getElementById('interestRate');
+  const interestRateWrap = document.getElementById('interestRateWrap');
+  const modeFixedBtn = document.getElementById('modeFixedBtn');
+  const modeInterestBtn = document.getElementById('modeInterestBtn');
+  const roundAmounts = document.getElementById('roundAmounts');
+  const storageStatusEl = document.getElementById('storageStatus');
+
+  let currentMode = 'interest';
+
+  function applyModeUI() {
+    if (currentMode === 'fixed') {
+      modeFixedBtn.classList.add('active');
+      modeInterestBtn.classList.remove('active');
+      interestRateWrap.style.display = 'none';
+    } else {
+      modeInterestBtn.classList.add('active');
+      modeFixedBtn.classList.remove('active');
+      interestRateWrap.style.display = 'inline-flex';
+    }
+  }
+
+  modeFixedBtn.addEventListener('click', () => {
+    currentMode = 'fixed';
+    applyModeUI();
+    updateAll();
+    scheduleSave();
+  });
+
+  modeInterestBtn.addEventListener('click', () => {
+    currentMode = 'interest';
+    applyModeUI();
+    updateAll();
+    scheduleSave();
+  });
+
+  interestRate.addEventListener('input', () => {
+    const digitsOnly = interestRate.value.replace(/[^\d۰-۹]/g, '');
+    interestRate.value = toLatinDigits(digitsOnly);
+    updateAll();
+    scheduleSave();
+  });
+
+  roundAmounts.addEventListener('change', () => {
+    updateAll();
+    scheduleSave();
+  });
+
+  monthlyInstallment.addEventListener('input', () => {
+    const digitsOnly = monthlyInstallment.value.replace(/[^\d۰-۹]/g, '');
+    const latinDigits = toLatinDigits(digitsOnly);
+    monthlyInstallment.value = formatWithSeparators(latinDigits);
+    updateAll();
+    scheduleSave();
+  });
+
+  // --- Persistent storage (survives a wiped browser or a lost phone) ---
+  // Data is kept server-side, tied to this artifact / the person's Claude
+  // account, via the "db" capability. If that isn't available (e.g. the
+  // file was saved and opened directly instead of through its Claude link),
+  // it falls back to this browser's localStorage only.
+  const STORAGE_DOC_PATH = 'loan/state';
+  const LOCAL_FALLBACK_KEY = 'loan-table-state-v2';
+  let dbHandle = null;
+  let downloadsHandle = null;
+  let saveTimer = null;
+
+  function buildState() {
+    return {
+      installment: monthlyInstallment.value,
+      mode: currentMode,
+      interestRate: interestRate.value,
+      roundAmounts: roundAmounts.checked,
+      nextRowId: nextRowId,
+      rows: rows.map((r) => ({
+        id: r.rowId,
+        month: r.monthInput.value,
+        name: r.nameInput.value,
+        paid: extractNumber(r.paidInput.value)
+      }))
+    };
+  }
+
+  function setStorageStatus(kind) {
+    if (!storageStatusEl) return;
+    if (kind === 'cloud-ok') {
+      storageStatusEl.textContent = '✅ ذخیره‌سازی آنلاین است — با پاک شدن مرورگر یا گم‌شدن گوشی از بین نمی‌رود.';
+      storageStatusEl.style.color = '#065f46';
+    } else if (kind === 'cloud-error') {
+      storageStatusEl.textContent = '⚠️ ذخیره‌ی آنلاین با خطا مواجه شد؛ یک نسخه‌ی پشتیبان روی همین مرورگر ذخیره شد.';
+      storageStatusEl.style.color = '#b45309';
+    } else if (kind === 'local-only') {
+      storageStatusEl.textContent = '⚠️ این نسخه فقط روی همین مرورگر ذخیره می‌شود. برای ذخیره‌ی همیشگی، از لینک Claude این صفحه استفاده کنید.';
+      storageStatusEl.style.color = '#b45309';
+    } else {
+      storageStatusEl.textContent = 'در حال بررسی وضعیت ذخیره‌سازی...';
+      storageStatusEl.style.color = '#6b7280';
+    }
+  }
+
+  async function doSave() {
+    const state = buildState();
+    if (dbHandle) {
+      try {
+        await dbHandle.doc(STORAGE_DOC_PATH).set(state);
+        setStorageStatus('cloud-ok');
+        return;
+      } catch (e) {
+        setStorageStatus('cloud-error');
+      }
+    }
+    try { localStorage.setItem(LOCAL_FALLBACK_KEY, JSON.stringify(state)); } catch (e) {}
+    if (!dbHandle) setStorageStatus('local-only');
+  }
+
+  function scheduleSave() {
+    if (saveTimer) clearTimeout(saveTimer);
+    saveTimer = setTimeout(doSave, 600);
+  }
+
+  async function initApp() {
+    setStorageStatus('checking');
+
+    if (window.claude && typeof window.claude.use === 'function') {
+      try { dbHandle = await window.claude.use('db'); } catch (e) { dbHandle = null; }
+      try { downloadsHandle = await window.claude.use('downloads'); } catch (e) { downloadsHandle = null; }
+    }
+
+    let state = null;
+
+    if (dbHandle) {
+      try {
+        const snap = await dbHandle.doc(STORAGE_DOC_PATH).get();
+        if (snap.exists) state = snap.data();
+      } catch (e) {
+        // fall through to local fallback below
+      }
+    }
+
+    if (!state) {
+      try {
+        const raw = localStorage.getItem(LOCAL_FALLBACK_KEY);
+        if (raw) state = JSON.parse(raw);
+      } catch (e) {}
+    }
+
+    if (state) {
+      if (state.installment) monthlyInstallment.value = state.installment;
+      if (state.mode === 'fixed' || state.mode === 'interest') currentMode = state.mode;
+      if (state.interestRate) interestRate.value = state.interestRate;
+      if (typeof state.roundAmounts === 'boolean') roundAmounts.checked = state.roundAmounts;
+      if (typeof state.nextRowId === 'number') nextRowId = state.nextRowId;
+    }
+
+    applyModeUI();
+
+    if (state && Array.isArray(state.rows) && state.rows.length > 0) {
+      state.rows.forEach((rowData) => addRow(rowData));
+    } else {
+      for (let i = 0; i < 20; i++) addRow();
+    }
+
+    updateAll();
+    setStorageStatus(dbHandle ? 'cloud-ok' : 'local-only');
+
+    // Persist once at the end, so a first-time visit (default 20 rows) is
+    // saved immediately rather than only after the first edit.
+    scheduleSave();
+  }
+
+  initApp();
+
+  // Export as image / share
+  const captureArea = document.getElementById('captureArea');
+  const exportImageBtn = document.getElementById('exportImageBtn');
+  const exportShareBtn = document.getElementById('exportShareBtn');
+
+  function captureTable(callback) {
+    html2canvas(captureArea, {
+      scale: 2,
+      backgroundColor: '#f4f6f9',
+      useCORS: true,
+      onclone: (clonedDoc) => {
+        // html2canvas can't shape Persian/Arabic text typed into <input> elements
+        // correctly, so swap every text input for a plain text element that shows
+        // the same value/placeholder before the screenshot is taken.
+        clonedDoc.querySelectorAll('input[type="text"]').forEach((inp) => {
+          const div = clonedDoc.createElement('div');
+          div.className = 'capture-text';
+          if (inp.value) {
+            div.textContent = inp.value;
+          } else if (inp.placeholder) {
+            div.textContent = inp.placeholder;
+            div.classList.add('capture-placeholder');
+          }
+          if (inp.parentNode) inp.parentNode.replaceChild(div, inp);
+        });
+      }
+    }).then(callback);
+  }
+
+  exportImageBtn.addEventListener('click', () => {
+    exportImageBtn.disabled = true;
+    exportImageBtn.textContent = 'در حال آماده‌سازی...';
+    captureTable((canvas) => {
+      canvas.toBlob(async (blob) => {
+        if (!blob) {
+          exportImageBtn.disabled = false;
+          exportImageBtn.textContent = '📷 دانلود عکس';
+          return;
+        }
+        if (downloadsHandle) {
+          try {
+            await downloadsHandle.save({ filename: 'جدول-وام-خانگی.png', data: blob });
+          } catch (e) {
+            // declined or failed — nothing more to do, the viewer already
+            // saw a prompt (or the capability itself is unusable here)
+          }
+        } else {
+          const link = document.createElement('a');
+          link.download = 'جدول-وام-خانگی.png';
+          link.href = canvas.toDataURL('image/png');
+          link.click();
+        }
+        exportImageBtn.disabled = false;
+        exportImageBtn.textContent = '📷 دانلود عکس';
+      }, 'image/png');
+    });
+  });
+
+  exportShareBtn.addEventListener('click', () => {
+    exportShareBtn.disabled = true;
+    exportShareBtn.textContent = 'در حال آماده‌سازی...';
+    captureTable((canvas) => {
+      canvas.toBlob(async (blob) => {
+        if (!blob) {
+          exportShareBtn.disabled = false;
+          exportShareBtn.textContent = '📤 اشتراک‌گذاری';
+          return;
+        }
+        const file = new File([blob], 'جدول-وام-خانگی.png', { type: 'image/png' });
+        const canUseWebShare = navigator.canShare && navigator.canShare({ files: [file] });
+
+        if (canUseWebShare) {
+          try {
+            await navigator.share({
+              files: [file],
+              title: 'جدول اقساط وام خانگی',
+              text: 'جدول اقساط وام خانگی'
+            });
+          } catch (err) {
+            // user cancelled the share sheet — nothing to do
+          }
+        } else if (downloadsHandle) {
+          try {
+            await downloadsHandle.save({ filename: 'جدول-وام-خانگی.png', data: blob });
+            alert('اشتراک‌گذاری مستقیم روی این دستگاه پشتیبانی نمی‌شود؛ عکس ذخیره شد تا خودتان به اشتراک بگذارید.');
+          } catch (e) {
+            // declined or failed — nothing more to do
+          }
+        } else {
+          const link = document.createElement('a');
+          link.download = 'جدول-وام-خانگی.png';
+          link.href = canvas.toDataURL('image/png');
+          link.click();
+          alert('اشتراک‌گذاری مستقیم روی این مرورگر پشتیبانی نمی‌شود؛ عکس دانلود شد تا خودتان به اشتراک بگذارید.');
+        }
+
+        exportShareBtn.disabled = false;
+        exportShareBtn.textContent = '📤 اشتراک‌گذاری';
+      }, 'image/png');
+    });
+  });
+</script>
+
+</body>
+</html>
