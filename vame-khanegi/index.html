@@ -331,6 +331,11 @@
   <button id="googleSignOutBtn" type="button" style="display:none; background:#f3f4f6; color:#374151; border:1px solid #d1d5db; border-radius:8px; padding:6px 14px; font-size:13px; font-family:inherit; cursor:pointer;">
     خروج از گوگل
   </button>
+  <div id="signInHint" style="display:none; width:100%; text-align:center; background:#fef3c7; color:#92400e; border-radius:8px; padding:8px 12px; font-size:13px; line-height:1.9;">
+    اگه هنگام ورود، صفحه‌ی خطای «Couldn't sign you in» دیدید، یعنی گوگل اجازه نمی‌ده داخل این برنامه وارد بشید.
+    صفحه رو توی مرورگر <b>کروم</b> باز کنید و همون‌جا وارد بشید:
+    <a id="openInChromeLink" href="#" style="color:#1d4ed8; font-weight:700;">باز کردن در کروم</a>
+  </div>
 </div>
 
 <div id="tabBar" style="width:100%; max-width:720px; margin:0 auto 16px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
@@ -1679,10 +1684,17 @@
       callback: (resp) => {
         if (resp && resp.access_token) {
           accessToken = resp.access_token;
+          signInHint.style.display = 'none';
           syncFromDrive();
         } else {
           setStorageStatus('local-only');
         }
+      },
+      // Fires when the sign-in popup can't open or is closed (for example
+      // when Google refuses to sign in inside an in-app browser). Only show
+      // the hint if the person tapped the sign-in button themselves.
+      error_callback: () => {
+        if (userTappedSignIn) signInHint.style.display = 'block';
       }
     });
     // Try a silent sign-in first (works if the person already granted access
@@ -1691,7 +1703,19 @@
     tokenClient.requestAccessToken({ prompt: '' });
   }
 
+  const signInHint = document.getElementById('signInHint');
+  const openInChromeLink = document.getElementById('openInChromeLink');
+  let userTappedSignIn = false;
+
+  // Android link that asks Chrome to open this same page.
+  openInChromeLink.href = 'intent://' + location.host + location.pathname +
+    '#Intent;scheme=https;package=com.android.chrome;end';
+
+  // In-app browsers (Android WebView) identify themselves with "; wv)".
+  if (/; wv\)/.test(navigator.userAgent)) signInHint.style.display = 'block';
+
   googleSignInBtn.addEventListener('click', () => {
+    userTappedSignIn = true;
     if (!tokenClient) { initGoogleAuth(); return; }
     tokenClient.requestAccessToken({ prompt: 'consent' });
   });
