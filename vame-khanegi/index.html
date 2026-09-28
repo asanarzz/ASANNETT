@@ -197,6 +197,42 @@
     margin-top: 20px;
     text-align: center;
   }
+  .lottery-chip {
+    background: #eef2ff;
+    color: #3730a3;
+    border: 1px solid #c7d2fe;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+  .lottery-person-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .lottery-person-row input[type="text"] {
+    flex: 1;
+  }
+  .lottery-chip.no-people {
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+  }
+  .lottery-history-item, .lottery-result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: #f9fafb;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  .lottery-history-item b, .lottery-result-item b {
+    color: #111827;
+  }
+  .lottery-history-item span:first-child, .lottery-result-item span:first-child {
+    color: #6b7280;
+  }
   .capture-text {
     width: 100%;
     box-sizing: border-box;
@@ -297,9 +333,72 @@
   </button>
 </div>
 
-<div id="tabBar" style="width:100%; max-width:720px; margin:0 auto 16px; display:flex; gap:8px; justify-content:center;">
+<div id="tabBar" style="width:100%; max-width:720px; margin:0 auto 16px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
+  <button type="button" id="tabLotteryBtn" class="tab-btn">قرعه‌کشی</button>
   <button type="button" id="tabLoanBtn" class="tab-btn active">جدول وام خانگی</button>
   <button type="button" id="tabInstallmentsBtn" class="tab-btn">جدول اقساط</button>
+</div>
+
+<div id="lotteryPanel" style="display:none; width:100%; flex-direction:column; align-items:center;">
+
+  <h1>قرعه‌کشی</h1>
+
+  <div class="summary" style="max-width:640px; flex-direction:column; align-items:stretch; gap:10px;">
+    <h2 style="font-size:16px; color:#2563eb; margin:0 0 6px;">👥 افراد شرکت‌کننده</h2>
+    <p style="font-size:13px; color:#6b7280; margin:0 0 8px;">اول اینجا اسم افراد رو وارد کنید — این اسم‌ها خودکار توی «جدول اقساط» میان. اسم‌های «جدول وام خانگی» بعد از قرعه‌کشی، به ترتیب نتیجه پر می‌شن.</p>
+    <div id="lotteryPeopleList" style="display:flex; flex-direction:column; gap:8px;"></div>
+    <button id="lotteryAddPersonBtn" type="button" style="
+        background:#2563eb;color:#fff;border:none;border-radius:8px;
+        padding:9px 16px;font-size:14px;font-family:inherit;cursor:pointer;align-self:center;margin-top:4px;">
+      + افزودن نفر
+    </button>
+  </div>
+
+  <div class="summary" style="max-width:640px; flex-direction:column; align-items:stretch; gap:10px; margin-top:20px;">
+    <h2 style="font-size:16px; color:#2563eb; margin:0 0 6px;">🎲 قرعه‌کشی ماهانه</h2>
+    <p style="font-size:13px; color:#6b7280; margin:0 0 8px;">هر بار دکمه رو بزنید، اسم‌ها ۵ ثانیه می‌چرخن و بعد یه نفر از بین افراد باقیمانده به‌عنوان برنده‌ی همون ماه مشخص می‌شه.</p>
+    <div id="lotteryMonthlyLockNote" style="display:none; background:#fef3c7; color:#92400e; border-radius:8px; padding:8px 12px; font-size:13px; text-align:center;">
+      قرعه‌کشی «یک‌باره» انجام شده. برای استفاده از این روش، اول نتیجه‌ی اون رو پاک کنید.
+    </div>
+    <div id="lotteryMonthlyPool" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;"></div>
+    <div id="lotteryMonthlySpinDisplay" style="
+        font-size:20px; font-weight:700; text-align:center; color:#1f2937;
+        min-height:36px; padding:8px;"></div>
+    <button id="lotteryMonthlyDrawBtn" type="button" style="
+        background:#2563eb;color:#fff;border:none;border-radius:8px;
+        padding:10px 18px;font-size:14px;font-family:inherit;cursor:pointer;align-self:center;">
+      🎲 قرعه‌کشی این ماه
+    </button>
+    <button id="lotteryMonthlyResetBtn" type="button" style="
+        display:none; background:#f3f4f6;color:#374151;border:1px solid #d1d5db;border-radius:8px;
+        padding:8px 16px;font-size:13px;font-family:inherit;cursor:pointer;align-self:center;">
+      🔄 شروع دوره‌ی جدید
+    </button>
+    <div id="lotteryMonthlyHistory" style="margin-top:6px;"></div>
+  </div>
+
+  <div class="summary" style="max-width:640px; flex-direction:column; align-items:stretch; gap:10px; margin-top:20px;">
+    <h2 style="font-size:16px; color:#2563eb; margin:0 0 6px;">🎰 قرعه‌کشی یک‌باره (ترتیب کامل ماه‌ها)</h2>
+    <p style="font-size:13px; color:#6b7280; margin:0 0 8px;">با زدن دکمه، اسم‌ها ۵ ثانیه می‌چرخن و بعد ترتیب کامل برنده‌ی هر ماه مشخص می‌شه.</p>
+    <div id="lotteryOnceLockNote" style="display:none; background:#fef3c7; color:#92400e; border-radius:8px; padding:8px 12px; font-size:13px; text-align:center;">
+      قرعه‌کشی «ماهانه» شروع شده. برای استفاده از این روش، اول نتیجه‌ی اون رو پاک کنید.
+    </div>
+    <div id="lotterySpinDisplay" style="
+        font-size:20px; font-weight:700; text-align:center; color:#1f2937;
+        min-height:36px; padding:10px;"></div>
+    <button id="lotteryOnceDrawBtn" type="button" style="
+        background:#7c3aed;color:#fff;border:none;border-radius:8px;
+        padding:10px 18px;font-size:14px;font-family:inherit;cursor:pointer;align-self:center;">
+      🎰 شروع قرعه‌کشی
+    </button>
+    <button id="lotteryOnceResetBtn" type="button" style="
+        display:none; background:#f3f4f6;color:#374151;border:1px solid #d1d5db;border-radius:8px;
+        padding:8px 16px;font-size:13px;font-family:inherit;cursor:pointer;align-self:center;">
+      🔄 پاک کردن نتیجه
+    </button>
+    <div id="lotteryOnceResult" style="margin-top:6px;"></div>
+  </div>
+
 </div>
 
 <div id="captureArea" style="width:100%; display:flex; flex-direction:column; align-items:center;">
@@ -478,11 +577,18 @@
         (مثلاً از ۰ به ۱ میلیون، یا از ۱ میلیون به ۲ میلیون). این عادیه و خرابی نیست — فقط به این خاطره که
         برنامه برای گرد کردن، همیشه به نزدیک‌ترین «یک میلیون کامل» می‌ره تا همه‌ی عددا هماهنگ بمونن.</span></li>
       <li><b>۴ — جدول اصلی:</b> هر ردیف یعنی یه نفر. توش می‌نویسید اسم اون فرد و کدوم ماه نوبتشه.
-        مبلغی که می‌گیره خودکار نمایش داده می‌شه. با زدن دکمه‌ی قرمز «×» می‌تونید اون ردیف رو پاک کنید.</li>
+        مبلغی که می‌گیره خودکار نمایش داده می‌شه. فقط کافیه اسم ماه رو برای ردیف اول بنویسید (مثلاً «مهر»)؛ ماه‌های بقیه‌ی ردیف‌ها خودکار به ترتیب پر می‌شن و بعد از اسفند دوباره از فروردین ادامه پیدا می‌کنن. با زدن دکمه‌ی قرمز «×» می‌تونید اون ردیف رو پاک کنید.</li>
       <li><b>۵ — افزودن ردیف:</b> هر بار بزنید، یه نفر دیگه به لیست اضافه می‌شه.</li>
       <li><b>۶ — دانلود عکس / اشتراک‌گذاری:</b> با این دکمه‌ها می‌تونید از کل جدول یه عکس بگیرید
         و برای بقیه (مثلاً توی گروه تلگرام) بفرستید.</li>
     </ol>
+
+    <h2 style="font-size:16.5px; color:#2563eb; margin-top:26px;">🎲 تب «قرعه‌کشی» چیه؟</h2>
+    <p style="font-size:14.5px; line-height:2; color:#374151;">
+      کار رو از این تب شروع کنید: اول اسم افراد رو توی «افراد شرکت‌کننده» بنویسید. بعد یکی از دو روش قرعه‌کشی رو بزنید
+      («ماهانه»: هر ماه یه برنده، یا «یک‌باره»: ترتیب همه‌ی ماه‌ها یک‌جا). فقط یکی از این دو روش قابل استفاده‌ست؛ برای عوض کردن روش، اول نتیجه رو پاک کنید. موقع قرعه‌کشی اسم‌ها ۵ ثانیه می‌چرخن و صدای چرخش پخش می‌شه (اگه صدای گوشی بسته باشه، صدایی نمی‌شنوید). نتیجه‌ی قرعه‌کشی خودکار توی ستون «نام فرد» تب
+      «جدول وام خانگی» به همون ترتیب نوشته می‌شه. اسم‌هایی که توی این تب می‌نویسید، توی تب «جدول اقساط» هم خودکار میان.
+    </p>
 
     <h2 style="font-size:16.5px; color:#2563eb; margin-top:26px;">۳) تب «جدول اقساط» چیه؟</h2>
     <p style="font-size:14.5px; line-height:2; color:#374151;">
@@ -615,6 +721,28 @@
     }
   }
 
+  const PERSIAN_MONTHS = ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور',
+                          'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند'];
+
+  function normalizeMonthName(s) {
+    let t = (s || '').replace(/ي/g, 'ی').replace(/ك/g, 'ک').replace(/[\u200c\s]+/g, '');
+    if (t === 'اذر') t = 'آذر';
+    if (t === 'ابان') t = 'آبان';
+    return t;
+  }
+
+  // Starting from the month typed in row 1, fill the following rows in order
+  // (wrapping from اسفند back to فروردین). overwrite=false only fills empty cells.
+  function fillMonthsFromFirst(overwrite) {
+    if (rows.length === 0) return;
+    const startIdx = PERSIAN_MONTHS.indexOf(normalizeMonthName(rows[0].monthInput.value));
+    if (startIdx === -1) return;
+    for (let i = 1; i < rows.length; i++) {
+      if (!overwrite && rows[i].monthInput.value.trim() !== '') continue;
+      rows[i].monthInput.value = PERSIAN_MONTHS[(startIdx + i) % 12];
+    }
+  }
+
   function addRow(initialData) {
     initialData = initialData || {};
     if (rows.length >= MAX_ROWS) return;
@@ -638,6 +766,8 @@
     monthInput.value = initialData.month || '';
 
     monthInput.addEventListener('input', () => {
+      // Typing a month name in the FIRST row fills the rest in order.
+      if (rows.length > 0 && rows[0].monthInput === monthInput) fillMonthsFromFirst(true);
       scheduleSave();
     });
 
@@ -647,6 +777,20 @@
     tdAmount.className = 'amount';
 
     const tdName = document.createElement('td');
+    const loanNameInput = document.createElement('input');
+    loanNameInput.type = 'text';
+    loanNameInput.placeholder = 'نام فرد...';
+    loanNameInput.value = initialData.loanName || '';
+
+    loanNameInput.addEventListener('input', () => {
+      scheduleSave();
+    });
+
+    tdName.appendChild(loanNameInput);
+
+    // Participant name: entered in the قرعه‌کشی tab, feeds the installments
+    // tab automatically. Deliberately NOT wired to the loan table's own name
+    // field above — the loan table's names are set only by lottery results.
     const nameInput = document.createElement('input');
     nameInput.type = 'text';
     nameInput.placeholder = 'نام فرد...';
@@ -654,9 +798,10 @@
 
     nameInput.addEventListener('input', () => {
       scheduleSave();
+      renderLotteryMonthly();
+      renderLotteryOnce();
+      renderLotteryPeopleList();
     });
-
-    tdName.appendChild(nameInput);
 
     const tdDelete = document.createElement('td');
     const delBtn = document.createElement('button');
@@ -726,8 +871,8 @@
     paymentsBody.appendChild(paidTr);
 
     rows.push({
-      rowId, tr, tdNum, tdAmount, monthInput, nameInput,
-      paidTr, tdNumPaid, paidInput, tdPaidAmount, tdRemaining
+      rowId, tr, tdNum, tdAmount, monthInput, nameInput, loanNameInput,
+      paidTr, tdNumPaid, paidInput, tdPaidAmount, tdRemaining, refreshPaidNameDisplay
     });
 
     renumberRows();
@@ -771,6 +916,8 @@
         r.tdAmount.textContent = formatRowAmount(displayAvg);
       });
       updatePaymentsDisplay();
+      renderLotteryMonthly();
+      renderLotteryOnce();
       return;
     }
 
@@ -792,6 +939,8 @@
         r.tdAmount.textContent = formatRowAmount(amount);
       });
       updatePaymentsDisplay();
+      renderLotteryMonthly();
+      renderLotteryOnce();
       return;
     }
 
@@ -804,10 +953,13 @@
       r.tdAmount.textContent = formatRowAmount(amount);
     });
     updatePaymentsDisplay();
+    renderLotteryMonthly();
+    renderLotteryOnce();
   }
 
   addRowBtn.addEventListener('click', () => {
     addRow();
+    fillMonthsFromFirst(false);
     updateAll();
     scheduleSave();
   });
@@ -839,31 +991,443 @@
     if (e.target === helpModal) closeHelp(); // clicking the dark backdrop
   });
 
+  const tabLotteryBtn = document.getElementById('tabLotteryBtn');
   const tabLoanBtn = document.getElementById('tabLoanBtn');
   const tabInstallmentsBtn = document.getElementById('tabInstallmentsBtn');
+  const lotteryPanel = document.getElementById('lotteryPanel');
   const installmentsPanel = document.getElementById('installmentsPanel');
   const installmentsExportWrap = document.getElementById('installmentsExportWrap');
 
-  function showLoanTab() {
-    tabLoanBtn.classList.add('active');
+  function hideAllTabs() {
+    tabLotteryBtn.classList.remove('active');
+    tabLoanBtn.classList.remove('active');
     tabInstallmentsBtn.classList.remove('active');
-    captureArea.style.display = 'flex';
-    exportWrap.style.display = 'flex';
+    lotteryPanel.style.display = 'none';
+    captureArea.style.display = 'none';
+    exportWrap.style.display = 'none';
     installmentsPanel.style.display = 'none';
     installmentsExportWrap.style.display = 'none';
   }
 
+  function showLotteryTab() {
+    hideAllTabs();
+    tabLotteryBtn.classList.add('active');
+    lotteryPanel.style.display = 'flex';
+    renderLotteryPeopleList();
+    renderLotteryMonthly();
+    renderLotteryOnce();
+  }
+
+  function showLoanTab() {
+    hideAllTabs();
+    tabLoanBtn.classList.add('active');
+    captureArea.style.display = 'flex';
+    exportWrap.style.display = 'flex';
+  }
+
   function showInstallmentsTab() {
+    hideAllTabs();
     tabInstallmentsBtn.classList.add('active');
-    tabLoanBtn.classList.remove('active');
-    captureArea.style.display = 'none';
-    exportWrap.style.display = 'none';
     installmentsPanel.style.display = 'flex';
     installmentsExportWrap.style.display = 'flex';
   }
 
+  tabLotteryBtn.addEventListener('click', showLotteryTab);
   tabLoanBtn.addEventListener('click', showLoanTab);
   tabInstallmentsBtn.addEventListener('click', showInstallmentsTab);
+
+  // --- Lottery ---
+  let lotteryDrawnOrder = []; // rowIds, in the order they've won (monthly method)
+  let lotteryOnceOrder = [];  // rowIds, final shuffled order (one-time method)
+  let lotterySpinTimer = null;
+  let lotterySpinning = false;
+  let audioCtx = null;
+  let masterOut = null;
+  let noiseBuffer = null;
+
+  const lotteryMonthlyPool = document.getElementById('lotteryMonthlyPool');
+  const lotteryMonthlyDrawBtn = document.getElementById('lotteryMonthlyDrawBtn');
+  const lotteryMonthlyResetBtn = document.getElementById('lotteryMonthlyResetBtn');
+  const lotteryMonthlyHistory = document.getElementById('lotteryMonthlyHistory');
+  const lotterySpinDisplay = document.getElementById('lotterySpinDisplay');
+  const lotteryOnceDrawBtn = document.getElementById('lotteryOnceDrawBtn');
+  const lotteryOnceResult = document.getElementById('lotteryOnceResult');
+  const lotteryPeopleList = document.getElementById('lotteryPeopleList');
+  const lotteryAddPersonBtn = document.getElementById('lotteryAddPersonBtn');
+  const lotteryMonthlySpinDisplay = document.getElementById('lotteryMonthlySpinDisplay');
+  const lotteryMonthlyLockNote = document.getElementById('lotteryMonthlyLockNote');
+  const lotteryOnceLockNote = document.getElementById('lotteryOnceLockNote');
+  const lotteryOnceResetBtn = document.getElementById('lotteryOnceResetBtn');
+
+  function getPeopleForLottery() {
+    return rows.map((r, idx) => ({
+      rowId: r.rowId,
+      name: r.nameInput.value || ('ردیف ' + toPersianDigits(idx + 1))
+    }));
+  }
+
+  // Editable participants list — this is the "source" list for the lottery
+  // tab. It directly edits the same underlying row objects used by the loan
+  // table and installments tab, so a name typed here shows up there too
+  // (and vice versa). Only rebuilt on structural changes (add/remove a
+  // person), never on a plain keystroke, so typing here doesn't lose focus.
+  function renderLotteryPeopleList() {
+    lotteryPeopleList.innerHTML = '';
+
+    if (rows.length === 0) {
+      const empty = document.createElement('div');
+      empty.style.cssText = 'color:#9ca3af; font-size:13px; text-align:center;';
+      empty.textContent = 'هنوز کسی اضافه نشده — با دکمه‌ی زیر شروع کنید.';
+      lotteryPeopleList.appendChild(empty);
+      return;
+    }
+
+    rows.forEach((r) => {
+      const line = document.createElement('div');
+      line.className = 'lottery-person-row';
+
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.placeholder = 'نام فرد...';
+      input.value = r.nameInput.value;
+      input.addEventListener('input', () => {
+        r.nameInput.value = input.value;
+        r.refreshPaidNameDisplay();
+        scheduleSave();
+        renderLotteryMonthly();
+        renderLotteryOnce();
+      });
+
+      const delBtn = document.createElement('button');
+      delBtn.type = 'button';
+      delBtn.className = 'delete-btn';
+      delBtn.textContent = '×';
+      delBtn.title = 'حذف این نفر';
+      delBtn.addEventListener('click', () => {
+        deleteRow(r.rowId);
+        renderLotteryPeopleList();
+      });
+
+      line.appendChild(delBtn);
+      line.appendChild(input);
+      lotteryPeopleList.appendChild(line);
+    });
+  }
+
+  lotteryAddPersonBtn.addEventListener('click', () => {
+    addRow();
+    fillMonthsFromFirst(false);
+    updateAll();
+    scheduleSave();
+    renderLotteryPeopleList();
+  });
+
+  // ---- Sound effects (synthesized with the Web Audio API, no files needed) ----
+  // Casino-style: wooden "clack" clicks like a roulette ball / dice rattling,
+  // and a slot-machine style bell jingle on a win.
+  function getAudioCtx() {
+    try {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const comp = audioCtx.createDynamicsCompressor();
+        comp.threshold.value = -14;
+        comp.knee.value = 12;
+        comp.ratio.value = 8;
+        comp.attack.value = 0.002;
+        comp.release.value = 0.12;
+        const master = audioCtx.createGain();
+        master.gain.value = 3.0; // loud; the compressor keeps it from distorting
+        master.connect(comp);
+        comp.connect(audioCtx.destination);
+        masterOut = master;
+
+        const len = Math.floor(audioCtx.sampleRate * 0.2);
+        noiseBuffer = audioCtx.createBuffer(1, len, audioCtx.sampleRate);
+        const data = noiseBuffer.getChannelData(0);
+        for (let i = 0; i < len; i++) data[i] = Math.random() * 2 - 1;
+      }
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+    } catch (e) { audioCtx = null; masterOut = null; }
+    return audioCtx;
+  }
+
+  function playTone(freq, startOffset, duration, type, volume) {
+    const ctx = getAudioCtx();
+    if (!ctx || !masterOut) return;
+    const t = ctx.currentTime + startOffset;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = type;
+    osc.frequency.value = freq;
+    gain.gain.setValueAtTime(0.0001, t);
+    gain.gain.exponentialRampToValueAtTime(volume, t + 0.006);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+    osc.connect(gain);
+    gain.connect(masterOut);
+    osc.start(t);
+    osc.stop(t + duration + 0.02);
+  }
+
+  function playClack(offset, volume) {
+    const ctx = getAudioCtx();
+    if (!ctx || !masterOut) return;
+    const t = ctx.currentTime + offset;
+
+    // sharp click (band-passed noise burst)
+    const src = ctx.createBufferSource();
+    src.buffer = noiseBuffer;
+    const bp = ctx.createBiquadFilter();
+    bp.type = 'bandpass';
+    bp.frequency.value = 1800 + Math.random() * 2600;
+    bp.Q.value = 1.1;
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(volume, t);
+    g.gain.exponentialRampToValueAtTime(0.001, t + 0.05);
+    src.connect(bp);
+    bp.connect(g);
+    g.connect(masterOut);
+    src.start(t);
+    src.stop(t + 0.06);
+
+    // woody thump underneath
+    const osc = ctx.createOscillator();
+    const og = ctx.createGain();
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(320 + Math.random() * 200, t);
+    osc.frequency.exponentialRampToValueAtTime(110, t + 0.05);
+    og.gain.setValueAtTime(volume * 0.9, t);
+    og.gain.exponentialRampToValueAtTime(0.001, t + 0.06);
+    osc.connect(og);
+    og.connect(masterOut);
+    osc.start(t);
+    osc.stop(t + 0.08);
+  }
+
+  // one "step" of the spin = a main clack plus a couple of small rattles
+  function playTick() {
+    playClack(0, 0.9);
+    if (Math.random() < 0.75) playClack(0.022 + Math.random() * 0.02, 0.5);
+    if (Math.random() < 0.4) playClack(0.048 + Math.random() * 0.02, 0.35);
+  }
+
+  function playBell(freq, offset) {
+    playTone(freq, offset, 0.9, 'sine', 0.55);
+    playTone(freq * 2.76, offset, 0.5, 'sine', 0.22);
+    playTone(freq * 5.4, offset, 0.25, 'sine', 0.10);
+  }
+
+  function playWinSound() {
+    const notes = [783.99, 987.77, 1174.66, 1567.98];
+    for (let round = 0; round < 3; round++) {
+      notes.forEach((f, i) => playBell(f, round * 0.5 + i * 0.08));
+    }
+    playBell(2093, 1.7);
+    // coin-like pings
+    for (let i = 0; i < 6; i++) playTone(2600 + Math.random() * 1200, 0.2 + i * 0.22, 0.12, 'triangle', 0.25);
+  }
+
+  // ---- Locking: only one lottery method can be used at a time ----
+  function updateLotteryLocks() {
+    const people = getPeopleForLottery();
+    const remaining = people.filter(p => !lotteryDrawnOrder.includes(p.rowId));
+    const monthlyUsed = lotteryDrawnOrder.length > 0;
+    const onceUsed = lotteryOnceOrder.length > 0;
+
+    const monthlyBlocked = lotterySpinning || onceUsed || remaining.length === 0;
+    lotteryMonthlyDrawBtn.disabled = monthlyBlocked;
+    lotteryMonthlyDrawBtn.style.opacity = monthlyBlocked ? '0.5' : '1';
+    lotteryMonthlyDrawBtn.textContent = lotterySpinning ? 'در حال قرعه‌کشی...' : '🎲 قرعه‌کشی این ماه';
+    lotteryMonthlyLockNote.style.display = onceUsed ? 'block' : 'none';
+    lotteryMonthlyResetBtn.style.display = (monthlyUsed && !lotterySpinning) ? 'inline-block' : 'none';
+
+    const onceBlocked = lotterySpinning || monthlyUsed || people.length === 0;
+    lotteryOnceDrawBtn.disabled = onceBlocked;
+    lotteryOnceDrawBtn.style.opacity = onceBlocked ? '0.5' : '1';
+    lotteryOnceDrawBtn.textContent = lotterySpinning
+      ? 'در حال قرعه‌کشی...'
+      : (onceUsed ? '🎰 قرعه‌کشی مجدد' : '🎰 شروع قرعه‌کشی');
+    lotteryOnceLockNote.style.display = monthlyUsed ? 'block' : 'none';
+    lotteryOnceResetBtn.style.display = (onceUsed && !lotterySpinning) ? 'inline-block' : 'none';
+  }
+
+  // ---- Shared 5-second spin (names flip quickly, then slow down) with ticking sound ----
+  function runLotterySpin(names, displayEl, onDone) {
+    const DURATION = 5000;
+    const startTime = performance.now();
+    lotterySpinning = true;
+    updateLotteryLocks();
+
+    function step() {
+      const elapsed = performance.now() - startTime;
+      if (elapsed >= DURATION) {
+        lotterySpinTimer = null;
+        lotterySpinning = false;
+        onDone();
+        return;
+      }
+      displayEl.textContent = names[Math.floor(Math.random() * names.length)];
+      playTick();
+      const progress = elapsed / DURATION;
+      const delay = 70 + progress * progress * 230; // 70ms at start → ~300ms at the end
+      lotterySpinTimer = setTimeout(step, delay);
+    }
+    step();
+  }
+
+  function renderLotteryMonthly() {
+    const people = getPeopleForLottery();
+    const validIds = new Set(people.map(p => p.rowId));
+    lotteryDrawnOrder = lotteryDrawnOrder.filter(id => validIds.has(id));
+
+    const remaining = people.filter(p => !lotteryDrawnOrder.includes(p.rowId));
+
+    lotteryMonthlyPool.innerHTML = '';
+    if (people.length === 0) {
+      const span = document.createElement('span');
+      span.className = 'lottery-chip no-people';
+      span.textContent = 'اول توی بخش «افراد شرکت‌کننده» چندنفر رو اضافه کنید.';
+      lotteryMonthlyPool.appendChild(span);
+    } else if (remaining.length === 0) {
+      const span = document.createElement('span');
+      span.className = 'lottery-chip no-people';
+      span.textContent = 'همه‌ی افراد قبلاً برنده شدن 🎉';
+      lotteryMonthlyPool.appendChild(span);
+    } else {
+      remaining.forEach((p) => {
+        const chip = document.createElement('span');
+        chip.className = 'lottery-chip';
+        chip.textContent = p.name;
+        lotteryMonthlyPool.appendChild(chip);
+      });
+    }
+
+    lotteryMonthlyHistory.innerHTML = '';
+    const peopleById = new Map(people.map(p => [p.rowId, p.name]));
+    lotteryDrawnOrder.forEach((rowId, idx) => {
+      const line = document.createElement('div');
+      line.className = 'lottery-history-item';
+      const label = document.createElement('span');
+      label.textContent = 'ماه ' + toPersianDigits(idx + 1);
+      const value = document.createElement('b');
+      value.textContent = peopleById.get(rowId) || '—';
+      line.appendChild(label);
+      line.appendChild(value);
+      lotteryMonthlyHistory.appendChild(line);
+    });
+
+    updateLotteryLocks();
+  }
+
+  lotteryMonthlyDrawBtn.addEventListener('click', () => {
+    if (lotterySpinning || lotteryOnceOrder.length > 0) return;
+    const remaining = getPeopleForLottery().filter(p => !lotteryDrawnOrder.includes(p.rowId));
+    if (remaining.length === 0) return;
+
+    getAudioCtx(); // must be started from a tap, so do it here
+    lotteryMonthlySpinDisplay.textContent = '';
+
+    runLotterySpin(remaining.map(p => p.name), lotteryMonthlySpinDisplay, () => {
+      const stillRemaining = getPeopleForLottery().filter(p => !lotteryDrawnOrder.includes(p.rowId));
+      if (stillRemaining.length === 0) { renderLotteryMonthly(); return; }
+
+      const winner = stillRemaining[Math.floor(Math.random() * stillRemaining.length)];
+      lotteryDrawnOrder.push(winner.rowId);
+
+      // Write this winner into the loan table's row for this turn (position-based:
+      // the 1st draw fills row 1, the 2nd draw fills row 2, ...).
+      const position = lotteryDrawnOrder.length - 1;
+      if (rows[position]) rows[position].loanNameInput.value = winner.name;
+
+      lotteryMonthlySpinDisplay.textContent = '🎉 ' + winner.name;
+      playWinSound();
+      renderLotteryMonthly();
+      renderLotteryOnce();
+      scheduleSave();
+    });
+  });
+
+  lotteryMonthlyResetBtn.addEventListener('click', () => {
+    if (lotterySpinning) return;
+    if (!confirm('نتیجه‌ی قرعه‌کشی ماهانه و اسم‌های نوشته‌شده توی «جدول وام خانگی» پاک می‌شه. مطمئنید؟')) return;
+    lotteryDrawnOrder = [];
+    rows.forEach((r) => { r.loanNameInput.value = ''; });
+    lotteryMonthlySpinDisplay.textContent = '';
+    renderLotteryMonthly();
+    renderLotteryOnce();
+    scheduleSave();
+  });
+
+  function renderLotteryOnce() {
+    const people = getPeopleForLottery();
+    const validIds = new Set(people.map(p => p.rowId));
+    lotteryOnceOrder = lotteryOnceOrder.filter(id => validIds.has(id));
+
+    lotteryOnceResult.innerHTML = '';
+    if (lotteryOnceOrder.length === 0 || lotteryOnceOrder.length !== people.length) {
+      if (!lotterySpinning) {
+        lotterySpinDisplay.textContent = people.length === 0
+          ? 'اول توی بخش «افراد شرکت‌کننده» چندنفر رو اضافه کنید.'
+          : '';
+      }
+    } else {
+      const peopleById = new Map(people.map(p => [p.rowId, p.name]));
+      lotteryOnceOrder.forEach((rowId, idx) => {
+        const line = document.createElement('div');
+        line.className = 'lottery-result-item';
+        const label = document.createElement('span');
+        label.textContent = 'ماه ' + toPersianDigits(idx + 1);
+        const value = document.createElement('b');
+        value.textContent = peopleById.get(rowId) || '—';
+        line.appendChild(label);
+        line.appendChild(value);
+        lotteryOnceResult.appendChild(line);
+      });
+    }
+
+    updateLotteryLocks();
+  }
+
+  lotteryOnceDrawBtn.addEventListener('click', () => {
+    if (lotterySpinning || lotteryDrawnOrder.length > 0) return;
+    const people = getPeopleForLottery();
+    if (people.length === 0) return;
+
+    getAudioCtx(); // must be started from a tap, so do it here
+    lotteryOnceResult.innerHTML = '';
+
+    runLotterySpin(people.map(p => p.name), lotterySpinDisplay, () => {
+      const current = getPeopleForLottery();
+      const shuffled = current.slice();
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const tmp = shuffled[i]; shuffled[i] = shuffled[j]; shuffled[j] = tmp;
+      }
+      lotteryOnceOrder = shuffled.map(p => p.rowId);
+
+      // Fill the loan table's name column in the drawn order (row 1 = month-1
+      // winner, row 2 = month-2 winner, ...).
+      shuffled.forEach((p, idx) => {
+        if (rows[idx]) rows[idx].loanNameInput.value = p.name;
+      });
+
+      lotterySpinDisplay.textContent = '✅ نتیجه مشخص شد:';
+      playWinSound();
+      renderLotteryOnce();
+      renderLotteryMonthly();
+      scheduleSave();
+    });
+  });
+
+  lotteryOnceResetBtn.addEventListener('click', () => {
+    if (lotterySpinning) return;
+    if (!confirm('نتیجه‌ی قرعه‌کشی یک‌باره و اسم‌های نوشته‌شده توی «جدول وام خانگی» پاک می‌شه. مطمئنید؟')) return;
+    lotteryOnceOrder = [];
+    rows.forEach((r) => { r.loanNameInput.value = ''; });
+    lotterySpinDisplay.textContent = '';
+    renderLotteryOnce();
+    renderLotteryMonthly();
+    scheduleSave();
+  });
 
   let currentMode = 'interest';
 
@@ -939,10 +1503,13 @@
       interestRate: interestRate.value,
       roundAmounts: roundAmounts.checked,
       nextRowId: nextRowId,
+      lotteryDrawnOrder: lotteryDrawnOrder,
+      lotteryOnceOrder: lotteryOnceOrder,
       rows: rows.map((r) => ({
         id: r.rowId,
         month: r.monthInput.value,
         name: r.nameInput.value,
+        loanName: r.loanNameInput.value,
         paid: extractNumber(r.paidInput.value)
       }))
     };
@@ -955,6 +1522,8 @@
     if (state.interestRate) interestRate.value = state.interestRate;
     if (typeof state.roundAmounts === 'boolean') roundAmounts.checked = state.roundAmounts;
     if (typeof state.nextRowId === 'number') nextRowId = state.nextRowId;
+    lotteryDrawnOrder = Array.isArray(state.lotteryDrawnOrder) ? state.lotteryDrawnOrder : [];
+    lotteryOnceOrder = Array.isArray(state.lotteryOnceOrder) ? state.lotteryOnceOrder : [];
     applyModeUI();
     if (Array.isArray(state.rows) && state.rows.length > 0) {
       state.rows.forEach((rowData) => addRow(rowData));
@@ -962,6 +1531,9 @@
       for (let i = 0; i < 20; i++) addRow();
     }
     updateAll();
+    renderLotteryPeopleList();
+    renderLotteryMonthly();
+    renderLotteryOnce();
   }
 
   function setStorageStatus(kind) {
