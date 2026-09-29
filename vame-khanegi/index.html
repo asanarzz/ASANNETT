@@ -336,6 +336,19 @@
     صفحه رو توی مرورگر <b>کروم</b> باز کنید و همون‌جا وارد بشید:
     <a id="openInChromeLink" href="#" style="color:#1d4ed8; font-weight:700;">باز کردن در کروم</a>
   </div>
+  <button id="backupDownloadBtn" type="button" style="background:#f3f4f6; color:#374151; border:1px solid #d1d5db; border-radius:8px; padding:6px 14px; font-size:13px; font-family:inherit; cursor:pointer;">
+    📥 دانلود پشتیبان
+  </button>
+  <button id="backupRestoreBtn" type="button" style="background:#f3f4f6; color:#374151; border:1px solid #d1d5db; border-radius:8px; padding:6px 14px; font-size:13px; font-family:inherit; cursor:pointer;">
+    📤 بازیابی از فایل
+  </button>
+  <input id="backupFileInput" type="file" accept="application/json,.json" style="display:none;">
+  <button id="autoBackupBtn" type="button" style="display:none; background:#f3f4f6; color:#374151; border:1px solid #d1d5db; border-radius:8px; padding:6px 14px; font-size:13px; font-family:inherit; cursor:pointer;">
+    📁 ساخت پوشه‌ی «وام خانگی» توی Downloads
+  </button>
+  <span id="autoBackupUnsupportedNote" style="display:none; width:100%; text-align:center; font-size:12px; color:#9ca3af;">
+    پشتیبان خودکار در پوشه فقط روی Chrome (نسخه‌های جدید) کار می‌کند؛ روی این مرورگر در دسترس نیست.
+  </span>
 </div>
 
 <div id="tabBar" style="width:100%; max-width:720px; margin:0 auto 16px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
@@ -610,7 +623,24 @@
       <br>اگه وارد نشید، اطلاعات فقط روی همین گوشی و همین مرورگر می‌مونه و با پاک‌شدن مرورگر از بین می‌ره.
     </p>
 
-    <h2 style="font-size:16.5px; color:#2563eb; margin-top:26px;">۵) چند نکته‌ی ساده</h2>
+    <h2 style="font-size:16.5px; color:#2563eb; margin-top:26px;">۵) پشتیبان‌گیری با فایل (بدون نیاز به گوگل)</h2>
+    <p style="font-size:14.5px; line-height:2; color:#374151;">
+      دکمه‌ی «📥 دانلود پشتیبان» یه فایل کوچیک می‌سازه که همه‌ی اطلاعات همین لحظه توشه. این فایل رو
+      جایی امن نگه دارید (مثلاً توی ایتا یا بله برای خودتون بفرستید، یا توی گوشی ذخیره‌ش کنید).
+      اگه بعداً گوشی عوض شد یا اطلاعات پاک شد، با دکمه‌ی «📤 بازیابی از فایل» همون فایل رو انتخاب کنید تا همه‌چیز برگرده.
+      <br><span style="color:#b45309;">⚠️ نکته: بازیابی، اطلاعات فعلی روی صفحه رو با محتوای فایل جایگزین می‌کنه.
+      قبلش یه پیام تأیید می‌پرسه.</span>
+    </p>
+    <p style="font-size:14.5px; line-height:2; color:#374151;">
+      روی گوشی‌هایی که Chrome دارن، یه دکمه‌ی «📁 ساخت پوشه‌ی «وام خانگی» توی Downloads» هم هست. باهاش زدنش،
+      صفحه‌ای باز می‌شه که از قبل روی پوشه‌ی Downloads گوشیه؛ همون‌جا یه پوشه‌ی جدید به اسم «وام خانگی» بسازید
+      (یا اگه قبلاً ساختید، همونو انتخاب کنید) و تأیید کنید. مرورگرها اجازه نمی‌دن یه سایت بدون این یک بار تأیید،
+      خودش توی گوشی پوشه بسازه — این یه محدودیت امنیتیه، نه چیزی که قابل دور زدن باشه.
+      بعد از این یک‌بار، از اون به بعد بعد از هر تغییری (اضافه/کم‌کردن اسم، قرعه‌کشی، ثبت قسط و...) یه فایل توی همون پوشه
+      خودکار به‌روز می‌شه — بدون این‌که دوباره چیزی بزنید. این قابلیت روی مرورگرهای دیگه (مثل Safari) در دسترس نیست.
+    </p>
+
+    <h2 style="font-size:16.5px; color:#2563eb; margin-top:26px;">۶) چند نکته‌ی ساده</h2>
     <ul style="font-size:14.5px; line-height:2.1; color:#374151; padding-right:20px;">
       <li>هرچی توی کادرها می‌نویسید، خودش ذخیره می‌شه — نیازی به زدن دکمه‌ی «ذخیره» نیست.</li>
       <li>حداکثر تا ۱۰۰ نفر می‌تونید اضافه کنید.</li>
@@ -1491,6 +1521,11 @@
   const DRIVE_SCOPE = 'https://www.googleapis.com/auth/drive.appdata';
   const DRIVE_FILE_NAME = 'loan-table-state.json';
   const LOCAL_FALLBACK_KEY = 'loan-table-state-v2';
+  const GOOGLE_FLAG_KEY = 'loan-google-connected-before';
+
+  function hasSignedInBefore() {
+    try { return localStorage.getItem(GOOGLE_FLAG_KEY) === '1'; } catch (e) { return false; }
+  }
 
   const googleSignInBtn = document.getElementById('googleSignInBtn');
   const googleSignOutBtn = document.getElementById('googleSignOutBtn');
@@ -1508,6 +1543,7 @@
       interestRate: interestRate.value,
       roundAmounts: roundAmounts.checked,
       nextRowId: nextRowId,
+      savedAt: Date.now(),
       lotteryDrawnOrder: lotteryDrawnOrder,
       lotteryOnceOrder: lotteryOnceOrder,
       rows: rows.map((r) => ({
@@ -1551,7 +1587,9 @@
       storageStatusEl.textContent = '⚠️ ذخیره‌ی گوگل درایو با خطا مواجه شد؛ یک نسخه‌ی پشتیبان روی همین مرورگر ذخیره شد.';
       storageStatusEl.style.color = '#b45309';
     } else if (kind === 'local-only') {
-      storageStatusEl.textContent = '⚠️ فقط روی همین مرورگر ذخیره می‌شود. برای ذخیره‌ی همیشگی وارد گوگل شوید.';
+      storageStatusEl.textContent = hasSignedInBefore()
+        ? '⚠️ فعلاً فقط روی همین مرورگر ذخیره می‌شود. برای همگام‌سازی با گوگل درایو، دکمه‌ی زیر رو بزنید.'
+        : '⚠️ فقط روی همین مرورگر ذخیره می‌شود. برای ذخیره‌ی همیشگی وارد گوگل شوید.';
       storageStatusEl.style.color = '#b45309';
       googleSignInBtn.style.display = 'inline-block';
       googleSignOutBtn.style.display = 'none';
@@ -1561,6 +1599,12 @@
     }
   }
 
+  function driveError(res, message) {
+    const err = new Error(message);
+    err.status = res.status;
+    return err;
+  }
+
   async function driveFindFile() {
     const res = await fetch(
       'https://www.googleapis.com/drive/v3/files?spaces=appDataFolder&q=' +
@@ -1568,7 +1612,7 @@
         '&fields=files(id,name)',
       { headers: { Authorization: 'Bearer ' + accessToken } }
     );
-    if (!res.ok) throw new Error('drive find failed');
+    if (!res.ok) throw driveError(res, 'drive find failed');
     const data = await res.json();
     return (data.files && data.files.length > 0) ? data.files[0].id : null;
   }
@@ -1578,8 +1622,10 @@
       `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media`,
       { headers: { Authorization: 'Bearer ' + accessToken } }
     );
-    if (!res.ok) return null;
-    try { return await res.json(); } catch (e) { return null; }
+    // Never treat a failed read as "no data", or we could overwrite the
+    // saved copy with local data by mistake.
+    if (!res.ok) throw driveError(res, 'drive read failed');
+    return await res.json();
   }
 
   async function driveCreateFile(content) {
@@ -1603,7 +1649,7 @@
         body
       }
     );
-    if (!res.ok) throw new Error('drive create failed');
+    if (!res.ok) throw driveError(res, 'drive create failed');
     const data = await res.json();
     return data.id;
   }
@@ -1620,12 +1666,13 @@
         body: JSON.stringify(content)
       }
     );
-    if (!res.ok) throw new Error('drive update failed');
+    if (!res.ok) throw driveError(res, 'drive update failed');
   }
 
   async function doSave() {
     const state = buildState();
     try { localStorage.setItem(LOCAL_FALLBACK_KEY, JSON.stringify(state)); } catch (e) {}
+    writeAutoBackupFile();
 
     if (!accessToken) {
       setStorageStatus('local-only');
@@ -1640,6 +1687,17 @@
       }
       setStorageStatus('cloud-ok');
     } catch (e) {
+      handleDriveFailure(e);
+    }
+  }
+
+  // An expired Google sign-in (they last about an hour) shows up as HTTP 401.
+  function handleDriveFailure(e) {
+    if (e && e.status === 401) {
+      accessToken = null;
+      driveFileId = null;
+      setStorageStatus('local-only');
+    } else {
       setStorageStatus('cloud-error');
     }
   }
@@ -1653,15 +1711,30 @@
     setStorageStatus('checking');
     try {
       driveFileId = await driveFindFile();
+
+      let localTs = 0;
+      try {
+        const raw = localStorage.getItem(LOCAL_FALLBACK_KEY);
+        if (raw) localTs = (JSON.parse(raw).savedAt) || 0;
+      } catch (e) {}
+
       if (driveFileId) {
         const remoteState = await driveReadFile(driveFileId);
-        if (remoteState) loadStateIntoUI(remoteState);
+        const remoteTs = (remoteState && remoteState.savedAt) || 0;
+        if (remoteState && remoteTs >= localTs) {
+          // The copy on Google Drive is the newer one.
+          loadStateIntoUI(remoteState);
+          try { localStorage.setItem(LOCAL_FALLBACK_KEY, JSON.stringify(remoteState)); } catch (e) {}
+        } else {
+          // Changes made on this device since the last connection are newer.
+          await driveUpdateFile(driveFileId, buildState());
+        }
       } else {
         driveFileId = await driveCreateFile(buildState());
       }
       setStorageStatus('cloud-ok');
     } catch (e) {
-      setStorageStatus('cloud-error');
+      handleDriveFailure(e);
     }
   }
 
@@ -1684,6 +1757,7 @@
       callback: (resp) => {
         if (resp && resp.access_token) {
           accessToken = resp.access_token;
+          try { localStorage.setItem(GOOGLE_FLAG_KEY, '1'); } catch (e) {}
           signInHint.style.display = 'none';
           syncFromDrive();
         } else {
@@ -1697,10 +1771,9 @@
         if (userTappedSignIn) signInHint.style.display = 'block';
       }
     });
-    // Try a silent sign-in first (works if the person already granted access
-    // before); if there's no prior session, this quietly does nothing and
-    // the person can use the sign-in button instead.
-    tokenClient.requestAccessToken({ prompt: '' });
+    // Deliberately NOT requesting a token here: doing it automatically on
+    // every page load pops up a Google sign-in page each time the app opens.
+    // The person connects by tapping the button instead.
   }
 
   const signInHint = document.getElementById('signInHint');
@@ -1716,8 +1789,10 @@
 
   googleSignInBtn.addEventListener('click', () => {
     userTappedSignIn = true;
-    if (!tokenClient) { initGoogleAuth(); return; }
-    tokenClient.requestAccessToken({ prompt: 'consent' });
+    if (!tokenClient) initGoogleAuth();
+    if (!tokenClient) return; // Google's script hasn't finished loading yet
+    // After the first approval, an empty prompt reconnects without asking again.
+    tokenClient.requestAccessToken({ prompt: hasSignedInBefore() ? '' : 'consent' });
   });
 
   googleSignOutBtn.addEventListener('click', () => {
@@ -1726,8 +1801,175 @@
     }
     accessToken = null;
     driveFileId = null;
+    try { localStorage.removeItem(GOOGLE_FLAG_KEY); } catch (e) {}
     setStorageStatus('local-only');
   });
+
+  // --- Backup to a file / restore from a file (works without Google) ---
+  const backupDownloadBtn = document.getElementById('backupDownloadBtn');
+  const backupRestoreBtn = document.getElementById('backupRestoreBtn');
+  const backupFileInput = document.getElementById('backupFileInput');
+
+  function toPersianDigitsForFilename(n) { return n < 10 ? '0' + n : '' + n; }
+
+  backupDownloadBtn.addEventListener('click', () => {
+    const state = buildState();
+    const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const now = new Date();
+    const filename = 'پشتیبان-وام-خانگی-' + now.getFullYear() + '-' +
+      toPersianDigitsForFilename(now.getMonth() + 1) + '-' +
+      toPersianDigitsForFilename(now.getDate()) + '.json';
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  });
+
+  backupRestoreBtn.addEventListener('click', () => {
+    backupFileInput.value = ''; // allow picking the same file twice in a row
+    backupFileInput.click();
+  });
+
+  backupFileInput.addEventListener('change', () => {
+    const file = backupFileInput.files && backupFileInput.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      let parsed;
+      try {
+        parsed = JSON.parse(reader.result);
+      } catch (e) {
+        alert('این فایل قابل خواندن نیست. مطمئن شوید فایل درستی از «دانلود پشتیبان» انتخاب کرده‌اید.');
+        return;
+      }
+      if (!parsed || !Array.isArray(parsed.rows)) {
+        alert('این فایل، فایل پشتیبان معتبری برای این برنامه نیست.');
+        return;
+      }
+      if (!confirm('اطلاعات فعلی روی صفحه با محتوای این فایل جایگزین می‌شود. مطمئنید؟')) return;
+
+      loadStateIntoUI(parsed);
+      scheduleSave();
+      alert('بازیابی با موفقیت انجام شد.');
+    };
+    reader.onerror = () => {
+      alert('خواندن فایل با خطا مواجه شد.');
+    };
+    reader.readAsText(file);
+  });
+
+  // --- Automatic backup into a chosen folder on the phone (Chrome only) ---
+  // Not supported everywhere: only recent Chrome/Edge can do this (not Safari,
+  // not Firefox, and not most in-app/WebView browsers). Where it's missing we
+  // just hide the button — the manual download/restore buttons above still work
+  // everywhere.
+  const AUTO_BACKUP_FILE_NAME = 'پشتیبان-خودکار-وام-خانگی.json';
+  const autoBackupBtn = document.getElementById('autoBackupBtn');
+  const autoBackupUnsupportedNote = document.getElementById('autoBackupUnsupportedNote');
+  let autoBackupDirHandle = null;
+  const autoBackupSupported = typeof window.showDirectoryPicker === 'function';
+
+  function idbOpen() {
+    return new Promise((resolve, reject) => {
+      const req = indexedDB.open('loan-table-db', 1);
+      req.onupgradeneeded = () => { req.result.createObjectStore('handles'); };
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error);
+    });
+  }
+  async function idbSet(key, value) {
+    const db = await idbOpen();
+    return new Promise((resolve, reject) => {
+      const tx = db.transaction('handles', 'readwrite');
+      tx.objectStore('handles').put(value, key);
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+    });
+  }
+  async function idbGet(key) {
+    const db = await idbOpen();
+    return new Promise((resolve, reject) => {
+      const tx = db.transaction('handles', 'readonly');
+      const req = tx.objectStore('handles').get(key);
+      req.onsuccess = () => resolve(req.result || null);
+      req.onerror = () => reject(req.error);
+    });
+  }
+
+  function setAutoBackupBtnState(kind, folderName) {
+    if (kind === 'off') {
+      autoBackupBtn.textContent = '📁 ساخت پوشه‌ی «وام خانگی» توی Downloads';
+    } else if (kind === 'active') {
+      autoBackupBtn.textContent = '📁 پشتیبان خودکار: «' + folderName + '» (تغییر پوشه)';
+    } else if (kind === 'needs-permission') {
+      autoBackupBtn.textContent = '📁 برای فعال‌سازی دوباره‌ی پشتیبان خودکار بزنید';
+    }
+  }
+
+  async function writeAutoBackupFile() {
+    if (!autoBackupDirHandle) return;
+    try {
+      const perm = await autoBackupDirHandle.queryPermission({ mode: 'readwrite' });
+      if (perm !== 'granted') return; // can't ask silently; needs a tap (handled by the button)
+      const fileHandle = await autoBackupDirHandle.getFileHandle(AUTO_BACKUP_FILE_NAME, { create: true });
+      const writable = await fileHandle.createWritable();
+      await writable.write(JSON.stringify(buildState(), null, 2));
+      await writable.close();
+    } catch (e) {
+      // Folder may have been moved/deleted — ignore quietly, manual backup still works.
+    }
+  }
+
+  autoBackupBtn.addEventListener('click', async () => {
+    try {
+      if (autoBackupDirHandle) {
+        const perm = await autoBackupDirHandle.queryPermission({ mode: 'readwrite' });
+        if (perm !== 'granted') {
+          const req = await autoBackupDirHandle.requestPermission({ mode: 'readwrite' });
+          if (req === 'granted') {
+            setAutoBackupBtnState('active', autoBackupDirHandle.name);
+            await writeAutoBackupFile();
+            return;
+          }
+        }
+      }
+      // Either nothing chosen yet, or the person wants to switch folders.
+      const handle = await window.showDirectoryPicker({ mode: 'readwrite', startIn: 'downloads' });
+      autoBackupDirHandle = handle;
+      await idbSet('backupDir', handle);
+      setAutoBackupBtnState('active', handle.name);
+      await writeAutoBackupFile();
+    } catch (e) {
+      // Person cancelled the folder picker — nothing to do.
+    }
+  });
+
+  async function initAutoBackup() {
+    if (!autoBackupSupported) {
+      autoBackupUnsupportedNote.style.display = 'block';
+      return;
+    }
+    autoBackupBtn.style.display = 'inline-block';
+    setAutoBackupBtnState('off');
+    try {
+      const handle = await idbGet('backupDir');
+      if (!handle) return;
+      const perm = await handle.queryPermission({ mode: 'readwrite' });
+      if (perm === 'granted') {
+        autoBackupDirHandle = handle;
+        setAutoBackupBtnState('active', handle.name);
+      } else {
+        // Browser needs a fresh tap before it will trust this folder again.
+        autoBackupDirHandle = handle;
+        setAutoBackupBtnState('needs-permission');
+      }
+    } catch (e) {
+      // No stored folder yet, or it's no longer accessible — button stays "off".
+    }
+  }
 
   function initApp() {
     // Render instantly from whatever's on this browser, without waiting on
@@ -1742,6 +1984,7 @@
     setStorageStatus('local-only');
 
     initGoogleAuth();
+    initAutoBackup();
   }
 
   initApp();
