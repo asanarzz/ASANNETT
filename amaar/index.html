@@ -1,1 +1,319 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فرم ثبت‌نام</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#EEF3F1; --card:#fff; --ink:#1d2b28; --soft:#66736f; --line:#cfdad6; --brand:#1F6F5C; --brand-d:#17564a; --err:#B23A3A; --ok:#2E7D4F; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Vazirmatn',Tahoma,sans-serif;padding:16px}
+  .wrap{max-width:640px;margin:0 auto}
+  h1{font-size:22px;font-weight:800;margin:8px 0 4px;color:var(--brand)}
+  .sub{font-size:13px;color:var(--soft);margin:0 0 16px}
+  .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 4px 16px rgba(0,0,0,.07);margin-bottom:14px}
+  .card h2{font-size:15px;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--brand);display:inline-block}
+  .row{display:grid;grid-template-columns:1fr;gap:12px}
+  @media(min-width:520px){.row.two{grid-template-columns:1fr 1fr}}
+  label{display:block;font-size:12.5px;font-weight:700;margin-bottom:5px}
+  label .req{color:var(--err)}
+  input[type=text],input[type=tel],select,textarea{
+    width:100%;font-family:inherit;font-size:14px;padding:11px 12px;border:1.5px solid var(--line);
+    border-radius:9px;background:#fff;color:var(--ink);outline:none;transition:.15s}
+  input::placeholder{color:#a9b3af;font-size:12.5px}
+  input:focus,select:focus,textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(31,111,92,.15)}
+  input.bad,select.bad,textarea.bad{border-color:var(--err)}
+  textarea{min-height:70px;resize:vertical}
+  .date3{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:8px}
+  .date3 .lbl{font-size:10.5px;color:var(--soft);text-align:center;margin-top:3px}
+  .radios{display:flex;gap:10px;flex-wrap:wrap}
+  .radios label{flex:1;min-width:90px;display:flex;align-items:center;justify-content:center;gap:6px;margin:0;font-weight:500;
+    border:1.5px solid var(--line);border-radius:9px;padding:10px;cursor:pointer}
+  .radios input{accent-color:var(--brand)}
+  .chkrow{display:flex;align-items:flex-start;gap:8px;font-size:13px;line-height:1.7}
+  .chkrow input{accent-color:var(--brand);width:18px;height:18px;margin-top:2px;flex-shrink:0}
+  .hint{font-size:11px;color:var(--soft);margin-top:4px}
+  .errmsg{font-size:11.5px;color:var(--err);margin-top:4px;min-height:14px}
+  .captcha{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .captcha .box{background:linear-gradient(135deg,#2b3a86,#8a2a6d);color:#fff;font-weight:700;letter-spacing:2px;
+    padding:10px 16px;border-radius:8px;font-family:monospace;font-size:16px;user-select:none}
+  .captcha button{background:none;border:1.5px solid var(--line);border-radius:8px;padding:8px 10px;cursor:pointer;font-size:15px}
+  button.send{width:100%;background:var(--brand);color:#fff;border:none;border-radius:11px;padding:14px;
+    font-family:inherit;font-size:16px;font-weight:800;cursor:pointer}
+  button.send:hover{background:var(--brand-d)}
+  button.send:disabled{opacity:.6;cursor:wait}
+  .status{margin-top:12px;padding:12px;border-radius:9px;font-size:13px;display:none;line-height:1.8}
+  .status.ok{display:block;background:#e6f4ec;color:var(--ok)}
+  .status.fail{display:block;background:#fbeaea;color:var(--err)}
+  .status a{color:inherit;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>فرم ثبت‌نام</h1>
+  <p class="sub">فیلدهای ستاره‌دار الزامی هستند. بعد از زدن «ارسال»، اطلاعات به ایمیل مسئول فرم ارسال می‌شود.</p>
 
+  <form id="f" novalidate>
+    <div class="card">
+      <h2>مشخصات فردی</h2>
+      <div class="row two">
+        <div><label>نام <span class="req">*</span></label><input type="text" name="نام" data-req></div>
+        <div><label>نام خانوادگی <span class="req">*</span></label><input type="text" name="نام خانوادگی" data-req></div>
+        <div><label>نام پدر <span class="req">*</span></label><input type="text" name="نام پدر" data-req></div>
+        <div>
+          <label>کد ملی <span class="req">*</span></label>
+          <input type="tel" inputmode="numeric" maxlength="10" name="کد ملی" id="nid" placeholder="لطفاً کیبورد را انگلیسی کنید" data-req>
+          <div class="errmsg" id="nidErr"></div>
+        </div>
+      </div>
+
+      <div class="row two" style="margin-top:12px">
+        <div>
+          <label>جنسیت <span class="req">*</span></label>
+          <div class="radios">
+            <label><input type="radio" name="جنسیت" value="زن"> زن</label>
+            <label><input type="radio" name="جنسیت" value="مرد"> مرد</label>
+          </div>
+        </div>
+        <div>
+          <label>وضعیت تأهل <span class="req">*</span></label>
+          <div class="radios">
+            <label><input type="radio" name="وضعیت تأهل" value="متأهل"> متأهل</label>
+            <label><input type="radio" name="وضعیت تأهل" value="مجرد"> مجرد</label>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px">
+        <label>تاریخ تولد (شمسی) <span class="req">*</span></label>
+        <div class="date3">
+          <div><select id="bd" data-req><option value="">--</option></select><div class="lbl">روز</div></div>
+          <div><select id="bm" data-req><option value="">--</option></select><div class="lbl">ماه</div></div>
+          <div><select id="by" data-req><option value="">--</option></select><div class="lbl">سال</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>اطلاعات تماس</h2>
+      <div class="row two">
+        <div>
+          <label>تلفن همراه <span class="req">*</span></label>
+          <input type="tel" inputmode="numeric" maxlength="11" name="تلفن همراه" id="mob" placeholder="09xxxxxxxxx" data-req>
+          <div class="errmsg" id="mobErr"></div>
+        </div>
+        <div><label>تلفن ثابت <span class="req">*</span></label><input type="tel" inputmode="numeric" name="تلفن ثابت" placeholder="لطفاً کیبورد را انگلیسی کنید" data-req></div>
+        <div><label>پیش‌شماره تلفن ثابت <span class="req">*</span></label><input type="tel" inputmode="numeric" maxlength="4" name="پیش‌شماره تلفن ثابت" placeholder="مثلاً 021" data-req></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>تحصیلات</h2>
+      <div class="row two">
+        <div>
+          <label>میزان تحصیلات <span class="req">*</span></label>
+          <select name="میزان تحصیلات" data-req>
+            <option value="">انتخاب کنید</option>
+            <option>زیر دیپلم</option><option>دیپلم</option><option>کاردانی</option>
+            <option>کارشناسی</option><option>کارشناسی ارشد</option><option>دکتری</option>
+          </select>
+        </div>
+        <div><label>رشته تحصیلی <span class="req">*</span></label><input type="text" name="رشته تحصیلی" data-req></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>محل سکونت</h2>
+      <div class="row two">
+        <div><label>استان محل سکونت <span class="req">*</span></label><input type="text" name="استان محل سکونت" data-req></div>
+        <div><label>شهرستان محل سکونت <span class="req">*</span></label><input type="text" name="شهرستان محل سکونت" data-req></div>
+      </div>
+      <div style="margin-top:12px">
+        <label>نام سطح جغرافیایی <span class="req">*</span></label>
+        <div class="radios">
+          <label><input type="radio" name="سطح جغرافیایی" value="شهر"> شهر</label>
+          <label><input type="radio" name="سطح جغرافیایی" value="روستا"> روستا</label>
+        </div>
+      </div>
+      <div class="row two" style="margin-top:12px">
+        <div><label>آدرس محل سکونت <span class="req">*</span></label><textarea name="آدرس محل سکونت" data-req></textarea></div>
+        <div><label>کد پستی <span class="req">*</span></label><input type="tel" inputmode="numeric" maxlength="10" name="کد پستی" placeholder="لطفاً کیبورد را انگلیسی کنید" data-req></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>اشتغال</h2>
+      <div class="row two">
+        <div>
+          <label>وضعیت فعالیت <span class="req">*</span></label>
+          <select name="وضعیت فعالیت" id="actStatus" data-req>
+            <option value="">انتخاب کنید</option>
+            <option>شاغل</option><option>بیکار</option><option>محصل/دانشجو</option>
+            <option>خانه‌دار</option><option>بازنشسته</option>
+          </select>
+        </div>
+        <div>
+          <label>نوع اشتغال <span class="req">*</span></label>
+          <input type="text" name="نوع اشتغال" placeholder="در صورت شاغل بودن" data-req>
+        </div>
+      </div>
+      <div style="margin-top:12px">
+        <label>آیا در ۳ ماه گذشته نسبت به پرداخت هزینه بیمه پایه اقدام نموده‌اید؟ <span class="req">*</span></label>
+        <select name="پرداخت بیمه پایه (۳ ماه اخیر)" data-req>
+          <option value="">انتخاب کنید</option>
+          <option>بله</option><option>خیر</option><option>در حال پیگیری</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>سوابق و مهارت‌ها</h2>
+      <div class="row" style="gap:14px">
+        <div>
+          <label>آیا تاکنون سابقه فعالیت در سرشماری‌ها یا اجرای طرح‌های آماری‌گیری قبلی داشته‌اید؟ <span class="req">*</span></label>
+          <div class="radios"><label><input type="radio" name="سابقه فعالیت آماری" value="بلی"> بلی</label><label><input type="radio" name="سابقه فعالیت آماری" value="خیر"> خیر</label></div>
+        </div>
+        <div>
+          <label>آیا تسلط عمومی و کلی برای کار با رایانه، تبلت و اینترنت دارید؟ <span class="req">*</span></label>
+          <div class="radios"><label><input type="radio" name="تسلط رایانه و اینترنت" value="بله"> بله</label><label><input type="radio" name="تسلط رایانه و اینترنت" value="خیر"> خیر</label></div>
+        </div>
+        <div>
+          <label>آیا به زبان محلی و بومی استان خود تسلط دارید؟ <span class="req">*</span></label>
+          <div class="radios"><label><input type="radio" name="تسلط زبان محلی" value="بله"> بله</label><label><input type="radio" name="تسلط زبان محلی" value="خیر"> خیر</label></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>اطلاعات بانکی</h2>
+      <div class="row two">
+        <div><label>نام بانک <span class="req">*</span></label><input type="text" name="نام بانک" data-req></div>
+        <div><label>شماره حساب <span class="req">*</span></label><input type="tel" inputmode="numeric" name="شماره حساب" placeholder="لطفاً کیبورد را انگلیسی کنید" data-req></div>
+      </div>
+      <div style="margin-top:12px">
+        <label>شماره شبا <span class="req">*</span></label>
+        <input type="text" name="شماره شبا" placeholder="IRxxxxxxxxxxxxxxxxxxxxxxxx" id="sheba" data-req>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="chkrow">
+        <input type="checkbox" id="confirm" data-req>
+        <label for="confirm" style="margin:0;font-weight:500">صحت اطلاعات فوق را تأیید می‌کنم. <span class="req">*</span></label>
+      </div>
+
+      <div class="captcha" style="margin-top:14px">
+        <label style="margin:0;flex-shrink:0">کد امنیتی <span class="req">*</span>:</label>
+        <span class="box" id="capQ"></span>
+        <button type="button" id="capRefresh" title="کد جدید">↻</button>
+      </div>
+      <input type="tel" inputmode="numeric" id="capA" placeholder="پاسخ را وارد کنید" data-req>
+      <div class="errmsg" id="capErr"></div>
+      <div class="hint">این یک کد امنیتی ساده‌ی سمت مرورگر است، صرفاً برای کاهش ارسال‌های خودکار.</div>
+    </div>
+
+    <button class="send" id="btn" type="submit">ارسال</button>
+    <div class="status" id="status"></div>
+  </form>
+</div>
+
+<script>
+/* ===== تنظیم ایمیل: ایمیل خودت رو اینجا بنویس ===== */
+const RECEIVER_EMAIL = "Asannettt@gmail.com";
+
+const MONTHS = ["فروردین","اردیبهشت","خرداد","تیر","مرداد","شهریور","مهر","آبان","آذر","دی","بهمن","اسفند"];
+const $ = s => document.querySelector(s);
+const toEn = s => String(s).replace(/[۰-۹]/g,d=>"۰۱۲۳۴۵۶۷۸۹".indexOf(d)).replace(/[٠-٩]/g,d=>"٠١٢٣٤٥٦٧٨٩".indexOf(d));
+
+/* تاریخ شمسی */
+(function(){
+  const by=$("#by"), bm=$("#bm"), bd=$("#bd");
+  for(let y=1405;y>=1300;y--) by.add(new Option(y,y));
+  MONTHS.forEach((m,i)=>bm.add(new Option(m,i+1)));
+  function days(){
+    const m=+bm.value||1, max = m<=6?31:(m<=11?30:29), cur=bd.value;
+    bd.length=1;
+    for(let d=1;d<=max;d++) bd.add(new Option(d,d));
+    if(cur && +cur<=max) bd.value=cur;
+  }
+  bm.addEventListener("change",days); days();
+})();
+
+/* کد امنیتی ساده */
+let capAns=0;
+function newCaptcha(){
+  const a=Math.floor(Math.random()*9)+1, b=Math.floor(Math.random()*9)+1;
+  capAns=a+b;
+  $("#capQ").textContent = a+" + "+b+" = ?";
+  $("#capA").value="";
+}
+$("#capRefresh").addEventListener("click", newCaptcha);
+newCaptcha();
+
+function validNid(s){
+  if(!/^\d{10}$/.test(s) || /^(\d)\1{9}$/.test(s)) return false;
+  let sum=0; for(let i=0;i<9;i++) sum += (+s[i])*(10-i);
+  const r=sum%11, c=+s[9];
+  return r<2 ? c===r : c===11-r;
+}
+
+$("#f").addEventListener("submit", async e=>{
+  e.preventDefault();
+  const st=$("#status"); st.className="status"; st.textContent="";
+  let ok=true;
+
+  document.querySelectorAll("[data-req]").forEach(el=>{
+    let bad;
+    if(el.type==="checkbox") bad = !el.checked;
+    else bad = !el.value.trim();
+    el.classList.toggle("bad",bad); if(bad) ok=false;
+  });
+
+  ["جنسیت","وضعیت تأهل","سطح جغرافیایی","سابقه فعالیت آماری","تسلط رایانه و اینترنت","تسلط زبان محلی"].forEach(name=>{
+    if(!document.querySelector(`input[name="${name}"]:checked`)) ok=false;
+  });
+
+  const nid=toEn($("#nid").value.trim()), mob=toEn($("#mob").value.trim());
+  $("#nidErr").textContent=""; $("#mobErr").textContent=""; $("#capErr").textContent="";
+  if(nid && !validNid(nid)){ $("#nidErr").textContent="کد ملی معتبر نیست"; $("#nid").classList.add("bad"); ok=false; }
+  if(mob && !/^09\d{9}$/.test(mob)){ $("#mobErr").textContent="شماره موبایل باید با ۰۹ شروع شود و ۱۱ رقم باشد"; $("#mob").classList.add("bad"); ok=false; }
+  if(+toEn($("#capA").value) !== capAns){ $("#capErr").textContent="پاسخ کد امنیتی درست نیست"; $("#capA").classList.add("bad"); ok=false; newCaptcha(); }
+
+  if(!ok){
+    st.className="status fail";
+    st.textContent="لطفاً فیلدهای مشخص‌شده (قرمز) را کامل و درست کنید.";
+    return;
+  }
+
+  const data={};
+  new FormData($("#f")).forEach((v,k)=>{ if(k && v!==undefined) data[k]=String(v).trim(); });
+  data["کد ملی"]=nid; data["تلفن همراه"]=mob;
+  data["تاریخ تولد (شمسی)"]=`${$("#bd").value}/${$("#bm").value}/${toEn($("#by").value)}  (${MONTHS[$("#bm").value-1]})`;
+  delete data["capA"];
+
+  const btn=$("#btn"); btn.disabled=true; btn.textContent="در حال ارسال...";
+  try{
+    const res = await fetch("https://formsubmit.co/ajax/"+encodeURIComponent(RECEIVER_EMAIL),{
+      method:"POST",
+      headers:{"Content-Type":"application/json","Accept":"application/json"},
+      body:JSON.stringify(Object.assign({_subject:"فرم ثبت‌نام جدید",_template:"table",_captcha:"false"},data))
+    });
+    const j = await res.json().catch(()=>({}));
+    if(res.ok && (j.success===true || j.success==="true")){
+      st.className="status ok"; st.textContent="✅ اطلاعات با موفقیت ارسال شد.";
+      $("#f").reset(); newCaptcha();
+    } else throw new Error(j.message||"send failed");
+  }catch(err){
+    const body = Object.entries(data).map(([k,v])=>k+": "+v).join("\n");
+    const href = "mailto:"+RECEIVER_EMAIL+"?subject="+encodeURIComponent("فرم ثبت‌نام جدید")+"&body="+encodeURIComponent(body);
+    st.className="status fail";
+    st.innerHTML = "ارسال خودکار انجام نشد. می‌تونی <a href='"+href+"'>از طریق برنامه‌ی ایمیل گوشی ارسالش کنی</a>.";
+  }finally{
+    btn.disabled=false; btn.textContent="ارسال";
+  }
+});
+document.querySelectorAll("input,select,textarea").forEach(el=>el.addEventListener("input",()=>el.classList.remove("bad")));
+</script>
+</body>
+</html>
