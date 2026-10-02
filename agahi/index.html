@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فرم آگاهی از سلامت دانش‌آموزان</title>
+<style>
+:root{--bg:#eef5f3;--card:#fff;--ink:#17332e;--muted:#5b7872;--line:#cfe0db;--accent:#1f7a6b;--accent-d:#155a4f;--err:#b3261e}
+@media (prefers-color-scheme:dark){:root{--bg:#10201d;--card:#183029;--ink:#e6f2ef;--muted:#9bb8b1;--line:#2c4a43;--accent:#3fb59f;--accent-d:#2d8f7c;--err:#ff8a80}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,"Vazirmatn","Segoe UI",sans-serif;line-height:1.9}
+.wrap{max-width:640px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:1.5rem;margin:8px 0 4px}
+.lead{color:var(--muted);margin:0 0 20px}
+fieldset{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:16px;margin:0 0 18px}
+legend{padding:0 8px;font-weight:bold;color:var(--accent)}
+label{display:block;margin:12px 0 4px;font-weight:600}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+.num{direction:ltr;text-align:right}
+.row{display:grid;grid-template-columns:1fr 1.4fr 1.2fr;gap:8px}
+.invalid{border-color:var(--err)}
+#msg{color:var(--err);min-height:1.6em;margin:0 0 10px}
+button{width:100%;font:inherit;font-weight:bold;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:14px;cursor:pointer}
+button:hover{background:var(--accent-d)}
+button:disabled{opacity:.6;cursor:wait}
+#thanks{display:none;text-align:center;padding:60px 16px}
+#thanks .tick{width:72px;height:72px;border-radius:50%;background:var(--accent);color:#fff;font-size:40px;line-height:72px;margin:0 auto 16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<form id="form" novalidate>
+  <h1>فرم آگاهی از سلامت دانش‌آموزان</h1>
+  <p class="lead">لطفاً همه سؤالات را پاسخ دهید. ارسال فرم بدون تکمیل همه موارد ممکن نیست.</p>
 
+  <fieldset>
+    <legend>مشخصات</legend>
+    <label for="phone">شماره موبایل پدر یا مادر</label>
+    <input id="phone" name="شماره موبایل پدر یا مادر" type="tel" inputmode="numeric" class="num" maxlength="11" placeholder="09123456789" required>
+    <label for="nid">کد ملی صاحب خط</label>
+    <input id="nid" name="کد ملی صاحب خط" type="text" inputmode="numeric" class="num" maxlength="10" required>
+    <label id="doblabel">تاریخ تولد صاحب خط</label>
+    <div class="row" role="group" aria-labelledby="doblabel">
+      <select id="dob-d" aria-label="روز"></select>
+      <select id="dob-m" aria-label="ماه"></select>
+      <select id="dob-y" aria-label="سال"></select>
+    </div>
+    <label for="sname">اسم و فامیل دانش‌آموز</label>
+    <input id="sname" name="اسم و فامیل دانش‌آموز" type="text" required>
+    <label for="grade">پایه تحصیلی دانش‌آموز</label>
+    <select id="grade" name="پایه تحصیلی دانش‌آموز" required></select>
+  </fieldset>
+
+  <fieldset id="qs">
+    <legend>سؤالات</legend>
+  </fieldset>
+
+  <p id="msg" role="alert"></p>
+  <button type="submit" id="send">ارسال</button>
+</form>
+
+<div id="thanks" role="status">
+  <div class="tick">✓</div>
+  <h1>با تشکر از شما</h1>
+  <p class="lead">فرم شما با موفقیت ارسال شد.</p>
+</div>
+</div>
+
+<script>
+const EMAIL = "Asannettt@gmail.com";
+const Q = [
+ ["میزان فعالیت بدنی شدید در هفته چند روز است؟","n",0,7,"روز"],
+ ["تعداد ساعات فعالیت شدید در هر روز چند ساعت است؟","n",0,12,"ساعت"],
+ ["میزان فعالیت بدنی متوسط در هفته چند روز است؟","n",0,7,"روز"],
+ ["تعداد ساعات فعالیت متوسط در هر روز چند ساعت است؟","n",0,12,"ساعت"],
+ ["میزان فعالیت راه رفتن در هفته چند روز است؟","n",0,7,"روز"],
+ ["تعداد ساعات فعالیت راه رفتن در هر روز چند ساعت است؟","n",0,12,"ساعت"],
+ ["مدت زمان یکجا نشستن در یک روز چند دقیقه است؟","t","","","دقیقه"],
+ ["معمولاً چه ساعتی می‌خوابد؟","s","","","",["قبل از ساعت ۱۰ شب","بین ساعت ۱۰ تا ۱۱ شب","بعد از ساعت ۱۱ شب"]],
+ ["میزان خواب در یک شبانه‌روز چند ساعت است؟","n",1,12,"ساعت"],
+ ["آیا دانش‌آموز بیماری خاصی دارد؟ (در صورت وجود، نام بیماری را بنویسید؛ در غیر این صورت «ندارد»)","t","","",""],
+ ["قد دانش‌آموز چند سانت است؟","n",80,220,"سانتی‌متر"],
+ ["وزن دانش‌آموز چند کیلو است؟","n",10,150,"کیلوگرم"]
+];
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+const box = document.getElementById("qs");
+Q.forEach((q,i)=>{
+  const id="q"+i, title=fa(i+1)+". "+q[0];
+  let field;
+  if(q[1]==="s"){
+    field=`<select id="${id}" name="${title}" required><option value="">انتخاب کنید</option>${q[5].map(o=>`<option value="${o}">${o}</option>`).join("")}</select>`;
+  } else if(q[1]==="n"){
+    let opts='<option value="">انتخاب کنید</option>';
+    for(let v=q[2];v<=q[3];v++) opts+=`<option value="${v}">${fa(v)}${q[4]?" "+q[4]:""}</option>`;
+    field=`<select id="${id}" name="${title}" required>${opts}</select>`;
+  } else {
+    field=`<textarea id="${id}" name="${title}" rows="2" required></textarea>`;
+  }
+  box.insertAdjacentHTML("beforeend",`<label for="${id}">${title}</label>${field}`);
+});
+
+const M=["فروردین","اردیبهشت","خرداد","تیر","مرداد","شهریور","مهر","آبان","آذر","دی","بهمن","اسفند"];
+const fill=(id,ph,items)=>{document.getElementById(id).innerHTML=`<option value="">${ph}</option>`+items.map(([v,t])=>`<option value="${v}">${t}</option>`).join("")};
+fill("dob-d","روز",Array.from({length:31},(_,i)=>[i+1,fa(i+1)]));
+fill("dob-m","ماه",M.map((m,i)=>[i+1,m]));
+fill("dob-y","سال",Array.from({length:86},(_,i)=>[1405-i,fa(1405-i)]));
+fill("grade","انتخاب کنید",Array.from({length:12},(_,i)=>[fa(i+1),"پایه "+fa(i+1)]));
+const form=document.getElementById("form"), msg=document.getElementById("msg"), btn=document.getElementById("send");
+form.addEventListener("submit", async e=>{
+  e.preventDefault(); msg.textContent="";
+  const els=[...form.querySelectorAll("input,select,textarea")];
+  let bad=null;
+  els.forEach(el=>{
+    const empty=!el.value.trim();
+    el.classList.toggle("invalid",empty);
+    if(empty && !bad) bad=el;
+  });
+  if(bad){ msg.textContent="لطفاً همه سؤالات را پاسخ دهید."; bad.focus(); return; }
+
+  const data={_subject:"فرم آگاهی از سلامت دانش‌آموزان",_template:"table",_captcha:"false"};
+  els.forEach(el=>{if(el.name)data[el.name]=el.value.trim()});
+  const d=id=>document.getElementById(id).value;
+  data["تاریخ تولد صاحب خط (شمسی)"]=d("dob-y")+"/"+d("dob-m")+"/"+d("dob-d");
+  btn.disabled=true; btn.textContent="در حال ارسال...";
+  try{
+    const r=await fetch("https://formsubmit.co/ajax/"+EMAIL,{
+      method:"POST",
+      headers:{"Content-Type":"application/json","Accept":"application/json"},
+      body:JSON.stringify(data)
+    });
+    const j=await r.json();
+    if(!r.ok || j.success==="false") throw new Error();
+    form.style.display="none";
+    document.getElementById("thanks").style.display="block";
+    window.scrollTo(0,0);
+  }catch(err){
+    msg.textContent="ارسال انجام نشد. اتصال اینترنت را بررسی کنید و دوباره تلاش کنید.";
+    btn.disabled=false; btn.textContent="ارسال";
+  }
+});
+</script>
+</body>
+</html>
