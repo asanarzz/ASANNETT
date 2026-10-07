@@ -1,0 +1,33 @@
+{
+ "name": "دستیار خانه",
+ "short_name": "دستیار خانه",
+ "description": "مدیریت خرید، غذا، موجودی، هزینه و قبض خانه",
+ "lang": "fa",
+ "dir": "rtl",
+ "start_url": "./index.html",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#eaf0ee",
+ "theme_color": "#1f7a6d",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
