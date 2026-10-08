@@ -386,7 +386,13 @@ const RULES=[
  s=>s.clean.map(b=>({b,d:b.s?instDue(b):(b.paid?'':b.due)})).filter(x=>x.d&&days(x.d,today())<=3).map(x=>{const n=days(x.d,today());return{t:`🧾 ${x.b.kind} «${x.b.title}» ${n<0?'سررسید گذشته':n===0?'امروز':'تا '+fa(n)+' روز دیگر'}`,b:'پرداخت شد',a:()=>payBill(x.b.id)}}),
  s=>s.meal.filter(x=>x.k==='occ').map(o=>({o,d:days(nextOcc(o),today())})).filter(x=>x.d<=7).map(x=>({t:`🎂 ${x.o.title}: ${x.d===0?'امروز':fa(x.d)+' روز دیگر'}`,b:'خرید هدیه',a:()=>addShop('هدیه '+x.o.title)})),
  s=>{const l=cfg().lastBackup,d=l?days(today(),l):99;return s.exp.length+s.inv.length+s.shop.length+s.clean.length>0&&d>=7?[{t:l?`💾 ${fa(d)} روز از آخرین پشتیبان گذشته`:'💾 هنوز پشتیبان نگرفته‌ای',b:'پشتیبان بگیر',a:()=>DO.shareBackup()}]:[]},
- s=>{if(s.meal.some(m=>m.date===today()))return[];const r=cookable()[0];return r?[{t:`🍳 برای امشب مواد «${r.n}» را داری`,b:'انتخاب',a:()=>setMeal(r.n)}]:[]}
+ s=>{const h=have(),wd=(new Date().getDay()+1)%7,ds=Math.floor(Date.now()/864e5),out=[],used=new Set();
+  for(const[k,l]of[['b','🌅 صبحانه'],['l','☀️ ناهار'],['d','🌙 شام']]){
+   if(s.meal.some(m=>(m.date===today()||m.date==='plan-'+wd)&&(m.slot||'d')===k))continue;
+   const c=RECIPES.filter(r=>r.m.includes(k)).map(r=>({r,m:r.I.filter(x=>!x.p&&!h.has(norm(x.n))).length})).filter(x=>x.m<=1&&!used.has(x.r.n)).sort((a,b)=>a.m-b.m);
+   if(!c.length)continue;const best=c.filter(x=>x.m===c[0].m),x=best[ds%best.length];used.add(x.r.n);
+   out.push({t:`${l} امروز: «${x.r.n}»${x.m?' (۱ کمبود)':' — مواد را داری'}`,b:'انتخاب',a:()=>setMeal(x.r.n,k)})}
+  return out}
 ];
 const firstUnpaid=b=>{for(let i=0;i<b.n;i++)if(!b.pm.includes(i))return i;return-1};
 const instDue=b=>{const i=b.s?firstUnpaid(b):-1;if(i<0)return'';const m0=b.s[1]-1+i,y=b.s[0]+~~(m0/12),m=m0%12+1,[g,mm,d]=j2g(y,m,Math.min(b.s[2],m>6?(m<12?30:29):31));return g+'-'+String(mm).padStart(2,'0')+'-'+String(d).padStart(2,'0')};
