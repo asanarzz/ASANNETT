@@ -1,1 +1,148 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#0a2463"><title>نبض قیمت خودرو | کافی نت آسان نت</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a2463;--card:#12338a;--tx:#eaf1ff;--mu:#a9c1f0;--g:#2563eb;--gl:#93c5fd;--ln:#2a4ba8;--wa:#fbbf24}
+*{box-sizing:border-box}:root{padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.7 Vazirmatn,Tahoma,sans-serif}
+header{background:var(--g);color:#fff;padding:calc(18px + env(safe-area-inset-top,0px)) 16px 14px}h1{margin:0;font-size:22px;font-weight:800}header p{margin:2px 0 0;color:var(--gl);font-size:14px}
+main{padding:12px;max-width:760px;margin:auto}.row{display:flex;gap:8px;flex-wrap:wrap}.row>*{flex:1}
+button,select,input,textarea{font:inherit;color:inherit;border:1px solid var(--ln);border-radius:10px;padding:10px 12px;background:var(--card);min-height:48px;width:100%}
+button{background:var(--g);color:#fff;border:0;font-weight:700;cursor:pointer}button.s{background:var(--card);color:var(--tx);border:1px solid var(--ln)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.st{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:8px;text-align:center}.st b{display:block;font-size:20px}.st span{font-size:12px;color:var(--mu)}
+nav{display:flex;gap:6px;margin:12px 0}nav button{background:var(--card);color:var(--tx);border:1px solid var(--ln)}nav button.on{background:var(--g);color:#fff}
+.tab{display:none}.tab.on{display:block}.item{display:flex;gap:10px;align-items:flex-start;background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:10px;margin:8px 0}
+.item input[type=checkbox]{width:24px;min-height:24px;margin-top:6px}.item .b{flex:1}.item .n{font-weight:700}.item .p{font-size:18px;font-weight:800;color:var(--gl)}
+.m{font-size:12.5px;color:var(--mu)}.tag{display:inline-block;border:1px solid var(--ln);border-radius:20px;padding:0 8px;font-size:12px;margin-inline-start:4px}.tag.w{color:var(--wa);border-color:var(--wa)}
+.x{width:44px;min-height:44px;padding:0;background:none;color:var(--mu);border:0;font-size:20px}label.f{display:block;font-size:14px;color:var(--mu);margin:8px 0 2px}
+#msg{position:sticky;top:0;z-index:5;margin:8px 0;padding:10px;border-radius:10px;background:var(--card);border:1px solid var(--g);display:none}
+canvas{width:100%;border:1px solid var(--ln);border-radius:10px;margin:8px 0}h3{margin:16px 0 4px}.note{font-size:13px;color:var(--mu)}
+</style></head><body>
+<header><h1>نبض قیمت خودرو</h1><p>کافی نت آسان نت · <span id="today"></span></p></header>
+<main>
+<div class="row"><button id="upd">بروزرسانی قیمت‌ها</button><button id="mk" class="s">ساخت بنر</button></div>
+<div id="msg" role="status"></div>
+<div class="stats"><div class="st"><b id="s1">۰</b><span>خودروی دارای قیمت</span></div><div class="st"><b id="s2">۰</b><span>منبع</span></div><div class="st"><b id="s3">۰</b><span>قدیمی</span></div><div class="st"><b id="s4" style="font-size:14px">—</b><span>تاریخ تازه‌ترین داده</span></div><div class="st"><b id="s5">۰</b><span>منبع خودکار با خطا</span></div><div class="st"><b id="s6">۰</b><span>انتخاب‌شده برای بنر</span></div></div>
+<nav><button data-t="t1" class="on">قیمت‌ها</button><button data-t="t2">افزودن</button><button data-t="t3">بنر</button></nav>
 
+<section id="t1" class="tab on">
+<input id="q" placeholder="جست‌وجوی خودرو…" type="search"><div class="row" style="margin-top:8px"><select id="cf"></select><select id="so"><option value="cat">مرتب: گروه</option><option value="name">نام</option><option value="price">قیمت</option><option value="date">تاریخ</option></select></div>
+<div class="row" style="margin-top:8px"><button class="s" id="sa">انتخاب همه نمایش‌داده‌شده</button><button class="s" id="sn">برداشتن انتخاب‌ها</button></div>
+<div id="list"></div></section>
+
+<section id="t2" class="tab">
+<h3>چسباندن جدول قیمت</h3><p class="note">متن یا جدول را از هر سایت کپی و اینجا بچسبانید. هر خط «نام خودرو، قیمت بازار، قیمت نمایندگی (اختیاری)» باشد؛ مثلاً «پژو ۲۰۷ اتوماتیک ۳,۷۰۰,۰۰۰,۰۰۰ ۲,۱۷۷,۰۰۰,۰۰۰» یا «۳ میلیارد و ۷۰۰ میلیون تومان». خط‌هایی که قیمت بازارشان «ناموجود» است نادیده گرفته می‌شوند.</p>
+<textarea id="pt" rows="7" placeholder="پژو 207 اتوماتیک · 3,700,000,000 · 2,177,000,000&#10;رانا پلاس · ۲ میلیارد و ۱۹۵ میلیون تومان"></textarea>
+<label class="f">نام منبع (الزامی)</label><input id="ps" placeholder="مثلاً خبرآنلاین"><label class="f">آدرس صفحه منبع (اختیاری)</label><input id="pu" dir="ltr" placeholder="https://…">
+<label class="f">تاریخ گزارش (الزامی)</label><input id="pd" type="date">
+<button id="pp" style="margin-top:10px">تشخیص قیمت‌ها</button><div id="pv"></div>
+<h3>ثبت دستی یک قیمت</h3><label class="f">نام خودرو</label><input id="mn"><label class="f">قیمت بازار (تومان، یا مثلاً «۲ میلیارد و ۲۰۰ میلیون»)</label><input id="m1"><label class="f">قیمت نمایندگی (اختیاری)</label><input id="m2">
+<label class="f">منبع</label><input id="ms" placeholder="مثلاً نمایشگاه محلی"><label class="f">تاریخ</label><input id="md" type="date"><button id="ma" style="margin-top:10px">ثبت قیمت</button>
+<h3>پشتیبان‌گیری</h3><div class="row"><button class="s" id="ej">خروجی JSON</button><button class="s" id="ec">خروجی CSV</button><button class="s" id="ij">وارد کردن JSON</button><button class="s" id="rs">نمایش موارد پنهان</button></div><input id="fi" type="file" accept=".json" hidden></section>
+
+<section id="t3" class="tab">
+<button id="lk" class="s"></button><p class="note" id="lkn"></p>
+<label class="f">عنوان بنر</label><input id="bt" value="قیمت روز خودرو"><div class="row"><div><label class="f">رنگ بالا و پایین</label><input id="ba" type="color" value="#7dd3fc"></div><div><label class="f">پس‌زمینه</label><input id="bb" type="color" value="#f0f9ff"></div><div><label class="f">رنگ متن</label><input id="bc" type="color" value="#082f49"></div></div>
+<label class="f">اندازه فونت</label><input id="bs" type="range" min="80" max="120" value="100"><label style="display:flex;gap:8px;margin:8px 0"><input id="bd" type="checkbox" checked style="width:24px;min-height:24px">نمایش تاریخ و ساعت</label>
+<p class="note">خودروهای مورد نظر را در برگه «قیمت‌ها» تیک بزنید. بنرها بر اساس شرکت جدا می‌شوند: بنر اول ایران‌خودرو، بنر دوم سایپا و بنر سوم بقیهٔ شرکت‌ها (کرمان موتور، وارداتی و…). اگر از یک گروه خودرویی انتخاب نشده باشد، بنرش ساخته نمی‌شود. قد هر بنر خودکار بلند می‌شود.</p><button id="bg">ساخت بنر</button><div id="out"></div></section>
+</main>
+<script>
+const FA='۰۱۲۳۴۵۶۷۸۹',AR='٠١٢٣٤٥٦٧٨٩';
+const norm=s=>String(s).replace(/[۰-۹]/g,d=>FA.indexOf(d)).replace(/[٠-٩]/g,d=>AR.indexOf(d)).replace(/[٬،,]/g,'').replace(/٫/g,'.');
+const T='\\d+(?:\\.\\d+)?\\s*میلیارد(?:\\s*و\\s*\\d+(?:\\.\\d+)?\\s*میلیون)?|\\d+(?:\\.\\d+)?\\s*میلیون|\\d{7,}';
+const val=t=>{const m=t.match(/^(\d+(?:\.\d+)?)\s*میلیارد(?:\s*و\s*(\d+(?:\.\d+)?)\s*میلیون)?/);if(m)return Math.round(+m[1]*1e9+(+m[2]||0)*1e6);if(/میلیون/.test(t))return Math.round(parseFloat(t)*1e6);return +t;};
+const CATS=[['وارداتی',/تویوتا|هیوندای|کیا |بنز|بی‌ام‌و|BMW|لکسوس|اوشان|Oshan|نیسان|هوندا|مزدا|فولکس|فرانتلندر|کرولا/],['کرمان موتور',/جک|کی‌ام‌سی|KMC|بک /],['ایران‌خودرو',/پژو|دنا|سورن|رانا|تارا|آریسان|ری ?را|هایما|فوتون|سمند/],['سایپا',/سهند|ساینا|کوییک|اطلس|شاهین|سایپا|زامیاد|کارون|چانگان|سیتروئن|پراید|تیبا/],['مدیران خودرو',/X22|X33|X55|تیگو|آریزو|فونیکس/],['بهمن موتور',/فیدلیتی|دیگنیتی|رسپکت|کارا|کاپرا/]];
+const cat=n=>(CATS.find(c=>c[1].test(n))||['سایر'])[0];
+function parseLine(line){
+  const raw=norm(line).replace(/\s+/g,' ').trim();if(!raw||/ناموجود|اعلام نشده|---/.test(raw))return null;
+  const cells=raw.split(/\t|\||·/).map(x=>x.trim()).filter(Boolean);let name,toks;
+  if(cells.length>=2){name=cells[0];toks=cells.slice(1).map(c=>(c.match(new RegExp(T))||[])[0]).filter(Boolean);}
+  else{const m=raw.match(new RegExp('^(.*?)\\s*((?:(?:'+T+')\\s*(?:تومان)?\\s*){1,2})$'));if(!m)return null;name=m[1];toks=m[2].match(new RegExp(T,'g'));}
+  name=(name||'').replace(/[-–:]+$/,'').trim();if(!name||!toks||!toks.length)return null;
+  const v=toks.map(val);if(v.some(n=>!(n>0)))return null;
+  return {name,price:v[0],agency:v[1]||0,cat:cat(name)};
+}
+const NP={norm,parseLine,cat};
+const S={a:['ایران‌خودرو — بازار آزاد ۱۹ مهر ۱۴۰۵ (تعادل/رکنا)','https://tejaratnews.com/','2026-10-11','daily'],b:['سایپا و سایر — ۱۹ مهر ۱۴۰۵ (اقتصاد۲۴/تعادل)','https://eghtesaad24.ir/','2026-10-11','daily'],c:['خبرآنلاین — ۱۹ مهر ۱۴۰۵','https://www.khabaronline.ir/','2026-10-11','daily'],d:['نشانه تجارت — ۱۸ مهر ۱۴۰۵','https://neshanetejarat.ir/','2026-10-10','daily'],e:['کرمان موتور — نبض قیمت ۱۹ مهر ۱۴۰۵','https://nabzgheymat.ir/','2026-10-11','daily'],f:['وارداتی — راهبرد معاصر (نمونه قیمت عرضه، مهر ۱۴۰۵)','https://rahbordemoaser.ir/','2026-09-27','offer']};
+const ROWS=[['وانت آریسان',2025e6,2026e6,'a'],['وانت آریسان (مانیتور)',2050e6,2050e6,'a'],['سورن (TU5P)',2710e6,1870e6,'a'],['سورن XU7P (رینگ فولادی)',2185e6,1725e6,'a'],['سورن XU7P',2220e6,0,'a'],['سورن پلاس دوگانه‌سوز (کپسول کوچک)',2720e6,0,'a'],['سورن پلاس دوگانه‌سوز (کپسول بزرگ)',2760e6,0,'a'],['دنا پلاس MT6 (رینگ فولادی)',2745e6,2082e6,'a'],['دنا پلاس MT6',2800e6,2172e6,'a'],['دنا پلاس اتوماتیک',3690e6,2611e6,'a'],['پژو 207 موتور TU3',2200e6,1740e6,'a'],['پژو 207 دنده‌ای (هیدرولیک)',2470e6,1792e6,'a'],['پژو 207 دنده‌ای (برقی)',2560e6,1847e6,'a'],['پژو 207 دنده‌ای پانوراما (رینگ فولادی)',2750e6,1921e6,'a'],['پژو 207 دنده‌ای پانوراما',2800e6,1966.6e6,'a'],['پژو 207 اتوماتیک',3700e6,2177e6,'a'],['پژو 207 اتوماتیک پانوراما',3840e6,2226e6,'a'],['رانا پلاس',2195e6,1622e6,'a'],['تارا دستی V1',2740e6,2063e6,'a'],['تارا اتوماتیک V4',3670e6,2470e6,'a'],['تارا اتوماتیک (توربو)',3760e6,2740e6,'a'],['هایما S7 پرو',6420e6,0,'a'],['هایما 8S',7470e6,0,'a'],['پیکاپ فوتون (اتوماتیک)',7700e6,6347e6,'a'],['ری را',4680e6,3200e6,'a'],
+['سهند S',1830e6,1031.4e6,'b'],['کوییک GX',1640e6,1063e6,'b'],['کوییک GXR (رینگ فولادی)',1650e6,797.831e6,'b'],['کوییک GXR',1690e6,825.911e6,'b'],['سایپا 151 GX',1580e6,1189.631e6,'b'],['سایپا 151 GX (پاششی)',1600e6,1212.221e6,'b'],['چانگان CS55',7950e6,5819e6,'b'],['سیتروئن C3-XR',5120e6,3389.3e6,'b'],
+['اطلس S',1730e6,1021.736e6,'c'],['اطلس GL',1800e6,1102.752e6,'c'],['اطلس G',1920e6,1136.671e6,'c'],['کارون',2955e6,1550.7e6,'c'],['زامیاد اکستند EX',2200e6,2110e6,'d'],['زامیاد اکستند EX (دوگانه‌سوز)',2425e6,2215e6,'d'],
+['بک X3',3950e6,3010e6,'e'],['جک J4',2750e6,2950e6,'e'],['جک S3',1590e6,0,'e'],['جک SR3',4100e6,3141e6,'e'],['جک SR6',6150e6,4300e6,'e'],['کی‌ام‌سی A5',3060e6,0,'e'],['کی‌ام‌سی J7',6700e6,4572e6,'e'],['کی‌ام‌سی T8',6400e6,5800e6,'e'],['کی‌ام‌سی T9',9000e6,6500e6,'e'],['کی‌ام‌سی X5',6250e6,4293e6,'e'],['کی‌ام‌سی ایگل',3130e6,2482e6,'e'],
+['تویوتا فرانتلندر',7370e6,0,'f'],['تویوتا کرولا کراس',6920e6,0,'f'],['تویوتا کرولا',5720e6,0,'f'],['چانگان Oshan E2 Pro',2880e6,0,'f']];
+const SEED={updated:'2026-10-11',items:ROWS.map(r=>({name:r[0],price:Math.round(r[1]),agency:Math.round(r[2]),cat:cat(r[0]),source:S[r[3]][0],url:S[r[3]][1],reportDate:S[r[3]][2],kind:S[r[3]][3]}))};
+const $=s=>document.querySelector(s),fa=n=>Number(n).toLocaleString('fa-IR'),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const KIND={daily:'قیمت بازار روز',offer:'قیمت عرضه (نه بازار آزاد)',manual:'ثبت دستی',pasted:'چسبانده‌شده از گزارش',scraped:'دریافت خودکار'};
+const ld=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}},sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch{}};
+let base=SEED.items,scr=[],log=[],man=ld('cp_manual',[]),off=new Set(ld('cp_off',[])),sel=new Set(ld('cp_sel',[]));
+const pd=d=>d?new Date(d).toLocaleDateString('fa-IR-u-ca-persian',{year:'numeric',month:'long',day:'numeric'}):'تاریخ نامشخص';
+const dt=x=>x.reportDate||x.date||null,age=x=>dt(x)?(Date.now()-new Date(dt(x)))/864e5:999,stale=x=>age(x)>3;
+const fmt=n=>{let b=Math.floor(n/1e9),m=Math.round(n%1e9/1e6);if(m>=1000){b++;m=0}return [b?fa(b)+' میلیارد':'',m?fa(m)+' میلیون':''].filter(Boolean).join(' و ')||fa(n)};
+const pt=x=>fmt(x.price);
+const key=x=>x.name+'|'+x.source+'|'+(dt(x)||'');
+const all=()=>[...base,...scr,...man].filter(x=>x&&x.name&&x.price>0).map(x=>({...x,k:key(x)}));
+const shown=()=>{const q=norm($('#q').value).trim(),c=$('#cf').value;let a=all().filter(x=>!off.has(x.k)&&(!q||norm(x.name).includes(q))&&(!c||x.cat===c));
+ const s=$('#so').value;a.sort((p,q)=>s==='name'?p.name.localeCompare(q.name,'fa'):s==='price'?p.price-q.price:s==='date'?new Date(dt(q)||0)-new Date(dt(p)||0):p.cat.localeCompare(q.cat,'fa')||p.name.localeCompare(q.name,'fa'));return a;};
+function msg(t,bad){const m=$('#msg');m.textContent=t;m.style.display='block';m.style.borderColor=bad?'var(--wa)':'var(--g)';clearTimeout(msg.t);msg.t=setTimeout(()=>m.style.display='none',6000);}
+function render(){const a=all(),v=a.filter(x=>!off.has(x.k));const cats=[...new Set(v.map(x=>x.cat))].sort((p,q)=>p.localeCompare(q,'fa'));const cur=$('#cf').value;
+ $('#cf').innerHTML='<option value="">همه گروه‌ها</option>'+cats.map(c=>`<option ${c===cur?'selected':''}>${esc(c)}</option>`).join('');
+ const L=shown();$('#list').innerHTML=L.length?L.map(x=>`<div class="item"><input type="checkbox" data-k="${esc(x.k)}" ${sel.has(x.k)?'checked':''} aria-label="انتخاب"><div class="b"><div class="n">${esc(x.name)} <span class="m">· ${esc(x.cat)}</span></div><div class="p">${pt(x)} <span class="m">تومان</span></div><div class="m">${fa(x.price)} تومان${x.agency?' · نمایندگی: '+fmt(x.agency):''}</div><div class="m"><span class="tag">${KIND[x.kind]||'نامشخص'}</span>${stale(x)?'<span class="tag w">قدیمی و نیازمند بررسی</span>':''}<br>${esc(x.source)} · ${pd(dt(x))}${x.url?` · <a href="${esc(x.url)}" target="_blank" rel="noopener">منبع</a>`:''}</div></div><button class="x" data-x="${esc(x.k)}" aria-label="پنهان یا حذف">✕</button></div>`).join(''):'<p class="note">داده‌ای برای نمایش نیست. از برگه «افزودن» گزارش بچسبانید یا قیمت ثبت کنید.</p>';
+ $('#s1').textContent=fa(v.length);$('#s2').textContent=fa(new Set(v.map(x=>x.source)).size);$('#s3').textContent=fa(v.filter(stale).length);
+ const nd=v.map(dt).filter(Boolean).sort().pop();$('#s4').textContent=nd?pd(nd):'—';$('#s5').textContent=fa(log.filter(l=>l.status==='error').length);$('#s6').textContent=fa([...sel].filter(k=>v.some(x=>x.k===k)).length);}
+document.addEventListener('change',e=>{const k=e.target.dataset?.k;if(k){e.target.checked?sel.add(k):sel.delete(k);sv('cp_sel',[...sel]);render();}});
+document.addEventListener('click',e=>{const k=e.target.dataset?.x;if(!k)return;const i=man.findIndex(x=>key(x)===k);if(i>=0){if(!confirm('این قیمت ثبت‌شده حذف شود؟'))return;man.splice(i,1);sv('cp_manual',man);}else{off.add(k);sv('cp_off',[...off]);}sel.delete(k);sv('cp_sel',[...sel]);render();});
+['q','cf','so'].forEach(i=>$('#'+i).addEventListener('input',render));
+$('#sa').onclick=()=>{shown().forEach(x=>sel.add(x.k));sv('cp_sel',[...sel]);render();};$('#sn').onclick=()=>{sel.clear();sv('cp_sel',[]);render();};$('#rs').onclick=()=>{off.clear();sv('cp_off',[]);render();msg('موارد پنهان برگشتند.');};
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button,.tab').forEach(e=>e.classList.remove('on'));b.classList.add('on');$('#'+b.dataset.t).classList.add('on');scrollTo(0,0);});
+$('#mk').onclick=()=>document.querySelector('[data-t=t3]').click();
+async function update(auto){if(!/^https?:/.test(location.protocol)){render();if(!auto)msg("برنامه از فایل محلی باز شده؛ قیمت‌های داخل خود برنامه نمایش داده می‌شوند. بروزرسانی خودکار فقط روی آدرس اینترنتی (گیت‌هاب) کار می‌کند.");return;}const b=$('#upd');b.disabled=true;b.textContent='در حال دریافت…';let ok=0,err=[],miss=0;
+ for(const [f,set] of [['data/prices.json',j=>base=j.items||[]],['data/scraped.json',j=>{scr=j.items||[];log=j.log||[]}]]){try{const r=await fetch(f+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);set(await r.json());ok++;}catch(e){if(e.message==='HTTP 404')miss++;else err.push(f.split('/')[1]+': '+e.message);}}
+ b.disabled=false;b.textContent='بروزرسانی قیمت‌ها';render();
+ if(err.length)msg((ok?'بخشی دریافت نشد. ':'دریافت نشد. ')+(navigator.onLine?'':'اینترنت قطع است. ')+'آخرین داده ذخیره‌شده نمایش داده می‌شود. '+err.join(' | '),true);else if(!auto)msg(miss?'قیمت‌ها داخل خود برنامه‌اند. برای قیمت جدید، گزارش را در برگه «افزودن» بچسبانید.':'بروزرسانی انجام شد.');}
+$('#upd').onclick=()=>update(false);
+let pend=[];$('#pp').onclick=()=>{const lines=$('#pt').value.split(/\n/).filter(l=>l.trim());pend=[];let bad=[];lines.forEach(l=>{const r=parseLine(l);r?pend.push(r):bad.push(l)});
+ $('#pv').innerHTML=(pend.length?`<p><b>${fa(pend.length)} خودرو تشخیص داده شد:</b></p>`+pend.map(x=>`<div class="item"><div class="b"><div class="n">${esc(x.name)} <span class="m">· ${esc(x.cat)}</span></div><div class="p">${pt(x)}</div>${x.agency?`<div class="m">نمایندگی: ${fmt(x.agency)}</div>`:''}</div></div>`).join('')+'<button id="pa">افزودن همه</button>':'<p class="note">هیچ قیمتی تشخیص داده نشد.</p>')+(bad.length?`<p class="note">${fa(bad.length)} خط تشخیص داده نشد و نادیده گرفته شد:<br>${bad.slice(0,8).map(esc).join('<br>')}</p>`:'');
+ const pa=$('#pa');if(pa)pa.onclick=()=>{const s=$('#ps').value.trim(),d=$('#pd').value;if(!s||!d)return msg('نام منبع و تاریخ گزارش را وارد کنید.',true);
+  pend.forEach(x=>man.push({...x,source:s,url:$('#pu').value.trim()||null,reportDate:d,date:new Date().toISOString().slice(0,10),kind:'pasted'}));sv('cp_manual',man);$('#pt').value='';$('#pv').innerHTML='';msg(fa(pend.length)+' قیمت اضافه شد.');render();};};
+$('#ma').onclick=()=>{const n=$('#mn').value.trim(),g1=(norm($('#m1').value).match(new RegExp(T))||[])[0],g2=(norm($('#m2').value).match(new RegExp(T))||[])[0],a=g1?val(g1):0,s=$('#ms').value.trim(),d=$('#md').value;
+ if(!n||!s||!d)return msg('نام خودرو، منبع و تاریخ را وارد کنید.',true);if(!(a>0))return msg('قیمت بازار را به‌صورت عدد کامل (حداقل ۷ رقم) یا با «میلیارد/میلیون» بنویسید.',true);
+ man.push({name:n,price:a,agency:g2?val(g2):0,cat:cat(n),source:s,url:null,reportDate:d,date:new Date().toISOString().slice(0,10),kind:'manual'});sv('cp_manual',man);['mn','m1','m2'].forEach(i=>$('#'+i).value='');msg('قیمت ثبت شد.');render();};
+const dl=(name,txt,type)=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type}));a.download=name;a.click();};
+$('#ej').onclick=()=>dl('cp-backup.json',JSON.stringify({manual:man,off:[...off],sel:[...sel]},null,1),'application/json');
+$('#ec').onclick=()=>{const q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';dl('cp-prices.csv','\ufeff'+['نام,گروه,قیمت بازار (تومان),قیمت نمایندگی (تومان),منبع,تاریخ گزارش,نوع'].concat(all().map(x=>[x.name,x.cat,x.price,x.agency||'',x.source,dt(x),KIND[x.kind]].map(q).join(','))).join('\n'),'text/csv');};
+$('#ij').onclick=()=>$('#fi').click();$('#fi').onchange=async e=>{try{const j=JSON.parse(await e.target.files[0].text());if(!Array.isArray(j.manual))throw 0;const ok=j.manual.filter(x=>x&&x.name&&x.price>0&&x.source);man=ok;off=new Set(j.off||[]);sel=new Set(j.sel||[]);sv('cp_manual',man);sv('cp_off',[...off]);sv('cp_sel',[...sel]);render();msg(fa(ok.length)+' قیمت معتبر وارد شد؛ '+fa(j.manual.length-ok.length)+' مورد نامعتبر رد شد.');}catch{msg('فایل پشتیبان معتبر نیست.',true);}e.target.value='';};
+function fit(c,t,w,sz,wt){let s=sz;do{c.font=`${wt} ${s}px Vazirmatn,Tahoma,sans-serif`;s-=2;}while(c.measureText(t).width>w&&s>16);}
+function wrap(g,t,w){const ws=t.split(' ');let ls=[],c='';ws.forEach(x=>{const n=c?c+' '+x:x;if(g.measureText(n).width>w&&c){ls.push(c);c=x}else c=n});if(c)ls.push(c);return ls}
+async function banner(){const items=all().filter(x=>sel.has(x.k)&&!off.has(x.k));if(!items.length)return msg('اول در برگه «قیمت‌ها» خودروها را تیک بزنید.',true);
+ try{await Promise.all([document.fonts.load('700 36px Vazirmatn'),document.fonts.load('400 26px Vazirmatn')]);}catch{}
+ const ac=$('#ba').value,bg=$('#bb').value,tx=$('#bc').value,k=$('#bs').value/100,GR=[['ایران‌خودرو',x=>x.cat==='ایران‌خودرو'],['سایپا',x=>x.cat==='سایپا'],['سایر شرکت‌ها',x=>x.cat!=='ایران‌خودرو'&&x.cat!=='سایپا']].map(([n,f])=>[n,items.filter(f)]).filter(g=>g[1].length),pages=GR.length,out=$('#out');out.innerHTML='';
+ const lum=h=>{const n=parseInt(h.slice(1),16);return(.299*(n>>16)+.587*((n>>8)&255)+.114*(n&255))/255},lt=lum(ac)>.6,hd=lt?'#082f49':'#ffffff',hs=lt?'#075985':'#e0f2fe';
+ const NOTE='قیمت‌ها به تومان و بر اساس بازار آزاد (پیشنهاد فروشندگان) است و ممکن است تغییر کند',HH=262,LH=54;
+ const mc=document.createElement('canvas').getContext('2d');mc.direction='rtl';mc.font='400 50px Vazirmatn,Tahoma,sans-serif';const nl=wrap(mc,NOTE,1080);
+ for(let p=0;p<pages;p++){const part=GR[p][1].slice().sort((a,b)=>a.cat.localeCompare(b.cat,'fa')),ds=part.map(dt).filter(Boolean).sort(),dr=ds.length?(ds[0]===ds[ds.length-1]?'تاریخ گزارش: '+pd(ds[0]):'تاریخ گزارش‌ها: '+pd(ds[0])+' تا '+pd(ds[ds.length-1])):'';
+  mc.font='400 48px Vazirmatn,Tahoma,sans-serif';const dl2=dr?wrap(mc,dr,1080):[],FH=62+(nl.length+dl2.length-1)*LH+156,H=HH+20+part.length*88+20+FH,fy=H-FH,c=document.createElement('canvas');c.width=1200;c.height=H;const g=c.getContext('2d');g.direction='rtl';
+  g.fillStyle=bg;g.fillRect(0,0,1200,H);g.fillStyle=ac;g.fillRect(0,0,1200,HH);g.fillStyle=hs;g.fillRect(0,HH,1200,8);
+  g.textAlign='right';g.fillStyle=hd;const Tt=($('#bt').value||'قیمت روز خودرو')+' — '+GR[p][0];fit(g,Tt,1000,72*k,800);g.fillText(Tt,1140,80);
+  g.fillStyle=hs;g.font='700 64px Vazirmatn,Tahoma,sans-serif';g.fillText('کافی نت آسان نت',1140,150);
+  if($('#bd').checked){g.fillStyle=hd;const D=pd(new Date().toISOString())+' — ساعت '+new Date().toLocaleTimeString('fa-IR',{hour:'2-digit',minute:'2-digit'});fit(g,D,1000,56,400);g.fillText(D,1140,222);}
+  if(pages>1){g.textAlign='left';g.fillStyle=hd;g.font='400 36px Vazirmatn,Tahoma,sans-serif';g.fillText(`${fa(p+1)} از ${fa(pages)}`,50,222);}
+  const y0=HH+20;part.forEach((x,i)=>{const y=y0+i*88;if(i%2==0){g.fillStyle='rgba(2,132,199,.10)';g.fillRect(40,y,1120,84);}
+   const note=x.cat+(x.agency?' • نمایندگی: '+fmt(x.agency):'')+(x.kind==='offer'?' • قیمت عرضه':'')+(stale(x)?' • قدیمی':'');g.textAlign='right';g.fillStyle=tx;fit(g,x.name,620,34*k,700);g.fillText(x.name,1150,y+38);
+   g.fillStyle='#4b6a80';fit(g,note,700,24,400);g.fillText(note,1150,y+72);
+   g.textAlign='left';g.fillStyle='#075985';fit(g,pt(x),450,34*k,800);g.fillText(pt(x),55,y+55);});
+  g.fillStyle=ac;g.fillRect(0,fy,1200,FH);g.textAlign='center';g.fillStyle=hd;let yy=fy+62;
+  g.font='400 50px Vazirmatn,Tahoma,sans-serif';nl.forEach(l=>{g.fillText(l,600,yy);yy+=LH;});
+  g.font='400 48px Vazirmatn,Tahoma,sans-serif';dl2.forEach(l=>{g.fillText(l,600,yy);yy+=LH;});
+  yy+=24;g.font='800 62px Vazirmatn,Tahoma,sans-serif';g.fillText('کافی نت آسان نت',600,yy);yy+=56;g.direction='ltr';g.fillStyle=hs;g.font='700 44px Vazirmatn,Tahoma,sans-serif';g.fillText('@ASANNETT',600,yy);
+  const w=document.createElement('div');w.appendChild(c);const r=document.createElement('div');r.className='row';r.innerHTML='<button class="s">ذخیره PNG</button><button>اشتراک‌گذاری</button>';w.appendChild(r);out.appendChild(w);
+  const blob=()=>new Promise(res=>c.toBlob(res,'image/png'));
+  r.children[0].onclick=async()=>{const b=await blob(),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=`banner-${p+1}.png`;a.click();};
+  r.children[1].onclick=async()=>{const b=await blob(),f=new File([b],`banner-${p+1}.png`,{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:'نبض قیمت خودرو'});}catch{}}else msg('مرورگر اشتراک‌گذاری را پشتیبانی نمی‌کند؛ «ذخیره PNG» را بزنید.',true);};}
+ msg(fa(pages)+' بنر ساخته شد.');}
+const BK=['bt','ba','bb','bc','bs'];
+function applyLock(L){BK.concat('bd').forEach(i=>$('#'+i).disabled=L);$('#lk').textContent=L?'باز کردن قفل تنظیمات':'قفل کردن و ذخیره تنظیمات';$('#lkn').textContent=L?'تنظیمات بنر ذخیره و قفل است و هر بار که برنامه را باز کنید همین‌ها اعمال می‌شود.':'رنگ‌ها، عنوان و اندازه فونت را تنظیم کنید و بعد قفل کنید تا برای دفعه‌های بعد ذخیره شوند.';}
+(()=>{const s=ld('cp_bset',null);if(s){BK.forEach(i=>{if(s[i]!=null)$('#'+i).value=s[i]});$('#bd').checked=!!s.bd;applyLock(!!s.locked);}else applyLock(false);})();
+$('#lk').onclick=()=>{const L=!ld('cp_bset',{}).locked,s={locked:L,bd:$('#bd').checked};BK.forEach(i=>s[i]=$('#'+i).value);sv('cp_bset',s);
+ if(ld('cp_bset',{}).locked!==L)return msg('مرورگر اجازه ذخیره‌سازی نداد، پس تنظیمات برای دفعه بعد نمی‌ماند. برنامه را از یک آدرس اینترنتی (مثل گیت‌هاب) باز کنید.',true);applyLock(L);msg(L?'تنظیمات بنر ذخیره و قفل شد.':'قفل باز شد.');};
+$('#bg').onclick=()=>banner().catch(e=>msg('خطا در ساخت بنر: '+e.message,true));
+$('#today').textContent=pd(new Date().toISOString());$('#pd').value=$('#md').value=new Date().toISOString().slice(0,10);
+render();update(true);
+window.addEventListener('error',e=>msg('خطای غیرمنتظره: '+e.message,true));
+</script></body></html>
