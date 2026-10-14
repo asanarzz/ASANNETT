@@ -1,1 +1,384 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فرم خوداظهاری خانوار</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#3f63a6; --blue-dark:#2f4d87; --ink:#1c2540; --muted:#7a859c;
+  --line:#dfe6f1; --card:#fbfcfe; --bg:#f1f4f9; --ok:#1f8a5b; --err:#d64545;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",Tahoma,"Segoe UI",sans-serif;line-height:1.9}
+.wrap{max-width:560px;margin:0 auto;padding:16px 14px 40px}
+.section{background:#fff;border-radius:26px;box-shadow:0 8px 28px rgba(40,60,110,.12);margin-bottom:22px;overflow:hidden}
+.section>header{background:linear-gradient(180deg,#4a70b5,var(--blue-dark));color:#fff;padding:16px 20px;display:flex;align-items:center;gap:12px;font-weight:500;font-size:16px}
+.section>header svg{width:26px;height:26px;flex:none}
+.body{padding:16px}
+.q{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;margin-bottom:14px}
+.q:last-child{margin-bottom:0}
+.q>.title{font-weight:700;font-size:15.5px;margin:0 0 10px}
+.hint{color:var(--muted);font-size:13px;margin:-4px 0 8px}
+.opt{display:flex;align-items:center;gap:12px;padding:9px 4px;cursor:pointer;font-size:15px;user-select:none}
+.opt input{appearance:none;-webkit-appearance:none;width:24px;height:24px;flex:none;margin:0;border:2px solid #5a77ad;background:#fff;cursor:pointer;display:grid;place-items:center;transition:.15s}
+.opt input[type=radio]{border-radius:50%}
+.opt input[type=checkbox]{border-radius:7px}
+.opt input[type=radio]:checked{background:var(--blue);box-shadow:inset 0 0 0 4px #fff;border-color:var(--blue)}
+.opt input[type=checkbox]:checked{background:var(--blue);border-color:var(--blue)}
+.opt input[type=checkbox]:checked::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.opt input:focus-visible{outline:3px solid #9db6e6;outline-offset:2px}
+.sub{display:none;margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 16px}
+.sub.show{display:block;animation:open .2s ease}
+@keyframes open{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.sub .label{color:var(--blue);font-weight:700;font-size:14px;margin:0 0 4px}
+.sub .label+.opt, .sub .gap{margin-top:0}
+.sub .gap{height:14px}
+.field{margin-bottom:14px}
+.field label{display:block;font-weight:700;font-size:14px;margin-bottom:4px}
+.field input{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:14px;font:inherit;background:#fff;color:var(--ink);direction:rtl}
+.field input.ltr{direction:ltr;text-align:right}
+.field input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px #d5e0f5}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:420px){.row{grid-template-columns:1fr}}
+.consent p{margin:0 0 6px;font-size:14.5px;color:#46506a}
+.q.invalid{border-color:var(--err)}
+.field.invalid input{border-color:var(--err)}
+.msg{display:none;color:var(--err);font-size:13px;margin-top:4px}
+.invalid>.msg,.invalid .msg{display:block}
+button.submit{width:100%;border:0;border-radius:18px;padding:15px;background:var(--blue);color:#fff;font:inherit;font-weight:700;font-size:16px;cursor:pointer;box-shadow:0 6px 18px rgba(63,99,166,.35)}
+button.submit:disabled{opacity:.6}
+button.submit:focus-visible{outline:3px solid #9db6e6;outline-offset:3px}
+#status{margin-top:14px;padding:12px 14px;border-radius:14px;display:none;font-size:14.5px}
+#status.ok{display:block;background:#e4f5ec;color:var(--ok)}
+#status.bad{display:block;background:#fbe9e9;color:var(--err)}
+@media(prefers-reduced-motion:reduce){.sub.show{animation:none}}
 
+#thanks{display:none;background:#fff;border-radius:26px;box-shadow:0 8px 28px rgba(40,60,110,.12);padding:36px 22px;text-align:center}
+#thanks.show{display:block;animation:open .3s ease}
+#thanks .tick{width:84px;height:84px;border-radius:50%;background:var(--ok);margin:0 auto 18px;display:grid;place-items:center}
+#thanks .tick svg{width:44px;height:44px}
+#thanks h2{margin:0 0 8px;font-size:22px;color:var(--ink)}
+#thanks p{margin:0 0 6px;color:#46506a;font-size:15px}
+#thanks .code{display:inline-block;margin:14px 0 4px;padding:8px 18px;border-radius:14px;background:#eef2fa;color:var(--blue-dark);font-weight:700;font-size:18px;letter-spacing:1px;direction:ltr}
+#thanks button{margin-top:22px;background:#fff;color:var(--blue);border:2px solid var(--blue);box-shadow:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<form id="f" novalidate>
+
+  <!-- مشخصات سرپرست -->
+  <div class="section">
+    <header>
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+      مشخصات سرپرست خانوار
+    </header>
+    <div class="body">
+      <div class="row">
+        <div class="field" data-f="fname"><label for="fname">نام</label><input id="fname" name="نام" autocomplete="given-name"><div class="msg">نام را با حروف فارسی وارد کنید</div></div>
+        <div class="field" data-f="lname"><label for="lname">نام خانوادگی</label><input id="lname" name="نام خانوادگی" autocomplete="family-name"><div class="msg">نام خانوادگی را با حروف فارسی وارد کنید</div></div>
+      </div>
+      <div class="field" data-f="nid"><label for="nid">کد ملی</label><input class="ltr" id="nid" name="کد ملی" inputmode="numeric" maxlength="10" autocomplete="off"><div class="msg">کد ملی نامعتبر است؛ ۱۰ رقم صحیح وارد کنید</div></div>
+      <div class="field" data-f="mobile"><label for="mobile">شماره موبایل</label><input class="ltr" id="mobile" name="شماره موبایل" inputmode="tel" maxlength="11" placeholder="09123456789" pattern="09[0-9]{9}" autocomplete="tel"><div class="msg">شماره موبایل معتبر نیست؛ باید ۱۱ رقم و با 09 شروع شود (مثال: 09123456789)</div></div>
+    </div>
+  </div>
+
+  <!-- پرسش‌های خوداظهاری -->
+  <div class="section">
+    <header>
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/></svg>
+      پرسش‌های خوداظهاری
+    </header>
+    <div class="body">
+
+      <!-- 1 نهاد حمایتی -->
+      <div class="q" id="q1">
+        <p class="title">آیا شما تحت پوشش نهادهای حمایتی (کمیته امداد، سازمان بهزیستی یا سایر) هستید؟</p>
+        <label class="opt"><input type="radio" name="تحت پوشش نهاد حمایتی" value="بلی" data-toggle="s1">بلی</label>
+        <label class="opt"><input type="radio" name="تحت پوشش نهاد حمایتی" value="خیر" data-toggle="s1">خیر</label>
+        <div class="sub" id="s1">
+          <p class="label">نهاد حمایتی را انتخاب کنید (یک یا چند مورد)</p>
+          <label class="opt"><input type="checkbox" name="نهاد حمایتی" value="کمیته امداد امام خمینی">کمیته امداد امام خمینی</label>
+          <label class="opt"><input type="checkbox" name="نهاد حمایتی" value="سازمان بهزیستی کشور">سازمان بهزیستی کشور</label>
+          <label class="opt"><input type="checkbox" name="نهاد حمایتی" value="سایر">سایر</label>
+        </div>
+        <div class="msg">یک گزینه را انتخاب کنید</div>
+      </div>
+
+      <!-- 2 ملک -->
+      <div class="q" id="q2">
+        <p class="title">آیا خانوار شما ملک (زمین، مسکونی، تجاری، کشاورزی و غیره) در تملک دارد؟ (هرگونه ملک با سند رسمی، غیررسمی، قولنامه‌ای، وکالتی و نظایر این‌ها)</p>
+        <label class="opt"><input type="radio" name="دارای ملک" value="بلی" data-toggle="s2">بلی</label>
+        <label class="opt"><input type="radio" name="دارای ملک" value="خیر" data-toggle="s2">خیر</label>
+        <div class="sub" id="s2">
+          <p class="label">نوع ملک را انتخاب کنید (یک یا چند مورد)</p>
+          <label class="opt"><input type="checkbox" name="نوع ملک" value="زمین یا ملک مسکونی شهری">زمین یا ملک مسکونی شهری</label>
+          <label class="opt"><input type="checkbox" name="نوع ملک" value="زمین یا ملک مسکونی روستایی">زمین یا ملک مسکونی روستایی</label>
+          <label class="opt"><input type="checkbox" name="نوع ملک" value="زمین یا ملک تجاری / اداری / صنعتی">زمین یا ملک تجاری / اداری / صنعتی</label>
+          <label class="opt"><input type="checkbox" name="نوع ملک" value="زمین کشاورزی">زمین کشاورزی</label>
+        </div>
+        <div class="msg">یک گزینه را انتخاب کنید</div>
+      </div>
+
+      <!-- 3 وسیله نقلیه -->
+      <div class="q" id="q3">
+        <p class="title">آیا خانوار شما دارای وسیله نقلیه (انواع شامل سواری، خودرو مسافربری، باری، ماشین‌آلات کشاورزی صنعتی راه‌سازی، قایق موتوری و لنج، موتورسیکلت) می‌باشد؟</p>
+        <label class="opt"><input type="radio" name="دارای وسیله نقلیه" value="بلی" data-toggle="s3">بلی</label>
+        <label class="opt"><input type="radio" name="دارای وسیله نقلیه" value="خیر" data-toggle="s3">خیر</label>
+        <div class="sub" id="s3">
+          <p class="label">نوع وسیله نقلیه را انتخاب کنید (یک یا چند مورد)</p>
+          <label class="opt"><input type="checkbox" name="نوع وسیله نقلیه" value="سواری">سواری</label>
+          <label class="opt"><input type="checkbox" name="نوع وسیله نقلیه" value="خودرو مسافربری">خودرو مسافربری</label>
+          <label class="opt"><input type="checkbox" name="نوع وسیله نقلیه" value="باری">باری</label>
+          <label class="opt"><input type="checkbox" name="نوع وسیله نقلیه" value="ماشین‌آلات کشاورزی، صنعتی و راه‌سازی">ماشین‌آلات کشاورزی، صنعتی و راه‌سازی</label>
+          <label class="opt"><input type="checkbox" name="نوع وسیله نقلیه" value="قایق موتوری">قایق موتوری</label>
+          <label class="opt"><input type="checkbox" name="نوع وسیله نقلیه" value="لنج">لنج</label>
+          <label class="opt"><input type="checkbox" name="نوع وسیله نقلیه" value="موتورسیکلت">موتورسیکلت</label>
+        </div>
+        <div class="msg">یک گزینه را انتخاب کنید</div>
+      </div>
+
+      <!-- 4 درآمد -->
+      <div class="q" id="q4">
+        <p class="title">مجموع درآمد ماهانه خانوار از طرق مختلف چقدر است؟</p>
+        <p class="hint">شامل سهام، حقوق، سود سپرده، اجاره و موارد مشابه.</p>
+        <label class="opt"><input type="radio" name="درآمد ماهانه" value="کمتر از ۲۰ میلیون تومان">کمتر از ۲۰ میلیون تومان</label>
+        <label class="opt"><input type="radio" name="درآمد ماهانه" value="از ۲۰ تا ۴۰ میلیون تومان">از ۲۰ تا ۴۰ میلیون تومان</label>
+        <label class="opt"><input type="radio" name="درآمد ماهانه" value="از ۴۰ تا ۶۰ میلیون تومان">از ۴۰ تا ۶۰ میلیون تومان</label>
+        <label class="opt"><input type="radio" name="درآمد ماهانه" value="از ۶۰ تا ۸۰ میلیون تومان">از ۶۰ تا ۸۰ میلیون تومان</label>
+        <label class="opt"><input type="radio" name="درآمد ماهانه" value="بالای ۸۰ میلیون تومان">بالای ۸۰ میلیون تومان</label>
+        <div class="msg">یک گزینه را انتخاب کنید</div>
+      </div>
+
+      <!-- 5 و 6 وضعیت شغلی -->
+      <div class="q" id="q5">
+        <p class="title">وضعیت شغلی سرپرست خانوار چیست؟</p>
+        <label class="opt"><input type="radio" name="وضعیت شغلی" value="شاغل" data-toggle="s5">شاغل</label>
+        <label class="opt"><input type="radio" name="وضعیت شغلی" value="بازنشسته" data-toggle="s5">بازنشسته</label>
+        <label class="opt"><input type="radio" name="وضعیت شغلی" value="بیکار" data-toggle="s5" data-when="بیکار">بیکار</label>
+        <div class="sub" id="s5">
+          <p class="label">میزان تحصیلات را انتخاب کنید</p>
+          <label class="opt"><input type="radio" name="میزان تحصیلات" value="خواندن و نوشتن">خواندن و نوشتن</label>
+          <label class="opt"><input type="radio" name="میزان تحصیلات" value="سیکل">سیکل</label>
+          <label class="opt"><input type="radio" name="میزان تحصیلات" value="دیپلم">دیپلم</label>
+          <label class="opt"><input type="radio" name="میزان تحصیلات" value="کاردانی">کاردانی</label>
+          <label class="opt"><input type="radio" name="میزان تحصیلات" value="کارشناسی">کارشناسی</label>
+          <label class="opt"><input type="radio" name="میزان تحصیلات" value="کارشناسی ارشد">کارشناسی ارشد</label>
+          <label class="opt"><input type="radio" name="میزان تحصیلات" value="دکتری">دکتری</label>
+          <div class="gap"></div>
+          <p class="label">نوع مهارت را انتخاب کنید (یک یا چند مورد)</p>
+          <label class="opt"><input type="checkbox" name="نوع مهارت" value="فنی">فنی</label>
+          <label class="opt"><input type="checkbox" name="نوع مهارت" value="خدماتی">خدماتی</label>
+          <label class="opt"><input type="checkbox" name="نوع مهارت" value="کشاورزی">کشاورزی</label>
+          <label class="opt"><input type="checkbox" name="نوع مهارت" value="تولیدی">تولیدی</label>
+          <label class="opt"><input type="checkbox" name="نوع مهارت" value="ساختمانی">ساختمانی</label>
+        </div>
+        <div class="msg">وضعیت شغلی و تحصیلات را مشخص کنید</div>
+      </div>
+
+      <!-- 7 هزینه خاص -->
+      <div class="q" id="q7">
+        <p class="title">آیا خانوار شما دارای هزینه‌های خاص (بیماری خاص، بیماری صعب‌العلاج، بیماری پرهزینه مورد تأیید بیمه) می‌باشد؟</p>
+        <label class="opt"><input type="radio" name="هزینه‌های خاص" value="بلی">بلی</label>
+        <label class="opt"><input type="radio" name="هزینه‌های خاص" value="خیر">خیر</label>
+        <div class="msg">یک گزینه را انتخاب کنید</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 رضایت -->
+  <div class="section">
+    <header>
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+      اعلام رضایت و پذیرش مسئولیت
+    </header>
+    <div class="body consent">
+      <div class="q" id="c1">
+        <p>اینجانب ضمن اعلام تقاضای دریافت افزایش کالابرگ به مراجع ذی‌صلاح اجازه دسترسی به تمام اطلاعات مالی، دارایی و اموال منقول و غیرمنقول خود را به منظور استحقاق‌سنجی می‌دهم.</p>
+        <label class="opt"><input type="checkbox" name="اعلام رضایت" value="پذیرفته شد">اعلام رضایت را می‌پذیرم</label>
+        <div class="msg">برای ادامه باید تیک بزنید</div>
+      </div>
+      <div class="q" id="c2">
+        <p>اینجانب تعهد می‌نمایم در صورت اظهار خلاف واقع در این خوداظهاری ضمن قبول مسئولیت، موافقت خود را با حذف کالابرگ و استرداد مبالغ دریافتی اعلام می‌نمایم.</p>
+        <label class="opt"><input type="checkbox" name="پذیرش مسئولیت" value="تأیید شد">پذیرش مسئولیت را تأیید می‌کنم</label>
+        <div class="msg">برای ادامه باید تیک بزنید</div>
+      </div>
+      <button type="submit" class="submit" id="btn">ارسال فرم</button>
+      <div id="status" role="status"></div>
+    </div>
+  </div>
+
+</form>
+
+<div id="thanks" role="status" aria-live="polite">
+  <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+  <h2>با تشکر؛ فرم شما ارسال شد</h2>
+  <p id="tName"></p>
+  <p>پاسخ‌های شما با موفقیت ثبت و ارسال شد.</p>
+  <div>کد پیگیری</div>
+  <div class="code" id="tCode"></div>
+  <p style="font-size:13px;color:var(--muted)">لطفاً این کد را نزد خود نگه دارید.</p>
+  <button type="button" class="submit" id="again">ثبت فرم جدید</button>
+</div>
+
+</div>
+
+<script>
+// ===== تنظیمات =====
+const EMAIL = "Asannettt@gmail.com";   // ایمیل مقصد
+// ===================
+
+const $ = s => document.querySelector(s);
+const form = $("#f");
+
+// نمایش/پنهان کردن لیست‌های باز‌شونده
+form.addEventListener("change", e => {
+  const t = e.target;
+  if (t.dataset && t.dataset.toggle) {
+    const sub = document.getElementById(t.dataset.toggle);
+    const wanted = t.dataset.when || "بلی";
+    const group = form.querySelectorAll(`input[name="${t.name}"]`);
+    let open = false;
+    group.forEach(r => { if (r.checked && r.value === wanted) open = true; });
+    sub.classList.toggle("show", open);
+    if (!open) sub.querySelectorAll("input").forEach(i => i.checked = false);
+  }
+  const box = t.closest(".q"); if (box) box.classList.remove("invalid");
+});
+form.addEventListener("input", e => {
+  const f = e.target.closest(".field"); if (f) f.classList.remove("invalid");
+});
+
+// تبدیل ارقام فارسی/عربی به انگلیسی
+const fa2en = s => s.replace(/[۰-۹]/g, d => "۰۱۲۳۴۵۶۷۸۹".indexOf(d))
+                    .replace(/[٠-٩]/g, d => "٠١٢٣٤٥٦٧٨٩".indexOf(d));
+["nid","mobile"].forEach(id => $("#"+id).addEventListener("input", e => {
+  e.target.value = fa2en(e.target.value).replace(/\D/g, "");
+}));
+
+function validNID(v){
+  if (!/^\d{10}$/.test(v) || /^(\d)\1{9}$/.test(v)) return false;
+  let s = 0; for (let i = 0; i < 9; i++) s += +v[i] * (10 - i);
+  const r = s % 11, c = +v[9];
+  return r < 2 ? c === r : c === 11 - r;
+}
+const checked = name => [...form.querySelectorAll(`input[name="${name}"]:checked`)];
+
+// شماره موبایل ایران: پیش‌شماره‌های واقعی اپراتورها + رد شماره‌های الکی
+function validMobile(v){
+  if (!/^09(0[1-5]|1\d|2[0-2]|3\d|41|9\d)\d{7}$/.test(v)) return false;
+  const tail = v.slice(4);                         // ۷ رقم آخر
+  if (/^(\d)\1{6}$/.test(tail)) return false;      // مثل 0000000 یا 1111111
+  if ("01234567890".includes(tail) || "09876543210".includes(tail)) return false; // 1234567
+  return true;
+}
+const validName = v => /^[\u0600-\u06FFa-zA-Z\s‌]{2,}$/.test(v.trim());
+
+function validate(mark){
+  let ok = true, first = null;
+  const bad = el => { if (mark) el.classList.add("invalid"); ok = false; if (!first) first = el; };
+
+  if (!validName($("#fname").value)) bad($('[data-f="fname"]'));
+  if (!validName($("#lname").value)) bad($('[data-f="lname"]'));
+  if (!validNID($("#nid").value)) bad($('[data-f="nid"]'));
+  if (!validMobile($("#mobile").value)) bad($('[data-f="mobile"]'));
+
+  // سوالات بلی/خیر با لیست
+  [["q1","تحت پوشش نهاد حمایتی","نهاد حمایتی"],
+   ["q2","دارای ملک","نوع ملک"],
+   ["q3","دارای وسیله نقلیه","نوع وسیله نقلیه"]].forEach(([id, yn, list]) => {
+    const a = checked(yn)[0];
+    if (!a || (a.value === "بلی" && !checked(list).length)) bad($("#"+id));
+  });
+  if (!checked("درآمد ماهانه").length) bad($("#q4"));
+  const job = checked("وضعیت شغلی")[0];
+  if (!job || (job.value === "بیکار" && !checked("میزان تحصیلات").length)) bad($("#q5"));
+  if (!checked("هزینه‌های خاص").length) bad($("#q7"));
+  if (!checked("اعلام رضایت").length) bad($("#c1"));
+  if (!checked("پذیرش مسئولیت").length) bad($("#c2"));
+
+  if (mark && first) first.scrollIntoView({behavior:"smooth", block:"center"});
+  return ok;
+}
+
+// دکمه ارسال تا کامل شدن همه‌ی پاسخ‌ها غیرفعال می‌ماند
+function refresh(){ $("#btn").disabled = !validate(false); }
+form.addEventListener("input", refresh);
+form.addEventListener("change", refresh);
+// خطای هر فیلد بعد از خارج شدن از آن نشان داده می‌شود
+[["fname",validName],["lname",validName],["nid",validNID],["mobile",validMobile]].forEach(([id,fn]) => {
+  $("#"+id).addEventListener("blur", e => {
+    if (e.target.value) e.target.closest(".field").classList.toggle("invalid", !fn(e.target.value));
+  });
+});
+refresh();
+$("#again").addEventListener("click", () => {
+  $("#thanks").classList.remove("show");
+  form.style.display = "";
+  refresh();
+  window.scrollTo({top:0});
+});
+
+function collect(){
+  const data = {
+    "نام": $("#fname").value.trim(),
+    "نام خانوادگی": $("#lname").value.trim(),
+    "کد ملی": $("#nid").value,
+    "شماره موبایل": $("#mobile").value
+  };
+  const names = ["تحت پوشش نهاد حمایتی","نهاد حمایتی","دارای ملک","نوع ملک","دارای وسیله نقلیه",
+    "نوع وسیله نقلیه","درآمد ماهانه","وضعیت شغلی","میزان تحصیلات","نوع مهارت","هزینه‌های خاص",
+    "اعلام رضایت","پذیرش مسئولیت"];
+  names.forEach(n => {
+    const v = checked(n).map(i => i.value);
+    if (v.length) data[n] = v.join("، ");
+  });
+  return data;
+}
+
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  const st = $("#status"); st.className = ""; st.textContent = "";
+  if (!validate(true)) return;
+
+  const data = collect();
+  const btn = $("#btn"); btn.disabled = true; btn.textContent = "در حال ارسال…";
+  const code = "KH-" + Date.now().toString(36).toUpperCase().slice(-6) + Math.floor(Math.random()*90+10);
+  data["کد پیگیری"] = code;
+  const body = Object.assign({
+    _subject: `فرم خوداظهاری - ${data["نام"]} ${data["نام خانوادگی"]}`,
+    _template: "table",
+    _captcha: "false"
+  }, data);
+
+  try {
+    const res = await fetch("https://formsubmit.co/ajax/" + encodeURIComponent(EMAIL), {
+      method: "POST",
+      headers: {"Content-Type":"application/json","Accept":"application/json"},
+      body: JSON.stringify(body)
+    });
+    const j = await res.json();
+    if (!res.ok || String(j.success) === "false") throw new Error(j.message || "خطا");
+    $("#tName").textContent = `${data["نام"]} ${data["نام خانوادگی"]} عزیز`;
+    $("#tCode").textContent = code;
+    form.reset();
+    document.querySelectorAll(".sub").forEach(x => x.classList.remove("show"));
+    form.style.display = "none";
+    $("#thanks").classList.add("show");
+    window.scrollTo({top:0, behavior:"smooth"});
+  } catch (err) {
+    // راه جایگزین: باز کردن برنامه ایمیل
+    const text = Object.entries(data).map(([k,v]) => `${k}: ${v}`).join("\n");
+    const url = `mailto:${EMAIL}?subject=${encodeURIComponent(body._subject)}&body=${encodeURIComponent(text)}`;
+    st.className = "bad";
+    st.innerHTML = `ارسال خودکار انجام نشد (${String(err.message||err)}). <a href="${url}">ارسال با برنامه ایمیل</a>`;
+  } finally {
+    btn.textContent = "ارسال فرم"; refresh();
+  }
+});
+</script>
+</body>
+</html>
