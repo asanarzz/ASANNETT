@@ -1,34 +1,194 @@
 {
- "updated": "2026-10-21T05:05:34+00:00",
+ "updated": "2026-10-21T11:42:43+00:00",
  "items": [
   {
-   "name": "ولوو S90",
-   "price": 28500000000,
-   "agency": 29000000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
+   "name": "سورن پلاس دوگانه‌سوز EF7 مدل",
+   "price": 740000000,
+   "agency": 740000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
    "kind": "scraped"
   },
   {
-   "name": "ولوو XC70",
-   "price": 18500000000,
-   "agency": 15900000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
+   "name": "سورن پلاس بنزینی XU7P مدل",
+   "price": 350000000,
+   "agency": 350000000,
+   "cat": "وارداتی",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
    "kind": "scraped"
   },
   {
-   "name": "ولوو EX30",
-   "price": 7600000000,
+   "name": "دنا پلاس شش‌دنده‌‌ مدل",
+   "price": 900000000,
+   "agency": 900000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "دنا پلاس اتوماتیک آپشنال مدل",
+   "price": 875000000,
+   "agency": 875000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "207 با موتور TU3 مدل",
+   "price": 390000000,
+   "agency": 380000000,
+   "cat": "سایر",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "207 دنده‌ای با موتور TU5P مدل",
+   "price": 660000000,
+   "agency": 660000000,
+   "cat": "سایر",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "207 اتوماتیک سقف‌شیشه‌ای مدل",
+   "price": 975000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "رانا پلاس با موتور TU5P مدل",
+   "price": 250000000,
+   "agency": 250000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "تارا دنده‌ای V1 پلاس مدل",
+   "price": 940000000,
+   "agency": 950000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "تارا اتوماتیک V4 با موتور TU5P ال‌ایکس مدل",
+   "price": 800000000,
+   "agency": 800000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "ری‌را توربو 6 سرعته مدل",
+   "price": 750000000,
+   "agency": 800000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "ساینا S دنده‌ای بنزینی مدل",
+   "price": 710000000,
+   "agency": 710000000,
+   "cat": "وارداتی",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "کوییک GX L دنده‌ای مدل",
+   "price": 670000000,
+   "agency": 670000000,
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "اطلس اتوماتیک پلاس مدل",
+   "price": 350000000,
+   "agency": 400000000,
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "سهند S مدل",
+   "price": 800000000,
+   "agency": 810000000,
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "سهند پلاس اتوماتیک E مدل",
+   "price": 350000000,
+   "agency": 350000000,
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "پارس نوآ مدل",
+   "price": 900000000,
+   "agency": 900000000,
+   "cat": "سایر",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "شاهین دنده‌ای مدل",
+   "price": 870000000,
+   "agency": 880000000,
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "شاهین پلاس مدل",
+   "price": 600000000,
+   "agency": 650000000,
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
    "kind": "scraped"
   },
   {
@@ -38,1056 +198,6 @@
    "cat": "وارداتی",
    "source": "petrochemiha.ir",
    "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بی‌ام‌و 225",
-   "price": 14000000000,
-   "agency": 9400000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بی‌ام‌و 325",
-   "price": 19800000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بی‌ام‌و 530I",
-   "price": 45000000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بی‌ام‌و 735I",
-   "price": 75000000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بی‌ام‌و X2",
-   "price": 14000000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بی‌ام‌و X3",
-   "price": 25900000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بنز GLB",
-   "price": 17800000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بنز A180",
-   "price": 11350000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بنز A200",
-   "price": 15000000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بنز C200",
-   "price": 20000000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بنز E200",
-   "price": 36000000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بنز EQA",
-   "price": 15500000000,
-   "agency": 6200000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بنز EQB",
-   "price": 16000000000,
-   "agency": 8000000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بنز EQE",
-   "price": 24500000000,
-   "agency": 13700000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "چانگان یونی زد",
-   "price": 9800000000,
-   "agency": 3980000000,
-   "cat": "سایپا",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "چانگان یونی تی",
-   "price": 9450000000,
-   "agency": 7680000000,
-   "cat": "سایپا",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "رنو کولیوس",
-   "price": 9690000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "لکسوس LX600",
-   "price": 82700000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا فوررانر لیمیتد",
-   "price": 40500000000,
-   "agency": 27700000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا لندکروز GXR 4.0",
-   "price": 55900000000,
-   "agency": 37000000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا لندکروز VXR",
-   "price": 61400000000,
-   "agency": 57000000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا پرادو",
-   "price": 41600000000,
-   "agency": 27000000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا کرولا هیبرید",
-   "price": 8630000000,
-   "agency": 6540000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا کرولا کراس 2026 نیوفیس",
-   "price": 9300000000,
-   "agency": 9150000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا کمری 2.0 چین",
-   "price": 11400000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا کمری 2.5 چین",
-   "price": 15200000000,
-   "agency": 12500000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا کمری LE ژاپن",
-   "price": 16700000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا کمری لومیر",
-   "price": 19900000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا رافور 2WD",
-   "price": 11100000000,
-   "agency": 7900000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا رافور 4WD",
-   "price": 14600000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا رافور 4WD ژاپن",
-   "price": 16200000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا وایلندر 4WD",
-   "price": 13000000000,
-   "agency": 3244000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا فرانتلندر",
-   "price": 11100000000,
-   "agency": 5200000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا ونزا",
-   "price": 14000000000,
-   "agency": 3265000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا هایلندر",
-   "price": 27200000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا هایلندر فول",
-   "price": 28500000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هیوندای سوناتا 2025 پانوراما",
-   "price": 12300000000,
-   "agency": 10400000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هیوندای سوناتا 2026 پانوراما",
-   "price": 13200000000,
-   "agency": 12700000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هیوندای النترا الیت",
-   "price": 7750000000,
-   "agency": 7100000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هیوندای توسان L مدل",
-   "price": 10600000000,
-   "agency": 10600000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هیوندای توسان N Line",
-   "price": 10800000000,
-   "agency": 11300000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هیوندای سانتافه",
-   "price": 16000000000,
-   "agency": 16500000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هیوندای پالیسید",
-   "price": 33000000000,
-   "agency": 35000000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هیوندای کونا",
-   "price": 7350000000,
-   "agency": 4592000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "کیا اسپورتیج کوشا",
-   "price": 11900000000,
-   "agency": 11731000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "کیا اسپورتیج هرمس",
-   "price": 11700000000,
-   "agency": 8220000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "کیا اپتیما توربو K5",
-   "price": 11500000000,
-   "agency": 11355000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "کیا اپتیما توربو K5 هرمس",
-   "price": 11800000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "مزدا EZ60",
-   "price": 16200000000,
-   "agency": 8800000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "مزدا EZ6",
-   "price": 13900000000,
-   "agency": 8600000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "مزدا 3",
-   "price": 10200000000,
-   "agency": 2995800000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "مزدا CX-30",
-   "price": 10880000000,
-   "agency": 10600000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "مزدا CX-50",
-   "price": 14900000000,
-   "agency": 3690000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "سوزوکی سیاز",
-   "price": 5100000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "سوزوکی بالنو",
-   "price": 5800000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "سوزوکی ویتارا 2WD",
-   "price": 6800000000,
-   "agency": 0,
-   "cat": "ایران‌خودرو",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "سوزوکی ویتارا هیبرید",
-   "price": 7600000000,
-   "agency": 0,
-   "cat": "ایران‌خودرو",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "سوزوکی فرانکس هیبرید",
-   "price": 5900000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "سوزوکی جیمنی دستی 3 در",
-   "price": 6700000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "سوزوکی جیمنی اتوماتیک 3 در",
-   "price": 7100000000,
-   "agency": 3960000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "سوزوکی جیمنی 5 در",
-   "price": 8000000000,
-   "agency": 4600000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هوندا سیویک",
-   "price": 8500000000,
-   "agency": 9325000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هوندا وزل",
-   "price": 7550000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هوندا سیتی",
-   "price": 5500000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هوندا HR-V",
-   "price": 7400000000,
-   "agency": 9232000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هوندا CR-V",
-   "price": 8700000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "هوندا آکورد",
-   "price": 11100000000,
-   "agency": 9900000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "فولکس‌واگن ID4 پیور",
-   "price": 9600000000,
-   "agency": 4595000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "فولکس‌واگن ID4 پیور پلاس",
-   "price": 10400000000,
-   "agency": 4590000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "فولکس‌واگن تی‌راک",
-   "price": 9600000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "فولکس‌واگن آیدی یونیکس پیور",
-   "price": 10850000000,
-   "agency": 6300000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "فولکس‌واگن آیدی یونیکس اولترا",
-   "price": 13600000000,
-   "agency": 8301500000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "فولکس‌واگن تیگوان",
-   "price": 12900000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "فولکس‌واگن تایرون",
-   "price": 10250000000,
-   "agency": 9600000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "نیسان سیلفی آمیتیس",
-   "price": 7230000000,
-   "agency": 5700000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "نیسان سیلفی اینجوی ادیشن",
-   "price": 8070000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "نیسان قشقایی آنر",
-   "price": 8900000000,
-   "agency": 7580000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "نیسان کیکس",
-   "price": 4090000000,
-   "agency": 3450000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "نیسان ترا",
-   "price": 12600000000,
-   "agency": 3980000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "نیسان آلتیما",
-   "price": 10000000000,
-   "agency": 6680000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "نیسان ایکس‌تریل",
-   "price": 11200000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "نیسان پاترول",
-   "price": 62100000000,
-   "agency": 42000000000,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "نیسان پاترول نیسمو",
-   "price": 88000000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تانک 300",
-   "price": 15000000000,
-   "agency": 6295000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تانک 500",
-   "price": 20900000000,
-   "agency": 10980000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "تانک 700",
-   "price": 28200000000,
-   "agency": 26500000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "میتسوبیشی اوتلندر H-LINE",
-   "price": 11500000000,
-   "agency": 3228000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "میتسوبیشی اکلیپس کراس",
-   "price": 9700000000,
-   "agency": 8590000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "ام‌جی 5",
-   "price": 3420000000,
-   "agency": 2590000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "ام‌جی GT",
-   "price": 5550000000,
-   "agency": 3890000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "گک امکو هیبرید",
-   "price": 6500000000,
-   "agency": 6440100000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "گک امپو هیبریدی",
-   "price": 6000000000,
-   "agency": 5858600000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "گک GS9",
-   "price": 12500000000,
-   "agency": 10406000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "آئودی A3L",
-   "price": 8950000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "آئودی Q4",
-   "price": 9800000000,
-   "agency": 12680000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "آئودی Q5 تیپ 1",
-   "price": 9100000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "آئودی Q5 تیپ 3",
-   "price": 10600000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "آئودی Q5 تیپ 4",
-   "price": 12300000000,
-   "agency": 6676700000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "اشکودا سوپرب",
-   "price": 6850000000,
-   "agency": 4700000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "اشکودا اکتاویا",
-   "price": 6200000000,
-   "agency": 4700000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "اشکودا کاروک",
-   "price": 6050000000,
-   "agency": 4750000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بی‌وای‌دی چین ال (Qin L)",
-   "price": 6050000000,
-   "agency": 3325000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "بی‌وای‌دی سانگ پلاس",
-   "price": 10400000000,
-   "agency": 4095000000,
-   "cat": "سایر",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "سورن پلاس دوگانه‌سوز EF7 مدل",
-   "price": 750000000,
-   "agency": 740000000,
-   "cat": "ایران‌خودرو",
-   "source": "fararu.com",
-   "url": "https://fararu.com/fa/news/1011054/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-28-%D9%85%D9%87%D8%B1-1405",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "کوییک GX L دنده‌ای مدل",
-   "price": 670000000,
-   "agency": 670000000,
-   "cat": "سایپا",
-   "source": "fararu.com",
-   "url": "https://fararu.com/fa/news/1011054/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-28-%D9%85%D9%87%D8%B1-1405",
    "reportDate": "2026-10-20",
    "kind": "scraped"
   },
@@ -1165,22 +275,30 @@
  "log": [
   {
    "source": "fararu.com",
-   "url": "https://fararu.com/fa/news/1011054/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-28-%D9%85%D9%87%D8%B1-1405",
+   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
    "status": "ok",
    "count": 19,
-   "date": "2026-10-20"
+   "date": "2026-10-21"
+  },
+  {
+   "source": "tabnak.ir",
+   "url": "https://www.tabnak.ir/fa/news/1399586/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-28-%D9%85%D9%87%D8%B1-%D9%85%D8%A7%D9%87",
+   "status": "error",
+   "count": 0,
+   "date": "2026-10-20",
+   "error": "جدول قیمت کافی پیدا نشد"
+  },
+  {
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/944400/قیمت-خودرو-امروز-چهارشنبه-29-مهر-1405",
+   "status": "error",
+   "count": 0,
+   "date": "2026-10-21",
+   "error": "'ascii' codec can't encode characters in position 20-23: ordinal not in range(128)"
   },
   {
    "source": "namnak.com",
    "url": "https://namnak.com/car-prices-today-26-mehr-1405.p123176",
-   "status": "error",
-   "count": 0,
-   "date": "2026-10-18",
-   "error": "جدول قیمت کافی پیدا نشد"
-  },
-  {
-   "source": "tabnak.ir",
-   "url": "https://www.tabnak.ir/fa/news/1399250/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-26%D9%85%D9%87%D8%B1%D9%85%D8%A7%D9%87-1405",
    "status": "error",
    "count": 0,
    "date": "2026-10-18",
@@ -1192,6 +310,29 @@
    "status": "ok",
    "count": 53,
    "date": "2026-10-18"
+  },
+  {
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-price-today-27-mehr-1405.p123262",
+   "status": "error",
+   "count": 0,
+   "date": "2026-10-19",
+   "error": "جدول قیمت کافی پیدا نشد"
+  },
+  {
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011054/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-28-%D9%85%D9%87%D8%B1-1405",
+   "status": "ok",
+   "count": 19,
+   "date": "2026-10-20"
+  },
+  {
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1171480/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B9-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%82%DB%8C%D9%85%D8%AA",
+   "status": "error",
+   "count": 0,
+   "date": "2026-10-21",
+   "error": "جدول قیمت کافی پیدا نشد"
   },
   {
    "source": "petrochemiha.ir",
@@ -1213,14 +354,6 @@
    "status": "ok",
    "count": 107,
    "date": "2026-10-18"
-  },
-  {
-   "source": "tabnak.ir",
-   "url": "https://www.tabnak.ir/fa/news/1399586/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-28-%D9%85%D9%87%D8%B1-%D9%85%D8%A7%D9%87",
-   "status": "error",
-   "count": 0,
-   "date": "2026-10-20",
-   "error": "جدول قیمت کافی پیدا نشد"
   },
   {
    "source": "sarmayevabourse.ir",
