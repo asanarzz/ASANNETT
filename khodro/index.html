@@ -49,7 +49,7 @@ const FA='۰۱۲۳۴۵۶۷۸۹',AR='٠١٢٣٤٥٦٧٨٩';
 const norm=s=>String(s).replace(/[۰-۹]/g,d=>FA.indexOf(d)).replace(/[٠-٩]/g,d=>AR.indexOf(d)).replace(/[٬،,]/g,'').replace(/٫/g,'.');
 const T='\\d+(?:\\.\\d+)?\\s*میلیارد(?:\\s*و\\s*\\d+(?:\\.\\d+)?\\s*میلیون)?|\\d+(?:\\.\\d+)?\\s*میلیون|\\d{7,}';
 const val=t=>{const m=t.match(/^(\d+(?:\.\d+)?)\s*میلیارد(?:\s*و\s*(\d+(?:\.\d+)?)\s*میلیون)?/);if(m)return Math.round(+m[1]*1e9+(+m[2]||0)*1e6);if(/میلیون/.test(t))return Math.round(parseFloat(t)*1e6);return +t;};
-const CATS=[['وارداتی',/تویوتا|هیوندای|کیا |بنز|بی‌ام‌و|BMW|لکسوس|اوشان|Oshan|نیسان|هوندا|مزدا|فولکس|فرانتلندر|کرولا/],['کرمان موتور',/جک|کی‌ام‌سی|KMC|بک /],['ایران‌خودرو',/پژو|دنا|سورن|رانا|تارا|آریسان|ری ?را|هایما|فوتون|سمند/],['سایپا',/سهند|ساینا|کوییک|اطلس|شاهین|سایپا|زامیاد|کارون|چانگان|سیتروئن|پراید|تیبا/],['مدیران خودرو',/X22|X33|X55|تیگو|آریزو|فونیکس/],['بهمن موتور',/فیدلیتی|دیگنیتی|رسپکت|کارا|کاپرا/]];
+const CATS=[['وارداتی',/تویوتا|هیوندای|کیا |بنز|بی‌ام‌و|BMW|لکسوس|اوشان|Oshan|نیسان|هوندا|مزدا|فولکس|فرانتلندر|کرولا/],['کرمان موتور',/جک|کی‌ام‌سی|KMC|بک /],['ایران‌خودرو',/پژو|دنا|سورن|رانا|تارا|آریسان|ری[ \u200c]?را|هایما|فوتون|سمند/],['سایپا',/سهند|ساینا|کوییک|اطلس|شاهین|سایپا|زامیاد|کارون|چانگان|سیتروئن|پراید|تیبا/],['مدیران خودرو',/X22|X33|X55|تیگو|آریزو|فونیکس/],['بهمن موتور',/فیدلیتی|دیگنیتی|رسپکت|کارا|کاپرا/]];
 const cat=n=>(CATS.find(c=>c[1].test(n))||['سایر'])[0];
 function parseLine(line){
   const raw=norm(line).replace(/\s+/g,' ').trim();if(!raw||/ناموجود|اعلام نشده|---/.test(raw))return null;
@@ -71,13 +71,13 @@ const SEED={updated:'2026-10-11',items:ROWS.map(r=>({name:r[0],price:Math.round(
 const $=s=>document.querySelector(s),fa=n=>Number(n).toLocaleString('fa-IR'),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const KIND={daily:'قیمت بازار روز',offer:'قیمت عرضه (نه بازار آزاد)',manual:'ثبت دستی',pasted:'چسبانده‌شده از گزارش',scraped:'دریافت خودکار'};
 const ld=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}},sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch{}};
-let base=SEED.items,scr=[],log=[],man=ld('cp_manual',[]),off=new Set(ld('cp_off',[])),sel=new Set(ld('cp_sel',[]));
+let base=SEED.items,scr=[],log=[],upd=null,man=ld('cp_manual',[]),off=new Set(ld('cp_off',[])),sel=new Set(ld('cp_sel',[]));
 const pd=d=>d?new Date(d).toLocaleDateString('fa-IR-u-ca-persian',{year:'numeric',month:'long',day:'numeric'}):'تاریخ نامشخص';
 const dt=x=>x.reportDate||x.date||null,age=x=>dt(x)?(Date.now()-new Date(dt(x)))/864e5:999,stale=x=>age(x)>3;
 const fmt=n=>{let b=Math.floor(n/1e9),m=Math.round(n%1e9/1e6);if(m>=1000){b++;m=0}return [b?fa(b)+' میلیارد':'',m?fa(m)+' میلیون':''].filter(Boolean).join(' و ')||fa(n)};
 const pt=x=>fmt(x.price);
 const key=x=>x.name+'|'+x.source+'|'+(dt(x)||'');
-const all=()=>[...base,...scr,...man].filter(x=>x&&x.name&&x.price>0).map(x=>({...x,k:key(x)}));
+const all=()=>[...(scr.length?[]:base),...scr,...man].filter(x=>x&&x.name&&x.price>0).map(x=>({...x,k:key(x)}));
 const shown=()=>{const q=norm($('#q').value).trim(),c=$('#cf').value;let a=all().filter(x=>!off.has(x.k)&&(!q||norm(x.name).includes(q))&&(!c||x.cat===c));
  const s=$('#so').value;a.sort((p,q)=>s==='name'?p.name.localeCompare(q.name,'fa'):s==='price'?p.price-q.price:s==='date'?new Date(dt(q)||0)-new Date(dt(p)||0):p.cat.localeCompare(q.cat,'fa')||p.name.localeCompare(q.name,'fa'));return a;};
 function msg(t,bad){const m=$('#msg');m.textContent=t;m.style.display='block';m.style.borderColor=bad?'var(--wa)':'var(--g)';clearTimeout(msg.t);msg.t=setTimeout(()=>m.style.display='none',6000);}
@@ -93,9 +93,9 @@ $('#sa').onclick=()=>{shown().forEach(x=>sel.add(x.k));sv('cp_sel',[...sel]);ren
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button,.tab').forEach(e=>e.classList.remove('on'));b.classList.add('on');$('#'+b.dataset.t).classList.add('on');scrollTo(0,0);});
 $('#mk').onclick=()=>document.querySelector('[data-t=t3]').click();
 async function update(auto){if(!/^https?:/.test(location.protocol)){render();if(!auto)msg("برنامه از فایل محلی باز شده؛ قیمت‌های داخل خود برنامه نمایش داده می‌شوند. بروزرسانی خودکار فقط روی آدرس اینترنتی (گیت‌هاب) کار می‌کند.");return;}const b=$('#upd');b.disabled=true;b.textContent='در حال دریافت…';let ok=0,err=[],miss=0;
- for(const [f,set] of [['data/prices.json',j=>base=j.items||[]],['data/scraped.json',j=>{scr=j.items||[];log=j.log||[]}]]){try{const r=await fetch(f+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);set(await r.json());ok++;}catch(e){if(e.message==='HTTP 404')miss++;else err.push(f.split('/')[1]+': '+e.message);}}
- b.disabled=false;b.textContent='بروزرسانی قیمت‌ها';render();
- if(err.length)msg((ok?'بخشی دریافت نشد. ':'دریافت نشد. ')+(navigator.onLine?'':'اینترنت قطع است. ')+'آخرین داده ذخیره‌شده نمایش داده می‌شود. '+err.join(' | '),true);else if(!auto)msg(miss?'قیمت‌ها داخل خود برنامه‌اند. برای قیمت جدید، گزارش را در برگه «افزودن» بچسبانید.':'بروزرسانی انجام شد.');}
+ for(const [f,set] of [['data/prices.json',j=>base=j.items||[]],['data/scraped.json',j=>{scr=j.items||[];log=j.log||[];upd=j.updated||null}]]){try{const r=await fetch(f+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);set(await r.json());ok++;}catch(e){if(e.message==='HTTP 404')miss++;else err.push(f.split('/')[1]+': '+e.message);}}
+ b.disabled=false;b.textContent='بروزرسانی قیمت‌ها';render();const ua=upd?(Date.now()-new Date(upd))/864e5:null;
+ if(err.length)msg((ok?'بخشی دریافت نشد. ':'دریافت نشد. ')+(navigator.onLine?'':'اینترنت قطع است. ')+'آخرین داده ذخیره‌شده نمایش داده می‌شود. '+err.join(' | '),true);else if(ua!==null&&ua>2)msg('قیمت خودکار بیش از '+fa(Math.floor(ua))+' روز قدیمی است. تب Actions در گیت‌هاب را بررسی کنید.',true);else if(miss&&!scr.length)msg('فایل data/scraped.json هنوز ساخته نشده؛ قیمت‌های نمایش‌داده‌شده فقط عکس اولیه داخل برنامه است.',true);else if(!auto)msg(scr.length?'بروزرسانی انجام شد: '+fa(scr.length)+' خودرو.':'بروزرسانی انجام شد.');}
 $('#upd').onclick=()=>update(false);
 let pend=[];$('#pp').onclick=()=>{const lines=$('#pt').value.split(/\n/).filter(l=>l.trim());pend=[];let bad=[];lines.forEach(l=>{const r=parseLine(l);r?pend.push(r):bad.push(l)});
  $('#pv').innerHTML=(pend.length?`<p><b>${fa(pend.length)} خودرو تشخیص داده شد:</b></p>`+pend.map(x=>`<div class="item"><div class="b"><div class="n">${esc(x.name)} <span class="m">· ${esc(x.cat)}</span></div><div class="p">${pt(x)}</div>${x.agency?`<div class="m">نمایندگی: ${fmt(x.agency)}</div>`:''}</div></div>`).join('')+'<button id="pa">افزودن همه</button>':'<p class="note">هیچ قیمتی تشخیص داده نشد.</p>')+(bad.length?`<p class="note">${fa(bad.length)} خط تشخیص داده نشد و نادیده گرفته شد:<br>${bad.slice(0,8).map(esc).join('<br>')}</p>`:'');
@@ -143,6 +143,6 @@ $('#lk').onclick=()=>{const L=!ld('cp_bset',{}).locked,s={locked:L,bd:$('#bd').c
  if(ld('cp_bset',{}).locked!==L)return msg('مرورگر اجازه ذخیره‌سازی نداد، پس تنظیمات برای دفعه بعد نمی‌ماند. برنامه را از یک آدرس اینترنتی (مثل گیت‌هاب) باز کنید.',true);applyLock(L);msg(L?'تنظیمات بنر ذخیره و قفل شد.':'قفل باز شد.');};
 $('#bg').onclick=()=>banner().catch(e=>msg('خطا در ساخت بنر: '+e.message,true));
 $('#today').textContent=pd(new Date().toISOString());$('#pd').value=$('#md').value=new Date().toISOString().slice(0,10);
-render();update(true);
+render();update(true);setInterval(()=>update(true),18e5);
 window.addEventListener('error',e=>msg('خطای غیرمنتظره: '+e.message,true));
 </script></body></html>
