@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T11:42:43+00:00",
+ "updated": "2026-10-21T17:07:55+00:00",
  "items": [
   {
    "name": "سورن پلاس دوگانه‌سوز EF7 مدل",
@@ -190,86 +190,6 @@
    "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
    "reportDate": "2026-10-21",
    "kind": "scraped"
-  },
-  {
-   "name": "بی‌ام‌و IX1",
-   "price": 10200000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "ام‌وی‌ام X33 اتوماتیک",
-   "price": 4060000000,
-   "agency": 0,
-   "cat": "مدیران خودرو",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1220601/new-prices-for-domestic-and-locally-assembled-vehicles-in-the-iranian-market-28-mehr-1405/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "آریزو 6 GT",
-   "price": 6400000000,
-   "agency": 0,
-   "cat": "مدیران خودرو",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1220601/new-prices-for-domestic-and-locally-assembled-vehicles-in-the-iranian-market-28-mehr-1405/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "جک J4",
-   "price": 3240000000,
-   "agency": 0,
-   "cat": "کرمان موتور",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1220601/new-prices-for-domestic-and-locally-assembled-vehicles-in-the-iranian-market-28-mehr-1405/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "جک J7",
-   "price": 6840000000,
-   "agency": 0,
-   "cat": "کرمان موتور",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1220601/new-prices-for-domestic-and-locally-assembled-vehicles-in-the-iranian-market-28-mehr-1405/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "رسپکت",
-   "price": 5400000000,
-   "agency": 0,
-   "cat": "بهمن موتور",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1220601/new-prices-for-domestic-and-locally-assembled-vehicles-in-the-iranian-market-28-mehr-1405/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "فیدلیتی پرستیژ 7 نفره",
-   "price": 9320000000,
-   "agency": 0,
-   "cat": "بهمن موتور",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1220601/new-prices-for-domestic-and-locally-assembled-vehicles-in-the-iranian-market-28-mehr-1405/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
-  },
-  {
-   "name": "کی‌ام‌سی ایگل",
-   "price": 3200000000,
-   "agency": 0,
-   "cat": "کرمان موتور",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1220601/new-prices-for-domestic-and-locally-assembled-vehicles-in-the-iranian-market-28-mehr-1405/",
-   "reportDate": "2026-10-20",
-   "kind": "scraped"
   }
  ],
  "log": [
@@ -312,21 +232,6 @@
    "date": "2026-10-18"
   },
   {
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-price-today-27-mehr-1405.p123262",
-   "status": "error",
-   "count": 0,
-   "date": "2026-10-19",
-   "error": "جدول قیمت کافی پیدا نشد"
-  },
-  {
-   "source": "fararu.com",
-   "url": "https://fararu.com/fa/news/1011054/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-28-%D9%85%D9%87%D8%B1-1405",
-   "status": "ok",
-   "count": 19,
-   "date": "2026-10-20"
-  },
-  {
    "source": "qudsonline.ir",
    "url": "https://www.qudsonline.ir/news/1171480/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B9-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%82%DB%8C%D9%85%D8%AA",
    "status": "error",
@@ -335,33 +240,11 @@
    "error": "جدول قیمت کافی پیدا نشد"
   },
   {
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1011054/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-28-%D9%85%D9%87%D8%B1-1405",
    "status": "ok",
-   "count": 107,
+   "count": 19,
    "date": "2026-10-20"
-  },
-  {
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1220601/new-prices-for-domestic-and-locally-assembled-vehicles-in-the-iranian-market-28-mehr-1405/",
-   "status": "ok",
-   "count": 45,
-   "date": "2026-10-20"
-  },
-  {
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D8%AA%DB%8C%D8%AA%D8%B1-%D9%BE%DB%8C%D8%B4%D9%86%D9%87%D8%A7%D8%AF%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF/",
-   "status": "ok",
-   "count": 107,
-   "date": "2026-10-18"
-  },
-  {
-   "source": "sarmayevabourse.ir",
-   "url": "https://sarmayevabourse.ir/26202/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b2%db%b6-%d9%85%d9%87%d8%b1-%db%b1%db%b4%db%b0%db%b5-%d8%aa%d8%a7%d8%b1%d8%a7-%d9%88-%d9%85%d8%b2%d8%af",
-   "status": "error",
-   "count": 0,
-   "date": "2026-10-18",
-   "error": "جدول قیمت کافی پیدا نشد"
   }
  ]
 }
