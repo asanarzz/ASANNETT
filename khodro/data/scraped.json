@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T21:38:35+00:00",
+ "updated": "2026-10-22T04:37:43+00:00",
  "items": [
   {
    "name": "پراید 151 SE",
@@ -162,12 +162,12 @@
    "kind": "scraped"
   },
   {
-   "name": "کوییک GX L دنده‌ای مدل",
-   "price": 670000000,
-   "agency": 670000000,
+   "name": "سهند S",
+   "price": 1805000000,
+   "agency": 1031400000,
    "cat": "سایپا",
-   "source": "fararu.com",
-   "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "source": "khabaronline.ir",
+   "url": "https://www.khabaronline.ir/news/2291102/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B9-%D9%85%D9%87%D8%B1%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%87%D9%86%D8%AF-%DB%B1%DB%B0%DB%B5-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B1%DB%8C%D8%B2%D8%B4",
    "reportDate": "2026-10-21",
    "kind": "scraped"
   }
@@ -176,10 +176,17 @@
   {
    "source": "khabaronline.ir",
    "url": "https://www.khabaronline.ir/news/2291102/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B9-%D9%85%D9%87%D8%B1%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%87%D9%86%D8%AF-%DB%B1%DB%B0%DB%B5-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B1%DB%8C%D8%B2%D8%B4",
+   "status": "ok",
+   "count": 45,
+   "date": "2026-10-21"
+  },
+  {
+   "source": "tabnak.ir",
+   "url": "https://www.tabnak.ir/fa/news/1399586/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-28-%D9%85%D9%87%D8%B1-%D9%85%D8%A7%D9%87",
    "status": "error",
    "count": 0,
-   "date": "2026-10-21",
-   "error": "<urlopen error [Errno -3] Temporary failure in name resolution>"
+   "date": "2026-10-20",
+   "error": "جدول قیمت کافی پیدا نشد"
   },
   {
    "source": "fararu.com",
@@ -197,20 +204,12 @@
    "error": "'ascii' codec can't encode characters in position 20-23: ordinal not in range(128)"
   },
   {
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-today-26-mehr-1405.p123176",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1171480/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B9-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%82%DB%8C%D9%85%D8%AA",
    "status": "error",
    "count": 0,
-   "date": "2026-10-18",
-   "error": "<urlopen error [Errno -3] Temporary failure in name resolution>"
-  },
-  {
-   "source": "bitpin.ir",
-   "url": "https://bitpin.ir/academy/iran-khodro-saipa-price-today-18-oct/",
-   "status": "error",
-   "count": 0,
-   "date": "2026-10-18",
-   "error": "<urlopen error [Errno -3] Temporary failure in name resolution>"
+   "date": "2026-10-21",
+   "error": "جدول قیمت کافی پیدا نشد"
   },
   {
    "source": "fararu.com",
@@ -220,11 +219,11 @@
    "date": "2026-10-20"
   },
   {
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1220601/new-prices-for-domestic-and-locally-assembled-vehicles-in-the-iranian-market-28-mehr-1405/",
+   "source": "eghtesaad24.ir",
+   "url": "https://eghtesaad24.ir/fa/news/384625/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405-%D8%AC%D8%AF%D9%88%D9%84",
    "status": "ok",
-   "count": 45,
-   "date": "2026-10-20"
+   "count": 28,
+   "date": "2026-10-21"
   },
   {
    "source": "andishemoaser.ir",
@@ -241,27 +240,11 @@
    "date": "2026-10-20"
   },
   {
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D8%AA%DB%8C%D8%AA%D8%B1-%D9%BE%DB%8C%D8%B4%D9%86%D9%87%D8%A7%D8%AF%DB%8C-%D8%A8%D8%B1%D8%A7%DB%8C-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF/",
+   "source": "gadgetnews.net",
+   "url": "https://gadgetnews.net/1220601/new-prices-for-domestic-and-locally-assembled-vehicles-in-the-iranian-market-28-mehr-1405/",
    "status": "ok",
-   "count": 107,
-   "date": "2026-10-18"
-  },
-  {
-   "source": "sarmayevabourse.ir",
-   "url": "https://sarmayevabourse.ir/26202/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b2%db%b6-%d9%85%d9%87%d8%b1-%db%b1%db%b4%db%b0%db%b5-%d8%aa%d8%a7%d8%b1%d8%a7-%d9%88-%d9%85%d8%b2%d8%af",
-   "status": "error",
-   "count": 0,
-   "date": "2026-10-18",
-   "error": "جدول قیمت کافی پیدا نشد"
-  },
-  {
-   "source": "tabnak.ir",
-   "url": "https://www.tabnak.ir/fa/news/1399586/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-28-%D9%85%D9%87%D8%B1-%D9%85%D8%A7%D9%87",
-   "status": "error",
-   "count": 0,
-   "date": "2026-10-20",
-   "error": "<urlopen error [Errno -3] Temporary failure in name resolution>"
+   "count": 45,
+   "date": "2026-10-20"
   }
  ]
 }
