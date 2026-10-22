@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T04:37:43+00:00",
+ "updated": "2026-10-22T11:45:50+00:00",
  "items": [
   {
    "name": "پراید 151 SE",
@@ -166,8 +166,98 @@
    "price": 1805000000,
    "agency": 1031400000,
    "cat": "سایپا",
-   "source": "khabaronline.ir",
-   "url": "https://www.khabaronline.ir/news/2291102/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B9-%D9%85%D9%87%D8%B1%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%87%D9%86%D8%AF-%DB%B1%DB%B0%DB%B5-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B1%DB%8C%D8%B2%D8%B4",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/944400/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "X33 کراس (اتوماتیک)",
+   "price": 4310000000,
+   "agency": 3021000000,
+   "cat": "مدیران خودرو",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/944400/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "X55 پرو",
+   "price": 5145000000,
+   "agency": 3888000000,
+   "cat": "مدیران خودرو",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/944400/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "آریزو 5",
+   "price": 4270000000,
+   "agency": 0,
+   "cat": "مدیران خودرو",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/944400/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "بک X3",
+   "price": 4305000000,
+   "agency": 3010000000,
+   "cat": "کرمان موتور",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/944400/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "جک J4",
+   "price": 3250000000,
+   "agency": 2950000000,
+   "cat": "کرمان موتور",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/944400/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "جک SR3",
+   "price": 4640000000,
+   "agency": 3141000000,
+   "cat": "کرمان موتور",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/944400/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "رسپکت (نیو)",
+   "price": 5400000000,
+   "agency": 3930000000,
+   "cat": "بهمن موتور",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/944400/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "فیدلیتی الیت (7 نفره)",
+   "price": 7615000000,
+   "agency": 6458000000,
+   "cat": "بهمن موتور",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/944400/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "reportDate": "2026-10-21",
+   "kind": "scraped"
+  },
+  {
+   "name": "فیدلیتی پرستیژ (7 نفره)",
+   "price": 9000000000,
+   "agency": 0,
+   "cat": "بهمن موتور",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/944400/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
    "reportDate": "2026-10-21",
    "kind": "scraped"
   }
@@ -189,6 +279,14 @@
    "error": "جدول قیمت کافی پیدا نشد"
   },
   {
+   "source": "rokna.net",
+   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1260152-%D9%82%DB%8C%D9%85%D8%AA-%D8%B1%D9%88%D8%B2-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%D9%85%D9%87%D8%B1-%D8%B1%DB%8C-%D8%B1%D8%A7-%D8%A8%D9%87-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B1%D8%B3%DB%8C%D8%AF",
+   "status": "error",
+   "count": 0,
+   "date": "2026-10-22",
+   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
+  },
+  {
    "source": "fararu.com",
    "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
    "status": "ok",
@@ -197,11 +295,10 @@
   },
   {
    "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/944400/قیمت-خودرو-امروز-چهارشنبه-29-مهر-1405",
-   "status": "error",
-   "count": 0,
-   "date": "2026-10-21",
-   "error": "'ascii' codec can't encode characters in position 20-23: ordinal not in range(128)"
+   "url": "https://www.entekhab.ir/fa/news/944400/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
+   "status": "ok",
+   "count": 97,
+   "date": "2026-10-21"
   },
   {
    "source": "qudsonline.ir",
@@ -226,18 +323,18 @@
    "date": "2026-10-21"
   },
   {
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d8%ae%d8%a7%d8%b1%d8%ac%db%8c-%d9%81-5/",
-   "status": "ok",
-   "count": 16,
-   "date": "2026-10-22"
-  },
-  {
    "source": "petrochemiha.ir",
    "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
    "status": "ok",
    "count": 107,
    "date": "2026-10-20"
+  },
+  {
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d8%ae%d8%a7%d8%b1%d8%ac%db%8c-%d9%81-5/",
+   "status": "ok",
+   "count": 16,
+   "date": "2026-10-22"
   },
   {
    "source": "gadgetnews.net",
