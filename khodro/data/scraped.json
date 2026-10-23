@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T11:33:06+00:00",
+ "updated": "2026-10-23T17:03:18+00:00",
  "items": [
   {
    "name": "وانت آریسان",
@@ -509,6 +509,14 @@
    "date": "2026-10-21"
   },
   {
+   "source": "tabnak.ir",
+   "url": "https://www.tabnak.ir/fa/news/1399586/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-28-%D9%85%D9%87%D8%B1-%D9%85%D8%A7%D9%87",
+   "status": "error",
+   "count": 0,
+   "date": "2026-10-20",
+   "error": "جدول قیمت کافی پیدا نشد"
+  },
+  {
    "source": "fararu.com",
    "url": "https://fararu.com/fa/news/1011306/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
    "status": "ok",
@@ -516,17 +524,33 @@
    "date": "2026-10-21"
   },
   {
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/944400/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-29-%D9%85%D9%87%D8%B1-1405",
-   "status": "ok",
-   "count": 97,
-   "date": "2026-10-21"
+   "source": "rokna.net",
+   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1260152-%D9%82%DB%8C%D9%85%D8%AA-%D8%B1%D9%88%D8%B2-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%D9%85%D9%87%D8%B1-%D8%B1%DB%8C-%D8%B1%D8%A7-%D8%A8%D9%87-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B1%D8%B3%DB%8C%D8%AF",
+   "status": "error",
+   "count": 0,
+   "date": "2026-10-22",
+   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
   },
   {
    "source": "fararu.com",
    "url": "https://fararu.com/fa/news/1011054/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-28-%D9%85%D9%87%D8%B1-1405",
    "status": "ok",
    "count": 19,
+   "date": "2026-10-20"
+  },
+  {
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1171480/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B9-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%82%DB%8C%D9%85%D8%AA",
+   "status": "error",
+   "count": 0,
+   "date": "2026-10-21",
+   "error": "جدول قیمت کافی پیدا نشد"
+  },
+  {
+   "source": "petrochemiha.ir",
+   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
+   "status": "ok",
+   "count": 107,
    "date": "2026-10-20"
   },
   {
@@ -537,26 +561,11 @@
    "date": "2026-10-23"
   },
   {
-   "source": "petrochemiha.ir",
-   "url": "https://petrochemiha.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B8-%D9%85%D9%87%D8%B1-%DB%B1%DB%B4%DB%B0/",
-   "status": "ok",
-   "count": 107,
-   "date": "2026-10-20"
-  },
-  {
    "source": "gadgetnews.net",
    "url": "https://gadgetnews.net/1220601/new-prices-for-domestic-and-locally-assembled-vehicles-in-the-iranian-market-28-mehr-1405/",
    "status": "ok",
    "count": 45,
    "date": "2026-10-20"
-  },
-  {
-   "source": "tabnak.ir",
-   "url": "https://www.tabnak.ir/fa/news/1399586/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-28-%D9%85%D9%87%D8%B1-%D9%85%D8%A7%D9%87",
-   "status": "error",
-   "count": 0,
-   "date": "2026-10-20",
-   "error": "جدول قیمت کافی پیدا نشد"
   }
  ]
 }
