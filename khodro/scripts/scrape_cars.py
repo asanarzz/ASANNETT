@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """دریافت خودکار قیمت روز خودرو از چند سایت خبری و ساخت data/scraped.json (فقط کتابخانه‌های استاندارد پایتون)."""
-import json, re, os, sys, datetime as dt, urllib.request, urllib.parse
+import json, re, os, sys, datetime as dt, html as htmllib, urllib.request, urllib.parse, urllib.robotparser
 from html.parser import HTMLParser
 from xml.etree import ElementTree as ET
 from email.utils import parsedate_to_datetime
@@ -10,14 +10,14 @@ OUT = 'data/scraped.json'
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
       'Accept-Language': 'fa,en;q=0.8'}
 QUERIES = ['قیمت خودرو امروز', 'قیمت خودروهای ایران خودرو امروز', 'قیمت خودروهای سایپا امروز', 'قیمت خودرو مونتاژی و وارداتی امروز']
-MAX_PAGES, MAX_AGE_DAYS, MIN_ITEMS_PAGE, MIN_ITEMS_TOTAL = 18, 3, 5, 10
+MAX_PAGES, MAX_AGE_DAYS, MIN_ITEMS_PAGE, MIN_ITEMS_TOTAL = 30, 3, 5, 10
 MONTHS = ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند']
-CATS = [('وارداتی', r'تویوتا|هیوندای|کیا |بنز|بی‌ام‌و|BMW|لکسوس|اوشان|Oshan|نیسان|هوندا|مزدا|فولکس|فرانتلندر|کرولا'),
-        ('کرمان موتور', r'جک|کی‌ام‌سی|KMC|بک '),
-        ('ایران‌خودرو', r'پژو|دنا|سورن|رانا|تارا|آریسان|ری[ \u200c]?را|هایما|فوتون|سمند'),
+CATS = [('وارداتی', r'سوزوکی|ویتارا|جیمنی|رنو|ولوو|آئودی|آدی|پورشه|مرسدس|بنز|بی‌ام‌و|BMW|لکسوس|تانک|میتسوبیشی|اسکودا|بی‌وای‌دی|BYD|امجی|MG|ام‌جی|تویوتا|هیوندای|(?<![آ-ی])کیا(?![آ-ی])|نیسان|هوندا|مزدا|فولکس|اوشان|Oshan|فرانتلندر|کرولا|لندکروز|پرادو|رافور|هایلندر|سانتافه|توسان|سوناتا|النترا'),
+        ('کرمان موتور', r'(?<![آ-ی])جک(?![آ-ی])|کی‌ام‌سی|KMC|(?<![آ-ی])بک(?![آ-ی])'),
+        ('ایران‌خودرو', r'پژو|(?<![آ-ی])دنا|سورن|(?<![آ-ی])رانا|(?<![آ-ی])تارا|آریسان|ری[ \u200c]?را|هایما|فوتون|سمند'),
         ('سایپا', r'سهند|ساینا|کوییک|اطلس|شاهین|سایپا|زامیاد|کارون|چانگان|سیتروئن|پراید|تیبا'),
         ('مدیران خودرو', r'X22|X33|X55|تیگو|آریزو|فونیکس'),
-        ('بهمن موتور', r'فیدلیتی|دیگنیتی|رسپکت|کارا|کاپرا')]
+        ('بهمن موتور', r'فیدلیتی|دیگنیتی|ریسپکت|رسپکت|(?<![آ-ی])کارا(?![آ-ی])|کاپرا|اینوی|H9')]
 STOP = {'و', 'با', 'ای', 'مدل', 'تیپ'}
 
 
@@ -45,6 +45,16 @@ def j2g(jy, jm, jd):  # تبدیل شمسی به میلادی
     while gm < 13 and gd > ml[gm]:
         gd -= ml[gm]; gm += 1
     return dt.date(gy, gm, gd)
+
+
+def g2j(gy, gm, gd):
+    gdm = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
+    gy2 = gy + 1 if gm > 2 else gy
+    days = 355666 + 365 * gy + (gy2 + 3) // 4 - (gy2 + 99) // 100 + (gy2 + 399) // 400 + gd + gdm[gm - 1]
+    jy = -1595 + 33 * (days // 12053); days %= 12053
+    jy += 4 * (days // 1461); days %= 1461
+    if days > 365: jy += (days - 1) // 365; days = (days - 1) % 365
+    return (jy, 1 + days // 31, 1 + days % 31) if days < 186 else (jy, 7 + (days - 186) // 30, 1 + (days - 186) % 30)
 
 
 def find_date(text):
@@ -118,6 +128,55 @@ def parse_rows(rows):
     return out
 
 
+PRS = r'\d+(?:\.\d+)?\s*میلیارد(?:\s*و\s*\d+(?:\.\d+)?\s*میلیون)?|\d+(?:\.\d+)?\s*میلیون|(?<![\d.])\d{9,11}(?![\d.])'
+RUN = re.compile(r'(?:(?:%s)\s*(?:تومان)?[\s·|]*){1,2}' % PRS)
+JUNK = re.compile(r'ناموجود|توقف\s*(?:فروش|تولید)|به\s*زودی|اعلام\s*نشده|\(?[-+]?\d+(?:\.\d+)?[%٪]\)?\s*[-+]?\d*')
+BAD = {'به', 'که', 'است', 'شد', 'رسید', 'را', 'در', 'از', 'برای', 'هم', 'این', 'آن', 'قیمت', 'امروز', 'تومان', 'بازار', 'نمایندگی', 'کارخانه'}
+
+
+def html_text(h):
+    h = re.sub(r'(?is)<(script|style|noscript)\b.*?</\1>', ' ', h)
+    h = re.sub(r'(?i)</t[dh]\s*>', ' · ', h)
+    h = re.sub(r'(?i)</(tr|li|p|div|h[1-6]|ul|ol|table|section|article)\s*>|<br\s*/?>', '\n', h)
+    return htmllib.unescape(re.sub(r'<[^>]+>', ' ', h))
+
+
+def parse_text(h):
+    out = []
+    for line in html_text(h).split('\n'):
+        s = re.sub(r'\s+', ' ', re.sub(r'[,٬،]', '', digits(line))).strip()
+        if len(s) < 8: continue
+        pos = 0
+        for m in RUN.finditer(s):
+            seg, pos = s[pos:m.start()], m.end()
+            vals = [price(t) for t in re.findall(PRS, m.group(0))]
+            if not vals or not vals[0]: continue
+            if re.search(r'(?:ناموجود|اعلام\s*نشده)\s*[·|\s]*$', seg): continue  # قیمت بازار این ردیف ندارد
+            pieces = [x.strip(' ·|-–:') for x in JUNK.split(seg)]
+            name = clean_name(next((x for x in reversed(pieces) if x), ''))
+            w = name.split()
+            if len(name) < 3 or len(w) > 8 or w[0] in BAD or not re.search(r'[آ-ی]', name): continue
+            ag = vals[1] if len(vals) > 1 and vals[1] and 0.3 <= vals[1] / vals[0] <= 2 else 0
+            out.append({'name': name, 'price': vals[0], 'agency': ag, 'cat': cat(name)})
+    return out
+
+
+_ROB = {}
+
+
+def allowed(url):  # احترام به robots.txt؛ اگر در دسترس نبود، آزاد فرض می‌شود
+    u = urllib.parse.urlparse(url); host = u.scheme + '://' + u.netloc
+    if host not in _ROB:
+        r = urllib.robotparser.RobotFileParser()
+        try:
+            r.parse(get(host + '/robots.txt').splitlines())
+        except Exception:
+            r = None
+        _ROB[host] = r
+    r = _ROB[host]
+    return True if r is None else r.can_fetch('*', url)
+
+
 def tokens(n):
     return {t for t in re.findall(r'[آ-یA-Za-z0-9]+', n.replace('\u200c', ' ').lower()) if t not in STOP}
 
@@ -128,9 +187,18 @@ def get(url):
         return r.read().decode('utf-8', 'replace')
 
 
-def candidates():
+def queries(today):
+    qs = list(QUERIES)
+    for back in (0, 1):
+        jy, jm, jd = g2j(*(today - dt.timedelta(days=back)).timetuple()[:3])
+        ds = str.translate('%d %s %d' % (jd, MONTHS[jm - 1], jy), str.maketrans('0123456789', '۰۱۲۳۴۵۶۷۸۹'))
+        qs += ['قیمت محصولات ایران خودرو و سایپا امروز ' + ds, 'قیمت خودرو امروز ' + ds, 'قیمت خودروهای ایران خودرو ' + ds, 'قیمت خودروهای سایپا ' + ds, 'قیمت خودرو وارداتی ' + ds]
+    return qs
+
+
+def candidates(today):
     seen, res = set(), []
-    for q in QUERIES:
+    for q in queries(today):
         try:
             xml = get('https://www.bing.com/news/search?q=%s&format=rss&setlang=fa&cc=IR' % urllib.parse.quote(q))
             for it in ET.fromstring(xml).iter('item'):
@@ -148,12 +216,15 @@ def candidates():
 
 def collect(today):
     pages, log = [], []
-    for title, url, d in candidates():
+    for title, url, d in candidates(today):
         if len(pages) + len(log) >= MAX_PAGES: break
         if d is None or not (today - dt.timedelta(days=MAX_AGE_DAYS) <= d <= today + dt.timedelta(days=1)): continue
         host = urllib.parse.urlparse(url).netloc.replace('www.', '')
         try:
-            p = TP(); p.feed(get(url)); items = parse_rows(p.rows)
+            if not allowed(url):
+                log.append({'source': host, 'url': url, 'status': 'robots', 'count': 0, 'date': str(d), 'error': 'robots.txt اجازه نمی‌دهد'}); continue
+            src = get(url); p = TP(); p.feed(src); items = parse_rows(p.rows)
+            if len(items) < MIN_ITEMS_PAGE: items = parse_text(src)
             ok = len(items) >= MIN_ITEMS_PAGE
             log.append({'source': host, 'url': url, 'status': 'ok' if ok else 'error', 'count': len(items), 'date': str(d), **({} if ok else {'error': 'جدول قیمت کافی پیدا نشد'})})
             if ok: pages.append({'host': host, 'url': url, 'date': d, 'items': items})
@@ -166,16 +237,21 @@ def merge(pages):
     if not pages: return []
     newest = max(p['date'] for p in pages)
     use = [p for p in pages if p['date'] >= newest - dt.timedelta(days=1)]
-    use.sort(key=lambda p: (p['date'] != newest, -sum(1 for i in p['items'] if i['agency']), -len(p['items'])))  # صفحه اصلی: تازه‌ترین و کامل‌ترین
     res, toks = [], []
-    for k, p in enumerate(use):
-        for i in p['items']:
-            t = tokens(i['name'])
-            if not t or any(len(t & o) / len(t | o) >= 0.85 for o in toks): continue
-            # از صفحه‌های بعدی فقط برای گروه‌هایی که صفحه اصلی کم‌پوشش دارد (مثلاً وارداتی) خودرو اضافه می‌شود
-            if k and sum(1 for x in res if x['cat'] == i['cat']) >= 3: continue
-            toks.append(t)
-            res.append({**i, 'source': p['host'], 'url': p['url'], 'reportDate': str(p['date']), 'kind': 'scraped'})
+    for c in sorted({i['cat'] for p in use for i in p['items']}):
+        # صفحه‌ها را برای این گروه رتبه‌بندی کن: تازه‌تر، دارای قیمت نمایندگی بیشتر، تعداد بیشتر
+        ranked = sorted(use, key=lambda p: (p['date'] != newest,
+                                            -sum(1 for i in p['items'] if i['cat'] == c and i['agency']),
+                                            -sum(1 for i in p['items'] if i['cat'] == c)))
+        n = 0
+        for k, p in enumerate(ranked):
+            if k and n >= 10: break  # صفحه اصلی این گروه کافی بود
+            for i in p['items']:
+                if i['cat'] != c: continue
+                t = tokens(i['name'])
+                if not t or any(len(t & o) / len(t | o) >= 0.85 for o in toks): continue
+                toks.append(t); n += 1
+                res.append({**i, 'source': p['host'], 'url': p['url'], 'reportDate': str(p['date']), 'kind': 'scraped'})
     return res
 
 
