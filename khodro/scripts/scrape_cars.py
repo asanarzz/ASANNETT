@@ -58,7 +58,7 @@ def g2j(gy, gm, gd):
 
 
 def find_date(text):
-    m = re.search(r'(\d{1,2})\s*(%s)\s*(\d{4})' % '|'.join(MONTHS), digits(text))
+    m = re.search(r'(\d{1,2})\s*(%s)(?:[\s\u200c]*ماه)?\s*(\d{4})' % '|'.join(MONTHS), digits(text))
     if not m: return None
     try: return j2g(int(m.group(3)), MONTHS.index(m.group(2)) + 1, int(m.group(1)))
     except Exception: return None
@@ -204,14 +204,20 @@ def candidates(today):
             for it in ET.fromstring(xml).iter('item'):
                 title, link = it.findtext('title') or '', it.findtext('link') or ''
                 url = urllib.parse.parse_qs(urllib.parse.urlparse(link).query).get('url', [link])[0]
-                d = find_date(title)
-                if d is None and it.findtext('pubDate'):
-                    try: d = parsedate_to_datetime(it.findtext('pubDate')).date()
-                    except Exception: pass
+                d = find_date(title)  # فقط تاریخ شمسی با سال داخل عنوان معتبر است
                 if url not in seen and 'خودرو' in title: seen.add(url); res.append((title, url, d))
         except Exception as e:
             print('خطا در جست‌وجوی خبر:', q, e, file=sys.stderr)
     return res
+
+
+def tag_text(src, tag):
+    m = re.search(r'(?is)<%s\b[^>]*>(.*?)</%s>' % (tag, tag), src)
+    return re.sub(r'<[^>]+>', ' ', htmllib.unescape(m.group(1))) if m else ''
+
+
+def page_date(src):  # تاریخ عنوان یا تیتر اصلی خود صفحه
+    return find_date(tag_text(src, 'h1')) or find_date(tag_text(src, 'title'))
 
 
 def collect(today):
@@ -223,10 +229,15 @@ def collect(today):
         try:
             if not allowed(url):
                 log.append({'source': host, 'url': url, 'status': 'robots', 'count': 0, 'date': str(d), 'error': 'robots.txt اجازه نمی‌دهد'}); continue
-            src = get(url); p = TP(); p.feed(src); items = parse_rows(p.rows)
+            src = get(url)
+            pdt = page_date(src)
+            if pdt and not (today - dt.timedelta(days=MAX_AGE_DAYS) <= pdt <= today + dt.timedelta(days=1)):
+                log.append({'source': host, 'url': url, 'status': 'error', 'count': 0, 'date': str(pdt), 'title': title[:70], 'error': 'تاریخ داخل صفحه قدیمی است'}); continue
+            d = pdt or d
+            p = TP(); p.feed(src); items = parse_rows(p.rows)
             if len(items) < MIN_ITEMS_PAGE: items = parse_text(src)
             ok = len(items) >= MIN_ITEMS_PAGE
-            log.append({'source': host, 'url': url, 'status': 'ok' if ok else 'error', 'count': len(items), 'date': str(d), **({} if ok else {'error': 'جدول قیمت کافی پیدا نشد'})})
+            log.append({'source': host, 'url': url, 'status': 'ok' if ok else 'error', 'count': len(items), 'date': str(d), 'title': title[:70], **({} if ok else {'error': 'جدول قیمت کافی پیدا نشد'})})
             if ok: pages.append({'host': host, 'url': url, 'date': d, 'items': items})
         except Exception as e:
             log.append({'source': host, 'url': url, 'status': 'error', 'count': 0, 'date': str(d), 'error': str(e)[:120]})
