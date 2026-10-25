@@ -2,7 +2,7 @@
 <html lang="fa" dir="rtl"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0e1230">
-<title>آهنگ‌ساز هوشمند</title>
+<title>آهنگ ساز آسان نت</title>
 <style>
 :root{--bg:#0e1230;--cd:#1a1f4a;--tx:#eef0ff;--mt:#9aa3d8;--ac:#7c5cff;--bd:#2d3470}
 :root[data-t=l]{--bg:#f3f4ff;--cd:#fff;--tx:#14183a;--mt:#5a6190;--bd:#d6d9f3}
@@ -20,7 +20,7 @@ textarea,select,input:not([type=checkbox]):not([type=range]){width:100%;backgrou
 .er{color:#ff7b7b}small,li{color:var(--mt)}audio{width:100%;margin-top:10px}a{color:#6cb6ff}
 .dt{white-space:pre-wrap;word-break:break-all;font-size:12px;color:var(--mt)}details{margin-top:12px}summary{color:var(--mt);cursor:pointer}
 </style></head><body>
-<header><b>🎵 آهنگ‌ساز هوشمند</b><button id=th aria-label="تغییر پوسته">◐</button></header>
+<header><b>🎵 آهنگ ساز آسان نت</b><button id=th aria-label="تغییر پوسته">◐</button></header>
 <h2>شعر به آهنگ</h2>
 <label>شعر یا ترانه (برچسب‌هایی مثل [verse] و [chorus] مفیدند)</label><textarea id=ly rows=8></textarea>
 <label>سبک</label><select id=sy><option value="Persian pop">پاپ ایرانی</option><option value="traditional Persian, santur, tar, daf, tonbak">سنتی ایرانی</option><option value="rap hip-hop">رپ و هیپ‌هاپ</option><option value="rock">راک</option><option value="classical orchestral">کلاسیک</option><option value="electronic">الکترونیک</option><option value="lo-fi">لوفای</option><option value="acoustic">آکوستیک</option><option value="romantic ballad">عاشقانه</option><option value="epic cinematic">حماسی</option><option value="upbeat dance pop">شاد و رقصی</option></select>
@@ -31,24 +31,27 @@ textarea,select,input:not([type=checkbox]):not([type=range]){width:100%;backgrou
 <label>سرعت (BPM، اختیاری)</label><input id=bp type=number min=50 max=200 inputmode=numeric>
 <label>توضیحات بیشتر (فارسی یا انگلیسی، اختیاری)</label><input id=ex>
 <label><input id=ins type=checkbox> بی‌کلام</label>
-<label>کلید رایگان ACE Music (از <a href="https://acemusic.ai/playground/api-key" target=_blank rel=noopener>acemusic.ai</a> بگیرید)</label><input id=ak dir=ltr type=password autocomplete=off>
-<p><small>موتور ACE-Step 1.5 فارسی را هم پشتیبانی می‌کند، ولی کیفیت خواندن فارسی تضمین نیست. سرویس acemusic.ai رایگان اعلام شده، اما سقف روزانه‌اش را تأیید نکرده‌ام. کلید فقط در همین گوشی ذخیره می‌شود.</small></p>
+
+<p><small id=qt></small></p>
 <p><button id=go>ساخت آهنگ</button></p><div id=out></div>
-<details><summary>تنظیمات پیشرفته</summary>
-<label>موتور</label><select id=en><option value=ace>ACE Music (api.acemusic.ai)</option><option value=hf>Hugging Face Space (سهمیهٔ کم)</option></select>
-<label>نام Space موتور</label><input id=sp dir=ltr>
-<label>توکن Hugging Face (اختیاری، برای سهمیهٔ بیشتر؛ فقط در همین گوشی ذخیره می‌شود)</label><input id=tk dir=ltr type=password autocomplete=off>
-</details>
-<h3>هنوز فعال نیست</h3>
-<ul><li>جداسازی سازها و تغییر صدای خواننده: نیازمند اتصال به موتور صوتی</li><li>ساخت از روی نمونه، ویرایش آهنگ، پروژه‌ها: هنوز پیاده‌سازی نشده</li></ul>
+
+
 <script>
+const KEY='a02957cc402b48458cc2122921a483ec';/* کلید ACE Music را بین دو نقل‌قول بگذارید */
 const $=s=>document.querySelector(s),h=(t,p={},...k)=>{const e=Object.assign(document.createElement(t),p);e.append(...k);return e};
 const ls={get:k=>{try{return localStorage.getItem(k)||''}catch{return''}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch{}}};
-const pick=o=>{if(!o)return;if(typeof o==='string')return /^https?:.*\.(mp3|wav|flac|ogg)/i.test(o)?{url:o}:0;if(typeof o!=='object')return;if(typeof o.url==='string'&&o.url)return o;for(const k in o){const r=pick(o[k]);if(r)return r}};
 const R=document.documentElement;if(ls.get('t'))R.dataset.t=ls.get('t');
 $('#th').onclick=()=>{R.dataset.t=R.dataset.t==='l'?'d':'l';ls.set('t',R.dataset.t)};
-$('#sp').value=ls.get('sp15')||'ACE-Step/Ace-Step-v1.5';$('#tk').value=ls.get('tk');$('#ak').value=ls.get('ak');['ly','ex'].forEach(i=>{$('#'+i).value=ls.get(i);$('#'+i).oninput=()=>ls.set(i,$('#'+i).value)});
+['ly','ex'].forEach(i=>{$('#'+i).value=ls.get(i);$('#'+i).oninput=()=>ls.set(i,$('#'+i).value)});
 
+const LIMIT=3,OWNER_HASH='55d35922e39bdad2a112e15bd8789e101714d94bdb112830b4c3e478f1c1631b',U=new URLSearchParams(location.search).get('uid')||'device';
+const QK=()=>'n:'+U+':'+new Date().toLocaleDateString('en-CA'),isOwner=()=>ls.get('own')==='1',used=()=>+ls.get(QK())||0;
+const showQ=()=>{$('#qt').textContent=isOwner()?'حالت مدیر: بدون محدودیت':'امروز '+used()+' از '+LIMIT+' آهنگ استفاده شده'};showQ();
+let taps=0,tt;$('header b').onclick=async()=>{taps++;clearTimeout(tt);tt=setTimeout(()=>taps=0,2000);if(taps<5)return;taps=0;
+ const p=prompt('رمز مدیر:');if(!p)return;
+ try{const d=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(p.trim()));
+  if([...new Uint8Array(d)].map(b=>b.toString(16).padStart(2,'0')).join('')===OWNER_HASH){ls.set('own','1');showQ();alert('حالت مدیر فعال شد.')}else alert('رمز نادرست است.')}
+ catch{alert('این مرورگر از این قابلیت پشتیبانی نمی‌کند.')}};
 const viaAce0=async(sig,k,tags,ly,dur,lang,ins)=>{
  const H={Authorization:'Bearer '+k,'Content-Type':'application/json'},B='https://api.acemusic.ai';let model='acemusic/acestep-v15-turbo';
  try{const r=await fetch(B+'/v1/models',{headers:H,signal:sig});if(r.ok){const j=await r.json();model=(j.data&&j.data[0]&&j.data[0].id)||model}}catch{}
@@ -62,40 +65,19 @@ const viaAce=async(...a)=>{const ac=new AbortController();window.ac=ac;const to=
 $('#go').onclick=async()=>{
  const ins=$('#ins').checked,ly=$('#ly').value.trim(),box=$('#out'),btn=$('#go');
  if(!ins&&!ly)return alert('شعر را وارد کنید یا گزینهٔ «بی‌کلام» را بزنید.');
- const sp=$('#sp').value.trim(),tk=$('#tk').value.trim();ls.set('sp15',sp);ls.set('tk',tk);
+ if(!isOwner()&&used()>=LIMIT)return alert('سهمیهٔ امروز شما ('+LIMIT+' آهنگ) تمام شد. فردا دوباره امتحان کنید.');
+ 
  const tags=[$('#sy').value,$('#mo').value+' mood',...(ins?['instrumental']:[$('#vo').value]),$('#bp').value&&$('#bp').value+' BPM',$('#ex').value.trim()].filter(Boolean).join(', ');
  const say=t=>box.replaceChildren(h('div',{className:'bar'},h('i')),h('p',{textContent:t}));
  let tm;btn.disabled=true;say('در حال اتصال به موتور…');
  try{
-  if($('#en').value==='ace'){
-   const k=$('#ak').value.trim();if(!k)throw new Error('ابتدا کلید رایگان را از acemusic.ai بگیرید و در کادر کلید بچسبانید.');
-   ls.set('ak',k);say('در حال ساخت آهنگ… ۰ ثانیه');const t0=Date.now();tm=setInterval(()=>{const p=box.querySelector('p');if(p)p.textContent='در حال ساخت آهنگ… '+Math.round((Date.now()-t0)/1000)+' ثانیه'},1000);box.append(h('button',{textContent:'انصراف',onclick:()=>window.ac&&window.ac.abort()}));
-   const {bl,txt}=await viaAce(k,tags,ly,+$('#du').value,$('#la').value,ins);
-   box.replaceChildren(h('audio',{controls:true,src:bl}),h('a',{href:bl,download:'song.mp3',textContent:'دانلود'}),txt.length>40?h('details',{},h('summary',{textContent:'جزئیات (شعری که موتور استفاده کرد)'}),h('pre',{className:'dt',textContent:txt})):'');
-  }else{
-  const {Client}=await import('https://cdn.jsdelivr.net/npm/@gradio/client/dist/index.min.js');
-  const c=await Client.connect(sp,tk?{hf_token:tk,token:tk}:{});
-  const api=await c.view_api();
-  const X={cap:/^(captions?|prompt|tags?)$/i,ly:/lyric/i,du:/^(audio_)?duration$/i,la:/language/i};
-  const fp=(e,k)=>e.parameters.find(p=>X[k].test(p.parameter_name));
-  let ent,sc=0;for(const [k,v] of Object.entries(api.named_endpoints||{})){if(!fp(v,'ly'))continue;const n=['cap','ly','du','la'].filter(x=>fp(v,x)).length;if(n>sc){sc=n;ent=[k,v]}}
-  if(!ent||sc<2)throw new Error('ورودی‌های این Space را نشناختم. نام Space را در تنظیمات پیشرفته بررسی کنید.');
-  const [name,ep]=ent,lang=$('#la').value,LN={fa:'Persian',en:'English',tr:'Turkish',ar:'Arabic'},mine={},cp=fp(ep,'cap'),lp=fp(ep,'la'),dp=fp(ep,'du');
-  if(cp)mine[cp.parameter_name]=tags+(lp||ins?'':', sung in '+LN[lang]);
-  mine[fp(ep,'ly').parameter_name]=ins?'[Instrumental]':ly;
-  if(dp)mine[dp.parameter_name]=+$('#du').value;
-  if(lp&&!ins)mine[lp.parameter_name]=lang;
-  const data=Object.fromEntries(ep.parameters.map(p=>[p.parameter_name,p.parameter_name in mine?mine[p.parameter_name]:(p.parameter_has_default?p.parameter_default:null)]));
-  say('ارسال شد…');let res,last,best;
-  for await(const m of c.submit(name,data)){
-   if(m.type==='status'){
-    last=m;
-    if(m.stage==='error')throw new Error(m.message||'خطای موتور');
-    say(m.stage==='pending'&&m.position!=null?'در صف، جایگاه '+(m.position+1):'در حال ساخت آهنگ…')}
-   if(m.type==='data'){res=m.data;best=pick(m.data)||best}}
-  if(!best){const er=new Error('موتور فایل صوتی برنگرداند (شاید سهمیهٔ امروز تمام شده یا موتور خطا داده).');er.detail='پاسخ موتور:\n'+JSON.stringify({status:last&&{stage:last.stage,message:last.message,code:last.code},data:res}).slice(0,900);throw er}
-  const f=best;
-  box.replaceChildren(h('audio',{controls:true,src:f.url}),h('a',{href:f.url,target:'_blank',rel:'noopener',textContent:'باز کردن / دانلود فایل'}));}
+  const k=KEY||ls.get('ak')||(prompt('کلید ACE Music را وارد کنید (فقط یک بار):')||'').trim();
+  if(!k)throw new Error('کلید وارد نشد.');
+  if(!KEY)ls.set('ak',k);
+  say('در حال ساخت آهنگ… ۰ ثانیه');const t0=Date.now();tm=setInterval(()=>{const p=box.querySelector('p');if(p)p.textContent='در حال ساخت آهنگ… '+Math.round((Date.now()-t0)/1000)+' ثانیه'},1000);
+  box.append(h('button',{textContent:'انصراف',onclick:()=>window.ac&&window.ac.abort()}));
+  const {bl,txt}=await viaAce(k,tags,ly,+$('#du').value,$('#la').value,ins);
+  box.replaceChildren(h('audio',{controls:true,src:bl}),h('a',{href:bl,download:'song.mp3',textContent:'دانلود'}),txt.length>40?h('details',{},h('summary',{textContent:'جزئیات (شعری که موتور استفاده کرد)'}),h('pre',{className:'dt',textContent:txt})):'');ls.set(QK(),String(used()+1));showQ();
  }catch(e){
   const m=e&&e.message?e.message:String(e);
   box.replaceChildren(h('p',{className:'er',textContent:m+(/quota/i.test(m)?' (سهمیهٔ روزانهٔ GPU تمام شده؛ ۲۴ ساعت بعد دوباره امتحان کنید.)':/abort/i.test(m)?' (زمان انتظار تمام شد یا انصراف دادید. سرویس ممکن است شلوغ باشد؛ با مدت کوتاه‌تر و شعر کوتاه‌تر دوباره امتحان کنید.)':/fetch|network/i.test(m)?' (اتصال برقرار نشد؛ شاید اینترنت قطع است یا مرورگر اجازهٔ اتصال به این سرویس را نمی‌دهد.)':'')+' — دوباره تلاش کنید.'}),e&&e.detail?h('pre',{className:'dt',dir:'ltr',textContent:e.detail}):'')}
