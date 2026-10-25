@@ -1,1 +1,76 @@
+<!doctype html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e1230">
+<title>آهنگ‌ساز هوشمند</title>
+<style>
+:root{--bg:#0e1230;--cd:#1a1f4a;--tx:#eef0ff;--mt:#9aa3d8;--ac:#7c5cff;--bd:#2d3470}
+:root[data-t=l]{--bg:#f3f4ff;--cd:#fff;--tx:#14183a;--mt:#5a6190;--bd:#d6d9f3}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.7 system-ui,Tahoma,sans-serif;padding:max(12px,env(safe-area-inset-top)) 14px 40px;max-width:640px;margin-inline:auto}
+header{display:flex;justify-content:space-between;align-items:center;font-size:20px;margin-bottom:8px}
+button,select,input,textarea{font:inherit;color:inherit}
+button{background:linear-gradient(135deg,#7c5cff,#3ea6ff);border:0;border-radius:12px;padding:10px 18px;color:#fff;cursor:pointer}
+button[disabled]{opacity:.5}
+label{display:block;margin:10px 0 4px;color:var(--mt);font-size:14px}
+textarea,select,input:not([type=checkbox]):not([type=range]){width:100%;background:var(--cd);border:1px solid var(--bd);border-radius:10px;padding:9px}
+.bar{height:6px;border-radius:3px;background:var(--bd);overflow:hidden}
+.bar i{display:block;height:100%;width:35%;background:var(--ac);animation:m 1.2s infinite alternate}
+@keyframes m{to{margin-right:65%}}
+.er{color:#ff7b7b}small,li{color:var(--mt)}audio{width:100%;margin-top:10px}a{color:#6cb6ff}
+details{margin-top:12px}summary{color:var(--mt);cursor:pointer}
+</style></head><body>
+<header><b>🎵 آهنگ‌ساز هوشمند</b><button id=th aria-label="تغییر پوسته">◐</button></header>
+<h2>شعر به آهنگ</h2>
+<label>شعر یا ترانه (برچسب‌هایی مثل [verse] و [chorus] مفیدند)</label><textarea id=ly rows=8></textarea>
+<label>سبک</label><select id=sy><option value="Persian pop">پاپ ایرانی</option><option value="traditional Persian, santur, tar, daf, tonbak">سنتی ایرانی</option><option value="rap hip-hop">رپ و هیپ‌هاپ</option><option value="rock">راک</option><option value="classical orchestral">کلاسیک</option><option value="electronic">الکترونیک</option><option value="lo-fi">لوفای</option><option value="acoustic">آکوستیک</option><option value="romantic ballad">عاشقانه</option><option value="epic cinematic">حماسی</option><option value="upbeat dance pop">شاد و رقصی</option></select>
+<label>حال‌وهوا</label><select id=mo><option value=sad>غمگین</option><option value=happy>شاد</option><option value=calm>آرام</option><option value=energetic>پرانرژی</option><option value=romantic>عاشقانه</option><option value=nostalgic>نوستالژیک</option><option value=epic>حماسی</option><option value=mysterious>رازآلود</option></select>
+<label>صدای خواننده</label><select id=vo><option value="male vocal">مرد</option><option value="female vocal">زن</option><option value="mixed choir vocals">گروهی</option></select>
+<label>مدت: <span id=dv>60</span> ثانیه (کوتاه‌تر، سهمیهٔ کمتری مصرف می‌کند)</label><input id=du type=range min=30 max=180 step=10 value=60 oninput="dv.textContent=this.value">
+<label>سرعت (BPM، اختیاری)</label><input id=bp type=number min=50 max=200 inputmode=numeric>
+<label>توضیحات بیشتر به انگلیسی (اختیاری)</label><input id=ex>
+<label><input id=ins type=checkbox> بی‌کلام</label>
+<p><small>خواندن شعر فارسی تضمین نیست. اگر بد خوانده شد، شعر را با حروف انگلیسی (فینگلیش) بنویسید و دوباره امتحان کنید. موتور رایگان است و سهمیهٔ روزانه دارد.</small></p>
+<p><button id=go>ساخت آهنگ</button></p><div id=out></div>
+<details><summary>تنظیمات پیشرفته</summary>
+<label>نام Space موتور</label><input id=sp dir=ltr>
+<label>توکن Hugging Face (اختیاری، برای سهمیهٔ بیشتر؛ فقط در همین گوشی ذخیره می‌شود)</label><input id=tk dir=ltr type=password autocomplete=off>
+</details>
+<h3>هنوز فعال نیست</h3>
+<ul><li>جداسازی سازها و تغییر صدای خواننده: نیازمند اتصال به موتور صوتی</li><li>ساخت از روی نمونه، ویرایش آهنگ، پروژه‌ها: هنوز پیاده‌سازی نشده</li></ul>
+<script>
+const $=s=>document.querySelector(s),h=(t,p={},...k)=>{const e=Object.assign(document.createElement(t),p);e.append(...k);return e};
+const ls={get:k=>{try{return localStorage.getItem(k)||''}catch{return''}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch{}}};
+const R=document.documentElement;if(ls.get('t'))R.dataset.t=ls.get('t');
+$('#th').onclick=()=>{R.dataset.t=R.dataset.t==='l'?'d':'l';ls.set('t',R.dataset.t)};
+$('#sp').value=ls.get('sp')||'ACE-Step/ACE-Step';$('#tk').value=ls.get('tk');
 
+$('#go').onclick=async()=>{
+ const ins=$('#ins').checked,ly=$('#ly').value.trim(),box=$('#out'),btn=$('#go');
+ if(!ins&&!ly)return alert('شعر را وارد کنید یا گزینهٔ «بی‌کلام» را بزنید.');
+ const sp=$('#sp').value.trim(),tk=$('#tk').value.trim();ls.set('sp',sp);ls.set('tk',tk);
+ const tags=[$('#sy').value,$('#mo').value+' mood',...(ins?['instrumental']:[$('#vo').value]),$('#bp').value&&$('#bp').value+' BPM',$('#ex').value.trim()].filter(Boolean).join(', ');
+ const say=t=>box.replaceChildren(h('div',{className:'bar'},h('i')),h('p',{textContent:t}));
+ btn.disabled=true;say('در حال اتصال به موتور…');
+ try{
+  const {Client}=await import('https://cdn.jsdelivr.net/npm/@gradio/client/dist/index.min.js');
+  const c=await Client.connect(sp,tk?{hf_token:tk,token:tk}:{});
+  const api=await c.view_api();
+  const ent=Object.entries(api.named_endpoints||{}).find(([,v])=>['prompt','lyrics','audio_duration'].every(n=>v.parameters.some(p=>p.parameter_name===n)));
+  if(!ent)throw new Error('این Space دیگر ورودی‌های prompt، lyrics و audio_duration را ندارد. نام Space را در تنظیمات پیشرفته بررسی کنید.');
+  const [name,ep]=ent,mine={prompt:tags,lyrics:ins?'[instrumental]':ly,audio_duration:+$('#du').value};
+  const data=Object.fromEntries(ep.parameters.map(p=>[p.parameter_name,p.parameter_name in mine?mine[p.parameter_name]:(p.parameter_has_default?p.parameter_default:null)]));
+  say('ارسال شد…');let res;
+  for await(const m of c.submit(name,data)){
+   if(m.type==='status'){
+    if(m.stage==='error')throw new Error(m.message||'خطای موتور');
+    say(m.stage==='pending'&&m.position!=null?'در صف، جایگاه '+(m.position+1):'در حال ساخت آهنگ…')}
+   if(m.type==='data')res=m.data}
+  const f=(res||[]).find(x=>x&&x.url);
+  if(!f)throw new Error('موتور فایل صوتی برنگرداند.');
+  box.replaceChildren(h('audio',{controls:true,src:f.url}),h('a',{href:f.url,target:'_blank',rel:'noopener',textContent:'باز کردن / دانلود فایل'}));
+ }catch(e){
+  const m=e&&e.message?e.message:String(e);
+  box.replaceChildren(h('p',{className:'er',textContent:m+(/quota/i.test(m)?' (سهمیهٔ روزانهٔ GPU تمام شده؛ ۲۴ ساعت بعد دوباره امتحان کنید.)':'')+' — دوباره تلاش کنید.'}))}
+ btn.disabled=false};
+</script></body></html>
