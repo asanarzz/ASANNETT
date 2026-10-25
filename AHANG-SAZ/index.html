@@ -26,11 +26,12 @@ textarea,select,input:not([type=checkbox]):not([type=range]){width:100%;backgrou
 <label>سبک</label><select id=sy><option value="Persian pop">پاپ ایرانی</option><option value="traditional Persian, santur, tar, daf, tonbak">سنتی ایرانی</option><option value="rap hip-hop">رپ و هیپ‌هاپ</option><option value="rock">راک</option><option value="classical orchestral">کلاسیک</option><option value="electronic">الکترونیک</option><option value="lo-fi">لوفای</option><option value="acoustic">آکوستیک</option><option value="romantic ballad">عاشقانه</option><option value="epic cinematic">حماسی</option><option value="upbeat dance pop">شاد و رقصی</option></select>
 <label>حال‌وهوا</label><select id=mo><option value=sad>غمگین</option><option value=happy>شاد</option><option value=calm>آرام</option><option value=energetic>پرانرژی</option><option value=romantic>عاشقانه</option><option value=nostalgic>نوستالژیک</option><option value=epic>حماسی</option><option value=mysterious>رازآلود</option></select>
 <label>صدای خواننده</label><select id=vo><option value="male vocal">مرد</option><option value="female vocal">زن</option><option value="mixed choir vocals">گروهی</option></select>
+<label>زبان شعر</label><select id=la><option value=fa>فارسی</option><option value=en>انگلیسی</option><option value=tr>ترکی</option><option value=ar>عربی</option></select>
 <label>مدت: <span id=dv>60</span> ثانیه (کوتاه‌تر، سهمیهٔ کمتری مصرف می‌کند)</label><input id=du type=range min=30 max=180 step=10 value=60 oninput="dv.textContent=this.value">
 <label>سرعت (BPM، اختیاری)</label><input id=bp type=number min=50 max=200 inputmode=numeric>
-<label>توضیحات بیشتر به انگلیسی (اختیاری)</label><input id=ex>
+<label>توضیحات بیشتر (فارسی یا انگلیسی، اختیاری)</label><input id=ex>
 <label><input id=ins type=checkbox> بی‌کلام</label>
-<p><small>خواندن شعر فارسی تضمین نیست. اگر بد خوانده شد، شعر را با حروف انگلیسی (فینگلیش) بنویسید و دوباره امتحان کنید. موتور رایگان است و سهمیهٔ روزانه دارد.</small></p>
+<p><small>موتور: ACE-Step 1.5 که فارسی را هم پشتیبانی می‌کند، ولی کیفیت خواندن فارسی تضمین نیست. رایگان است و سهمیهٔ روزانه دارد.</small></p>
 <p><button id=go>ساخت آهنگ</button></p><div id=out></div>
 <details><summary>تنظیمات پیشرفته</summary>
 <label>نام Space موتور</label><input id=sp dir=ltr>
@@ -44,14 +45,12 @@ const ls={get:k=>{try{return localStorage.getItem(k)||''}catch{return''}},set:(k
 const pick=o=>{if(!o)return;if(typeof o==='string')return /^https?:.*\.(mp3|wav|flac|ogg)/i.test(o)?{url:o}:0;if(typeof o!=='object')return;if(typeof o.url==='string'&&o.url)return o;for(const k in o){const r=pick(o[k]);if(r)return r}};
 const R=document.documentElement;if(ls.get('t'))R.dataset.t=ls.get('t');
 $('#th').onclick=()=>{R.dataset.t=R.dataset.t==='l'?'d':'l';ls.set('t',R.dataset.t)};
-$('#sp').value=ls.get('sp')||'ACE-Step/ACE-Step';$('#tk').value=ls.get('tk');
+$('#sp').value=ls.get('sp15')||'ACE-Step/Ace-Step-v1.5';$('#tk').value=ls.get('tk');
 
 $('#go').onclick=async()=>{
  const ins=$('#ins').checked,ly=$('#ly').value.trim(),box=$('#out'),btn=$('#go');
  if(!ins&&!ly)return alert('شعر را وارد کنید یا گزینهٔ «بی‌کلام» را بزنید.');
- if(/[\u0600-\u06FF]/.test($('#ex').value))return alert('بخش «توضیحات بیشتر» باید انگلیسی باشد، مثلاً: violin, setar. انگلیسی بنویسید یا خالی بگذارید.');
- if(!ins&&/[\u0600-\u06FF]/.test(ly)&&!window.warned&&(window.warned=1,!confirm('شعر فارسی ممکن است بد خوانده شود. ادامه می‌دهید؟')))return;
- const sp=$('#sp').value.trim(),tk=$('#tk').value.trim();ls.set('sp',sp);ls.set('tk',tk);
+ const sp=$('#sp').value.trim(),tk=$('#tk').value.trim();ls.set('sp15',sp);ls.set('tk',tk);
  const tags=[$('#sy').value,$('#mo').value+' mood',...(ins?['instrumental']:[$('#vo').value]),$('#bp').value&&$('#bp').value+' BPM',$('#ex').value.trim()].filter(Boolean).join(', ');
  const say=t=>box.replaceChildren(h('div',{className:'bar'},h('i')),h('p',{textContent:t}));
  btn.disabled=true;say('در حال اتصال به موتور…');
@@ -59,9 +58,15 @@ $('#go').onclick=async()=>{
   const {Client}=await import('https://cdn.jsdelivr.net/npm/@gradio/client/dist/index.min.js');
   const c=await Client.connect(sp,tk?{hf_token:tk,token:tk}:{});
   const api=await c.view_api();
-  const ent=Object.entries(api.named_endpoints||{}).find(([,v])=>['prompt','lyrics','audio_duration'].every(n=>v.parameters.some(p=>p.parameter_name===n)));
-  if(!ent)throw new Error('این Space دیگر ورودی‌های prompt، lyrics و audio_duration را ندارد. نام Space را در تنظیمات پیشرفته بررسی کنید.');
-  const [name,ep]=ent,mine={prompt:tags,lyrics:ins?'[instrumental]':ly,audio_duration:+$('#du').value};
+  const X={cap:/^(captions?|prompt|tags?)$/i,ly:/lyric/i,du:/^(audio_)?duration$/i,la:/language/i};
+  const fp=(e,k)=>e.parameters.find(p=>X[k].test(p.parameter_name));
+  let ent,sc=0;for(const [k,v] of Object.entries(api.named_endpoints||{})){if(!fp(v,'ly'))continue;const n=['cap','ly','du','la'].filter(x=>fp(v,x)).length;if(n>sc){sc=n;ent=[k,v]}}
+  if(!ent||sc<2)throw new Error('ورودی‌های این Space را نشناختم. نام Space را در تنظیمات پیشرفته بررسی کنید.');
+  const [name,ep]=ent,lang=$('#la').value,LN={fa:'Persian',en:'English',tr:'Turkish',ar:'Arabic'},mine={},cp=fp(ep,'cap'),lp=fp(ep,'la'),dp=fp(ep,'du');
+  if(cp)mine[cp.parameter_name]=tags+(lp||ins?'':', sung in '+LN[lang]);
+  mine[fp(ep,'ly').parameter_name]=ins?'[Instrumental]':ly;
+  if(dp)mine[dp.parameter_name]=+$('#du').value;
+  if(lp&&!ins)mine[lp.parameter_name]=lang;
   const data=Object.fromEntries(ep.parameters.map(p=>[p.parameter_name,p.parameter_name in mine?mine[p.parameter_name]:(p.parameter_has_default?p.parameter_default:null)]));
   say('ارسال شد…');let res,last,best;
   for await(const m of c.submit(name,data)){
