@@ -47,30 +47,31 @@ const ls={get:k=>{try{return localStorage.getItem(k)||''}catch{return''}},set:(k
 const pick=o=>{if(!o)return;if(typeof o==='string')return /^https?:.*\.(mp3|wav|flac|ogg)/i.test(o)?{url:o}:0;if(typeof o!=='object')return;if(typeof o.url==='string'&&o.url)return o;for(const k in o){const r=pick(o[k]);if(r)return r}};
 const R=document.documentElement;if(ls.get('t'))R.dataset.t=ls.get('t');
 $('#th').onclick=()=>{R.dataset.t=R.dataset.t==='l'?'d':'l';ls.set('t',R.dataset.t)};
-$('#sp').value=ls.get('sp15')||'ACE-Step/Ace-Step-v1.5';$('#tk').value=ls.get('tk');$('#ak').value=ls.get('ak');
+$('#sp').value=ls.get('sp15')||'ACE-Step/Ace-Step-v1.5';$('#tk').value=ls.get('tk');$('#ak').value=ls.get('ak');['ly','ex'].forEach(i=>{$('#'+i).value=ls.get(i);$('#'+i).oninput=()=>ls.set(i,$('#'+i).value)});
 
-const viaAce=async(k,tags,ly,dur,lang,ins)=>{
+const viaAce0=async(sig,k,tags,ly,dur,lang,ins)=>{
  const H={Authorization:'Bearer '+k,'Content-Type':'application/json'},B='https://api.acemusic.ai';let model='acemusic/acestep-v15-turbo';
- try{const r=await fetch(B+'/v1/models',{headers:H});if(r.ok){const j=await r.json();model=(j.data&&j.data[0]&&j.data[0].id)||model}}catch{}
- const r=await fetch(B+'/v1/chat/completions',{method:'POST',headers:H,body:JSON.stringify({model,stream:false,messages:[{role:'user',content:'<prompt>'+tags+'</prompt><lyrics>'+(ins?'[Instrumental]':ly)+'</lyrics>'}],audio_config:{duration:dur,vocal_language:lang}})});
+ try{const r=await fetch(B+'/v1/models',{headers:H,signal:sig});if(r.ok){const j=await r.json();model=(j.data&&j.data[0]&&j.data[0].id)||model}}catch{}
+ const r=await fetch(B+'/v1/chat/completions',{method:'POST',headers:H,signal:sig,body:JSON.stringify({model,stream:false,messages:[{role:'user',content:ins?'<prompt>'+tags+'</prompt>':tags}],lyrics:ins?undefined:ly,use_cot_language:false,audio_config:{duration:dur,vocal_language:lang,instrumental:ins}})});
  const j=await r.json().catch(()=>({}));
  if(!r.ok){const e=j.error;throw new Error(String((e&&(e.message||JSON.stringify(e)))||j.detail||'خطا '+r.status))}
  const a=j.choices&&j.choices[0]&&j.choices[0].message&&j.choices[0].message.audio,u=a&&a[0]&&a[0].audio_url&&a[0].audio_url.url;
  if(!u){const er=new Error('موتور فایل صوتی برنگرداند.');er.detail=JSON.stringify(j).slice(0,900);throw er}
- return URL.createObjectURL(await(await fetch(u)).blob())};
+ return {bl:URL.createObjectURL(await(await fetch(u)).blob()),txt:String(j.choices[0].message.content||'')}};
+const viaAce=async(...a)=>{const ac=new AbortController();window.ac=ac;const to=setTimeout(()=>ac.abort(),240000);try{return await viaAce0(ac.signal,...a)}finally{clearTimeout(to)}};
 $('#go').onclick=async()=>{
  const ins=$('#ins').checked,ly=$('#ly').value.trim(),box=$('#out'),btn=$('#go');
  if(!ins&&!ly)return alert('شعر را وارد کنید یا گزینهٔ «بی‌کلام» را بزنید.');
  const sp=$('#sp').value.trim(),tk=$('#tk').value.trim();ls.set('sp15',sp);ls.set('tk',tk);
  const tags=[$('#sy').value,$('#mo').value+' mood',...(ins?['instrumental']:[$('#vo').value]),$('#bp').value&&$('#bp').value+' BPM',$('#ex').value.trim()].filter(Boolean).join(', ');
  const say=t=>box.replaceChildren(h('div',{className:'bar'},h('i')),h('p',{textContent:t}));
- btn.disabled=true;say('در حال اتصال به موتور…');
+ let tm;btn.disabled=true;say('در حال اتصال به موتور…');
  try{
   if($('#en').value==='ace'){
    const k=$('#ak').value.trim();if(!k)throw new Error('ابتدا کلید رایگان را از acemusic.ai بگیرید و در کادر کلید بچسبانید.');
-   ls.set('ak',k);say('در حال ساخت آهنگ… (ممکن است یکی دو دقیقه طول بکشد)');
-   const bl=await viaAce(k,tags,ly,+$('#du').value,$('#la').value,ins);
-   box.replaceChildren(h('audio',{controls:true,src:bl}),h('a',{href:bl,download:'song.mp3',textContent:'دانلود'}));
+   ls.set('ak',k);say('در حال ساخت آهنگ… ۰ ثانیه');const t0=Date.now();tm=setInterval(()=>{const p=box.querySelector('p');if(p)p.textContent='در حال ساخت آهنگ… '+Math.round((Date.now()-t0)/1000)+' ثانیه'},1000);box.append(h('button',{textContent:'انصراف',onclick:()=>window.ac&&window.ac.abort()}));
+   const {bl,txt}=await viaAce(k,tags,ly,+$('#du').value,$('#la').value,ins);
+   box.replaceChildren(h('audio',{controls:true,src:bl}),h('a',{href:bl,download:'song.mp3',textContent:'دانلود'}),txt.length>40?h('details',{},h('summary',{textContent:'جزئیات (شعری که موتور استفاده کرد)'}),h('pre',{className:'dt',textContent:txt})):'');
   }else{
   const {Client}=await import('https://cdn.jsdelivr.net/npm/@gradio/client/dist/index.min.js');
   const c=await Client.connect(sp,tk?{hf_token:tk,token:tk}:{});
@@ -97,6 +98,6 @@ $('#go').onclick=async()=>{
   box.replaceChildren(h('audio',{controls:true,src:f.url}),h('a',{href:f.url,target:'_blank',rel:'noopener',textContent:'باز کردن / دانلود فایل'}));}
  }catch(e){
   const m=e&&e.message?e.message:String(e);
-  box.replaceChildren(h('p',{className:'er',textContent:m+(/quota/i.test(m)?' (سهمیهٔ روزانهٔ GPU تمام شده؛ ۲۴ ساعت بعد دوباره امتحان کنید.)':/fetch|network/i.test(m)?' (اتصال برقرار نشد؛ شاید اینترنت قطع است یا مرورگر اجازهٔ اتصال به این سرویس را نمی‌دهد.)':'')+' — دوباره تلاش کنید.'}),e&&e.detail?h('pre',{className:'dt',dir:'ltr',textContent:e.detail}):'')}
- btn.disabled=false};
+  box.replaceChildren(h('p',{className:'er',textContent:m+(/quota/i.test(m)?' (سهمیهٔ روزانهٔ GPU تمام شده؛ ۲۴ ساعت بعد دوباره امتحان کنید.)':/abort/i.test(m)?' (زمان انتظار تمام شد یا انصراف دادید. سرویس ممکن است شلوغ باشد؛ با مدت کوتاه‌تر و شعر کوتاه‌تر دوباره امتحان کنید.)':/fetch|network/i.test(m)?' (اتصال برقرار نشد؛ شاید اینترنت قطع است یا مرورگر اجازهٔ اتصال به این سرویس را نمی‌دهد.)':'')+' — دوباره تلاش کنید.'}),e&&e.detail?h('pre',{className:'dt',dir:'ltr',textContent:e.detail}):'')}
+ clearInterval(tm);btn.disabled=false};
 </script></body></html>
