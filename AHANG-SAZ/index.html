@@ -18,7 +18,7 @@ textarea,select,input:not([type=checkbox]):not([type=range]){width:100%;backgrou
 .bar i{display:block;height:100%;width:35%;background:var(--ac);animation:m 1.2s infinite alternate}
 @keyframes m{to{margin-right:65%}}
 .er{color:#ff7b7b}small,li{color:var(--mt)}audio{width:100%;margin-top:10px}a{color:#6cb6ff}
-details{margin-top:12px}summary{color:var(--mt);cursor:pointer}
+.dt{white-space:pre-wrap;word-break:break-all;font-size:12px;color:var(--mt)}details{margin-top:12px}summary{color:var(--mt);cursor:pointer}
 </style></head><body>
 <header><b>🎵 آهنگ‌ساز هوشمند</b><button id=th aria-label="تغییر پوسته">◐</button></header>
 <h2>شعر به آهنگ</h2>
@@ -41,6 +41,7 @@ details{margin-top:12px}summary{color:var(--mt);cursor:pointer}
 <script>
 const $=s=>document.querySelector(s),h=(t,p={},...k)=>{const e=Object.assign(document.createElement(t),p);e.append(...k);return e};
 const ls={get:k=>{try{return localStorage.getItem(k)||''}catch{return''}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch{}}};
+const pick=o=>{if(!o)return;if(typeof o==='string')return /^https?:.*\.(mp3|wav|flac|ogg)/i.test(o)?{url:o}:0;if(typeof o!=='object')return;if(typeof o.url==='string'&&o.url)return o;for(const k in o){const r=pick(o[k]);if(r)return r}};
 const R=document.documentElement;if(ls.get('t'))R.dataset.t=ls.get('t');
 $('#th').onclick=()=>{R.dataset.t=R.dataset.t==='l'?'d':'l';ls.set('t',R.dataset.t)};
 $('#sp').value=ls.get('sp')||'ACE-Step/ACE-Step';$('#tk').value=ls.get('tk');
@@ -48,6 +49,8 @@ $('#sp').value=ls.get('sp')||'ACE-Step/ACE-Step';$('#tk').value=ls.get('tk');
 $('#go').onclick=async()=>{
  const ins=$('#ins').checked,ly=$('#ly').value.trim(),box=$('#out'),btn=$('#go');
  if(!ins&&!ly)return alert('شعر را وارد کنید یا گزینهٔ «بی‌کلام» را بزنید.');
+ if(/[\u0600-\u06FF]/.test($('#ex').value))return alert('بخش «توضیحات بیشتر» باید انگلیسی باشد، مثلاً: violin, setar. انگلیسی بنویسید یا خالی بگذارید.');
+ if(!ins&&/[\u0600-\u06FF]/.test(ly)&&!window.warned&&(window.warned=1,!confirm('شعر فارسی ممکن است بد خوانده شود. ادامه می‌دهید؟')))return;
  const sp=$('#sp').value.trim(),tk=$('#tk').value.trim();ls.set('sp',sp);ls.set('tk',tk);
  const tags=[$('#sy').value,$('#mo').value+' mood',...(ins?['instrumental']:[$('#vo').value]),$('#bp').value&&$('#bp').value+' BPM',$('#ex').value.trim()].filter(Boolean).join(', ');
  const say=t=>box.replaceChildren(h('div',{className:'bar'},h('i')),h('p',{textContent:t}));
@@ -60,17 +63,18 @@ $('#go').onclick=async()=>{
   if(!ent)throw new Error('این Space دیگر ورودی‌های prompt، lyrics و audio_duration را ندارد. نام Space را در تنظیمات پیشرفته بررسی کنید.');
   const [name,ep]=ent,mine={prompt:tags,lyrics:ins?'[instrumental]':ly,audio_duration:+$('#du').value};
   const data=Object.fromEntries(ep.parameters.map(p=>[p.parameter_name,p.parameter_name in mine?mine[p.parameter_name]:(p.parameter_has_default?p.parameter_default:null)]));
-  say('ارسال شد…');let res;
+  say('ارسال شد…');let res,last,best;
   for await(const m of c.submit(name,data)){
    if(m.type==='status'){
+    last=m;
     if(m.stage==='error')throw new Error(m.message||'خطای موتور');
     say(m.stage==='pending'&&m.position!=null?'در صف، جایگاه '+(m.position+1):'در حال ساخت آهنگ…')}
-   if(m.type==='data')res=m.data}
-  const f=(res||[]).find(x=>x&&x.url);
-  if(!f)throw new Error('موتور فایل صوتی برنگرداند.');
+   if(m.type==='data'){res=m.data;best=pick(m.data)||best}}
+  if(!best){const er=new Error('موتور فایل صوتی برنگرداند (شاید سهمیهٔ امروز تمام شده یا موتور خطا داده).');er.detail='پاسخ موتور:\n'+JSON.stringify({status:last&&{stage:last.stage,message:last.message,code:last.code},data:res}).slice(0,900);throw er}
+  const f=best;
   box.replaceChildren(h('audio',{controls:true,src:f.url}),h('a',{href:f.url,target:'_blank',rel:'noopener',textContent:'باز کردن / دانلود فایل'}));
  }catch(e){
   const m=e&&e.message?e.message:String(e);
-  box.replaceChildren(h('p',{className:'er',textContent:m+(/quota/i.test(m)?' (سهمیهٔ روزانهٔ GPU تمام شده؛ ۲۴ ساعت بعد دوباره امتحان کنید.)':'')+' — دوباره تلاش کنید.'}))}
+  box.replaceChildren(h('p',{className:'er',textContent:m+(/quota/i.test(m)?' (سهمیهٔ روزانهٔ GPU تمام شده؛ ۲۴ ساعت بعد دوباره امتحان کنید.)':'')+' — دوباره تلاش کنید.'}),e&&e.detail?h('pre',{className:'dt',dir:'ltr',textContent:e.detail}):'')}
  btn.disabled=false};
 </script></body></html>
