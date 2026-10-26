@@ -1,1 +1,337 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>وقت سالن</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f6fb;--card:#ffffff;--line:#d9dfec;--tx:#1b2233;--mut:#667089;--cy:#0891b2;--mg:#c026d3;--gd:#b45309;--ok:#059669;--bad:#dc2626}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Vazirmatn,Tahoma,sans-serif;font-size:15px;padding:12px;max-width:760px;margin-inline:auto}
+h1{margin:6px 0 2px;font-size:22px;color:var(--cy);text-align:center}
+.sub{text-align:center;color:var(--mut);font-size:12px;margin-bottom:12px}
+.tabs{display:flex;gap:4px;overflow-x:auto;padding-bottom:8px;position:sticky;top:0;background:var(--bg);z-index:5}
+.tabs button{flex:1;min-width:0;white-space:nowrap;background:var(--card);color:var(--mut);border:1px solid var(--line);padding:8px 2px;border-radius:9px;font:inherit;font-size:12.5px;cursor:pointer}
+.tabs button.on{color:#fff;background:var(--cy);border-color:var(--cy);font-weight:700}
+.sec{display:none}.sec.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:10px 0}
+.card h3{margin:0 0 8px;font-size:15px;color:var(--gd)}
+label{display:block;font-size:12px;color:var(--mut);margin:6px 0 3px}
+input,select{width:100%;background:#f8fafc;color:var(--tx);border:1px solid var(--line);border-radius:9px;padding:9px;font:inherit}
+.row{display:flex;gap:8px}.row>*{flex:1}
+button.b{background:var(--cy);color:#fff;border:0;border-radius:9px;padding:9px 14px;font:inherit;font-weight:700;cursor:pointer;margin-top:8px}
+button.m{background:var(--mg)}button.x{background:transparent;color:var(--bad);border:1px solid var(--bad);padding:4px 10px;font-weight:400;margin:0}
+.pr{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.pr>span:first-child{flex:1;min-width:130px}
+.pr select{width:auto;max-width:55%}
+.s0{color:var(--mut)}.s1{border-color:var(--bad);color:var(--bad)}.s2{border-color:var(--ok);color:var(--ok)}.s3{border-color:var(--mg);color:var(--mg)}
+.sum{font-size:12.5px;margin-top:8px;line-height:1.9}.sum b.ok{color:var(--ok)}.sum b.bad{color:var(--bad)}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12.5px;white-space:nowrap}
+th,td{border-bottom:1px solid var(--line);padding:7px 6px;text-align:center}th{color:var(--gd);font-weight:700}td:first-child,th:first-child{text-align:right}
+.tot td{font-weight:700;color:var(--cy)}
+.hd{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.mut{color:var(--mut);font-size:12px}.empty{color:var(--mut);text-align:center;padding:14px}
+.acts{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.days{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.days label{display:flex;align-items:center;gap:4px;margin:0;padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:#f8fafc;color:var(--tx);font-size:14px;cursor:pointer}
+.days input{width:auto}
+.days label.on{background:var(--cy);border-color:var(--cy);color:#fff}
+.seg{display:flex;gap:6px;margin:10px 0}
+.seg button{flex:1;border:0;border-radius:10px;padding:10px;font:inherit;background:#e2e8f0;color:var(--tx);cursor:pointer}
+.seg button.on{background:var(--cy);color:#fff;font-weight:700}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:20;align-items:center;justify-content:center;padding:16px}
+.modal.show{display:flex}.modal .card{width:100%;max-width:400px}
+.res{max-height:280px;overflow:auto;border:1px solid var(--line);border-radius:10px;padding:2px 10px;margin-top:6px;background:#fff}
+.res:empty{display:none}
+.done{background:#fdecec;border:1px solid #f3c4c4;border-radius:16px;padding:4px 10px 10px;margin-top:18px}
+.done>h3{margin:10px 0 0;color:#b91c1c;font-size:15px}
+.done .card{background:#fff6f6;border-color:#f3cccc}
+details>summary{list-style:none;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 14px;font-weight:700;color:var(--gd);margin:6px 0}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:'▾';float:left;color:var(--cy)}
+details[open]>summary::after{content:'▴'}
+.badge{font-size:11px;background:var(--gd);color:#fff;border-radius:8px;padding:1px 7px;margin-inline-start:6px}
+a.a{display:inline-block;text-decoration:none;padding:4px 10px;border-radius:9px;background:var(--cy);color:#fff}
+a.a.sm{background:var(--mg)}
+.chk{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px dashed var(--line)}.chk input{width:20px;height:20px}
+</style>
+</head>
+<body>
+<h1>⚽ وقت سالن</h1>
+<div class="sub">مدیریت سانس، پرداخت بازیکنان و پول توپ — آسان نت</div>
 
+<div class="tabs" id="tabs">
+ <button data-t="players" class="on">بازیکنان</button>
+ <button data-t="sess">سانس‌ها</button>
+ <button data-t="rep">گزارش ماه</button>
+ <button data-t="debt">بدهکاران</button>
+ <button data-t="ball">پول توپ</button>
+</div>
+
+<!-- بازیکنان -->
+<div class="sec on" id="players">
+ <div class="card"><h3>افزودن بازیکن</h3>
+  <input id="pname" placeholder="نام بازیکن">
+  <label>شماره موبایل (اختیاری)</label>
+  <input id="pphone" type="tel" inputmode="tel" dir="ltr" placeholder="09123456789" onkeydown="if(event.key==='Enter')addPlayer()">
+  <button class="b" onclick="addPlayer()">+ افزودن</button></div>
+ <div class="card"><h3>لیست بازیکنان (<span id="pcount">۰</span> نفر)</h3><div id="plist"></div></div>
+ <div class="card"><h3>پشتیبان‌گیری</h3>
+  <div class="mut">اطلاعات روی همین مرورگر ذخیره می‌شود. برای اطمینان گاهی پشتیبان بگیرید.</div>
+  <div class="row"><button class="b" onclick="exportData()">دریافت پشتیبان</button>
+  <button class="b m" onclick="$('imp').click()">بازیابی پشتیبان</button></div>
+  <input type="file" id="imp" accept=".json" style="display:none" onchange="importData(this)"></div>
+</div>
+
+<!-- سانس‌ها -->
+<div class="sec" id="sess">
+ <details id="addBox"><summary>➕ افزودن سانس و برنامه‌ی سانس ثابت</summary>
+ <div class="card"><label>نام تیم</label><input id="team" placeholder="مثلاً تیم ما" onchange="S.team=this.value;save()"></div>
+ <div class="seg"><button id="mFix" class="on" onclick="showMode('fix')">سانس ثابت</button><button id="mOne" onclick="showMode('one')">سانس تکی</button></div>
+ <div class="card" id="fixedCard"><h3>سانس ثابت (هفتگی)</h3>
+  <div class="mut">روزهای ثابت هفته را انتخاب کنید و تاریخ شروع را بدهید؛ سانس‌ها تا پایان همان سال خودکار ساخته می‌شوند.</div>
+  <label>روزهای هفته</label><div class="days" id="fdays"></div>
+  <label>شروع از تاریخ (شمسی)</label>
+  <div class="row"><select id="fy" onchange="fillDays('f')"></select><select id="fm" onchange="fillDays('f')"></select><select id="fd"></select></div>
+  <div class="row"><div><label>از ساعت</label><input type="time" id="ftf" value="20:00"></div><div><label>تا ساعت</label><input type="time" id="ftt" value="21:00"></div></div>
+  <div class="row"><div><label>مبلغ کل هر سانس (تومان)</label><input id="fprice" inputmode="numeric" placeholder="۰"></div>
+  <div><label>سهم هر نفر (تومان)</label><input id="fper" inputmode="numeric" placeholder="۰"></div></div>
+  <button class="b" onclick="addFixed()">+ ساخت سانس‌های ثابت تا پایان سال</button></div>
+ <div class="card" id="singleCard" style="display:none"><h3>ثبت سانس تکی</h3>
+  
+  <label>تاریخ (شمسی)</label>
+  <div class="row"><select id="sy" onchange="fillDays('s')"></select><select id="sm" onchange="fillDays('s')"></select><select id="sd"></select></div>
+  <div class="row"><div><label>از ساعت</label><input type="time" id="tf" value="20:00"></div><div><label>تا ساعت</label><input type="time" id="tt" value="21:00"></div></div>
+  <div class="row"><div><label>مبلغ کل سانس (تومان)</label><input id="price" inputmode="numeric" placeholder="۰"></div>
+  <div><label>سهم هر نفر (تومان)</label><input id="per" inputmode="numeric" placeholder="۰"></div></div>
+  <button class="b" onclick="addSession()">+ ثبت سانس</button></div>
+ <div id="rulesList"></div>
+ </details>
+ <div class="card" id="sessFilter"><h3>سانس‌های ثبت‌شده</h3><div class="row"><select id="ly" onchange="autoF=false;renderSessions()"></select><select id="lm" onchange="autoF=false;renderSessions()"></select></div></div>
+ <div id="sessList"></div>
+</div>
+
+<!-- گزارش ماهانه -->
+<div class="sec" id="rep">
+ <div class="card"><h3>گزارش پایان ماه</h3>
+  <div class="row"><select id="ry" onchange="autoR=false;renderRep()"></select><select id="rm" onchange="autoR=false;renderRep()"></select></div></div>
+ <div id="repBody"></div>
+</div>
+
+<!-- بدهکاران -->
+<div class="sec" id="debt"><div id="debtBody"></div></div>
+
+<!-- پول توپ -->
+<div class="sec" id="ball">
+ <div class="card"><h3>جمع‌آوری پول توپ</h3>
+  <label>عنوان</label><input id="btitle" placeholder="مثلاً خرید توپ جدید">
+  <label>قیمت توپ (تومان)</label><input id="bamt" inputmode="numeric" placeholder="۰">
+  <button class="b" onclick="addBall()">+ شروع جمع‌آوری</button></div>
+ <div id="ballList"></div>
+</div>
+
+<div class="modal" id="modal"><div class="card"><h3>ویرایش بازیکن</h3>
+ <label>نام بازیکن</label><input id="ename">
+ <label>شماره موبایل</label><input id="ephone" type="tel" inputmode="tel" dir="ltr">
+ <div class="row"><button class="b" onclick="saveEdit()">ذخیره</button><button class="b m" onclick="closeEdit()">انصراف</button></div></div></div>
+
+<script>
+const $=id=>document.getElementById(id);
+const FD='۰۱۲۳۴۵۶۷۸۹';
+const fa=s=>String(s).replace(/\d/g,d=>FD[d]);
+const num=s=>+String(s).replace(/[۰-۹]/g,d=>FD.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/[^\d.]/g,'')||0;
+const money=n=>fa(Math.round(n).toLocaleString('en-US'))+' تومان';
+const fm=n=>n?String(n).replace(/\B(?=(\d{3})+(?!\d))/g,','):'';
+const dgs=v=>String(v).replace(/[۰-۹]/g,x=>FD.indexOf(x)).replace(/[٠-٩]/g,x=>'٠١٢٣٤٥٦٧٨٩'.indexOf(x)).replace(/\D/g,'');
+document.addEventListener('input',e=>{const t=e.target;if(t.tagName!=='INPUT'||t.getAttribute('inputmode')!=='numeric')return;
+ const k=dgs(t.value.slice(0,t.selectionStart)).length,v=fm(dgs(t.value).replace(/^0+(?=\d)/,''));
+ t.value=v;let c=0,i=0;while(i<v.length&&c<k){if(v[i]!==',')c++;i++}
+ try{t.setSelectionRange(i,i)}catch(x){}});
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pad=n=>String(n).padStart(2,'0');
+const MN=['فروردین','اردیبهشت','خرداد','تیر','مرداد','شهریور','مهر','آبان','آذر','دی','بهمن','اسفند'];
+const WD=['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
+const ST=['نیامده','آمده – پرداخت نکرده','نقد پرداخت کرد','کارت‌به‌کارت کرد'];
+
+/* ---- تقویم شمسی ---- */
+const div=(a,b)=>~~(a/b);
+function g2j(gy,gm,gd){const g=[0,31,59,90,120,151,181,212,243,273,304,334];let jy=gy>1600?979:0;gy-=gy>1600?1600:621;
+ const gy2=gm>2?gy+1:gy;let days=365*gy+div(gy2+3,4)-div(gy2+99,100)+div(gy2+399,400)-80+gd+g[gm-1];
+ jy+=33*div(days,12053);days%=12053;jy+=4*div(days,1461);days%=1461;
+ if(days>365){jy+=div(days-1,365);days=(days-1)%365}
+ const jm=days<186?1+div(days,31):7+div(days-186,30);const jd=1+(days<186?days%31:(days-186)%30);return[jy,jm,jd]}
+function j2g(jy,jm,jd){let gy=jy>979?1600:621;jy-=jy>979?979:0;
+ let days=365*jy+div(jy,33)*8+div(jy%33+3,4)+78+jd+(jm<7?(jm-1)*31:(jm-7)*30+186);
+ gy+=400*div(days,146097);days%=146097;
+ if(days>36524){gy+=100*div(--days,36524);days%=36524;if(days>=365)days++}
+ gy+=4*div(days,1461);days%=1461;if(days>365){gy+=div(days-1,365);days=(days-1)%365}
+ let gd=days+1;const a=[0,31,(gy%4==0&&gy%100!=0)||gy%400==0?29:28,31,30,31,30,31,31,30,31,30,31];
+ let gm;for(gm=0;gm<13&&gd>a[gm];gm++)gd-=a[gm];return[gy,gm,gd]}
+const dim=(y,m)=>m<=6?31:m<=11?30:(g2j(...j2g(y,12,30))[1]===12?30:29);
+const today=()=>{const t=new Date();return g2j(t.getFullYear(),t.getMonth()+1,t.getDate())};
+const wday=(y,m,d)=>{const g=j2g(y,m,d);return WD[new Date(g[0],g[1]-1,g[2]).getDay()]};
+const fmtD=s=>`${wday(s.y,s.m,s.d)} ${fa(s.y+'/'+pad(s.m)+'/'+pad(s.d))}`;
+const dkey=s=>s.y*10000+s.m*100+s.d;
+
+/* ---- داده ---- */
+let S=load();if(!S.rules)S.rules=[];
+function migrate(){S.balls.forEach(b=>{if(b.price===undefined){b.price=(b.amount||0)*S.players.length;
+ for(const k in b.paid){if(b.paid[k]===true)b.paid[k]=b.amount||0;else if(b.paid[k]===false||b.paid[k]===0)delete b.paid[k]}}})}
+migrate();
+function load(){try{const x=JSON.parse(localStorage.getItem('vaghtSalon'));if(x&&x.players)return x}catch(e){}return{team:'',players:[],sessions:[],balls:[],def:{price:0,per:0}}}
+function save(){try{localStorage.setItem('vaghtSalon',JSON.stringify(S))}catch(e){}}
+let _c=0;const nid=()=>Date.now()*1000+(_c++%1000);
+const PO=[6,0,1,2,3,4,5];
+const pn=id=>{const p=S.players.find(p=>p.id===id);return p?esc(p.name):'—'};
+
+/* ---- تب‌ها ---- */
+$('tabs').onclick=e=>{const t=e.target.dataset.t;if(!t)return;
+ document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b===e.target));
+ document.querySelectorAll('.sec').forEach(s=>s.classList.toggle('on',s.id===t));renderAll()};
+
+/* ---- بازیکنان ---- */
+const ph=s=>String(s).replace(/[۰-۹]/g,d=>FD.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/[^\d+]/g,'');
+function addPlayer(){const v=$('pname').value.trim();if(!v)return;S.players.push({id:nid(),name:v,phone:ph($('pphone').value)});$('pname').value='';$('pphone').value='';save();renderAll()}
+let editId=0;
+function editPlayer(id){const p=S.players.find(p=>p.id===id);editId=id;$('ename').value=p.name;$('ephone').value=p.phone||'';$('modal').classList.add('show')}
+function closeEdit(){$('modal').classList.remove('show')}
+function saveEdit(){const n=$('ename').value.trim();if(!n){alert('نام را وارد کنید');return}const p=S.players.find(p=>p.id===editId);p.name=n;p.phone=ph($('ephone').value);save();closeEdit();renderAll()}
+const contact=(phone,msg)=>phone?`<a class="b a" href="tel:${phone}">📞 تماس</a><a class="b a sm" href="sms:${phone}${msg?'?body='+encodeURIComponent(msg):''}">✉️ پیامک</a>`:''
+function delPlayer(id){if(!confirm('این بازیکن حذف شود؟ سوابق پرداختش هم پاک می‌شود.'))return;
+ S.players=S.players.filter(p=>p.id!==id);S.sessions.forEach(s=>delete s.st[id]);S.balls.forEach(b=>delete b.paid[id]);save();renderAll()}
+function renderPlayers(){$('pcount').textContent=fa(S.players.length);
+ $('plist').innerHTML=S.players.map((p,i)=>`<div class="pr"><span>${fa(i+1)}. ${esc(p.name)}<br><span class="mut" dir="ltr">${p.phone?fa(p.phone):'بدون شماره'}</span></span><span class="acts">${contact(p.phone)}<button class="b x" onclick="editPlayer(${p.id})">ویرایش</button><button class="b x" onclick="delPlayer(${p.id})">حذف</button></span></div>`).join('')||'<div class="empty">هنوز بازیکنی اضافه نشده</div>'}
+
+/* ---- سانس‌ها ---- */
+function fillYM(yid,mid,y,m){const cy=today()[0],lo=Math.min(cy,...S.sessions.map(s=>s.y)),ys=[];for(let v=lo;v<=1500;v++)ys.push(v);
+ $(yid).innerHTML=ys.map(v=>`<option value="${v}"${v===y?' selected':''}>${fa(v)}</option>`).join('');
+ $(mid).innerHTML=MN.map((n,i)=>`<option value="${i+1}"${i+1===m?' selected':''}>${n}</option>`).join('')}
+function fillDays(p,keep){const y=+$(p+'y').value,m=+$(p+'m').value,cur=keep||+$(p+'d').value||1;
+ $(p+'d').innerHTML=Array.from({length:dim(y,m)},(_,i)=>`<option value="${i+1}"${i+1===cur?' selected':''}>${fa(i+1)}</option>`).join('')}
+function addSession(){const per=num($('per').value),price=num($('price').value);
+ S.sessions.push({id:nid(),y:+$('sy').value,m:+$('sm').value,d:+$('sd').value,from:$('tf').value,to:$('tt').value,price,per,st:{}});
+ S.def={price,per};save();$('ly').value=+$('sy').value;$('lm').value=+$('sm').value;renderAll();closeBox()}
+function closeBox(){$('addBox').open=false;setTimeout(()=>{try{$('sessFilter').scrollIntoView({behavior:'smooth'})}catch(e){}},60)}
+function showMode(m){$('fixedCard').style.display=m==='fix'?'':'none';$('singleCard').style.display=m==='one'?'':'none';$('mFix').classList.toggle('on',m==='fix');$('mOne').classList.toggle('on',m==='one')}
+function addFixed(){
+ const days=[...document.querySelectorAll('#fdays input:checked')].map(i=>+i.value);
+ if(!days.length){alert('حداقل یک روز هفته را انتخاب کنید');return}
+ const y=+$('fy').value,m0=+$('fm').value,d0=+$('fd').value,per=num($('fper').value),price=num($('fprice').value),from=$('ftf').value,to=$('ftt').value,rid=nid();
+ let n=0;
+ for(let m=m0;m<=12;m++)for(let d=(m===m0?d0:1);d<=dim(y,m);d++){const g=j2g(y,m,d);
+  if(days.includes(new Date(g[0],g[1]-1,g[2]).getDay())){S.sessions.push({id:nid(),y,m,d,from,to,price,per,st:{},rid});n++}}
+ S.rules.push({id:rid,days,from,to,price,per,y,m:m0,d:d0,n});S.def={price,per};save();
+ $('ly').value=y;$('lm').value=m0;renderAll();closeBox();alert(fa(n)+' سانس ثابت تا پایان سال '+fa(y)+' ساخته شد')}
+function delRule(id){if(!confirm('این برنامه‌ی سانس ثابت حذف شود؟ سانس‌هایی که هنوز وضعیت پرداختی ندارند پاک می‌شوند و سانس‌های دارای سابقه‌ی پرداخت باقی می‌مانند.'))return;
+ S.rules=S.rules.filter(r=>r.id!==id);S.sessions=S.sessions.filter(s=>s.rid!==id||Object.values(s.st).some(v=>v>0));save();renderAll()}
+function renderRules(){$('rulesList').innerHTML=S.rules.length?'<div class="card"><h3>برنامه‌های سانس ثابت</h3>'+S.rules.map(r=>`<div class="pr"><span>${PO.filter(d=>r.days.includes(d)).map(d=>WD[d]).join('، ')} — ساعت ${fa(r.from||'')} تا ${fa(r.to||'')}<br><span class="mut">از ${fa(r.y+'/'+pad(r.m)+'/'+pad(r.d))} تا پایان سال · ${fa(r.n)} سانس · نفری ${money(r.per)}</span></span><button class="b x" onclick="delRule(${r.id})">حذف</button></div>`).join('')+'</div>':''}
+function delSess(id){if(!confirm('این سانس حذف شود؟'))return;S.sessions=S.sessions.filter(s=>s.id!==id);save();renderAll()}
+function setSt(sid,pid,v){S.sessions.find(s=>s.id===sid).st[pid]=+v;save();renderAll()}
+const nf=t=>String(t).replace(/ي/g,'ی').replace(/ك/g,'ک').toLowerCase();
+const sess=id=>S.sessions.find(x=>x.id===id);
+function srch(sid){const s=sess(sid),raw=$('q'+sid).value.trim(),q=nf(raw),qp=ph(raw);
+ const R=S.players.filter(p=>!(p.id in s.st)&&(!q||nf(p.name).includes(q)||(qp&&p.phone&&p.phone.includes(qp))));
+ $('r'+sid).innerHTML=R.slice(0,8).map(p=>`<div class="pr"><span>${esc(p.name)}<br><span class="mut" dir="ltr">${p.phone?fa(p.phone):''}</span></span><button class="b" style="margin:0" onclick="addTo(${sid},${p.id})">+ افزودن</button></div>`).join('')
+  +(R.length>8?`<div class="mut" style="padding:6px">${fa(R.length-8)} نتیجه‌ی دیگر؛ عبارت دقیق‌تری بنویسید</div>`:'')||'<div class="mut" style="padding:6px">بازیکنی پیدا نشد</div>'}
+function addTo(sid,pid){sess(sid).st[pid]=1;save();renderAll();const q=$('q'+sid);if(q)q.focus()}
+function rmFrom(sid,pid){delete sess(sid).st[pid];save();renderAll()}
+function addAll(sid){if(S.players.length>30&&!confirm('همه‌ی '+fa(S.players.length)+' بازیکن به این سانس اضافه شوند؟'))return;
+ const s=sess(sid);S.players.forEach(p=>{if(!(p.id in s.st))s.st[p.id]=1});save();renderAll()}
+function copyPrev(sid){const s=sess(sid);
+ const prev=S.sessions.filter(x=>x.id!==sid&&dkey(x)<dkey(s)&&(s.rid?x.rid===s.rid:!x.rid)&&Object.keys(x.st).length).sort((a,b)=>dkey(b)-dkey(a))[0];
+ if(!prev){alert('سانس قبلی که بازیکن داشته باشد پیدا نشد');return}
+ Object.keys(prev.st).forEach(k=>{if(!(k in s.st)&&S.players.some(p=>p.id==k))s.st[k]=1});save();renderAll()}
+function setNum(sid,k,v){S.sessions.find(s=>s.id===sid)[k]=num(v);save();renderAll()}
+function renderSessions(){
+ const fyr=+$('ly').value,fmo=+$('lm').value;
+ const list=S.sessions.filter(s=>s.y===fyr&&(fmo===0||s.m===fmo));
+ const cardHtml=s=>{
+  const g=f=>S.players.filter(p=>f(s.st[p.id]||0)).map(p=>esc(p.name)).join('، ')||'—';
+  const came=S.players.filter(p=>(s.st[p.id]||0)>0).length;
+  const mem=S.players.filter(p=>p.id in s.st);
+  const rows=mem.map((p,i)=>{const v=s.st[p.id]||0;
+   return `<div class="pr"><span>${fa(i+1)}. ${esc(p.name)}</span><span class="acts"><select class="s${v}" onchange="setSt(${s.id},${p.id},this.value)">${ST.map((t,k)=>`<option value="${k}"${k===v?' selected':''}>${t}</option>`).join('')}</select><button class="b x" onclick="rmFrom(${s.id},${p.id})">✕</button></span></div>`}).join('')||'<div class="empty">هنوز بازیکنی به این سانس اضافه نشده</div>';
+  const got=S.players.reduce((a,p)=>a+((s.st[p.id]||0)>=2?s.per:0),0);
+  return `<div class="card"><div class="hd"><h3>${S.team?esc(S.team)+' — ':''}${fmtD(s)}${s.rid?'<span class="badge">ثابت</span>':''}</h3><button class="b x" onclick="delSess(${s.id})">حذف</button></div>
+  <div class="mut">ساعت ${fa(s.from||'')} تا ${fa(s.to||'')}</div>
+  <div class="row"><div><label>مبلغ کل سانس</label><input inputmode="numeric" value="${fm(s.price)}" onchange="setNum(${s.id},'price',this.value)"></div>
+  <div><label>سهم هر نفر</label><input inputmode="numeric" value="${fm(s.per)}" onchange="setNum(${s.id},'per',this.value)"></div></div>
+   <label>افزودن بازیکن به این سانس (جستجو در لیست ذخیره‌شده)</label>
+   <input id="q${s.id}" placeholder="نام یا شماره را تایپ کنید…" oninput="srch(${s.id})" onfocus="srch(${s.id})">
+   <div class="res" id="r${s.id}"></div>
+   <div class="row"><button class="b m" onclick="copyPrev(${s.id})">کپی از سانس قبلی</button><button class="b m" onclick="addAll(${s.id})">افزودن همه</button></div>
+   <div class="mut" style="margin-top:8px">بازیکنان این سانس: ${fa(mem.length)} نفر</div>
+  ${rows}
+  <div class="sum">آمده: <b>${fa(came)}</b> نفر · جمع‌شده: <b>${money(got)}</b> از ${money(came*s.per)}<br>
+  <b class="ok">پول داده (نقد):</b> ${g(v=>v===2)}<br><b class="ok">پول داده (کارت):</b> ${g(v=>v===3)}<br><b class="bad">پول نداده:</b> ${g(v=>v===1)}</div></div>`};
+ const t=today(),tk=t[0]*10000+t[1]*100+t[2];
+ const up=list.filter(s=>dkey(s)>=tk).sort((a,b)=>dkey(a)-dkey(b)),dn=list.filter(s=>dkey(s)<tk).sort((a,b)=>dkey(b)-dkey(a));
+ $('sessList').innerHTML=(up.length?up.map(cardHtml).join(''):(dn.length?'<div class="empty">سانس پیش‌رویی در این بازه نیست</div>':'<div class="empty">سانسی در این بازه ثبت نشده</div>'))
+  +(dn.length?'<div class="done"><h3>✅ سانس‌های انجام‌شده (تمام‌شده) — '+fa(dn.length)+' سانس</h3>'+dn.map(cardHtml).join('')+'</div>':'')}
+
+/* ---- گزارش ماهانه ---- */
+function stats(list){return S.players.map(p=>{const r={p,came:0,paid:0,cashN:0,cardN:0,debtN:0,debt:0,cash:0,card:0};
+ list.forEach(s=>{const v=s.st[p.id]||0;if(!v)return;r.came++;
+  if(v===1){r.debtN++;r.debt+=s.per}else{r.paid++;if(v===2){r.cashN++;r.cash+=s.per}else{r.cardN++;r.card+=s.per}}});return r})}
+function renderRep(){const y=+$('ry').value,m=+$('rm').value;
+ const list=S.sessions.filter(s=>s.y===y&&s.m===m),R=stats(list);
+ const T=R.reduce((a,r)=>{for(const k of['came','paid','debtN','debt','cash','card'])a[k]+=r[k];return a},{came:0,paid:0,debtN:0,debt:0,cash:0,card:0});
+ const names=f=>R.filter(f).map(r=>`${esc(r.p.name)} (${fa(f===undefined?0:0)}${''}`).join('');
+ const lst=(f,fmt)=>R.filter(f).map(r=>fmt(r)).join('<br>')||'—';
+ $('repBody').innerHTML=`<div class="card"><h3>${MN[m-1]} ${fa(y)} — ${fa(list.length)} سانس</h3>
+ <div class="tw"><table><tr><th>بازیکن</th><th>آمده</th><th>پرداخت</th><th>بدهی</th><th>مبلغ بدهی</th></tr>
+ ${R.map(r=>`<tr><td>${esc(r.p.name)}</td><td>${fa(r.came)}</td><td>${fa(r.paid)}</td><td style="color:${r.debtN?'var(--bad)':'var(--ok)'}">${fa(r.debtN)}</td><td>${money(r.debt)}</td></tr>`).join('')}
+ <tr class="tot"><td>جمع</td><td>${fa(T.came)}</td><td>${fa(T.paid)}</td><td>${fa(T.debtN)}</td><td>${money(T.debt)}</td></tr></table></div></div>
+ <div class="card"><h3>🔴 بدهکاران این ماه</h3>${R.filter(r=>r.debtN>0).map(r=>`<div style="margin-top:10px"><div class="hd"><b>${esc(r.p.name)}</b><b style="color:var(--bad)">${fa(r.debtN)} سانس — ${money(r.debt)}</b></div>${debtRows(r.p,list)}</div>`).join('')||'<div class="sum">—</div>'}</div>
+ <div class="card"><h3>💵 پرداخت نقدی</h3><div class="sum">${lst(r=>r.cashN>0,r=>`${esc(r.p.name)}: ${fa(r.cashN)} سانس — ${money(r.cash)}`)}<br><b>جمع نقد: ${money(T.cash)}</b></div></div>
+ <div class="card"><h3>💳 پرداخت کارت‌به‌کارت</h3><div class="sum">${lst(r=>r.cardN>0,r=>`${esc(r.p.name)}: ${fa(r.cardN)} سانس — ${money(r.card)}`)}<br><b>جمع کارت: ${money(T.card)}</b></div></div>
+ <div class="card" style="border:2px solid var(--cy)"><h3>🧮 جمع کل پرداخت — ${MN[m-1]} ${fa(y)}</h3><div class="sum" style="font-size:15px">نقد: ${money(T.cash)}<br>کارت‌به‌کارت: ${money(T.card)}<br><b style="font-size:18px;color:var(--cy)">جمع کل پرداخت‌شده: ${money(T.cash+T.card)}</b><br><span class="mut">بدهی باقی‌مانده: ${money(T.debt)}</span></div></div>`}
+
+/* ---- بدهکاران (کل سوابق) ---- */
+const debtRows=(p,list)=>[...list].sort((a,b)=>dkey(a)-dkey(b)).filter(s=>s.st[p.id]===1).map(s=>`<div class="pr"><span>${fmtD(s)}<br><span class="mut">ساعت ${fa(s.from||'')} تا ${fa(s.to||'')} · ${money(s.per)}</span></span><span class="acts"><button class="b" style="margin:0;padding:6px 10px" onclick="setSt(${s.id},${p.id},2)">💵 نقد</button><button class="b m" style="margin:0;padding:6px 10px" onclick="setSt(${s.id},${p.id},3)">💳 کارت</button></span></div>`).join('');
+function renderDebt(){const R=stats(S.sessions).filter(r=>r.debtN>0),tot=R.reduce((a,r)=>a+r.debt,0);
+ const dates=p=>[...S.sessions].sort((a,b)=>dkey(a)-dkey(b)).filter(s=>s.st[p.id]===1).map(s=>fa(s.y+'/'+pad(s.m)+'/'+pad(s.d))).join('، ');
+ $('debtBody').innerHTML=`<div class="card"><h3>بدهکاران (کل سوابق) — جمع بدهی: ${money(tot)}</h3></div>`+
+ (R.map((r,i)=>`<div class="card"><div class="hd"><b>${fa(i+1)}. ${esc(r.p.name)}</b><b style="color:var(--bad)">${money(r.debt)}</b></div>
+  <div class="mut" style="margin:4px 0">${fa(r.debtN)} سانس پرداخت‌نشده؛ با دکمه‌ی «نقد» یا «کارت» پرداخت همان سانس را ثبت کن:</div>${debtRows(r.p,S.sessions)}
+  <div class="acts" style="margin-top:8px">${contact(r.p.phone,'سلام '+r.p.name+'، بدهی وقت سالن شما بابت سانس‌های '+dates(r.p)+' مبلغ '+money(r.debt)+' است. لطفاً پرداخت کنید. ممنون')}</div></div>`).join('')||'<div class="empty">🎉 هیچ بدهکاری وجود ندارد</div>')}
+
+/* ---- پول توپ ---- */
+function addBall(){const t=$('btitle').value.trim()||'پول توپ',a=num($('bamt').value);S.balls.push({id:nid(),title:t,price:a,paid:{}});$('btitle').value='';$('bamt').value='';save();renderAll()}
+function delBall(id){if(!confirm('این جمع‌آوری حذف شود؟'))return;S.balls=S.balls.filter(b=>b.id!==id);save();renderAll()}
+function setBallAmt(id,pid,v){const b=S.balls.find(b=>b.id===id),n=num(v);if(n>0)b.paid[pid]=n;else delete b.paid[pid];save();renderAll()}
+function setBallPrice(id,v){S.balls.find(b=>b.id===id).price=num(v);save();renderAll()}
+function renderBall(){$('ballList').innerHTML=S.balls.map(b=>{
+ const paidP=S.players.filter(p=>b.paid[p.id]>0),col=paidP.reduce((a,p)=>a+b.paid[p.id],0),rem=Math.max(0,b.price-col);
+ const un=S.players.filter(p=>!(b.paid[p.id]>0)).map(p=>esc(p.name)).join('، ')||'—';
+ const pct=b.price?Math.min(100,col/b.price*100):0;
+ const rows=S.players.map((p,i)=>`<div class="pr"><span>${fa(i+1)}. ${esc(p.name)}</span><input inputmode="numeric" style="width:140px" placeholder="مبلغ پرداختی" value="${fm(b.paid[p.id])}" onchange="setBallAmt(${b.id},${p.id},this.value)"></div>`).join('')||'<div class="empty">ابتدا بازیکن اضافه کنید</div>';
+ return `<div class="card"><div class="hd"><h3>${esc(b.title)}</h3><button class="b x" onclick="delBall(${b.id})">حذف</button></div>
+ <label>قیمت توپ (تومان)</label><input inputmode="numeric" value="${fm(b.price)}" onchange="setBallPrice(${b.id},this.value)">
+ <div style="height:8px;background:#e2e8f0;border-radius:6px;overflow:hidden;margin:10px 0 4px"><div style="height:100%;width:${pct}%;background:var(--ok)"></div></div>
+ <div class="mut">هر بازیکن هر مبلغی که داد را جلوی اسمش بنویس</div>
+ ${rows}
+ <div class="sum">پرداخت کرده: <b class="ok">${fa(paidP.length)}</b> نفر · جمع‌شده: <b>${money(col)}</b> از ${money(b.price)}<br>
+ ${col>b.price?'اضافه‌ی جمع‌شده: <b>'+money(col-b.price)+'</b>':'مانده: <b class="bad">'+money(rem)+'</b>'}<br>نداده‌اند: ${un}</div></div>`}).join('')||'<div class="empty">هنوز جمع‌آوری‌ای ثبت نشده</div>'}
+
+/* ---- پشتیبان ---- */
+function exportData(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:'application/json'}));a.download='vaght-salon-backup.json';a.click()}
+function importData(i){const f=i.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result);if(!x.players)throw 0;S=x;if(!S.rules)S.rules=[];migrate();save();renderAll();alert('بازیابی شد')}catch(e){alert('فایل معتبر نیست')}};r.readAsText(f)}
+
+function renderAll(){renderPlayers();renderRules();renderSessions();renderRep();renderDebt();renderBall()}
+let autoF=true,autoR=true,ld=today().join();
+function chkDate(){const t=today(),k=t.join();if(k===ld)return;ld=k;
+ if(autoF){$('ly').value=t[0];$('lm').value=t[1]}
+ if(autoR){$('ry').value=t[0];$('rm').value=t[1]}
+ renderSessions();renderRep()}
+setInterval(chkDate,60000);document.addEventListener('visibilitychange',chkDate);
+(function init(){const t=today();fillYM('sy','sm',t[0],t[1]);fillDays('s',t[2]);fillYM('fy','fm',t[0],t[1]);fillDays('f',t[2]);
+ fillYM('ly','lm',t[0],t[1]);$('lm').insertAdjacentHTML('afterbegin','<option value="0">همه ماه‌ها</option>');$('lm').value=t[1];
+ $('fdays').innerHTML=PO.map(d=>`<label><input type="checkbox" value="${d}" onchange="this.parentNode.classList.toggle('on',this.checked)">${WD[d]}</label>`).join('');
+ if(S.def.price){$('fprice').value=fm(S.def.price)}if(S.def.per){$('fper').value=fm(S.def.per)}
+ fillYM('ry','rm',t[0],t[1]);
+ $('team').value=S.team||'';$('addBox').open=S.sessions.length===0;if(S.def.price)$('price').value=fm(S.def.price);if(S.def.per)$('per').value=fm(S.def.per);renderAll()})();
+</script>
+</body>
+</html>
