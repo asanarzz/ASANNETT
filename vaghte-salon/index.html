@@ -51,6 +51,21 @@ details>summary{list-style:none;cursor:pointer;background:var(--card);border:1px
 details>summary::-webkit-details-marker{display:none}
 details>summary::after{content:'▾';float:left;color:var(--cy)}
 details[open]>summary::after{content:'▴'}
+.pr.t0{background:#fff8d6;border-radius:8px;padding:6px 8px}
+.pr.t1{background:#e8f1ff;border-radius:8px;padding:6px 8px}
+.th{font-weight:700;font-size:13px;margin-top:10px;padding:5px 8px;border-radius:8px}
+.th.t0{background:#ffefa8}.th.t1{background:#d4e6ff}
+.tsel{width:auto;max-width:120px}
+input.ia{background:#fff8d6}input.ib{background:#e8f1ff}
+.gm{display:grid;grid-template-columns:1fr auto 1fr;gap:6px;align-items:start;text-align:center}
+.gm .tn{font-size:13px;font-weight:700}
+.gm .sc{font-size:42px;font-weight:700;line-height:1.15}
+.gm .mid{font-size:12px;color:var(--mut);padding-top:8px;min-width:86px;line-height:1.8}
+.gp{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+.gp>div{border-radius:10px;padding:6px 8px;font-size:13px;line-height:1.9}
+.gp .t0{background:#fff8d6}.gp .t1{background:#e8f1ff}
+.th.tx{background:#eef1f6}
+.modal .card{max-height:92vh;overflow:auto}
 .badge{font-size:11px;background:var(--gd);color:#fff;border-radius:8px;padding:1px 7px;margin-inline-start:6px}
 a.a{display:inline-block;text-decoration:none;padding:4px 10px;border-radius:9px;background:var(--cy);color:#fff}
 a.a.sm{background:var(--mg)}
@@ -66,7 +81,7 @@ a.a.sm{background:var(--mg)}
  <button data-t="sess">سانس‌ها</button>
  <button data-t="rep">گزارش ماه</button>
  <button data-t="debt">بدهکاران</button>
- <button data-t="ball">پول توپ</button>
+ <button data-t="res">نتایج</button>
 </div>
 
 <!-- بازیکنان -->
@@ -75,6 +90,9 @@ a.a.sm{background:var(--mg)}
   <input id="pname" placeholder="نام بازیکن">
   <label>شماره موبایل (اختیاری)</label>
   <input id="pphone" type="tel" inputmode="tel" dir="ltr" placeholder="09123456789" onkeydown="if(event.key==='Enter')addPlayer()">
+  <label>نقش بازیکن (می‌تواند هر دو باشد)</label>
+  <div class="days"><label class="on"><input type="checkbox" id="rpl" checked onchange="this.parentNode.classList.toggle('on',this.checked)">بازیکن</label><label><input type="checkbox" id="rgk" onchange="this.parentNode.classList.toggle('on',this.checked)">🧤 دروازه‌بان</label></div>
+  <label>امتیاز بازیکن (۱ تا ۱۰)</label><select id="prt"></select>
   <button class="b" onclick="addPlayer()">+ افزودن</button></div>
  <div class="card"><h3>لیست بازیکنان (<span id="pcount">۰</span> نفر)</h3><div id="plist"></div></div>
  <div class="card"><h3>پشتیبان‌گیری</h3>
@@ -120,21 +138,47 @@ a.a.sm{background:var(--mg)}
 </div>
 
 <!-- بدهکاران -->
-<div class="sec" id="debt"><div id="debtBody"></div></div>
+<div class="sec" id="debt">
+ <div class="seg"><button id="dbA" class="on" onclick="showDebt('d')">بدهکاران</button><button id="dbB" onclick="showDebt('b')">پول توپ</button></div>
+ <div id="debtBody"></div>
+ <div id="ballBox" style="display:none">
+  <div class="card"><h3>جمع‌آوری پول توپ</h3>
+   <label>عنوان</label><input id="btitle" placeholder="مثلاً خرید توپ جدید">
+   <label>قیمت توپ (تومان)</label><input id="bamt" inputmode="numeric" placeholder="۰">
+   <button class="b" onclick="addBall()">+ شروع جمع‌آوری</button></div>
+  <div id="ballList"></div>
+ </div>
+</div>
 
-<!-- پول توپ -->
-<div class="sec" id="ball">
- <div class="card"><h3>جمع‌آوری پول توپ</h3>
-  <label>عنوان</label><input id="btitle" placeholder="مثلاً خرید توپ جدید">
-  <label>قیمت توپ (تومان)</label><input id="bamt" inputmode="numeric" placeholder="۰">
-  <button class="b" onclick="addBall()">+ شروع جمع‌آوری</button></div>
- <div id="ballList"></div>
+<!-- نتایج -->
+<div class="sec" id="res">
+ <div class="card"><h3>ثبت نتیجه‌ی بازی</h3>
+  <label>سانس (تیم‌ها و بازیکنان از همین سانس گرفته می‌شود)</label><select id="rsess"></select>
+  <div class="row"><div><label id="rl0">تیم اول</label><input id="ra" class="ia" inputmode="numeric" placeholder="گل"></div>
+  <div><label id="rl1">تیم دوم</label><input id="rb" class="ib" inputmode="numeric" placeholder="گل"></div></div>
+  <button class="b" onclick="addGame()">+ ثبت نتیجه</button>
+  <button class="b m" onclick="exportToday()">📷 خروجی عکس بازی امروز</button></div>
+ <div class="card"><h3>نام تیم‌ها</h3>
+  <div class="row"><div><label>تیم اول (زرد)</label><input id="tn0" class="ia" onchange="setTn(0,this.value)"></div>
+  <div><label>تیم دوم (آبی)</label><input id="tn1" class="ib" onchange="setTn(1,this.value)"></div></div></div>
+ <div class="card"><h3>آمار ماهانه و سالانه</h3>
+  <div class="row"><select id="gY" onchange="autoG=false;renderRes()"></select><select id="gM" onchange="autoG=false;renderRes()"></select></div>
+  <div id="statBox"></div></div>
+ <div id="gameList"></div>
 </div>
 
 <div class="modal" id="modal"><div class="card"><h3>ویرایش بازیکن</h3>
  <label>نام بازیکن</label><input id="ename">
  <label>شماره موبایل</label><input id="ephone" type="tel" inputmode="tel" dir="ltr">
+ <label>نقش</label>
+ <div class="days"><label id="epll"><input type="checkbox" id="epl" onchange="this.parentNode.classList.toggle('on',this.checked)">بازیکن</label><label id="egkl"><input type="checkbox" id="egk" onchange="this.parentNode.classList.toggle('on',this.checked)">🧤 دروازه‌بان</label></div>
+ <label>امتیاز (۱ تا ۱۰)</label><select id="ert"></select>
  <div class="row"><button class="b" onclick="saveEdit()">ذخیره</button><button class="b m" onclick="closeEdit()">انصراف</button></div></div></div>
+
+<div class="modal" id="imgModal"><div class="card"><h3>📷 عکس نتیجه</h3>
+ <div class="mut">برای ذخیره روی عکس نگه دارید یا دکمه‌ی ذخیره را بزنید</div>
+ <img id="gimg" alt="" style="width:100%;border:1px solid var(--line);border-radius:8px;margin-top:8px">
+ <div class="row"><button class="b" onclick="saveImg()">ذخیره</button><button class="b m" onclick="shareImg()">اشتراک‌گذاری</button><button class="b x" onclick="closeImg()">بستن</button></div></div></div>
 
 <script>
 const $=id=>document.getElementById(id);
@@ -176,7 +220,9 @@ const dkey=s=>s.y*10000+s.m*100+s.d;
 
 /* ---- داده ---- */
 let S=load();if(!S.rules)S.rules=[];
-function migrate(){S.balls.forEach(b=>{if(b.price===undefined){b.price=(b.amount||0)*S.players.length;
+function migrate(){S.players.forEach(p=>{if(p.rt===undefined)p.rt=5;if(p.pl===undefined)p.pl=true;if(p.gk===undefined)p.gk=false});
+ if(!S.tnames)S.tnames=['توت گلان','فریب خورده ها'];if(!S.games)S.games=[];
+ S.balls.forEach(b=>{if(b.price===undefined){b.price=(b.amount||0)*S.players.length;
  for(const k in b.paid){if(b.paid[k]===true)b.paid[k]=b.amount||0;else if(b.paid[k]===false||b.paid[k]===0)delete b.paid[k]}}})}
 migrate();
 function load(){try{const x=JSON.parse(localStorage.getItem('vaghtSalon'));if(x&&x.players)return x}catch(e){}return{team:'',players:[],sessions:[],balls:[],def:{price:0,per:0}}}
@@ -192,19 +238,24 @@ $('tabs').onclick=e=>{const t=e.target.dataset.t;if(!t)return;
 
 /* ---- بازیکنان ---- */
 const ph=s=>String(s).replace(/[۰-۹]/g,d=>FD.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/[^\d+]/g,'');
-function addPlayer(){const v=$('pname').value.trim();if(!v)return;S.players.push({id:nid(),name:v,phone:ph($('pphone').value)});$('pname').value='';$('pphone').value='';save();renderAll()}
+const chip=(id,v)=>{$(id).checked=v;$(id).parentNode.classList.toggle('on',v)};
+function addPlayer(){const v=$('pname').value.trim();if(!v)return;
+ const pl=$('rpl').checked,gk=$('rgk').checked;if(!pl&&!gk){alert('حداقل یک نقش (بازیکن یا دروازه‌بان) را انتخاب کنید');return}
+ S.players.push({id:nid(),name:v,phone:ph($('pphone').value),pl,gk,rt:+$('prt').value||5});
+ $('pname').value='';$('pphone').value='';chip('rpl',true);chip('rgk',false);$('prt').value=5;save();renderAll()}
 let editId=0;
-function editPlayer(id){const p=S.players.find(p=>p.id===id);editId=id;$('ename').value=p.name;$('ephone').value=p.phone||'';$('modal').classList.add('show')}
+function editPlayer(id){const p=S.players.find(p=>p.id===id);editId=id;$('ename').value=p.name;$('ephone').value=p.phone||'';chip('epl',p.pl!==false);chip('egk',!!p.gk);$('ert').value=p.rt||5;$('modal').classList.add('show')}
 function closeEdit(){$('modal').classList.remove('show')}
-function saveEdit(){const n=$('ename').value.trim();if(!n){alert('نام را وارد کنید');return}const p=S.players.find(p=>p.id===editId);p.name=n;p.phone=ph($('ephone').value);save();closeEdit();renderAll()}
+function saveEdit(){const n=$('ename').value.trim();if(!n){alert('نام را وارد کنید');return}const p=S.players.find(p=>p.id===editId);if(!$('epl').checked&&!$('egk').checked){alert('حداقل یک نقش را انتخاب کنید');return}
+ p.name=n;p.phone=ph($('ephone').value);p.pl=$('epl').checked;p.gk=$('egk').checked;p.rt=+$('ert').value||5;save();closeEdit();renderAll()}
 const contact=(phone,msg)=>phone?`<a class="b a" href="tel:${phone}">📞 تماس</a><a class="b a sm" href="sms:${phone}${msg?'?body='+encodeURIComponent(msg):''}">✉️ پیامک</a>`:''
 function delPlayer(id){if(!confirm('این بازیکن حذف شود؟ سوابق پرداختش هم پاک می‌شود.'))return;
  S.players=S.players.filter(p=>p.id!==id);S.sessions.forEach(s=>delete s.st[id]);S.balls.forEach(b=>delete b.paid[id]);save();renderAll()}
 function renderPlayers(){$('pcount').textContent=fa(S.players.length);
- $('plist').innerHTML=S.players.map((p,i)=>`<div class="pr"><span>${fa(i+1)}. ${esc(p.name)}<br><span class="mut" dir="ltr">${p.phone?fa(p.phone):'بدون شماره'}</span></span><span class="acts">${contact(p.phone)}<button class="b x" onclick="editPlayer(${p.id})">ویرایش</button><button class="b x" onclick="delPlayer(${p.id})">حذف</button></span></div>`).join('')||'<div class="empty">هنوز بازیکنی اضافه نشده</div>'}
+ $('plist').innerHTML=S.players.map((p,i)=>`<div class="pr"><span>${fa(i+1)}. ${esc(p.name)}<br><span class="mut" dir="ltr">${p.phone?fa(p.phone):'بدون شماره'}</span><br><span class="mut">⭐ ${fa(p.rt||5)} · ${[p.pl!==false?'بازیکن':'',p.gk?'دروازه‌بان':''].filter(Boolean).join(' و ')}</span></span><span class="acts">${contact(p.phone)}<button class="b x" onclick="editPlayer(${p.id})">ویرایش</button><button class="b x" onclick="delPlayer(${p.id})">حذف</button></span></div>`).join('')||'<div class="empty">هنوز بازیکنی اضافه نشده</div>'}
 
 /* ---- سانس‌ها ---- */
-function fillYM(yid,mid,y,m){const cy=today()[0],lo=Math.min(cy,...S.sessions.map(s=>s.y)),ys=[];for(let v=lo;v<=1500;v++)ys.push(v);
+function fillYM(yid,mid,y,m){const cy=today()[0],lo=Math.min(cy,...S.sessions.map(s=>s.y),...S.games.map(g=>g.y)),ys=[];for(let v=lo;v<=1500;v++)ys.push(v);
  $(yid).innerHTML=ys.map(v=>`<option value="${v}"${v===y?' selected':''}>${fa(v)}</option>`).join('');
  $(mid).innerHTML=MN.map((n,i)=>`<option value="${i+1}"${i+1===m?' selected':''}>${n}</option>`).join('')}
 function fillDays(p,keep){const y=+$(p+'y').value,m=+$(p+'m').value,cur=keep||+$(p+'d').value||1;
@@ -228,6 +279,38 @@ function delRule(id){if(!confirm('این برنامه‌ی سانس ثابت ح�
 function renderRules(){$('rulesList').innerHTML=S.rules.length?'<div class="card"><h3>برنامه‌های سانس ثابت</h3>'+S.rules.map(r=>`<div class="pr"><span>${PO.filter(d=>r.days.includes(d)).map(d=>WD[d]).join('، ')} — ساعت ${fa(r.from||'')} تا ${fa(r.to||'')}<br><span class="mut">از ${fa(r.y+'/'+pad(r.m)+'/'+pad(r.d))} تا پایان سال · ${fa(r.n)} سانس · نفری ${money(r.per)}</span></span><button class="b x" onclick="delRule(${r.id})">حذف</button></div>`).join('')+'</div>':''}
 function delSess(id){if(!confirm('این سانس حذف شود؟'))return;S.sessions=S.sessions.filter(s=>s.id!==id);save();renderAll()}
 function setSt(sid,pid,v){S.sessions.find(s=>s.id===sid).st[pid]=+v;save();renderAll()}
+const DEFN=['توت گلان','فریب خورده ها'];
+const tn=i=>S.tnames[i];
+function ensureTeams(s){if(!s.tm)s.tm={};if(!s.gk)s.gk=[null,null]}
+function setTm(sid,pid,v){const s=sess(sid);ensureTeams(s);const o=s.tm[pid];
+ if(o!==undefined&&s.gk[o]===pid)s.gk[o]=null;
+ if(v==='')delete s.tm[pid];else s.tm[pid]=+v;save();renderAll()}
+function setGk(sid,pid){const s=sess(sid);ensureTeams(s);const t=s.tm[pid];if(t===undefined)return;s.gk[t]=(s.gk[t]===pid)?null:pid;save();renderAll()}
+function splitTeams(sid){const s=sess(sid);ensureTeams(s);
+ const att=S.players.filter(p=>p.id in s.st&&(s.st[p.id]||0)>0);
+ if(att.length<2){alert('برای تقسیم‌بندی حداقل دو بازیکن آمده لازم است');return}
+ if(Object.keys(s.tm).length&&!confirm('تیم‌بندی فعلی پاک شود و دوباره تقسیم انجام شود؟'))return;
+ const info=att.map(p=>({p,r:p.rt||5,k:Math.random()}));
+ const cand=info.filter(o=>o.p.gk),pure=o=>o.p.gk&&o.p.pl===false;
+ let gks=cand.slice(0,2);
+ if(cand.length>=2){let best=null;
+  for(let i=0;i<cand.length;i++)for(let j=i+1;j<cand.length;j++){
+   const out=cand.filter(o=>pure(o)&&o!==cand[i]&&o!==cand[j]).length;
+   const pen=out*100+Math.abs(cand[i].r-cand[j].r)+(cand[i].k+cand[j].k)*0.01;
+   if(!best||pen<best.pen)best={pen,a:cand[i],b:cand[j]}}
+  gks=[best.a,best.b].sort((a,b)=>b.r-a.r||a.k-b.k)}
+ const tm={},gk=[null,null],sum=[0,0],cnt=[0,0],cap=Math.ceil(att.length/2);
+ const put=(o,t,g)=>{tm[o.p.id]=t;sum[t]+=o.r;cnt[t]++;if(g)gk[t]=o.p.id};
+ if(gks[0])put(gks[0],0,true);if(gks[1])put(gks[1],1,true);
+ const rest=info.filter(o=>!gks.includes(o)).sort((a,b)=>b.r-a.r||a.k-b.k);
+ const give=(o,pref)=>put(o,cnt[pref]>=cap?1-pref:pref,false);
+ for(let i=0;i<rest.length;i+=2){const a=rest[i],b=rest[i+1],low=sum[0]<=sum[1]?0:1;
+  give(a,low);if(b)give(b,1-tm[a.p.id])}
+ s.tm=tm;s.gk=gk;save();renderAll();
+ const miss=[0,1].filter(t=>gk[t]===null).map(t=>tn(t));
+ if(miss.length)alert('دروازه‌بان کافی پیدا نشد؛ برای این تیم‌ها دروازه‌بان تعیین نشد: '+miss.join('، ')+'\nاز بخش بازیکنان نقش «دروازه‌بان» را فعال کن یا با دکمه‌ی 🧤 دستی انتخاب کن.')}
+function setTn(i,v){S.tnames[i]=v.trim()||DEFN[i];save();renderAll()}
+function showDebt(m){$('debtBody').style.display=m==='d'?'':'none';$('ballBox').style.display=m==='b'?'':'none';$('dbA').classList.toggle('on',m==='d');$('dbB').classList.toggle('on',m==='b')}
 const nf=t=>String(t).replace(/ي/g,'ی').replace(/ك/g,'ک').toLowerCase();
 const sess=id=>S.sessions.find(x=>x.id===id);
 function srch(sid){const s=sess(sid),raw=$('q'+sid).value.trim(),q=nf(raw),qp=ph(raw);
@@ -235,7 +318,7 @@ function srch(sid){const s=sess(sid),raw=$('q'+sid).value.trim(),q=nf(raw),qp=ph
  $('r'+sid).innerHTML=R.slice(0,8).map(p=>`<div class="pr"><span>${esc(p.name)}<br><span class="mut" dir="ltr">${p.phone?fa(p.phone):''}</span></span><button class="b" style="margin:0" onclick="addTo(${sid},${p.id})">+ افزودن</button></div>`).join('')
   +(R.length>8?`<div class="mut" style="padding:6px">${fa(R.length-8)} نتیجه‌ی دیگر؛ عبارت دقیق‌تری بنویسید</div>`:'')||'<div class="mut" style="padding:6px">بازیکنی پیدا نشد</div>'}
 function addTo(sid,pid){sess(sid).st[pid]=1;save();renderAll();const q=$('q'+sid);if(q)q.focus()}
-function rmFrom(sid,pid){delete sess(sid).st[pid];save();renderAll()}
+function rmFrom(sid,pid){const s=sess(sid);delete s.st[pid];if(s.tm)delete s.tm[pid];save();renderAll()}
 function addAll(sid){if(S.players.length>30&&!confirm('همه‌ی '+fa(S.players.length)+' بازیکن به این سانس اضافه شوند؟'))return;
  const s=sess(sid);S.players.forEach(p=>{if(!(p.id in s.st))s.st[p.id]=1});save();renderAll()}
 function copyPrev(sid){const s=sess(sid);
@@ -249,9 +332,15 @@ function renderSessions(){
  const cardHtml=s=>{
   const g=f=>S.players.filter(p=>f(s.st[p.id]||0)).map(p=>esc(p.name)).join('، ')||'—';
   const came=S.players.filter(p=>(s.st[p.id]||0)>0).length;
-  const mem=S.players.filter(p=>p.id in s.st);
-  const rows=mem.map((p,i)=>{const v=s.st[p.id]||0;
-   return `<div class="pr"><span>${fa(i+1)}. ${esc(p.name)}</span><span class="acts"><select class="s${v}" onchange="setSt(${s.id},${p.id},this.value)">${ST.map((t,k)=>`<option value="${k}"${k===v?' selected':''}>${t}</option>`).join('')}</select><button class="b x" onclick="rmFrom(${s.id},${p.id})">✕</button></span></div>`}).join('')||'<div class="empty">هنوز بازیکنی به این سانس اضافه نشده</div>';
+   ensureTeams(s);
+   const mem=S.players.filter(p=>p.id in s.st);
+   const rowHtml=(p,i)=>{const v=s.st[p.id]||0,t=s.tm[p.id],isG=t!==undefined&&s.gk[t]===p.id;
+    return `<div class="pr${t===undefined?'':' t'+t}"><span>${fa(i+1)}. ${esc(p.name)}${isG?' 🧤':''} <span class="mut">⭐${fa(p.rt||5)}</span></span><span class="acts"><select class="tsel" onchange="setTm(${s.id},${p.id},this.value)">${t===undefined?'<option value="" selected>— تیم —</option>':''}<option value="0"${t===0?' selected':''}>${esc(tn(0))}</option><option value="1"${t===1?' selected':''}>${esc(tn(1))}</option></select>${p.gk&&t!==undefined?`<button class="b" style="margin:0;padding:4px 8px${isG?'':';background:#e2e8f0;color:#334155'}" onclick="setGk(${s.id},${p.id})">🧤</button>`:''}<select class="s${v}" onchange="setSt(${s.id},${p.id},this.value)">${ST.map((x,k)=>`<option value="${k}"${k===v?' selected':''}>${x}</option>`).join('')}</select><button class="b x" onclick="rmFrom(${s.id},${p.id})">✕</button></span></div>`};
+   const grp=t=>{const G=mem.filter(p=>s.tm[p.id]===t);if(!G.length)return'';const sm=G.reduce((a,p)=>a+(p.rt||5),0);
+    return (t===undefined?`<div class="th tx">بدون تیم — ${fa(G.length)} نفر</div>`:`<div class="th t${t}">${esc(tn(t))} — ${fa(G.length)} نفر · مجموع امتیاز ${fa(sm)}</div>`)+G.map(rowHtml).join('')};
+   const rows=(grp(0)+grp(1)+grp(undefined))||'<div class="empty">هنوز بازیکنی به این سانس اضافه نشده</div>';
+   const gs=S.games.filter(g=>g.sid===s.id);
+   const gsum=gs.length?'<div class="sum">⚽ '+gs.map(g=>esc(tn(0))+' '+fa(g.a)+' – '+fa(g.b)+' '+esc(tn(1))).join('<br>')+'</div>':'';
   const got=S.players.reduce((a,p)=>a+((s.st[p.id]||0)>=2?s.per:0),0);
   return `<div class="card"><div class="hd"><h3>${S.team?esc(S.team)+' — ':''}${fmtD(s)}${s.rid?'<span class="badge">ثابت</span>':''}</h3><button class="b x" onclick="delSess(${s.id})">حذف</button></div>
   <div class="mut">ساعت ${fa(s.from||'')} تا ${fa(s.to||'')}</div>
@@ -261,14 +350,16 @@ function renderSessions(){
    <input id="q${s.id}" placeholder="نام یا شماره را تایپ کنید…" oninput="srch(${s.id})" onfocus="srch(${s.id})">
    <div class="res" id="r${s.id}"></div>
    <div class="row"><button class="b m" onclick="copyPrev(${s.id})">کپی از سانس قبلی</button><button class="b m" onclick="addAll(${s.id})">افزودن همه</button></div>
+   <button class="b" style="width:100%" onclick="splitTeams(${s.id})">⚖️ تقسیم بازیکنان به دو تیم</button>
    <div class="mut" style="margin-top:8px">بازیکنان این سانس: ${fa(mem.length)} نفر</div>
   ${rows}
+   ${gsum}
   <div class="sum">آمده: <b>${fa(came)}</b> نفر · جمع‌شده: <b>${money(got)}</b> از ${money(came*s.per)}<br>
   <b class="ok">پول داده (نقد):</b> ${g(v=>v===2)}<br><b class="ok">پول داده (کارت):</b> ${g(v=>v===3)}<br><b class="bad">پول نداده:</b> ${g(v=>v===1)}</div></div>`};
  const t=today(),tk=t[0]*10000+t[1]*100+t[2];
  const up=list.filter(s=>dkey(s)>=tk).sort((a,b)=>dkey(a)-dkey(b)),dn=list.filter(s=>dkey(s)<tk).sort((a,b)=>dkey(b)-dkey(a));
  $('sessList').innerHTML=(up.length?up.map(cardHtml).join(''):(dn.length?'<div class="empty">سانس پیش‌رویی در این بازه نیست</div>':'<div class="empty">سانسی در این بازه ثبت نشده</div>'))
-  +(dn.length?'<div class="done"><h3>✅ سانس‌های انجام‌شده (تمام‌شده) — '+fa(dn.length)+' سانس</h3>'+dn.map(cardHtml).join('')+'</div>':'')}
+  +(dn.length?'<div class="done"><h3>✅ سانس‌های انجام‌شده (تمام‌شده) — '+fa(dn.length)+' سانس</h3>'+dn.map(cardHtml).join('')+'</div>':'');save()}
 
 /* ---- گزارش ماهانه ---- */
 function stats(list){return S.players.map(p=>{const r={p,came:0,paid:0,cashN:0,cardN:0,debtN:0,debt:0,cash:0,card:0};
@@ -319,15 +410,135 @@ function renderBall(){$('ballList').innerHTML=S.balls.map(b=>{
 function exportData(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:'application/json'}));a.download='vaght-salon-backup.json';a.click()}
 function importData(i){const f=i.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result);if(!x.players)throw 0;S=x;if(!S.rules)S.rules=[];migrate();save();renderAll();alert('بازیابی شد')}catch(e){alert('فایل معتبر نیست')}};r.readAsText(f)}
 
-function renderAll(){renderPlayers();renderRules();renderSessions();renderRep();renderDebt();renderBall()}
-let autoF=true,autoR=true,ld=today().join();
+function addGame(){const sid=+$('rsess').value,s=sess(sid);if(!s){alert('ابتدا سانسی که بازیکن دارد انتخاب کنید');return}
+ const a=dgs($('ra').value),b=dgs($('rb').value);if(a===''||b===''){alert('نتیجه‌ی هر دو تیم را وارد کنید');return}
+ ensureTeams(s);const mem=S.players.filter(p=>p.id in s.st);
+ const snap=t=>mem.filter(p=>s.tm[p.id]===t).map(p=>({id:p.id,n:p.name}));
+ if(!snap(0).length&&!snap(1).length){alert('این سانس هنوز تیم‌بندی نشده؛ ابتدا در تب «سانس‌ها» دکمه‌ی «تقسیم بازیکنان» را بزن');return}
+ S.games.push({id:nid(),sid,y:s.y,m:s.m,d:s.d,from:s.from,to:s.to,a:+a,b:+b,t0:snap(0),t1:snap(1),k:[s.gk[0],s.gk[1]]});
+ $('ra').value='';$('rb').value='';$('gY').value=s.y;$('gM').value=s.m;save();renderAll()}
+function editGame(id){const g=S.games.find(x=>x.id===id);const a=prompt(tn(0)+' چند گل زد؟',g.a);if(a===null)return;const b=prompt(tn(1)+' چند گل زد؟',g.b);if(b===null)return;
+ const x=dgs(a),y=dgs(b);if(x===''||y==='')return;g.a=+x;g.b=+y;save();renderAll()}
+function delGame(id){if(!confirm('این بازی حذف شود؟'))return;S.games=S.games.filter(g=>g.id!==id);save();renderAll()}
+function tstats(list){const r=[0,1].map(()=>({g:0,w:0,l:0,d:0,gf:0,ga:0}));
+ list.forEach(g=>{r[0].g++;r[1].g++;r[0].gf+=g.a;r[0].ga+=g.b;r[1].gf+=g.b;r[1].ga+=g.a;
+  if(g.a>g.b){r[0].w++;r[1].l++}else if(g.b>g.a){r[1].w++;r[0].l++}else{r[0].d++;r[1].d++}});return r}
+function teamTable(list){const t=tstats(list);return `<div class="tw"><table><tr><th>تیم</th><th>بازی</th><th>برد</th><th>باخت</th><th>مساوی</th><th>گل زده</th><th>گل خورده</th></tr>${[0,1].map(i=>`<tr style="background:${i?'#e8f1ff':'#fff8d6'}"><td>${esc(tn(i))}</td><td>${fa(t[i].g)}</td><td>${fa(t[i].w)}</td><td>${fa(t[i].l)}</td><td>${fa(t[i].d)}</td><td>${fa(t[i].gf)}</td><td>${fa(t[i].ga)}</td></tr>`).join('')}</table></div>`}
+function gameCard(g){const nm=t=>g['t'+t].map(x=>{const p=S.players.find(p=>p.id===x.id);return esc(p?p.name:x.n)+((g.k||[])[t]===x.id?' 🧤':'')}).join('<br>')||'—';
+ const w=g.a>g.b?0:g.b>g.a?1:-1,col=i=>w===i?'var(--ok)':'var(--tx)';
+ return `<div class="card"><div class="gm"><div><div class="tn">${esc(tn(0))}</div><div class="sc" style="color:${col(0)}">${fa(g.a)}</div></div>
+ <div class="mid">${wday(g.y,g.m,g.d)}<br>${fa(g.y+'/'+pad(g.m)+'/'+pad(g.d))}</div>
+ <div><div class="tn">${esc(tn(1))}</div><div class="sc" style="color:${col(1)}">${fa(g.b)}</div></div></div>
+ <div class="gp"><div class="t0">${nm(0)}</div><div class="t1">${nm(1)}</div></div>
+ <div class="row" style="margin-top:8px"><button class="b" onclick="exportGame(${g.id})">📷 عکس</button><button class="b m" onclick="editGame(${g.id})">ویرایش</button><button class="b x" onclick="delGame(${g.id})">حذف</button></div></div>`}
+function renderRes(){
+ $('tn0').value=tn(0);$('tn1').value=tn(1);$('rl0').textContent=tn(0);$('rl1').textContent=tn(1);
+ const prev=$('rsess').value,t=today(),tk=t[0]*10000+t[1]*100+t[2];
+ const ss=S.sessions.filter(s=>S.players.some(p=>p.id in s.st));
+ const L=[...ss.filter(s=>dkey(s)<=tk).sort((a,b)=>dkey(b)-dkey(a)),...ss.filter(s=>dkey(s)>tk).sort((a,b)=>dkey(a)-dkey(b))];
+ $('rsess').innerHTML=L.map(s=>`<option value="${s.id}">${fmtD(s)} · ${fa(S.players.filter(p=>p.id in s.st).length)} نفر</option>`).join('')||'<option value="">هنوز سانسی با بازیکن ندارید</option>';
+ if(prev&&L.some(s=>String(s.id)===prev))$('rsess').value=prev;
+ const gy=+$('gY').value,gm=+$('gM').value;
+ const ys=S.games.filter(g=>g.y===gy),ms=gm?ys.filter(g=>g.m===gm):ys;
+ const mrows=MN.map((n,i)=>{const X=ys.filter(g=>g.m===i+1);if(!X.length)return'';const q=tstats(X);return `<tr><td>${n}</td><td>${fa(q[0].g)}</td><td>${fa(q[0].w)}</td><td>${fa(q[1].w)}</td><td>${fa(q[0].d)}</td></tr>`}).join('');
+ $('statBox').innerHTML=(gm?`<h3 style="margin:10px 0 4px">${MN[gm-1]} ${fa(gy)}</h3>`+teamTable(ms):'')
+  +`<h3 style="margin:14px 0 4px">آمار سالانه ${fa(gy)}</h3>`+teamTable(ys)
+  +(mrows?`<div class="tw" style="margin-top:8px"><table><tr><th>ماه</th><th>بازی</th><th>برد ${esc(tn(0))}</th><th>برد ${esc(tn(1))}</th><th>مساوی</th></tr>${mrows}</table></div>`:'');
+ const gl=[...ms].sort((a,b)=>(b.y*10000+b.m*100+b.d)-(a.y*10000+a.m*100+a.d)||b.id-a.id);
+ $('gameList').innerHTML=gl.map(gameCard).join('')||'<div class="empty">بازی‌ای در این بازه ثبت نشده</div>'}
+let lastBlob=null,lastUrl='';
+function todayGame(){const t=today(),k=t[0]*10000+t[1]*100+t[2],A=S.games.filter(g=>g.y*10000+g.m*100+g.d===k),L=A.length?A:S.games;
+ return [...L].sort((a,b)=>(b.y*10000+b.m*100+b.d)-(a.y*10000+a.m*100+a.d)||b.id-a.id)[0]}
+function exportToday(){const g=todayGame();if(!g){alert('هنوز نتیجه‌ای ثبت نشده');return}exportGame(g.id)}
+function exportGame(id){const g=S.games.find(x=>x.id===id);if(!g)return;const go=()=>drawImg(g);
+ if(document.fonts&&document.fonts.load){Promise.all([document.fonts.load('700 24px Vazirmatn'),document.fonts.load('400 24px Vazirmatn')]).then(go,go)}else go()}
+function drawImg(g){const W=600,H=1200,c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d');
+ x.direction='rtl';
+ const FF='Vazirmatn,Tahoma,sans-serif',GOLD='#facc15',GREEN='#4ade80',RED='#fb7185';
+ const T=(t,px,py,sz,col,al,w)=>{x.font=`${w||400} ${sz}px ${FF}`;x.fillStyle=col;x.textAlign=al||'center';x.fillText(t,px,py)};
+ const GT=(t,px,py,sz,col,al,w,gl)=>{x.save();x.shadowColor=gl||col;x.shadowBlur=20;T(t,px,py,sz,col,al,w);x.restore()};
+ const RR=(rx,ry,rw,rh,rad,fill,stroke,lw)=>{const q=Math.min(rad,rw/2,rh/2);x.beginPath();x.moveTo(rx+q,ry);x.arcTo(rx+rw,ry,rx+rw,ry+rh,q);x.arcTo(rx+rw,ry+rh,rx,ry+rh,q);x.arcTo(rx,ry+rh,rx,ry,q);x.arcTo(rx,ry,rx+rw,ry,q);x.closePath();if(fill){x.fillStyle=fill;x.fill()}if(stroke){x.strokeStyle=stroke;x.lineWidth=lw||1.5;x.stroke()}};
+ const LG=(x0,y0,x1,y1,a,b)=>{const gr=x.createLinearGradient(x0,y0,x1,y1);gr.addColorStop(0,a);gr.addColorStop(1,b);return gr};
+ const glow=(cx,cy,r,col)=>{const gr=x.createRadialGradient(cx,cy,0,cx,cy,r);gr.addColorStop(0,col);gr.addColorStop(1,'rgba(0,0,0,0)');x.fillStyle=gr;x.fillRect(cx-r,cy-r,2*r,2*r)};
+ const fit=(t,max,sz,w)=>{x.font=`${w||700} ${sz}px ${FF}`;while(sz>12&&x.measureText(t).width>max){sz--;x.font=`${w||700} ${sz}px ${FF}`}return sz};
+ const poly=(cx,cy,r,n,a0,fill)=>{x.beginPath();for(let k=0;k<n;k++){const a=a0+k*2*Math.PI/n;x[k?'lineTo':'moveTo'](cx+r*Math.cos(a),cy+r*Math.sin(a))}x.closePath();x.fillStyle=fill;x.fill()};
+ const ball=(cx,cy,r)=>{x.save();x.shadowColor='rgba(125,211,252,0.95)';x.shadowBlur=28;x.fillStyle='#ffffff';x.beginPath();x.arc(cx,cy,r,0,7);x.fill();x.restore();
+  x.strokeStyle=GOLD;x.lineWidth=3;x.beginPath();x.arc(cx,cy,r+6,0,7);x.stroke();
+  poly(cx,cy,r*0.4,5,-Math.PI/2,'#0f172a');x.strokeStyle='#0f172a';x.lineWidth=2;
+  for(let k=0;k<5;k++){const a=-Math.PI/2+k*2*Math.PI/5;x.beginPath();x.moveTo(cx+r*0.4*Math.cos(a),cy+r*0.4*Math.sin(a));x.lineTo(cx+r*0.72*Math.cos(a),cy+r*0.72*Math.sin(a));x.stroke();
+   poly(cx+r*0.9*Math.cos(a+Math.PI/5),cy+r*0.9*Math.sin(a+Math.PI/5),r*0.16,5,a,'#0f172a')}};
+ const w=g.a>g.b?0:g.b>g.a?1:-1,colr=i=>w===-1?'#ffffff':(w===i?GREEN:RED);
+ const ACC=['#fbbf24','#38bdf8'];
+ const panel=(px,py,pw,ph)=>{RR(px,py,pw,ph,22,LG(0,py,0,py+ph,'#2447e8','#172fae'),'rgba(255,255,255,0.3)',2)};
+ // ---- پس‌زمینه‌ی شب و استادیوم
+ const bg=x.createLinearGradient(0,0,0,H);bg.addColorStop(0,'#071246');bg.addColorStop(0.5,'#14116b');bg.addColorStop(1,'#2b0f60');x.fillStyle=bg;x.fillRect(0,0,W,H);
+ glow(60,70,280,'rgba(168,85,247,0.55)');glow(570,30,230,'rgba(56,189,248,0.38)');glow(300,1160,400,'rgba(217,70,239,0.55)');glow(300,1190,300,'rgba(34,211,238,0.45)');
+ let sd=7;const rnd=()=>(sd=(sd*9301+49297)%233280)/233280;
+ for(let i=0;i<110;i++){const px=rnd()*W,py=rnd()*640,r=rnd()*1.8+0.4;x.globalAlpha=0.25+rnd()*0.6;x.fillStyle='#cfe3ff';x.beginPath();x.arc(px,py,r,0,7);x.fill()}x.globalAlpha=1;
+ x.lineCap='round';[[-10,150,150,-10,'#a855f7',7],[-10,190,190,-10,'#22d3ee',4],[610,170,430,-10,'#f472b6',6],[610,215,475,-10,'#38bdf8',3]].forEach(([x0,y0,x1,y1,col,lw])=>{x.strokeStyle=col;x.globalAlpha=0.8;x.lineWidth=lw;x.beginPath();x.moveTo(x0,y0);x.lineTo(x1,y1);x.stroke()});x.globalAlpha=1;
+ [[300,1170,340,72,'rgba(125,211,252,0.7)'],[300,1170,260,52,'rgba(244,114,182,0.75)'],[300,1170,180,34,'rgba(125,211,252,0.6)']].forEach(([cx,cy,rx,ry,col])=>{x.strokeStyle=col;x.lineWidth=3;x.beginPath();x.ellipse(cx,cy,rx,ry,0,0,7);x.stroke()});
+ // ---- سربرگ
+ ball(300,52,24);
+ GT('نتیجه بازی',300,120,40,'#ffffff','center',700,'#60a5fa');
+ T(wday(g.y,g.m,g.d)+' '+fa(g.y+'/'+pad(g.m)+'/'+pad(g.d)),300,160,30,GOLD,'center',700);
+ // ---- اسکوربورد
+ panel(30,176,540,172);
+ RR(318,188,230,42,21,ACC[0]);RR(52,188,230,42,21,ACC[1]);
+ const n0=tn(0),n1=tn(1);
+ T(n0,433,218,fit(n0,212,25),'#1f2937','center',700);T(n1,167,218,fit(n1,212,25),'#0b1736','center',700);
+ GT(fa(g.a),433,318,100,colr(0),'center',700);GT(fa(g.b),167,318,100,colr(1),'center',700);
+ T('پایان بازی',300,268,19,'#fde047','center',700);T('-',300,312,56,'#93c5fd','center',700);
+ RR(150,358,300,40,20,w===-1?'#64748b':'#16a34a');
+ T(w===-1?'مساوی':'🏆 برنده: '+tn(w),300,386,23,'#ffffff','center',700);
+ // ---- ترکیب تیم‌ها
+ panel(20,408,560,242);
+ x.fillStyle='rgba(255,255,255,0.25)';x.fillRect(299,418,2,222);
+ const names=t=>g['t'+t].map(o=>{const p=S.players.find(p=>p.id===o.id);return (p?p.name:o.n)+(((g.k||[])[t]===o.id)?' 🧤':'')});
+ [0,1].forEach(i=>{const rgt=i?280:580,mid=i?160:440,L=names(i);
+  RR(mid-104,418,208,36,18,ACC[i]);T(tn(i),mid,444,fit(tn(i),190,22),i?'#0b1736':'#1f2937','center',700);
+  const lh=Math.min(32,180/Math.max(L.length,1)),sz=Math.min(23,lh-6);
+  L.forEach((n,k)=>{const cy=464+k*lh+lh/2,rad=Math.min(12,lh/2-3);
+   if(k){x.fillStyle='rgba(255,255,255,0.12)';x.fillRect(rgt-262,464+k*lh,248,1)}
+   x.beginPath();x.arc(rgt-26,cy,rad,0,7);x.fillStyle=ACC[i];x.fill();
+   T(fa(k+1),rgt-26,cy+5,Math.max(11,rad+2),'#0b1736','center',700);
+   T(n,rgt-46,cy+sz*0.35,sz,'#ffffff','right',700)})});
+ // ---- آمار
+ const MS=S.games.filter(q=>q.y===g.y&&q.m===g.m),YS=S.games.filter(q=>q.y===g.y);
+ const table=(title,list,ty)=>{
+  RR(90,ty,420,42,21,LG(90,0,510,0,'#7c3aed','#db2777'));GT(title,300,ty+29,22,'#ffffff','center',700,'#f472b6');
+  const st=tstats(list),top=ty+52,cw=[170,60,60,60,60,130],hd=['تیم','بازی','برد','باخت','مساوی','گل'];
+  panel(30,top,540,158);
+  let rx=562;const pos=cw.map(wd=>{const q=rx-wd/2;rx-=wd;return q});
+  hd.forEach((h,k)=>T(h,pos[k],top+29,19,'#fde047','center',700));
+  const lead=st[0].w===st[1].w?-1:(st[0].w>st[1].w?0:1);
+  [0,1].forEach(i=>{const y=top+42+i*58,col=lead===-1?'#ffffff':(lead===i?GREEN:RED);
+   RR(40,y+3,520,52,13,lead===-1?'rgba(255,255,255,0.1)':(lead===i?'rgba(34,197,94,0.22)':'rgba(244,63,94,0.2)'));
+   x.beginPath();x.arc(546,y+29,7,0,7);x.fillStyle=ACC[i];x.fill();
+   [tn(i),fa(st[i].g),fa(st[i].w),fa(st[i].l),fa(st[i].d),fa(st[i].gf)+' - '+fa(st[i].ga)].forEach((t,k)=>T(t,pos[k]-(k?0:12),y+38,k?27:fit(t,140,24),col,'center',700))})};
+ table('نتایج ماه '+MN[g.m-1]+' '+fa(g.y),MS,662);
+ table('نتایج سال '+fa(g.y),YS,884);
+ // ---- فوتر
+ RR(262,1108,76,76,18,LG(0,1108,0,1184,'#22c55e','#15803d'),'rgba(255,255,255,0.6)',2);
+ T('آسان',300,1141,23,'#ffffff','center',700);T('نت',300,1171,23,'#ffffff','center',700);
+ x.direction='ltr';T('@ASANNETT',28,1160,19,'#ffffff','left',700);x.direction='rtl';
+ T('وقت سالن',572,1160,19,'#ffffff','right',700);
+ lastUrl=c.toDataURL('image/png');c.toBlob(b=>{lastBlob=b},'image/png');$('gimg').src=lastUrl;$('imgModal').classList.add('show')}
+function saveImg(){if(!lastUrl)return;const a=document.createElement('a');a.href=lastUrl;a.download='vaght-salon-result.png';document.body.appendChild(a);a.click();a.remove()}
+function shareImg(){if(!lastBlob){alert('چند لحظه بعد دوباره تلاش کنید');return}const f=new File([lastBlob],'vaght-salon-result.png',{type:'image/png'});
+ if(navigator.canShare&&navigator.canShare({files:[f]}))navigator.share({files:[f],title:'نتیجه بازی'}).catch(()=>{});else alert('اشتراک‌گذاری در این مرورگر ممکن نیست؛ روی عکس نگه دارید و ذخیره کنید.')}
+function closeImg(){$('imgModal').classList.remove('show')}
+function renderAll(){renderPlayers();renderRules();renderSessions();renderRep();renderDebt();renderBall();renderRes()}
+let autoF=true,autoR=true,autoG=true,ld=today().join();
 function chkDate(){const t=today(),k=t.join();if(k===ld)return;ld=k;
  if(autoF){$('ly').value=t[0];$('lm').value=t[1]}
  if(autoR){$('ry').value=t[0];$('rm').value=t[1]}
- renderSessions();renderRep()}
+ if(autoG){$('gY').value=t[0];$('gM').value=t[1]}
+ renderSessions();renderRep();renderRes()}
 setInterval(chkDate,60000);document.addEventListener('visibilitychange',chkDate);
 (function init(){const t=today();fillYM('sy','sm',t[0],t[1]);fillDays('s',t[2]);fillYM('fy','fm',t[0],t[1]);fillDays('f',t[2]);
  fillYM('ly','lm',t[0],t[1]);$('lm').insertAdjacentHTML('afterbegin','<option value="0">همه ماه‌ها</option>');$('lm').value=t[1];
+ fillYM('gY','gM',t[0],t[1]);$('gM').insertAdjacentHTML('afterbegin','<option value="0">همه ماه‌ها</option>');$('gM').value=t[1];
+ ['prt','ert'].forEach(id=>{$(id).innerHTML=Array.from({length:10},(_,i)=>`<option value="${i+1}"${i+1===5?' selected':''}>${fa(i+1)}</option>`).join('')});
  $('fdays').innerHTML=PO.map(d=>`<label><input type="checkbox" value="${d}" onchange="this.parentNode.classList.toggle('on',this.checked)">${WD[d]}</label>`).join('');
  if(S.def.price){$('fprice').value=fm(S.def.price)}if(S.def.per){$('fper').value=fm(S.def.per)}
  fillYM('ry','rm',t[0],t[1]);
