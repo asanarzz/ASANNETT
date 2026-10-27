@@ -413,7 +413,8 @@ function renderBall(){$('ballList').innerHTML=S.balls.map(b=>{
  ${col>b.price?'اضافه‌ی جمع‌شده: <b>'+money(col-b.price)+'</b>':'مانده: <b class="bad">'+money(rem)+'</b>'}<br>نداده‌اند: ${un}</div></div>`}).join('')||'<div class="empty">هنوز جمع‌آوری‌ای ثبت نشده</div>'}
 
 /* ---- پشتیبان ---- */
-function exportData(){const name='vaght-salon-backup-'+today().map(n=>pad(n)).join('-')+'.json';
+function nameHint(n){try{if(window.AndroidDownloader&&AndroidDownloader.setNextName)AndroidDownloader.setNextName(n)}catch(e){}}
+function exportData(){const name='vaght-salon-backup-'+today().map(n=>pad(n)).join('-')+'.json';nameHint(name);
  const url=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:'application/json'}));
  const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),4000)}
 function applyBackup(txt){let x;try{x=JSON.parse(String(txt).replace(/^\uFEFF/,'').trim())}catch(e){alert('متن پشتیبان معتبر نیست');return false}
@@ -536,7 +537,7 @@ function drawImg(g){const W=600,H=1200,c=document.createElement('canvas');c.widt
  x.direction='ltr';T('@ASANNETT',28,1160,19,'#ffffff','left',700);x.direction='rtl';
  T('وقت سالن',572,1160,19,'#ffffff','right',700);
  lastUrl=c.toDataURL('image/png');c.toBlob(b=>{lastBlob=b},'image/png');$('gimg').src=lastUrl;$('imgModal').classList.add('show')}
-function saveImg(){if(!lastUrl)return;const a=document.createElement('a');a.href=lastUrl;a.download='vaght-salon-result.png';document.body.appendChild(a);a.click();a.remove()}
+function saveImg(){if(!lastUrl)return;nameHint('vaght-salon-result.png');const a=document.createElement('a');a.href=lastUrl;a.download='vaght-salon-result.png';document.body.appendChild(a);a.click();a.remove()}
 function shareImg(){if(!lastBlob){alert('چند لحظه بعد دوباره تلاش کنید');return}const f=new File([lastBlob],'vaght-salon-result.png',{type:'image/png'});
  if(navigator.canShare&&navigator.canShare({files:[f]}))navigator.share({files:[f],title:'نتیجه بازی'}).catch(()=>{});else alert('اشتراک‌گذاری در این مرورگر ممکن نیست؛ روی عکس نگه دارید و ذخیره کنید.')}
 function closeImg(){$('imgModal').classList.remove('show')}
