@@ -66,6 +66,12 @@ input.ia{background:#fff8d6}input.ib{background:#e8f1ff}
 .gp .t0{background:#fff8d6}.gp .t1{background:#e8f1ff}
 .th.tx{background:#eef1f6}
 .modal .card{max-height:92vh;overflow:auto}
+.acts.sr{flex-wrap:nowrap;width:100%;gap:5px}
+.sr select{flex:1 1 0;min-width:0;width:auto;max-width:none;padding:7px 4px;font-size:13px;border-radius:8px}
+.sr .tsel{flex:1.3 1 0}
+.sr select:not(.tsel){flex:1.4 1 0}
+.sr button{flex:none}
+.sr .b.x{padding:6px 10px}
 .badge{font-size:11px;background:var(--gd);color:#fff;border-radius:8px;padding:1px 7px;margin-inline-start:6px}
 a.a{display:inline-block;text-decoration:none;padding:4px 10px;border-radius:9px;background:var(--cy);color:#fff}
 a.a.sm{background:var(--mg)}
@@ -97,9 +103,9 @@ a.a.sm{background:var(--mg)}
  <div class="card"><h3>لیست بازیکنان (<span id="pcount">۰</span> نفر)</h3><div id="plist"></div></div>
  <div class="card"><h3>پشتیبان‌گیری</h3>
   <div class="mut">اطلاعات روی همین مرورگر ذخیره می‌شود. برای اطمینان گاهی پشتیبان بگیرید.</div>
-  <div class="row"><button class="b" onclick="exportData()">دریافت پشتیبان</button>
-  <button class="b m" onclick="$('imp').click()">بازیابی پشتیبان</button></div>
-  <input type="file" id="imp" accept=".json" style="display:none" onchange="importData(this)"></div>
+  <div class="row"><button class="b" onclick="exportData()">⬇️ دریافت پشتیبان</button>
+  <label style="position:relative;display:block;text-align:center;overflow:hidden;margin-top:8px;cursor:pointer;background:var(--mg);color:#fff;border-radius:9px;padding:9px 14px;font-weight:700">⬆️ بازیابی پشتیبان<input type="file" id="imp" style="position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:100px" onchange="importData(this)"></label></div>
+  <div class="mut" style="margin-top:6px">فایل پشتیبان با پسوند .json ذخیره می‌شود. برای بازیابی، همان فایل را انتخاب کن.</div></div>
 </div>
 
 <!-- سانس‌ها -->
@@ -335,7 +341,7 @@ function renderSessions(){
    ensureTeams(s);
    const mem=S.players.filter(p=>p.id in s.st);
    const rowHtml=(p,i)=>{const v=s.st[p.id]||0,t=s.tm[p.id],isG=t!==undefined&&s.gk[t]===p.id;
-    return `<div class="pr${t===undefined?'':' t'+t}"><span>${fa(i+1)}. ${esc(p.name)}${isG?' 🧤':''} <span class="mut">⭐${fa(p.rt||5)}</span></span><span class="acts"><select class="tsel" onchange="setTm(${s.id},${p.id},this.value)">${t===undefined?'<option value="" selected>— تیم —</option>':''}<option value="0"${t===0?' selected':''}>${esc(tn(0))}</option><option value="1"${t===1?' selected':''}>${esc(tn(1))}</option></select>${p.gk&&t!==undefined?`<button class="b" style="margin:0;padding:4px 8px${isG?'':';background:#e2e8f0;color:#334155'}" onclick="setGk(${s.id},${p.id})">🧤</button>`:''}<select class="s${v}" onchange="setSt(${s.id},${p.id},this.value)">${ST.map((x,k)=>`<option value="${k}"${k===v?' selected':''}>${x}</option>`).join('')}</select><button class="b x" onclick="rmFrom(${s.id},${p.id})">✕</button></span></div>`};
+    return `<div class="pr${t===undefined?'':' t'+t}"><span>${fa(i+1)}. ${esc(p.name)}${isG?' 🧤':''} <span class="mut">⭐${fa(p.rt||5)}</span></span><span class="acts sr"><select class="tsel" onchange="setTm(${s.id},${p.id},this.value)">${t===undefined?'<option value="" selected>— تیم —</option>':''}<option value="0"${t===0?' selected':''}>${esc(tn(0))}</option><option value="1"${t===1?' selected':''}>${esc(tn(1))}</option></select>${p.gk&&t!==undefined?`<button class="b" style="margin:0;padding:4px 8px${isG?'':';background:#e2e8f0;color:#334155'}" onclick="setGk(${s.id},${p.id})">🧤</button>`:''}<select class="s${v}" onchange="setSt(${s.id},${p.id},this.value)">${ST.map((x,k)=>`<option value="${k}"${k===v?' selected':''}>${x}</option>`).join('')}</select><button class="b x" onclick="rmFrom(${s.id},${p.id})">✕</button></span></div>`};
    const grp=t=>{const G=mem.filter(p=>s.tm[p.id]===t);if(!G.length)return'';const sm=G.reduce((a,p)=>a+(p.rt||5),0);
     return (t===undefined?`<div class="th tx">بدون تیم — ${fa(G.length)} نفر</div>`:`<div class="th t${t}">${esc(tn(t))} — ${fa(G.length)} نفر · مجموع امتیاز ${fa(sm)}</div>`)+G.map(rowHtml).join('')};
    const rows=(grp(0)+grp(1)+grp(undefined))||'<div class="empty">هنوز بازیکنی به این سانس اضافه نشده</div>';
@@ -407,8 +413,15 @@ function renderBall(){$('ballList').innerHTML=S.balls.map(b=>{
  ${col>b.price?'اضافه‌ی جمع‌شده: <b>'+money(col-b.price)+'</b>':'مانده: <b class="bad">'+money(rem)+'</b>'}<br>نداده‌اند: ${un}</div></div>`}).join('')||'<div class="empty">هنوز جمع‌آوری‌ای ثبت نشده</div>'}
 
 /* ---- پشتیبان ---- */
-function exportData(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:'application/json'}));a.download='vaght-salon-backup.json';a.click()}
-function importData(i){const f=i.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result);if(!x.players)throw 0;S=x;if(!S.rules)S.rules=[];migrate();save();renderAll();alert('بازیابی شد')}catch(e){alert('فایل معتبر نیست')}};r.readAsText(f)}
+function exportData(){const name='vaght-salon-backup-'+today().map(n=>pad(n)).join('-')+'.json';
+ const url=URL.createObjectURL(new Blob([JSON.stringify(S)],{type:'application/json'}));
+ const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),4000)}
+function applyBackup(txt){let x;try{x=JSON.parse(String(txt).replace(/^\uFEFF/,'').trim())}catch(e){alert('متن پشتیبان معتبر نیست');return false}
+ if(!x||!Array.isArray(x.players)){alert('این پشتیبان مربوط به وقت سالن نیست');return false}
+ if(!confirm('اطلاعات فعلی با این پشتیبان جایگزین شود؟'))return false;
+ ['sessions','balls','games','rules'].forEach(k=>{if(!Array.isArray(x[k]))x[k]=[]});if(!x.def)x.def={price:0,per:0};
+ S=x;migrate();save();$('team').value=S.team||'';renderAll();alert('بازیابی شد');return true}
+function importData(i){const f=i.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{applyBackup(r.result);i.value=''};r.onerror=()=>alert('خواندن فایل ممکن نشد');r.readAsText(f)}
 
 function addGame(){const sid=+$('rsess').value,s=sess(sid);if(!s){alert('ابتدا سانسی که بازیکن دارد انتخاب کنید');return}
  const a=dgs($('ra').value),b=dgs($('rb').value);if(a===''||b===''){alert('نتیجه‌ی هر دو تیم را وارد کنید');return}
@@ -518,8 +531,8 @@ function drawImg(g){const W=600,H=1200,c=document.createElement('canvas');c.widt
  table('نتایج ماه '+MN[g.m-1]+' '+fa(g.y),MS,662);
  table('نتایج سال '+fa(g.y),YS,884);
  // ---- فوتر
- RR(262,1108,76,76,18,LG(0,1108,0,1184,'#22c55e','#15803d'),'rgba(255,255,255,0.6)',2);
- T('آسان',300,1141,23,'#ffffff','center',700);T('نت',300,1171,23,'#ffffff','center',700);
+ RR(205,1118,190,58,16,LG(0,1118,0,1176,'#22c55e','#15803d'),'rgba(255,255,255,0.6)',2);
+ T('آسان نت',300,1157,28,'#ffffff','center',700);
  x.direction='ltr';T('@ASANNETT',28,1160,19,'#ffffff','left',700);x.direction='rtl';
  T('وقت سالن',572,1160,19,'#ffffff','right',700);
  lastUrl=c.toDataURL('image/png');c.toBlob(b=>{lastBlob=b},'image/png');$('gimg').src=lastUrl;$('imgModal').classList.add('show')}
