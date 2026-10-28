@@ -538,7 +538,10 @@ function drawImg(g){const W=600,H=1200,c=document.createElement('canvas');c.widt
  T('وقت سالن',572,1160,19,'#ffffff','right',700);
  lastUrl=c.toDataURL('image/png');c.toBlob(b=>{lastBlob=b},'image/png');$('gimg').src=lastUrl;$('imgModal').classList.add('show')}
 function saveImg(){if(!lastUrl)return;nameHint('vaght-salon-result.png');const a=document.createElement('a');a.href=lastUrl;a.download='vaght-salon-result.png';document.body.appendChild(a);a.click();a.remove()}
-function shareImg(){if(!lastBlob){alert('چند لحظه بعد دوباره تلاش کنید');return}const f=new File([lastBlob],'vaght-salon-result.png',{type:'image/png'});
+function shareImg(){if(!lastUrl){alert('چند لحظه بعد دوباره تلاش کنید');return}
+ try{if(window.AndroidDownloader&&AndroidDownloader.shareFile){AndroidDownloader.shareFile(lastUrl,'vaght-salon-result.png');return}}catch(e){}
+ if(!lastBlob){alert('چند لحظه بعد دوباره تلاش کنید');return}
+ const f=new File([lastBlob],'vaght-salon-result.png',{type:'image/png'});
  if(navigator.canShare&&navigator.canShare({files:[f]}))navigator.share({files:[f],title:'نتیجه بازی'}).catch(()=>{});else alert('اشتراک‌گذاری در این مرورگر ممکن نیست؛ روی عکس نگه دارید و ذخیره کنید.')}
 function closeImg(){$('imgModal').classList.remove('show')}
 function renderAll(){renderPlayers();renderRules();renderSessions();renderRep();renderDebt();renderBall();renderRes()}
