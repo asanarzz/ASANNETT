@@ -598,7 +598,7 @@
         مبلغی که می‌گیره خودکار نمایش داده می‌شه. فقط کافیه اسم ماه رو برای ردیف اول بنویسید (مثلاً «مهر»)؛ ماه‌های بقیه‌ی ردیف‌ها خودکار به ترتیب پر می‌شن و بعد از اسفند دوباره از فروردین ادامه پیدا می‌کنن. با زدن دکمه‌ی قرمز «×» می‌تونید اون ردیف رو پاک کنید.</li>
       <li><b>۵ — افزودن ردیف:</b> هر بار بزنید، یه نفر دیگه به لیست اضافه می‌شه.</li>
       <li><b>۶ — دانلود عکس / اشتراک‌گذاری:</b> با این دکمه‌ها می‌تونید از کل جدول یه عکس بگیرید
-        و برای بقیه (مثلاً توی گروه تلگرام) بفرستید.</li>
+        و برای بقیه (مثلاً توی گروه تلگرام) بفرستید. هر عکس حداکثر ۱۲ نفر رو نشون می‌ده؛ اگه نفرات بیشتر باشن، چند عکس جدا ساخته می‌شه.</li>
     </ol>
 
     <h2 style="font-size:16.5px; color:#2563eb; margin-top:26px;">🎲 تب «قرعه‌کشی» چیه؟</h2>
@@ -1997,8 +1997,13 @@
   const installmentsExportImageBtn = document.getElementById('installmentsExportImageBtn');
   const installmentsExportShareBtn = document.getElementById('installmentsExportShareBtn');
 
-  function captureElement(target, callback) {
-    html2canvas(target, {
+  // Pictures are split so each one shows at most 12 people (keeps them short
+  // enough to read and share). More than 12 people = several pictures.
+  const ROWS_PER_IMAGE = 12;
+
+  // One picture of `target`, keeping only the table rows from index `from` up to (not including) `to`.
+  function captureChunk(target, rowSelector, from, to) {
+    return html2canvas(target, {
       scale: 2,
       backgroundColor: '#f4f6f9',
       useCORS: true,
@@ -2017,64 +2022,109 @@
           }
           if (inp.parentNode) inp.parentNode.replaceChild(div, inp);
         });
+
+        // Keep only this picture's share of the people.
+        clonedDoc.querySelectorAll(rowSelector).forEach((el, i) => {
+          if (i < from || i >= to) el.remove();
+        });
       }
-    }).then(callback);
+    });
   }
 
-  function wireExportButtons(imageBtn, shareBtn, target, filename, shareTitle) {
-    imageBtn.addEventListener('click', () => {
+  function canvasToBlob(canvas) {
+    return new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
+  }
+
+  async function captureAllChunks(target, rowSelector, baseName, onProgress) {
+    const total = Math.max(1, Math.ceil(rows.length / ROWS_PER_IMAGE));
+    const files = [];
+    for (let i = 0; i < total; i++) {
+      if (onProgress) onProgress(i + 1, total);
+      const canvas = await captureChunk(target, rowSelector, i * ROWS_PER_IMAGE, (i + 1) * ROWS_PER_IMAGE);
+      const blob = await canvasToBlob(canvas);
+      if (!blob) continue;
+      const name = total === 1 ? baseName + '.png' : baseName + '-' + (i + 1) + '.png';
+      files.push(new File([blob], name, { type: 'image/png' }));
+    }
+    return files;
+  }
+
+  function downloadFiles(files) {
+    files.forEach((file, i) => {
+      // small gap between files so the browser doesn't drop any of them
+      setTimeout(() => {
+        const url = URL.createObjectURL(file);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = file.name;
+        link.click();
+        setTimeout(() => URL.revokeObjectURL(url), 3000);
+      }, i * 600);
+    });
+  }
+
+  function wireExportButtons(imageBtn, shareBtn, target, rowSelector, baseName, shareTitle) {
+    const IMAGE_IDLE = '📷 دانلود عکس';
+    const SHARE_IDLE = '📤 اشتراک‌گذاری';
+
+    function progressText(done, total) {
+      return total > 1
+        ? 'در حال آماده‌سازی... (' + toPersianDigits(done) + ' از ' + toPersianDigits(total) + ')'
+        : 'در حال آماده‌سازی...';
+    }
+
+    imageBtn.addEventListener('click', async () => {
       imageBtn.disabled = true;
-      imageBtn.textContent = 'در حال آماده‌سازی...';
-      captureElement(target, (canvas) => {
-        canvas.toBlob((blob) => {
-          if (blob) {
-            const link = document.createElement('a');
-            link.download = filename;
-            link.href = canvas.toDataURL('image/png');
-            link.click();
-          }
-          imageBtn.disabled = false;
-          imageBtn.textContent = '📷 دانلود عکس';
-        }, 'image/png');
-      });
+      try {
+        const files = await captureAllChunks(target, rowSelector, baseName, (d, t) => {
+          imageBtn.textContent = progressText(d, t);
+        });
+        downloadFiles(files);
+        if (files.length > 1) {
+          alert('جدول توی ' + toPersianDigits(files.length) + ' عکس جدا ذخیره شد (هر عکس حداکثر ۱۲ نفر). اگه مرورگر پرسید، اجازه‌ی دانلود چند فایل رو تأیید کنید.');
+        }
+      } catch (e) {
+        alert('ساخت عکس با خطا مواجه شد. دوباره امتحان کنید.');
+      }
+      imageBtn.disabled = false;
+      imageBtn.textContent = IMAGE_IDLE;
     });
 
-    shareBtn.addEventListener('click', () => {
+    shareBtn.addEventListener('click', async () => {
       shareBtn.disabled = true;
-      shareBtn.textContent = 'در حال آماده‌سازی...';
-      captureElement(target, (canvas) => {
-        canvas.toBlob(async (blob) => {
-          if (!blob) {
-            shareBtn.disabled = false;
-            shareBtn.textContent = '📤 اشتراک‌گذاری';
-            return;
-          }
-          const file = new File([blob], filename, { type: 'image/png' });
-          const canUseWebShare = navigator.canShare && navigator.canShare({ files: [file] });
+      try {
+        const files = await captureAllChunks(target, rowSelector, baseName, (d, t) => {
+          shareBtn.textContent = progressText(d, t);
+        });
+        if (files.length === 0) throw new Error('no images');
 
-          if (canUseWebShare) {
-            try {
-              await navigator.share({ files: [file], title: shareTitle, text: shareTitle });
-            } catch (err) {
-              // user cancelled the share sheet — nothing to do
-            }
-          } else {
-            const link = document.createElement('a');
-            link.download = filename;
-            link.href = canvas.toDataURL('image/png');
-            link.click();
-            alert('اشتراک‌گذاری مستقیم روی این مرورگر پشتیبانی نمی‌شود؛ عکس دانلود شد تا خودتان به اشتراک بگذارید.');
+        const canUseWebShare = navigator.canShare && navigator.canShare({ files });
+        let shared = false;
+        if (canUseWebShare) {
+          try {
+            await navigator.share({ files, title: shareTitle, text: shareTitle });
+            shared = true;
+          } catch (err) {
+            // Closing the share sheet is fine. Any other failure (for example the
+            // browser refusing because preparing the pictures took a while) falls
+            // back to downloading them below.
+            if (err && err.name === 'AbortError') shared = true;
           }
-
-          shareBtn.disabled = false;
-          shareBtn.textContent = '📤 اشتراک‌گذاری';
-        }, 'image/png');
-      });
+        }
+        if (!shared) {
+          downloadFiles(files);
+          alert('اشتراک‌گذاری مستقیم انجام نشد؛ عکس‌ها دانلود شدن تا خودتان به اشتراک بگذارید.');
+        }
+      } catch (e) {
+        alert('ساخت عکس با خطا مواجه شد. دوباره امتحان کنید.');
+      }
+      shareBtn.disabled = false;
+      shareBtn.textContent = SHARE_IDLE;
     });
   }
 
-  wireExportButtons(exportImageBtn, exportShareBtn, captureArea, 'جدول-وام-خانگی.png', 'جدول اقساط وام خانگی');
-  wireExportButtons(installmentsExportImageBtn, installmentsExportShareBtn, installmentsPanel, 'وضعیت-اقساط-پرداختی.png', 'وضعیت اقساط پرداختی هر نفر');
+  wireExportButtons(exportImageBtn, exportShareBtn, captureArea, '#loanTable tbody tr', 'جدول-وام-خانگی', 'جدول اقساط وام خانگی');
+  wireExportButtons(installmentsExportImageBtn, installmentsExportShareBtn, installmentsPanel, '#paymentsTable tbody tr', 'وضعیت-اقساط-پرداختی', 'وضعیت اقساط پرداختی هر نفر');
 </script>
 
 </body>
