@@ -598,7 +598,7 @@
         مبلغی که می‌گیره خودکار نمایش داده می‌شه. فقط کافیه اسم ماه رو برای ردیف اول بنویسید (مثلاً «مهر»)؛ ماه‌های بقیه‌ی ردیف‌ها خودکار به ترتیب پر می‌شن و بعد از اسفند دوباره از فروردین ادامه پیدا می‌کنن. با زدن دکمه‌ی قرمز «×» می‌تونید اون ردیف رو پاک کنید.</li>
       <li><b>۵ — افزودن ردیف:</b> هر بار بزنید، یه نفر دیگه به لیست اضافه می‌شه.</li>
       <li><b>۶ — دانلود عکس / اشتراک‌گذاری:</b> با این دکمه‌ها می‌تونید از کل جدول یه عکس بگیرید
-        و برای بقیه (مثلاً توی گروه تلگرام) بفرستید. هر عکس حداکثر ۱۲ نفر رو نشون می‌ده؛ اگه نفرات بیشتر باشن، چند عکس جدا ساخته می‌شه.</li>
+        و برای بقیه (مثلاً توی گروه تلگرام) بفرستید. هر عکس حداکثر ۱۲ نفر رو نشون می‌ده؛ اگه نفرات بیشتر باشن، چند عکس جدا ساخته می‌شه و توی مرورگر کروم، همه‌ی عکس‌ها با هم برای اشتراک‌گذاری فرستاده می‌شن (اگه توی خود برنامه باشید، یه پنجره باز می‌شه که هر عکس رو جدا می‌فرستید).</li>
     </ol>
 
     <h2 style="font-size:16.5px; color:#2563eb; margin-top:26px;">🎲 تب «قرعه‌کشی» چیه؟</h2>
@@ -655,6 +655,24 @@
       </button>
     </div>
 
+  </div>
+</div>
+
+<div id="sharePanel" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.6); z-index:1100; padding:16px; box-sizing:border-box; overflow-y:auto;">
+  <div style="max-width:480px; margin:0 auto; background:#fff; border-radius:14px; padding:18px 16px 22px; box-shadow:0 8px 30px rgba(0,0,0,0.3);">
+    <h2 style="font-size:16px; color:#1f2937; margin:0 0 6px;">عکس‌ها آماده شد</h2>
+    <p id="sharePanelNote" style="font-size:13px; color:#6b7280; line-height:1.9; margin:0 0 12px;"></p>
+    <div style="text-align:center;">
+      <button id="shareAllBtn" type="button" style="background:#7c3aed; color:#fff; border:none; border-radius:8px; padding:10px 18px; font-size:14px; font-family:inherit; cursor:pointer;">
+        📤 ارسال همه با هم
+      </button>
+    </div>
+    <div id="sharePanelList" style="margin-top:14px;"></div>
+    <div style="text-align:center; margin-top:14px;">
+      <button id="sharePanelClose" type="button" style="background:#f3f4f6; color:#374151; border:1px solid #d1d5db; border-radius:8px; padding:8px 20px; font-size:13px; font-family:inherit; cursor:pointer;">
+        بستن
+      </button>
+    </div>
   </div>
 </div>
 
@@ -2068,6 +2086,85 @@
     });
   }
 
+  // Opens the phone's share sheet with the given pictures. If the browser
+  // refuses, the pictures are downloaded instead.
+  async function shareFiles(fileList, title) {
+    const canUseWebShare = navigator.canShare && navigator.canShare({ files: fileList });
+    if (canUseWebShare) {
+      try {
+        await navigator.share({ files: fileList, title: title, text: title });
+        return;
+      } catch (err) {
+        if (err && err.name === 'AbortError') return; // closed the share sheet
+      }
+    }
+    downloadFiles(fileList);
+    alert('اشتراک‌گذاری مستقیم انجام نشد؛ عکس‌ها دانلود شدن تا خودتان به اشتراک بگذارید.');
+  }
+
+  // With more than one picture we show them first, so the person can send them
+  // all together or one at a time. (Each tap is a fresh tap, which browsers
+  // require before they'll open the share sheet.)
+  // Android in-app browsers (WebView) identify themselves with "; wv)".
+  const IN_APP_BROWSER = /; wv\)/.test(navigator.userAgent);
+  const sharePanel = document.getElementById('sharePanel');
+  const sharePanelNote = document.getElementById('sharePanelNote');
+  const sharePanelList = document.getElementById('sharePanelList');
+  const shareAllBtn = document.getElementById('shareAllBtn');
+  const sharePanelClose = document.getElementById('sharePanelClose');
+  let sharePanelUrls = [];
+  let sharePanelFiles = [];
+  let sharePanelTitle = '';
+
+  function closeSharePanel() {
+    sharePanel.style.display = 'none';
+    sharePanelUrls.forEach((u) => URL.revokeObjectURL(u));
+    sharePanelUrls = [];
+    sharePanelFiles = [];
+    sharePanelList.innerHTML = '';
+  }
+
+  function openSharePanel(fileList, title) {
+    closeSharePanel();
+    sharePanelFiles = fileList;
+    sharePanelTitle = title;
+    sharePanelNote.textContent = toPersianDigits(fileList.length) +
+      ' عکس ساخته شد (هر عکس حداکثر ۱۲ نفر). توی این برنامه بهتره هر عکس رو جداگانه بفرستید.';
+
+    fileList.forEach((file, i) => {
+      const url = URL.createObjectURL(file);
+      sharePanelUrls.push(url);
+
+      const item = document.createElement('div');
+      item.style.cssText = 'border:1px solid #e5e7eb; border-radius:10px; padding:10px; margin-bottom:10px; text-align:center;';
+
+      const img = document.createElement('img');
+      img.src = url;
+      img.style.cssText = 'max-width:100%; max-height:260px; border-radius:6px; border:1px solid #f3f4f6;';
+
+      const label = document.createElement('div');
+      label.style.cssText = 'font-size:13px; font-weight:600; color:#374151; margin:8px 0;';
+      label.textContent = 'عکس ' + toPersianDigits(i + 1) + ' از ' + toPersianDigits(fileList.length);
+
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = '📤 ارسال این عکس';
+      btn.style.cssText = 'background:#2563eb; color:#fff; border:none; border-radius:8px; padding:8px 16px; font-size:13px; font-family:inherit; cursor:pointer;';
+      btn.addEventListener('click', () => shareFiles([file], sharePanelTitle));
+
+      item.appendChild(img);
+      item.appendChild(label);
+      item.appendChild(btn);
+      sharePanelList.appendChild(item);
+    });
+
+    sharePanel.style.display = 'block';
+  }
+
+  shareAllBtn.addEventListener('click', () => shareFiles(sharePanelFiles, sharePanelTitle));
+  sharePanelClose.addEventListener('click', closeSharePanel);
+  sharePanel.addEventListener('click', (e) => { if (e.target === sharePanel) closeSharePanel(); });
+
   function wireExportButtons(imageBtn, shareBtn, target, rowSelector, baseName, shareTitle, hideSelectors) {
     const IMAGE_IDLE = '📷 دانلود عکس';
     const SHARE_IDLE = '📤 اشتراک‌گذاری';
@@ -2103,22 +2200,13 @@
         });
         if (files.length === 0) throw new Error('no images');
 
-        const canUseWebShare = navigator.canShare && navigator.canShare({ files });
-        let shared = false;
-        if (canUseWebShare) {
-          try {
-            await navigator.share({ files, title: shareTitle, text: shareTitle });
-            shared = true;
-          } catch (err) {
-            // Closing the share sheet is fine. Any other failure (for example the
-            // browser refusing because preparing the pictures took a while) falls
-            // back to downloading them below.
-            if (err && err.name === 'AbortError') shared = true;
-          }
-        }
-        if (!shared) {
-          downloadFiles(files);
-          alert('اشتراک‌گذاری مستقیم انجام نشد؛ عکس‌ها دانلود شدن تا خودتان به اشتراک بگذارید.');
+        if (files.length > 1 && IN_APP_BROWSER) {
+          // Inside an app's built-in browser, sharing several pictures in one go
+          // has only ever delivered the first one, so let each be sent on its own.
+          openSharePanel(files, shareTitle);
+        } else {
+          // Normal Chrome: all pictures go to the share sheet together.
+          await shareFiles(files, shareTitle);
         }
       } catch (e) {
         alert('ساخت عکس با خطا مواجه شد. دوباره امتحان کنید.');
