@@ -598,7 +598,7 @@
         مبلغی که می‌گیره خودکار نمایش داده می‌شه. فقط کافیه اسم ماه رو برای ردیف اول بنویسید (مثلاً «مهر»)؛ ماه‌های بقیه‌ی ردیف‌ها خودکار به ترتیب پر می‌شن و بعد از اسفند دوباره از فروردین ادامه پیدا می‌کنن. با زدن دکمه‌ی قرمز «×» می‌تونید اون ردیف رو پاک کنید.</li>
       <li><b>۵ — افزودن ردیف:</b> هر بار بزنید، یه نفر دیگه به لیست اضافه می‌شه.</li>
       <li><b>۶ — دانلود عکس / اشتراک‌گذاری:</b> با این دکمه‌ها می‌تونید از کل جدول یه عکس بگیرید
-        و برای بقیه (مثلاً توی گروه تلگرام) بفرستید. هر عکس حداکثر ۱۲ نفر رو نشون می‌ده؛ اگه نفرات بیشتر باشن، چند عکس جدا ساخته می‌شه و توی مرورگر کروم، همه‌ی عکس‌ها با هم برای اشتراک‌گذاری فرستاده می‌شن (اگه توی خود برنامه باشید، یه پنجره باز می‌شه که هر عکس رو جدا می‌فرستید).</li>
+        و برای بقیه (مثلاً توی گروه تلگرام) بفرستید. هر عکس حداکثر ۱۲ نفر رو نشون می‌ده؛ اگه نفرات بیشتر باشن، چند عکس جدا ساخته می‌شه و موقع اشتراک‌گذاری همه‌ی عکس‌ها با هم فرستاده می‌شن. اگه فقط یکی رفت، نوشته‌ی کوچیک «فقط یه عکس رفت؟» زیر دکمه رو بزنید تا هر عکس رو جدا بفرستید.</li>
     </ol>
 
     <h2 style="font-size:16.5px; color:#2563eb; margin-top:26px;">🎲 تب «قرعه‌کشی» چیه؟</h2>
@@ -647,7 +647,9 @@
       <li>اگه اشتباهی یه ردیف رو حذف کردید، متأسفانه راه برگردوندنش نیست — پس قبل از زدن «×» مطمئن بشید.</li>
     </ul>
 
-    <div style="text-align:center; margin-top:28px;">
+    <p style="text-align:center; font-size:11px; color:#9ca3af; margin-top:24px;">نسخه‌ی صفحه: 2026-10-31-d</p>
+
+    <div style="text-align:center; margin-top:8px;">
       <button id="helpCloseBtn2" type="button" style="
           background:#2563eb; color:#fff; border:none; border-radius:8px;
           padding:10px 24px; font-size:14px; font-family:inherit; cursor:pointer;">
@@ -2086,18 +2088,41 @@
     });
   }
 
-  // Opens the phone's share sheet with the given pictures. If the browser
-  // refuses, the pictures are downloaded instead.
+  // Opens the phone's share sheet with the given pictures.
+  // Same approach as the Eitaa sticker maker, which is known to deliver several
+  // pictures at once in this app: pass only `files` and `title` (no `text`),
+  // and if the all-at-once call fails, try one picture at a time.
   async function shareFiles(fileList, title) {
-    const canUseWebShare = navigator.canShare && navigator.canShare({ files: fileList });
-    if (canUseWebShare) {
-      try {
-        await navigator.share({ files: fileList, title: title, text: title });
-        return;
-      } catch (err) {
-        if (err && err.name === 'AbortError') return; // closed the share sheet
+    if (navigator.share) {
+      if (navigator.canShare && navigator.canShare({ files: fileList })) {
+        try {
+          await navigator.share({ files: fileList, title: title });
+          return;
+        } catch (err) {
+          if (err && err.name === 'AbortError') return; // closed the share sheet
+        }
       }
+
+      let failedAt = -1;
+      for (let i = 0; i < fileList.length; i++) {
+        try {
+          if (navigator.canShare && navigator.canShare({ files: [fileList[i]] })) {
+            await navigator.share({ files: [fileList[i]], title: title });
+          } else {
+            failedAt = i;
+            break;
+          }
+        } catch (err) {
+          if (err && err.name === 'AbortError') return;
+          failedAt = i;
+          break;
+        }
+        await new Promise((r) => setTimeout(r, 300));
+      }
+      if (failedAt === -1) return;
+      fileList = fileList.slice(failedAt);
     }
+
     downloadFiles(fileList);
     alert('اشتراک‌گذاری مستقیم انجام نشد؛ عکس‌ها دانلود شدن تا خودتان به اشتراک بگذارید.');
   }
@@ -2105,8 +2130,6 @@
   // With more than one picture we show them first, so the person can send them
   // all together or one at a time. (Each tap is a fresh tap, which browsers
   // require before they'll open the share sheet.)
-  // Android in-app browsers (WebView) identify themselves with "; wv)".
-  const IN_APP_BROWSER = /; wv\)/.test(navigator.userAgent);
   const sharePanel = document.getElementById('sharePanel');
   const sharePanelNote = document.getElementById('sharePanelNote');
   const sharePanelList = document.getElementById('sharePanelList');
@@ -2129,7 +2152,7 @@
     sharePanelFiles = fileList;
     sharePanelTitle = title;
     sharePanelNote.textContent = toPersianDigits(fileList.length) +
-      ' عکس ساخته شد (هر عکس حداکثر ۱۲ نفر). توی این برنامه بهتره هر عکس رو جداگانه بفرستید.';
+      ' عکس ساخته شد (هر عکس حداکثر ۱۲ نفر). می‌تونید همه رو با هم یا هر عکس رو جدا بفرستید.';
 
     fileList.forEach((file, i) => {
       const url = URL.createObjectURL(file);
@@ -2200,19 +2223,35 @@
         });
         if (files.length === 0) throw new Error('no images');
 
-        if (files.length > 1 && IN_APP_BROWSER) {
-          // Inside an app's built-in browser, sharing several pictures in one go
-          // has only ever delivered the first one, so let each be sent on its own.
-          openSharePanel(files, shareTitle);
-        } else {
-          // Normal Chrome: all pictures go to the share sheet together.
-          await shareFiles(files, shareTitle);
-        }
+        await shareFiles(files, shareTitle);
       } catch (e) {
         alert('ساخت عکس با خطا مواجه شد. دوباره امتحان کنید.');
       }
       shareBtn.disabled = false;
       shareBtn.textContent = SHARE_IDLE;
+    });
+
+    // Fallback by hand: if sharing everything at once only delivers one picture
+    // in the app being used, this lets each picture be sent on its own.
+    const oneByOneBtn = document.createElement('button');
+    oneByOneBtn.type = 'button';
+    oneByOneBtn.textContent = 'فقط یه عکس رفت؟ عکس‌ها رو تک‌تک بفرستید';
+    oneByOneBtn.style.cssText = 'width:100%; background:none; border:none; color:#6b7280; font-size:12px; font-family:inherit; text-decoration:underline; cursor:pointer; margin-top:2px;';
+    shareBtn.parentElement.appendChild(oneByOneBtn);
+
+    oneByOneBtn.addEventListener('click', async () => {
+      const idleText = oneByOneBtn.textContent;
+      oneByOneBtn.disabled = true;
+      try {
+        const files = await captureAllChunks(target, rowSelector, baseName, hideSelectors, (d, t) => {
+          oneByOneBtn.textContent = progressText(d, t);
+        });
+        if (files.length > 0) openSharePanel(files, shareTitle);
+      } catch (e) {
+        alert('ساخت عکس با خطا مواجه شد. دوباره امتحان کنید.');
+      }
+      oneByOneBtn.disabled = false;
+      oneByOneBtn.textContent = idleText;
     });
   }
 
