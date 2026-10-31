@@ -227,7 +227,7 @@ const dkey=s=>s.y*10000+s.m*100+s.d;
 /* ---- داده ---- */
 let S=load();if(!S.rules)S.rules=[];
 function migrate(){S.players.forEach(p=>{if(p.rt===undefined)p.rt=5;if(p.pl===undefined)p.pl=true;if(p.gk===undefined)p.gk=false});
- if(!S.tnames)S.tnames=['توت گلان','فریب خورده ها'];if(!S.games)S.games=[];
+ if(!S.tnames)S.tnames=['دغل','فریب'];if(S.tnames[0]==='توت گلان'&&S.tnames[1]==='فریب خورده ها')S.tnames=['دغل','فریب'];if(!S.games)S.games=[];
  S.balls.forEach(b=>{if(b.price===undefined){b.price=(b.amount||0)*S.players.length;
  for(const k in b.paid){if(b.paid[k]===true)b.paid[k]=b.amount||0;else if(b.paid[k]===false||b.paid[k]===0)delete b.paid[k]}}})}
 migrate();
@@ -285,7 +285,7 @@ function delRule(id){if(!confirm('این برنامه‌ی سانس ثابت ح�
 function renderRules(){$('rulesList').innerHTML=S.rules.length?'<div class="card"><h3>برنامه‌های سانس ثابت</h3>'+S.rules.map(r=>`<div class="pr"><span>${PO.filter(d=>r.days.includes(d)).map(d=>WD[d]).join('، ')} — ساعت ${fa(r.from||'')} تا ${fa(r.to||'')}<br><span class="mut">از ${fa(r.y+'/'+pad(r.m)+'/'+pad(r.d))} تا پایان سال · ${fa(r.n)} سانس · نفری ${money(r.per)}</span></span><button class="b x" onclick="delRule(${r.id})">حذف</button></div>`).join('')+'</div>':''}
 function delSess(id){if(!confirm('این سانس حذف شود؟'))return;S.sessions=S.sessions.filter(s=>s.id!==id);save();renderAll()}
 function setSt(sid,pid,v){S.sessions.find(s=>s.id===sid).st[pid]=+v;save();renderAll()}
-const DEFN=['توت گلان','فریب خورده ها'];
+const DEFN=['دغل','فریب'];
 const tn=i=>S.tnames[i];
 function ensureTeams(s){if(!s.tm)s.tm={};if(!s.gk)s.gk=[null,null]}
 function setTm(sid,pid,v){const s=sess(sid);ensureTeams(s);const o=s.tm[pid];
