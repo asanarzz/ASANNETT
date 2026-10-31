@@ -1,1 +1,790 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ویرایشگر زنده با راهنما</title>
+<style>
+:root { --bg:#f6f4ee; --ink:#1d2b2a; --acc:#0f6b66; --line:#cfd8d4; --chip:#e3efec; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: Tahoma, sans-serif; }
+body { display: flex; flex-direction: column; }
+textarea { flex: 0 0 auto; height: 130px; direction: ltr; font: 15px monospace; border: 0; border-bottom: 2px solid var(--ink); padding: 8px; background: #fff; color: var(--ink); resize: none; }
+.bar { flex: 0 0 auto; display: flex; gap: 6px; padding: 5px 6px; overflow-x: auto; direction: ltr; border-bottom: 1px solid var(--line); }
+.bar button { flex: 0 0 auto; min-width: 40px; height: 36px; padding: 0 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--chip); color: var(--ink); font: 16px monospace; }
+#sug button { background: var(--acc); color: #fff; border-color: var(--acc); }
+#desc { flex: 0 0 auto; min-height: 22px; padding: 2px 8px; font-size: 13px; color: var(--acc); }
+iframe { flex: 1; min-height: 80px; border: 0; background: #fff; }
+.foot { flex: 0 0 auto; display: flex; }
+.foot button { flex: 1; height: 44px; border: 0; border-left: 1px solid #fff5; background: var(--ink); color: #fff; font: 14px Tahoma, sans-serif; }
+#save { background: var(--acc); }
+#sheet { position: fixed; inset: auto 0 0 0; height: 70%; background: var(--bg); border-top: 3px solid var(--acc); display: none; flex-direction: column; }
+#sheet.on { display: flex; }
+#sheet header { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; font-weight: bold; }
+#sheet header button { border: 0; background: none; font-size: 22px; color: var(--ink); }
+#q { margin: 0 10px 8px; padding: 8px; border: 1px solid var(--line); border-radius: 6px; font: 14px Tahoma, sans-serif; }
+.cat { margin: 12px 0 6px; color: var(--acc); font-size: 15px; }
+#list { overflow-y: auto; padding: 0 10px 20px; }
+.it { width: 100%; text-align: right; display: block; margin-bottom: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); font-family: Tahoma, sans-serif; }
+.it b { direction: ltr; display: inline-block; color: var(--acc); font: bold 16px monospace; }
+.it span { display: block; font-size: 14px; margin: 3px 0; }
+.it code { display: block; direction: ltr; text-align: left; font: 13px monospace; white-space: pre-wrap; background: var(--chip); padding: 4px 6px; border-radius: 4px; }
+.foot button { font-size: 13px; }
+#tut { position: fixed; inset: 0; z-index: 20; display: none; flex-direction: column; background: var(--bg); }
+#tut.on { display: flex; }
+#tut header { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: var(--acc); color: #fff; font-weight: bold; }
+#tut header button { border: 0; background: none; color: #fff; font-size: 22px; }
+#tbody { overflow-y: auto; padding: 10px 14px 40px; line-height: 1.9; font-size: 15px; }
+#tbody section { border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+#tbody h3 { color: var(--acc); margin: 14px 0 4px; }
+#tbody pre { direction: ltr; text-align: left; background: var(--chip); padding: 8px; border-radius: 6px; font: 13px/1.5 monospace; white-space: pre-wrap; margin: 6px 0; }
+#tbody code { direction: ltr; unicode-bidi: embed; background: var(--chip); padding: 0 4px; border-radius: 3px; font-size: 13px; }
+#tbody .try { height: 38px; padding: 0 14px; border: 0; border-radius: 6px; background: var(--acc); color: #fff; font: 14px Tahoma, sans-serif; }
+#idx button.sel { background: var(--acc); color: #fff; }
+#idx { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+#idx button { border: 1px solid var(--line); background: var(--chip); border-radius: 14px; padding: 4px 10px; font: 13px Tahoma, sans-serif; color: var(--ink); }
+.dg { direction: ltr; margin: 8px 0; padding: 10px; text-align: center; font: 14px monospace; background: #fff; border: 1px solid var(--line); border-radius: 8px; line-height: 1.6; }
+.dg small { font: 12px Tahoma, sans-serif; }
+.bx { padding: 10px; margin: 4px; border: 2px dashed #888; text-align: center; }
+.bx.m { background: #fbe3c8; } .bx.b { background: #f6d58a; border-style: solid; } .bx.p { background: #cfe6c4; } .bx.c { background: #bcd8f0; }
+.tg { color: #0f6b66; font-weight: bold; } .at { color: #b4531a; } .tx { color: #1d2b2a; background: #bcd8f0; padding: 0 3px; }
+.k1 { background: #bcd8f0; padding: 2px 6px; border-radius: 4px; } .k2 { background: #cfe6c4; padding: 2px 6px; border-radius: 4px; } .k3 { background: #fbe3c8; padding: 2px 6px; border-radius: 4px; }
+.row { display: flex; gap: 8px; justify-content: center; margin-bottom: 4px; }
+.row span { background: #f6d58a; border: 2px solid #b4531a; padding: 10px 18px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<textarea id="code" spellcheck="false"><h1>سلام دنیا!</h1>
+<p>یه پاراگراف</p></textarea>
+<div class="bar" id="sym"></div>
+<div class="bar" id="sug"></div>
+<div id="desc"></div>
+<iframe id="out"></iframe>
+<div class="foot">
+  <button id="open">📚 راهنما</button>
+  <button id="save">💾 ذخیره HTML</button>
+  <button id="copy">📋 کپی</button>
+  <button id="learn">🎓 آموزش</button>
+</div>
 
+<div id="tut">
+  <header><span>🎓 آموزش از صفر</span><button id="tclose">✕</button></header>
+  <div id="tbody"></div>
+</div>
+
+<div id="sheet">
+  <header><span>راهنما: روی هر مورد بزن تا اضافه بشه</span><button id="close">✕</button></header>
+  <input id="q" placeholder="جستجو: مثلا رنگ، input، تاریخ">
+  <div id="list"></div>
+</div>
+
+<script>
+// [اسم, توضیح فارسی, مثالی که اضافه می‌شود]
+const D = [
+[
+"#",
+"ساختار صفحه"
+],
+[
+"title",
+"عنوان تب مرورگر",
+"<title>صفحه من</title>"
+],
+[
+"span",
+"تکه‌ای از متن داخل خط که می‌خوای جدا استایل بدی",
+"<span style=\"color: red\">قرمز</span>"
+],
+[
+"div",
+"جعبه‌ای برای گروه کردن چیزها",
+"<div style=\"background: gold; padding: 10px\">متن</div>"
+],
+[
+"header",
+"بخش بالای صفحه (footer پایین، nav منو، section یک بخش)",
+"<header>بالای صفحه</header>"
+],
+[
+"hr",
+"خط افقی جداکننده",
+"<hr>"
+],
+[
+"comment",
+"توضیح برای خودت؛ نمایش داده نمی‌شود",
+"<!-- توضیح من -->"
+],
+[
+"meta-viewport",
+"سازگاری با موبایل (داخل head)",
+"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+],
+[
+"id",
+"اسم یکتا برای یک تگ (جاوااسکریپت با آن پیداش می‌کند)",
+"id=\"box1\""
+],
+[
+"class",
+"اسم گروه استایل؛ چند تگ می‌توانند یک class داشته باشند",
+"class=\"red\""
+],
+[
+"dir",
+"جهت متن: rtl راست‌چین، ltr چپ‌چین",
+"dir=\"rtl\""
+],
+[
+"#",
+"متن"
+],
+[
+"h1",
+"عنوان بزرگ (h1 تا h6، عدد بزرگ‌تر یعنی کوچک‌تر)",
+"<h1>عنوان</h1>"
+],
+[
+"h2",
+"عنوان متوسط",
+"<h2>عنوان</h2>"
+],
+[
+"h3",
+"عنوان کوچک‌تر",
+"<h3>عنوان</h3>"
+],
+[
+"p",
+"پاراگراف، یعنی متن معمولی",
+"<p>متن</p>"
+],
+[
+"b",
+"بولد",
+"<b>متن بولد</b>"
+],
+[
+"i",
+"کج",
+"<i>متن کج</i>"
+],
+[
+"u",
+"زیرخط‌دار",
+"<u>زیرخط</u>"
+],
+[
+"s",
+"خط‌خورده",
+"<s>خط خورده</s>"
+],
+[
+"mark",
+"هایلایت زرد",
+"<mark>مهم</mark>"
+],
+[
+"small",
+"متن کوچک",
+"<small>ریز</small>"
+],
+[
+"sup",
+"بالانویس (توان)",
+"x<sup>2</sup>"
+],
+[
+"sub",
+"پایین‌نویس",
+"H<sub>2</sub>O"
+],
+[
+"blockquote",
+"نقل‌قول",
+"<blockquote>جمله‌ی نقل‌شده</blockquote>"
+],
+[
+"pre",
+"متن را دقیقاً با همان فاصله‌ها و خط‌ها نشان می‌دهد",
+"<pre>خط اول\n   خط دوم</pre>"
+],
+[
+"br",
+"رفتن به خط بعد (تگ بسته ندارد)",
+"<br>"
+],
+[
+"#",
+"لیست و جدول"
+],
+[
+"ul",
+"لیست نقطه‌ای؛ هر مورد با li",
+"<ul><li>اول</li><li>دوم</li></ul>"
+],
+[
+"ol",
+"لیست شماره‌دار",
+"<ol><li>اول</li><li>دوم</li></ol>"
+],
+[
+"table",
+"جدول؛ tr ردیف، th سرستون، td خانه",
+"<table border=\"1\"><tr><th>نام</th><th>سن</th></tr><tr><td>علی</td><td>20</td></tr></table>"
+],
+[
+"#",
+"لینک و رسانه"
+],
+[
+"a",
+"لینک؛ آدرس در href",
+"<a href=\"https://example.com\">لینک</a>"
+],
+[
+"a-newtab",
+"لینک که در تب جدید باز شود",
+"<a href=\"https://example.com\" target=\"_blank\">لینک</a>"
+],
+[
+"a-tel",
+"لینک تماس تلفنی",
+"<a href=\"tel:09120000000\">تماس بگیر</a>"
+],
+[
+"img",
+"عکس؛ آدرس عکس در src، عرض در width",
+"<img src=\"عکس.jpg\" width=\"150\">"
+],
+[
+"video",
+"ویدیو با دکمه‌های پخش",
+"<video src=\"فیلم.mp4\" controls width=\"250\"></video>"
+],
+[
+"audio",
+"صدا با دکمه‌های پخش",
+"<audio src=\"صدا.mp3\" controls></audio>"
+],
+[
+"iframe",
+"نمایش یک صفحه‌ی دیگر داخل صفحه‌ی خودت",
+"<iframe src=\"https://example.com\" width=\"300\" height=\"200\"></iframe>"
+],
+[
+"#",
+"فرم و کادر ورودی (جواب گرفتن)"
+],
+[
+"input",
+"کادر نوشتن جواب (کادر کوچک یک‌خطی)",
+"<input type=\"text\" placeholder=\"اسمت رو بنویس\">"
+],
+[
+"question",
+"یک سوال با کادر جواب جلوش",
+"<p>اسمت چیه؟ <input type=\"text\" placeholder=\"جواب\"></p>"
+],
+[
+"label",
+"برچسب کنار کادر؛ با زدن روی آن کادر انتخاب می‌شود",
+"<label>نام: <input type=\"text\"></label>"
+],
+[
+"textarea",
+"کادر چندخطی برای متن بلند",
+"<textarea rows=\"4\" cols=\"30\" placeholder=\"توضیح بده\"></textarea>"
+],
+[
+"input-pass",
+"کادر رمز؛ حروف نقطه نشان داده می‌شوند",
+"<input type=\"password\" placeholder=\"رمز\">"
+],
+[
+"input-number",
+"کادر فقط عدد",
+"<input type=\"number\" min=\"0\" max=\"100\">"
+],
+[
+"input-email",
+"کادر ایمیل",
+"<input type=\"email\" placeholder=\"ایمیل\">"
+],
+[
+"input-tel",
+"کادر شماره تلفن",
+"<input type=\"tel\" placeholder=\"شماره موبایل\">"
+],
+[
+"input-date",
+"تاریخ میلادی (انتخاب با تقویم خود مرورگر)",
+"<input type=\"date\">"
+],
+[
+"checkbox",
+"تیک‌زدنی (چند انتخاب)",
+"<label><input type=\"checkbox\"> قبول دارم</label>"
+],
+[
+"radio",
+"دایره‌ای (فقط یکی؛ name یکسان باشد)",
+"<label><input type=\"radio\" name=\"g\"> آقا</label> <label><input type=\"radio\" name=\"g\"> خانم</label>"
+],
+[
+"select",
+"لیست کشویی؛ هر گزینه با option",
+"<select><option>تهران</option><option>شیراز</option><option>تبریز</option></select>"
+],
+[
+"button",
+"دکمه",
+"<button>کلیک کن</button>"
+],
+[
+"range",
+"نوار لغزنده",
+"<input type=\"range\" min=\"0\" max=\"100\">"
+],
+[
+"color-picker",
+"انتخاب رنگ",
+"<input type=\"color\">"
+],
+[
+"file",
+"انتخاب فایل از گوشی",
+"<input type=\"file\">"
+],
+[
+"form",
+"فرم؛ همه‌ی کادرها داخلش گذاشته می‌شود",
+"<form>\n  <input type=\"text\" placeholder=\"نام\">\n  <button>ارسال</button>\n</form>"
+],
+[
+"placeholder",
+"متن کم‌رنگ راهنما داخل کادر",
+"placeholder=\"اینجا بنویس\""
+],
+[
+"value",
+"مقدار پیش‌فرض کادر",
+"value=\"متن اولیه\""
+],
+[
+"required",
+"پر کردن اجباری",
+"required"
+],
+[
+"disabled",
+"غیرفعال کردن",
+"disabled"
+],
+[
+"#",
+"تاریخ شمسی"
+],
+[
+"shamsi-date",
+"تاریخ تولد شمسی: سه لیست سال، ماه، روز (بدون نیاز به اینترنت)",
+"<label>تاریخ تولد:</label>\n<select id=\"sal\"></select> <select id=\"mah\"></select> <select id=\"roz\"></select>\n<script>\nfor(let i=1404;i>=1300;i--) sal.innerHTML+=\"<option>\"+i+\"</option>\";\nmah.innerHTML=[\"فروردین\",\"اردیبهشت\",\"خرداد\",\"تیر\",\"مرداد\",\"شهریور\",\"مهر\",\"آبان\",\"آذر\",\"دی\",\"بهمن\",\"اسفند\"].map(n=>\"<option>\"+n+\"</option>\").join(\"\");\nfor(let i=1;i<=31;i++) roz.innerHTML+=\"<option>\"+i+\"</option>\";\n<\/script>"
+],
+[
+"today-shamsi",
+"نمایش تاریخ امروز به شمسی",
+"<p id=\"emrooz\"></p>\n<script>\nemrooz.textContent = new Date().toLocaleDateString(\"fa-IR\");\n<\/script>"
+],
+[
+"#",
+"جاوااسکریپت (برنامه‌نویسی صفحه)"
+],
+[
+"script",
+"جایی که کد جاوااسکریپت نوشته می‌شود",
+"<script>\n  // کد اینجا\n<\/script>"
+],
+[
+"alert",
+"پیام پنجره‌ای نشان می‌دهد",
+"alert(\"سلام!\");"
+],
+[
+"prompt",
+"از کاربر سوال می‌پرسد و جواب را برمی‌گرداند",
+"let name = prompt(\"اسمت چیه؟\");"
+],
+[
+"onclick",
+"کار بعد از زدن روی یک تگ",
+"<button onclick=\"alert('سلام')\">بزن</button>"
+],
+[
+"getElementById",
+"پیدا کردن تگی که id دارد",
+"document.getElementById(\"box1\")"
+],
+[
+"innerHTML",
+"عوض کردن محتوای یک تگ",
+"document.getElementById(\"box1\").innerHTML = \"متن جدید\";"
+],
+[
+"style.color",
+"عوض کردن رنگ با جاوااسکریپت",
+"document.getElementById(\"box1\").style.color = \"red\";"
+],
+[
+"let",
+"ساختن متغیر (جعبه‌ای که چیزی داخلش نگه می‌دارد)",
+"let age = 20;"
+],
+[
+"if",
+"شرط: اگر درست بود، این کار را بکن",
+"if (age >= 18) {\n  alert(\"بزرگسال\");\n} else {\n  alert(\"زیر ۱۸\");\n}"
+],
+[
+"function",
+"ساختن یک دستور که بعداً صدایش می‌زنی",
+"function salam() {\n  alert(\"سلام\");\n}"
+],
+[
+"for",
+"تکرار یک کار چند بار",
+"for (let i = 1; i <= 5; i++) {\n  document.write(i + \"<br>\");\n}"
+],
+[
+"setTimeout",
+"انجام کار بعد از چند میلی‌ثانیه",
+"setTimeout(() => alert(\"وقتش شد\"), 3000);"
+],
+[
+"random",
+"عدد تصادفی بین ۱ تا ۱۰",
+"Math.floor(Math.random() * 10) + 1"
+],
+[
+"#",
+"CSS: رنگ و متن (داخل style)"
+],
+[
+"style",
+"ظاهر تگ؛ داخل گیومه، ویژگی‌ها با ; جدا می‌شوند",
+"style=\"color: red; font-size: 30px\""
+],
+[
+"color",
+"رنگ نوشته",
+"color: red;"
+],
+[
+"background",
+"رنگ پشت تگ",
+"background: yellow;"
+],
+[
+"font-size",
+"اندازه نوشته",
+"font-size: 30px;"
+],
+[
+"font-weight",
+"ضخامت نوشته؛ bold بولد",
+"font-weight: bold;"
+],
+[
+"font-family",
+"نوع قلم",
+"font-family: Tahoma, sans-serif;"
+],
+[
+"font-style",
+"کج کردن: italic",
+"font-style: italic;"
+],
+[
+"text-align",
+"چینش متن: center وسط، left چپ، right راست",
+"text-align: center;"
+],
+[
+"text-decoration",
+"زیرخط یا خط‌خوردگی؛ none یعنی بدون خط (مثلاً برای لینک)",
+"text-decoration: underline;"
+],
+[
+"line-height",
+"ارتفاع خط؛ کمتر یعنی خط‌ها نزدیک‌تر",
+"line-height: 1.5;"
+],
+[
+"letter-spacing",
+"فاصله بین حروف",
+"letter-spacing: 2px;"
+],
+[
+"text-shadow",
+"سایه‌ی نوشته: راست، پایین، محو، رنگ",
+"text-shadow: 2px 2px 4px gray;"
+],
+[
+"#",
+"CSS: اندازه و فاصله"
+],
+[
+"margin",
+"فاصله بیرونی تگ تا چیزهای دیگر",
+"margin: 10px;"
+],
+[
+"padding",
+"فاصله داخلی بین لبه و نوشته",
+"padding: 10px;"
+],
+[
+"width",
+"عرض (می‌توان درصد هم داد: 50%)",
+"width: 200px;"
+],
+[
+"height",
+"ارتفاع",
+"height: 100px;"
+],
+[
+"max-width",
+"بیشترین عرض مجاز",
+"max-width: 400px;"
+],
+[
+"border",
+"خط دور تگ: ضخامت، نوع، رنگ",
+"border: 2px solid black;"
+],
+[
+"border-radius",
+"گرد کردن گوشه‌ها (50% یعنی دایره)",
+"border-radius: 10px;"
+],
+[
+"box-shadow",
+"سایه‌ی دور جعبه",
+"box-shadow: 0 4px 8px gray;"
+],
+[
+"overflow",
+"وقتی محتوا بزرگ‌تر از جعبه است: auto اسکرول، hidden برش",
+"overflow: auto;"
+],
+[
+"#",
+"CSS: چیدمان"
+],
+[
+"display-flex",
+"چیدن فرزندان کنار هم (به تگ پدر داده می‌شود)",
+"display: flex;"
+],
+[
+"justify-content",
+"چینش افقی در flex: center وسط، space-between با فاصله",
+"justify-content: center;"
+],
+[
+"align-items",
+"چینش عمودی در flex",
+"align-items: center;"
+],
+[
+"gap",
+"فاصله بین فرزندان در flex یا grid",
+"gap: 10px;"
+],
+[
+"flex-direction",
+"جهت چیدن: column زیر هم",
+"flex-direction: column;"
+],
+[
+"display-grid",
+"چیدن به شکل جدول شبکه‌ای؛ مثلاً دو ستون مساوی",
+"display: grid; grid-template-columns: 1fr 1fr;"
+],
+[
+"display-none",
+"مخفی کردن تگ",
+"display: none;"
+],
+[
+"position",
+"جای‌گذاری دقیق؛ absolute آزاد، fixed ثابت روی صفحه",
+"position: fixed; top: 10px; left: 10px;"
+],
+[
+"#",
+"CSS: جلوه و استایل کلی"
+],
+[
+"opacity",
+"شفافیت: ۱ کامل، ۰ نامرئی",
+"opacity: 0.5;"
+],
+[
+"cursor",
+"شکل نشانگر: pointer دست",
+"cursor: pointer;"
+],
+[
+"transition",
+"تغییر نرم و آهسته بین دو حالت",
+"transition: 0.3s;"
+],
+[
+"style-tag",
+"نوشتن استایل برای کل صفحه (در head)",
+"<style>\n  p { color: blue; }\n</style>"
+],
+[
+"hover",
+"استایل وقتی انگشت یا ماوس روی تگ است (داخل style-tag)",
+"button:hover { background: gold; }"
+],
+[
+"media",
+"استایل فقط برای صفحه‌ی کوچک (موبایل)",
+"@media (max-width: 600px) {\n  body { font-size: 18px; }\n}"
+]
+];
+const code = document.getElementById('code'), out = document.getElementById('out');
+const sug = document.getElementById('sug'), desc = document.getElementById('desc');
+
+function update(){ out.srcdoc = '<meta charset="UTF-8"><body dir="rtl" style="font-family:Tahoma,sans-serif">' + code.value; }
+out.addEventListener('load', () => { try { const w = out.contentWindow; w.scrollTo(0, w.document.documentElement.scrollHeight); } catch (e) {} });
+function put(t, a, b){ code.setRangeText(t, a, b, 'end'); code.focus(); update(); suggest(); }
+function ins(t){ put(t, code.selectionStart, code.selectionEnd); }
+const keep = e => e.preventDefault(); // کیبورد بسته نشود
+
+// نوار نمادها
+['<','>','/','=','"',':',';','#','(',')','{','}'].forEach(s => {
+  const b = document.createElement('button'); b.textContent = s;
+  b.onmousedown = keep; b.onclick = () => ins(s);
+  document.getElementById('sym').appendChild(b);
+});
+
+// پیشنهاد هنگام تایپ
+function suggest(){
+  sug.innerHTML = ''; desc.textContent = '';
+  const pos = code.selectionStart, m = code.value.slice(0, pos).match(/[a-zA-Z0-9-]+$/);
+  if (!m) return;
+  const w = m[0].toLowerCase();
+  const hits = D.filter(d => d[0].startsWith(w)).slice(0, 8);
+  hits.forEach(d => {
+    const b = document.createElement('button'); b.textContent = d[0];
+    b.onmousedown = keep;
+    b.onclick = () => {
+      let start = pos - m[0].length;
+      if (code.value[start - 1] === '<') start--;
+      put(d[2], start, pos);
+    };
+    sug.appendChild(b);
+  });
+  if (hits.length) desc.textContent = hits[0][0] + ': ' + hits[0][1];
+}
+
+// لیست راهنما
+const sheet = document.getElementById('sheet'), list = document.getElementById('list');
+const q = document.getElementById('q');
+function render(){
+  const f = q.value.trim().toLowerCase(); list.innerHTML = ''; let cat = '', shown = false;
+  D.forEach(d => {
+    if (d[0] === '#') { cat = d[1]; shown = false; return; }
+    if (f && !(d[0] + ' ' + d[1]).toLowerCase().includes(f)) return;
+    if (!shown) { const h = document.createElement('h4'); h.className = 'cat'; h.textContent = cat; list.appendChild(h); shown = true; }
+    const b = document.createElement('button'); b.className = 'it';
+    const n = document.createElement('b'); n.textContent = d[0];
+    const s = document.createElement('span'); s.textContent = d[1];
+    const c = document.createElement('code'); c.textContent = d[2];
+    b.append(n, s, c);
+    b.onclick = () => { sheet.classList.remove('on'); ins(d[2]); };
+    list.appendChild(b);
+  });
+}
+q.addEventListener('input', render); render();
+document.getElementById('open').onclick = () => sheet.classList.add('on');
+document.getElementById('close').onclick = () => sheet.classList.remove('on');
+
+// ذخیره و کپی: یک فایل HTML کامل می‌سازد
+function fullPage(){
+  return '<!DOCTYPE html>\n<html lang="fa" dir="rtl">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>صفحه من</title>\n</head>\n<body>\n' + code.value + '\n</body>\n</html>';
+}
+document.getElementById('save').onclick = () => {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([fullPage()], {type: 'text/html'}));
+  a.download = 'page.html';
+  document.body.appendChild(a); a.click(); a.remove();
+};
+document.getElementById('copy').onclick = () => {
+  const t = fullPage(), btn = document.getElementById('copy');
+  const ok = () => { btn.textContent = '✔ کپی شد'; setTimeout(() => btn.textContent = '📋 کپی', 1500); };
+  const old = () => {
+    const x = document.createElement('textarea');
+    x.value = t; x.style.cssText = 'position:fixed;top:0;opacity:0';
+    document.body.appendChild(x); x.focus(); x.select(); x.setSelectionRange(0, t.length);
+    let r = false;
+    try { r = document.execCommand('copy'); } catch (e) {}
+    x.remove();
+    r ? ok() : alert('کپی نشد. از دکمه ذخیره HTML استفاده کن');
+  };
+  if (window.isSecureContext && navigator.clipboard) navigator.clipboard.writeText(t).then(ok).catch(old);
+  else old();
+};
+
+
+// آموزش
+const T = [{"t": "صفحه‌ی وب از چی ساخته شده؟", "h": "هر صفحه‌ی وب سه تا بازیگر داره: <b>HTML</b> اسکلت و محتوا (مثل دیوار و در خانه)، <b>CSS</b> ظاهر (رنگ و رنگ‌آمیزی)، و <b>جاوااسکریپت</b> رفتار (مثل برق و کلید). از HTML شروع می‌کنیم.", "g": "<div class=\"dg\"><span class=\"k1\">HTML = اسکلت</span> + <span class=\"k2\">CSS = ظاهر</span> + <span class=\"k3\">JS = رفتار</span></div>"}, {"t": "تگ و ساختار صفحه", "h": "HTML از <b>تگ</b> ساخته می‌شه. هر تگ باز (<code>&lt;p&gt;</code>) یه تگ بسته (<code>&lt;/p&gt;</code>) داره و محتوا بینشونه. تگ‌ها می‌تونن داخل هم باشن، مثل جعبه‌های تودرتو.", "g": "<div class=\"dg\"><div class=\"bx m\">html<div class=\"bx b\">head <small>(عنوان تب)</small></div><div class=\"bx p\">body <small>(هرچی دیده می‌شه)</small><div class=\"bx c\">h1 · p · img ...</div></div></div></div>", "c": "<h1>سلام!</h1>\n<p>این اولین صفحه‌ی منه.</p>"}, {"t": "متن و لیست", "h": "عنوان‌ها <code>h1</code> تا <code>h6</code>، پاراگراف <code>p</code>، بولد <code>b</code>، کج <code>i</code>، خط جدید <code>br</code>. لیست نقطه‌ای <code>ul</code> و شماره‌دار <code>ol</code> هستن و هر مورد داخل <code>li</code> می‌ره.", "c": "<h2>خرید امروز</h2>\n<ul>\n  <li>نان</li>\n  <li><b>شیر</b></li>\n</ul>\n<ol>\n  <li>اول</li>\n  <li>دوم</li>\n</ol>"}, {"t": "ویژگی‌ها: لینک و عکس", "h": "تگ‌ها می‌تونن اطلاعات اضافه بگیرن به اسم <b>ویژگی</b>. شکلش همیشه <code>اسم=\"مقدار\"</code> هست و تو تگ باز نوشته می‌شه. مثلاً لینک آدرسش رو از <code>href</code> می‌گیره.", "g": "<div class=\"dg\"><span class=\"tg\">&lt;a</span> <span class=\"at\">href=\"https://x.com\"</span><span class=\"tg\">&gt;</span><span class=\"tx\">لینک</span><span class=\"tg\">&lt;/a&gt;</span><br><small><span class=\"tg\">تگ</span> · <span class=\"at\">ویژگی = مقدار</span> · <span class=\"tx\">محتوا</span></small></div>", "c": "<a href=\"https://example.com\">برو به سایت</a>\n<br>\n<img src=\"عکس.jpg\" width=\"120\">"}, {"t": "CSS: رنگ و متن", "h": "با ویژگی <code>style</code> ظاهر می‌دی. داخلش هر چیز <code>اسم: مقدار;</code> نوشته می‌شه. اسم رنگ انگلیسی یا کد <code>#ff8800</code> بذار.", "c": "<p style=\"color: red; font-size: 30px; font-weight: bold\">قرمز و بزرگ</p>\n<p style=\"background: gold; text-align: center\">طلایی و وسط‌چین</p>"}, {"t": "جعبه: margin و padding", "h": "هر تگ یه جعبه‌ست: وسطش محتوا، بعد <b>padding</b> (فاصله‌ی داخلی)، بعد <b>border</b> (قاب)، و بیرونش <b>margin</b> (فاصله تا بقیه).", "g": "<div class=\"dg\"><div class=\"bx m\">margin<div class=\"bx b\">border<div class=\"bx p\">padding<div class=\"bx c\">محتوا</div></div></div></div></div>", "c": "<div style=\"border: 3px solid teal; padding: 20px; margin: 30px; border-radius: 12px\">\n  یه جعبه‌ی قاب‌دار\n</div>"}, {"t": "چیدمان با flex", "h": "<code>display: flex</code> روی تگ پدر، فرزندانش رو کنار هم می‌چینه. <code>justify-content</code> چینش افقی و <code>gap</code> فاصله‌ی بین‌شونه. <code>flex-direction: column</code> زیر هم می‌ذاره.", "g": "<div class=\"dg\"><div class=\"row\"><span>۱</span><span>۲</span><span>۳</span></div><small>display: flex</small></div>", "c": "<div style=\"display: flex; gap: 10px; justify-content: center\">\n  <div style=\"background: tomato; padding: 20px\">۱</div>\n  <div style=\"background: gold; padding: 20px\">۲</div>\n  <div style=\"background: skyblue; padding: 20px\">۳</div>\n</div>"}, {"t": "فرم: گرفتن جواب از کاربر", "h": "<code>input</code> یه کادر جواب می‌سازه و <code>type</code> نوعش رو مشخص می‌کنه (text، number، date، password). <code>select</code> لیست کشویی و <code>button</code> دکمه‌ست.", "c": "<p>اسمت چیه؟ <input type=\"text\" placeholder=\"جواب\"></p>\n<p>شهر:\n  <select><option>تهران</option><option>شیراز</option></select>\n</p>\n<button>ثبت</button>"}, {"t": "جاوااسکریپت: متغیر و پیام", "h": "جاوااسکریپت داخل <code>&lt;script&gt;</code> نوشته می‌شه. <b>متغیر</b> یه جعبه‌ی اسم‌دار برای نگه‌داشتن چیزه: <code>let سن = 20;</code>. <code>alert</code> پیام نشون می‌ده و <code>prompt</code> سوال می‌پرسه.", "g": "<div class=\"dg\"><span class=\"k1\">let name</span> = <span class=\"k2\">\"علی\"</span> <span class=\"k3\">←</span> جعبه‌ای به اسم name که داخلش «علی» است</div>", "c": "<script>\n  let name = prompt(\"اسمت چیه؟\");\n  alert(\"سلام \" + name);\n<\/script>"}, {"t": "شرط و تکرار", "h": "<b>شرط</b>: <code>if</code> می‌گه «اگر این درست بود این کار رو بکن، وگرنه آن کار». <b>تکرار</b>: <code>for</code> یه کار رو چند بار انجام می‌ده.", "g": "<div class=\"dg\">سن ≥ ۱۸ ؟ <span class=\"k2\">بله ← بزرگسال</span> | <span class=\"k3\">نه ← زیر ۱۸</span></div>", "c": "<script>\n  let age = 20;\n  if (age >= 18) {\n    document.write(\"بزرگسال<br>\");\n  } else {\n    document.write(\"زیر ۱۸<br>\");\n  }\n  for (let i = 1; i <= 3; i++) {\n    document.write(\"تکرار \" + i + \"<br>\");\n  }\n<\/script>"}, {"t": "رویداد: دکمه‌ای که کار می‌کنه", "h": "با <code>id</code> به تگ اسم می‌دیم، با <code>getElementById</code> پیداش می‌کنیم، و با <code>onclick</code> می‌گیم با کلیک چه شود. <code>innerHTML</code> محتوای تگ رو عوض می‌کنه.", "g": "<div class=\"dg\"><span class=\"k1\">کلیک</span> ← <span class=\"k2\">تابع اجرا می‌شه</span> ← <span class=\"k3\">متن صفحه عوض می‌شه</span></div>", "c": "<h2 id=\"pm\">سلام</h2>\n<button onclick=\"salam()\">بزن</button>\n<script>\n  function salam() {\n    document.getElementById(\"pm\").innerHTML = \"دکمه زده شد!\";\n    document.getElementById(\"pm\").style.color = \"red\";\n  }\n<\/script>"}, {"t": "پروژه: شمارنده", "h": "همه‌چیزهایی که یاد گرفتی رو کنار هم بذار: یه متغیر، یه تابع، یه دکمه و یه نمایشگر. بعد از امتحان کردن، رنگ و اندازه رو خودت عوض کن.", "c": "<h1 id=\"n\" style=\"text-align: center; font-size: 60px\">0</h1>\n<div style=\"text-align: center\">\n  <button onclick=\"plus()\" style=\"font-size: 24px; padding: 10px 20px\">+۱</button>\n</div>\n<script>\n  let count = 0;\n  function plus() {\n    count = count + 1;\n    document.getElementById(\"n\").innerHTML = count;\n  }\n<\/script>"}];
+const T2 = [{"t": "آرایه: لیست در جاوااسکریپت", "h": "آرایه یه <b>لیست مرتب</b> داخل یه متغیره. شماره‌گذاری از <b>۰</b> شروع می‌شه. <code>push</code> چیزی اضافه می‌کنه و <code>length</code> تعدادشون رو می‌گه.", "g": "<div class=\"dg\"><div class=\"row\"><span>[0] سیب</span><span>[1] موز</span><span>[2] انار</span></div></div>", "c": "<script>\n  let fruits = [\"سیب\", \"موز\", \"انار\"];\n  fruits.push(\"گیلاس\");\n  document.write(fruits[0] + \"<br>\");\n  document.write(\"تعداد: \" + fruits.length + \"<br>\");\n  for (let f of fruits) {\n    document.write(\"🍎 \" + f + \"<br>\");\n  }\n<\/script>"}, {"t": "شیء: اطلاعات اسم‌دار", "h": "شیء چند اطلاعات مرتبط رو با اسم کنار هم نگه می‌داره (<code>اسم: مقدار</code>). با نقطه بهشون می‌رسی: <code>person.name</code>.", "g": "<div class=\"dg\" style=\"text-align:left\">person = {<br>&nbsp;&nbsp;name: \"علی\",<br>&nbsp;&nbsp;age: 20<br>}</div>", "c": "<script>\n  let person = { name: \"علی\", age: 20, city: \"تهران\" };\n  document.write(person.name + \" اهل \" + person.city + \" است<br>\");\n  person.age = person.age + 1;\n  document.write(\"سن بعد از تولد: \" + person.age);\n<\/script>"}, {"t": "تابع با ورودی و خروجی", "h": "تابع می‌تونه ورودی بگیره (داخل پرانتز) و با <code>return</code> نتیجه پس بده. یه بار می‌نویسیش و هر چند بار خواستی صدا می‌زنی.", "g": "<div class=\"dg\"><span class=\"k1\">ورودی: 2 و 3</span> ← <span class=\"k2\">تابع جمع</span> ← <span class=\"k3\">خروجی: 5</span></div>", "c": "<script>\n  function jam(a, b) {\n    return a + b;\n  }\n  document.write(jam(2, 3) + \"<br>\");\n  document.write(jam(10, 25));\n<\/script>"}, {"t": "گرفتن مقدار از کادر", "h": "با <code>.value</code> هر چی کاربر تو کادر نوشته رو می‌خونی. متنی که از کادر میاد «متن» حساب می‌شه، با <code>Number()</code> عددش کن.", "c": "<input id=\"nm\" placeholder=\"اسمت\">\n<button onclick=\"go()\">سلام کن</button>\n<p id=\"res\"></p>\n<script>\n  function go() {\n    let v = document.getElementById(\"nm\").value;\n    document.getElementById(\"res\").innerHTML = \"سلام \" + v + \"!\";\n  }\n<\/script>"}, {"t": "پروژه: ماشین‌حساب جمع", "h": "ورودی‌ها رو بگیر، عدد کن، جمع بزن، نشون بده. مرحله‌های ذهنی هر برنامه همین سه‌تاست: <b>ورودی ← پردازش ← خروجی</b>.", "c": "<input id=\"a\" type=\"number\" placeholder=\"عدد اول\">\n<input id=\"b\" type=\"number\" placeholder=\"عدد دوم\">\n<button onclick=\"jam()\">جمع بزن</button>\n<h2 id=\"r\"></h2>\n<script>\n  function jam() {\n    let x = Number(document.getElementById(\"a\").value);\n    let y = Number(document.getElementById(\"b\").value);\n    document.getElementById(\"r\").innerHTML = x + y;\n  }\n<\/script>"}, {"t": "پروژه: لیست کارها", "h": "آرایه و رویداد و تابع کنار هم: هر بار که دکمه رو می‌زنی، متن کادر به لیست اضافه می‌شه.", "c": "<input id=\"inp\" placeholder=\"کار جدید\">\n<button onclick=\"add()\">اضافه کن</button>\n<ul id=\"lst\"></ul>\n<script>\n  function add() {\n    let t = document.getElementById(\"inp\").value;\n    if (t === \"\") { return; }\n    document.getElementById(\"lst\").innerHTML += \"<li>\" + t + \"</li>\";\n    document.getElementById(\"inp\").value = \"\";\n  }\n<\/script>"}];
+const T3 = [{"t": "کلاس و تگ style", "h": "به‌جای تکرار <code>style</code> روی هر تگ، یه بار تو <code>&lt;style&gt;</code> یه <b>class</b> (با نقطه اولش) می‌سازی و به هر تگ می‌دی: <code>class=\"کارت\"</code>. عوض کنی، همه عوض می‌شن.", "c": "<style>\n  .kart { background: #fde7c3; padding: 12px; margin: 8px; border-radius: 10px; }\n</style>\n<div class=\"kart\">اولی</div>\n<div class=\"kart\">دومی</div>\n<div class=\"kart\">سومی</div>"}, {"t": "hover و transition", "h": "<code>:hover</code> استایل لحظه‌ی لمس یا ماوس رو می‌ده و <code>transition</code> تغییر رو نرم می‌کنه.", "c": "<style>\n  button { background: teal; color: white; border: 0; padding: 12px 24px; border-radius: 8px; transition: 0.3s; }\n  button:hover { background: orange; transform: scale(1.1); }\n</style>\n<button>بزن رو من</button>"}, {"t": "چیدمان شبکه‌ای: grid", "h": "<code>display: grid</code> صفحه رو مثل جدول شبکه‌ای می‌کنه. <code>grid-template-columns: 1fr 1fr</code> یعنی دو ستون مساوی.", "g": "<div class=\"dg\"><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:6px\"><span class=\"k1\">۱</span><span class=\"k2\">۲</span><span class=\"k3\">۳</span><span class=\"k1\">۴</span></div></div>", "c": "<div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 10px\">\n  <div style=\"background: tomato; padding: 20px\">۱</div>\n  <div style=\"background: gold; padding: 20px\">۲</div>\n  <div style=\"background: skyblue; padding: 20px\">۳</div>\n  <div style=\"background: lightgreen; padding: 20px\">۴</div>\n</div>"}, {"t": "موبایل‌پسند: media", "h": "<code>@media (max-width: 600px)</code> یعنی «فقط وقتی صفحه کوچیکه». عرض صفحه رو که کم و زیاد کنی، چیدمان عوض می‌شه. <code>max-width</code> هم جلوی بزرگ شدن بیش از حد رو می‌گیره.", "c": "<style>\n  .box { background: gold; padding: 20px; max-width: 400px; }\n  @media (max-width: 600px) {\n    .box { background: tomato; font-size: 22px; }\n  }\n</style>\n<div class=\"box\">تو گوشی قرمز می‌شم</div>"}, {"t": "پروژه: کارت معرفی کافی‌نت", "h": "همه‌ی CSS رو با هم به کار بگیر: کلاس، قاب گرد، سایه، flex و دکمه. اسم و متن رو با اطلاعات خودت عوض کن.", "c": "<style>\n  .card { max-width: 320px; margin: 20px auto; padding: 20px; border-radius: 16px; background: #fff; box-shadow: 0 4px 12px #0003; text-align: center; }\n  .card h2 { color: teal; margin: 0 0 8px; }\n  .card a { display: inline-block; margin-top: 12px; padding: 10px 20px; background: teal; color: #fff; border-radius: 8px; text-decoration: none; }\n</style>\n<div class=\"card\">\n  <h2>کافی‌نت من</h2>\n  <p>اینترنت پرسرعت، پرینت و اسکن</p>\n  <a href=\"#\">تماس بگیر</a>\n</div>"}];
+const T4 = [{"t": "localStorage: حافظه‌ی مرورگر", "h": "<b>localStorage</b> یه انباری تو مرورگره که بعد از بستن صفحه هم اطلاعات رو نگه می‌داره. <code>setItem(\"کلید\", مقدار)</code> ذخیره می‌کنه و <code>getItem(\"کلید\")</code> می‌خونه. اگه تو پیش‌نمایش پیام «فعال نیست» اومد، فایل رو ذخیره کن و با Chrome باز کن.", "g": "<div class=\"dg\"><span class=\"k1\">صفحه</span> ⇄ <span class=\"k2\">localStorage</span> <span class=\"k3\">← بعد از بستن صفحه هم می‌مونه</span></div>", "c": "<input id=\"nm\" placeholder=\"اسمت\">\n<button onclick=\"sv()\">ذخیره</button>\n<h2 id=\"out\"></h2>\n<script>\n  let o = document.getElementById(\"out\");\n  try { o.innerHTML = localStorage.getItem(\"esm\") || \"\"; } catch (e) { o.innerHTML = \"ذخیره‌سازی اینجا فعال نیست\"; }\n  function sv() {\n    let v = document.getElementById(\"nm\").value;\n    try { localStorage.setItem(\"esm\", v); o.innerHTML = v; } catch (e) { alert(\"ذخیره‌سازی اینجا فعال نیست\"); }\n  }\n<\/script>"}, {"t": "JSON: ذخیره‌ی لیست و شیء", "h": "localStorage فقط <b>متن</b> نگه می‌داره. برای آرایه و شیء، اول با <code>JSON.stringify</code> متنش کن و موقع خوندن با <code>JSON.parse</code> برگردونش.", "g": "<div class=\"dg\"><span class=\"k1\">[\"الف\",\"ب\"]</span> ← stringify ← <span class=\"k2\">'[\"الف\",\"ب\"]' (متن)</span> ← parse ← <span class=\"k3\">آرایه</span></div>", "c": "<script>\n  let list = [\"الف\", \"ب\", \"ج\"];\n  let txt = JSON.stringify(list);\n  document.write(\"متن: \" + txt + \"<br>\");\n  let back = JSON.parse(txt);\n  document.write(\"آیتم دوم: \" + back[1]);\n<\/script>"}, {"t": "پروژه: شمارنده‌ی بازدید", "h": "هر بار صفحه رو باز کنی یکی اضافه می‌شه. مقدار از localStorage به‌صورت متن میاد، پس با <code>Number</code> عددش می‌کنیم.", "c": "<h2 id=\"c\"></h2>\n<script>\n  try {\n    let n = Number(localStorage.getItem(\"bazdid\")) + 1;\n    localStorage.setItem(\"bazdid\", n);\n    document.getElementById(\"c\").innerHTML = \"بازدید شماره \" + n;\n  } catch (e) {\n    document.getElementById(\"c\").innerHTML = \"ذخیره‌سازی اینجا فعال نیست\";\n  }\n<\/script>"}, {"t": "پروژه: لیست کار ماندگار", "h": "لیست کارها که بعد از بستن صفحه هم می‌مونه: آرایه + JSON + localStorage + تابع نمایش.", "c": "<input id=\"inp\" placeholder=\"کار جدید\">\n<button onclick=\"add()\">اضافه</button>\n<ul id=\"lst\"></ul>\n<script>\n  let items = [];\n  try { items = JSON.parse(localStorage.getItem(\"kar\") || \"[]\"); } catch (e) {}\n  function nshow() {\n    document.getElementById(\"lst\").innerHTML = items.map(x => \"<li>\" + x + \"</li>\").join(\"\");\n  }\n  function add() {\n    let v = document.getElementById(\"inp\").value;\n    if (v === \"\") { return; }\n    items.push(v);\n    try { localStorage.setItem(\"kar\", JSON.stringify(items)); } catch (e) {}\n    document.getElementById(\"inp\").value = \"\";\n    nshow();\n  }\n  nshow();\n<\/script>"}];
+const T5 = [{"t": "fetch: گرفتن اطلاعات از اینترنت", "h": "<b>API</b> آدرسیه که به‌جای صفحه، اطلاعات (معمولاً JSON) می‌ده. <code>fetch(آدرس)</code> درخواست می‌فرسته. جواب چند لحظه بعد میاد، پس <code>await</code> می‌گه «صبر کن». تابعی که await داره باید <code>async</code> باشه. اینترنت لازمه.", "g": "<div class=\"dg\"><span class=\"k1\">درخواست fetch</span> → <span class=\"k2\">سرور</span> → <span class=\"k3\">جواب JSON</span></div>", "c": "<button onclick=\"get()\">بگیر</button>\n<p id=\"o\"></p>\n<script>\n  async function get() {\n    let r = await fetch(\"https://jsonplaceholder.typicode.com/todos/1\");\n    let d = await r.json();\n    document.getElementById(\"o\").innerHTML = d.title;\n  }\n<\/script>"}, {"t": "نمایش لیستی از اطلاعات", "h": "وقتی جواب API یه آرایه‌ست، با <code>map</code> هر آیتم رو به یه تگ تبدیل کن و <code>join(\"\")</code> بچسبونشون.", "c": "<button onclick=\"get()\">۵ کاربر</button>\n<ul id=\"o\"></ul>\n<script>\n  async function get() {\n    let r = await fetch(\"https://jsonplaceholder.typicode.com/users?_limit=5\");\n    let users = await r.json();\n    document.getElementById(\"o\").innerHTML = users.map(u => \"<li>\" + u.name + \" — \" + u.email + \"</li>\").join(\"\");\n  }\n<\/script>"}, {"t": "خطا و حالت بارگذاری", "h": "اینترنت ممکنه قطع باشه. با <code>try/catch</code> خطا رو می‌گیریم تا برنامه خراب نشه، و تا رسیدن جواب «در حال بارگذاری» نشون می‌دیم.", "c": "<button onclick=\"get()\">بگیر</button>\n<p id=\"o\"></p>\n<script>\n  async function get() {\n    let o = document.getElementById(\"o\");\n    o.innerHTML = \"در حال بارگذاری...\";\n    try {\n      let r = await fetch(\"https://jsonplaceholder.typicode.com/posts/1\");\n      let d = await r.json();\n      o.innerHTML = d.title;\n    } catch (e) {\n      o.innerHTML = \"خطا: اینترنت رو چک کن\";\n    }\n  }\n<\/script>"}, {"t": "پروژه: جستجوی کاربر با شماره", "h": "ورودی کاربر داخل آدرس API می‌شینه: شماره بده (۱ تا ۱۰) و مشخصات اون کاربر رو ببین.", "c": "<input id=\"id\" type=\"number\" min=\"1\" max=\"10\" placeholder=\"شماره ۱ تا ۱۰\">\n<button onclick=\"find()\">جستجو</button>\n<div id=\"o\" style=\"margin-top: 10px\"></div>\n<script>\n  async function find() {\n    let id = document.getElementById(\"id\").value;\n    let o = document.getElementById(\"o\");\n    o.innerHTML = \"در حال بارگذاری...\";\n    try {\n      let r = await fetch(\"https://jsonplaceholder.typicode.com/users/\" + id);\n      let u = await r.json();\n      o.innerHTML = \"<b>\" + u.name + \"</b><br>\" + u.email + \"<br>\" + u.address.city;\n    } catch (e) {\n      o.innerHTML = \"پیدا نشد\";\n    }\n  }\n<\/script>"}];
+const T6 = [{"t": "اول نقشه، بعد کد", "h": "برنامه‌نویس‌ها قبل از کد نوشتن فکر می‌کنن. ما یه ابزار هزینه‌ی کافی‌نت می‌سازیم: <b>ورودی</b> چیه؟ چه <b>پردازشی</b> لازمه؟ <b>خروجی</b> چیه؟ چیزی هم باید <b>ذخیره</b> بشه؟ هر مرحله یه درس.", "g": "<div class=\"dg\"><span class=\"k1\">ورودی: دقیقه و برگ</span> → <span class=\"k2\">پردازش: ضرب و جمع</span> → <span class=\"k3\">خروجی: مبلغ</span><br>↓<br><span class=\"k1\">ذخیره: تاریخچه</span></div>"}, {"t": "گام ۱: ظاهر برنامه", "h": "اول فقط ظاهر: کادرها و دکمه با کلاس‌های CSS که یاد گرفتی. هنوز دکمه کاری نمی‌کنه و اشکالی نداره.", "c": "<style>\n  body { font-family: Tahoma; max-width: 420px; margin: auto; padding: 10px; }\n  .box { background: #fff; border-radius: 12px; padding: 12px; box-shadow: 0 2px 8px #0002; margin-bottom: 10px; }\n  input { width: 100%; padding: 8px; margin: 4px 0 10px; box-sizing: border-box; }\n  button { padding: 10px 16px; border: 0; border-radius: 8px; background: teal; color: #fff; }\n  #total { font-size: 28px; color: teal; text-align: center; }\n</style>\n<h2>محاسبه‌ی هزینه</h2>\n<div class=\"box\">\n  <label>دقیقه اینترنت</label><input id=\"min\" type=\"number\" value=\"0\">\n  <label>تعداد برگ پرینت</label><input id=\"pg\" type=\"number\" value=\"0\">\n  <label>قیمت هر دقیقه (تومان)</label><input id=\"pm\" type=\"number\" value=\"100\">\n  <label>قیمت هر برگ</label><input id=\"pp\" type=\"number\" value=\"2000\">\n  <button>محاسبه</button>\n  <p id=\"total\"></p>\n</div>\n"}, {"t": "گام ۲: محاسبه", "h": "حالا تابع <code>calc</code> رو می‌نویسیم: مقدارها رو می‌خونه، حساب می‌کنه و با <code>toLocaleString(\"fa-IR\")</code> مبلغ رو با رقم فارسی و جداکننده‌ی هزارگان نشون می‌ده.", "c": "<style>\n  body { font-family: Tahoma; max-width: 420px; margin: auto; padding: 10px; }\n  .box { background: #fff; border-radius: 12px; padding: 12px; box-shadow: 0 2px 8px #0002; margin-bottom: 10px; }\n  input { width: 100%; padding: 8px; margin: 4px 0 10px; box-sizing: border-box; }\n  button { padding: 10px 16px; border: 0; border-radius: 8px; background: teal; color: #fff; }\n  #total { font-size: 28px; color: teal; text-align: center; }\n</style>\n<h2>محاسبه‌ی هزینه</h2>\n<div class=\"box\">\n  <label>دقیقه اینترنت</label><input id=\"min\" type=\"number\" value=\"0\">\n  <label>تعداد برگ پرینت</label><input id=\"pg\" type=\"number\" value=\"0\">\n  <label>قیمت هر دقیقه (تومان)</label><input id=\"pm\" type=\"number\" value=\"100\">\n  <label>قیمت هر برگ</label><input id=\"pp\" type=\"number\" value=\"2000\">\n  <button onclick=\"calc()\">محاسبه</button>\n  <p id=\"total\"></p>\n</div>\n<script>\n  function v(id) { return Number(document.getElementById(id).value); }\n  function calc() {\n    let sum = v(\"min\") * v(\"pm\") + v(\"pg\") * v(\"pp\");\n    document.getElementById(\"total\").innerHTML = sum.toLocaleString(\"fa-IR\") + \" تومان\";\n  }\n<\/script>"}, {"t": "گام ۳: برنامه‌ی کامل با تاریخچه", "h": "آخرین مرحله: هر محاسبه با ساعتش تو یه آرایه ثبت می‌شه، با JSON تو localStorage ذخیره می‌شه و تو لیست نشون داده می‌شه. دکمه‌ی پاک‌کردن هم داره. این یه ابزار واقعیه؛ قیمت‌ها رو با قیمت‌های خودت عوض کن.", "c": "<style>\n  body { font-family: Tahoma; max-width: 420px; margin: auto; padding: 10px; }\n  .box { background: #fff; border-radius: 12px; padding: 12px; box-shadow: 0 2px 8px #0002; margin-bottom: 10px; }\n  input { width: 100%; padding: 8px; margin: 4px 0 10px; box-sizing: border-box; }\n  button { padding: 10px 16px; border: 0; border-radius: 8px; background: teal; color: #fff; }\n  #total { font-size: 28px; color: teal; text-align: center; }\n</style>\n<h2>محاسبه‌ی هزینه</h2>\n<div class=\"box\">\n  <label>دقیقه اینترنت</label><input id=\"min\" type=\"number\" value=\"0\">\n  <label>تعداد برگ پرینت</label><input id=\"pg\" type=\"number\" value=\"0\">\n  <label>قیمت هر دقیقه (تومان)</label><input id=\"pm\" type=\"number\" value=\"100\">\n  <label>قیمت هر برگ</label><input id=\"pp\" type=\"number\" value=\"2000\">\n  <button onclick=\"calc()\">محاسبه و ثبت</button>\n  <p id=\"total\"></p>\n</div>\n<div class=\"box\"><b>تاریخچه</b><ul id=\"hl\"></ul><button onclick=\"clr()\">پاک کردن</button></div>\n<script>\n  let his = [];\n  try { his = JSON.parse(localStorage.getItem(\"his\") || \"[]\"); } catch (e) {}\n  function show() {\n    document.getElementById(\"hl\").innerHTML = his.map(x => \"<li>\" + x + \"</li>\").join(\"\");\n  }\n  function v(id) { return Number(document.getElementById(id).value); }\n  function calc() {\n    let sum = v(\"min\") * v(\"pm\") + v(\"pg\") * v(\"pp\");\n    document.getElementById(\"total\").innerHTML = sum.toLocaleString(\"fa-IR\") + \" تومان\";\n    his.unshift(new Date().toLocaleTimeString(\"fa-IR\") + \" — \" + sum.toLocaleString(\"fa-IR\"));\n    his = his.slice(0, 10);\n    try { localStorage.setItem(\"his\", JSON.stringify(his)); } catch (e) {}\n    show();\n  }\n  function clr() {\n    his = [];\n    try { localStorage.removeItem(\"his\"); } catch (e) {}\n    show();\n  }\n  show();\n<\/script>"}];
+const T7 = [{"t": "فایل‌ها و پوشه‌ی سایت", "h": "یه سایت ساده یعنی یه پوشه که فایل اصلیش <code>index.html</code> اسم داره. اگه CSS یا جاوااسکریپت یا عکس جدا داری، داخل HTML با آدرس نسبی صداشون می‌زنی: <code>&lt;link rel=\"stylesheet\" href=\"style.css\"&gt;</code>، <code>&lt;script src=\"app.js\"&gt;&lt;/script&gt;</code> و <code>&lt;img src=\"images/logo.png\"&gt;</code>. برای شروع، یه فایل HTML تکی (مثل خروجی همین ابزار) کافیه.", "g": "<div class=\"dg\" style=\"text-align:left\">my-site/<br>├ index.html<br>├ style.css<br>├ app.js<br>└ images/<br>&nbsp;&nbsp;&nbsp;└ logo.png</div>"}, {"t": "آنلاین شدن یعنی چی؟", "h": "وقتی فایل رو روی یه <b>هاست</b> (کامپیوتری که همیشه روشنه و به اینترنته) بذاری و یه <b>آدرس</b> (دامنه) بهش بدی، هر کسی با مرورگر می‌تونه ببینه. مرورگر فایل رو دانلود می‌کنه و همون‌جا اجرا می‌کنه.", "g": "<div class=\"dg\"><span class=\"k1\">مرورگر کاربر</span> → آدرس سایت → <span class=\"k2\">هاست</span> → <span class=\"k3\">index.html</span> → نمایش</div>"}, {"t": "راه‌های منتشر کردن", "h": "<b>۱.</b> فرستادن خود فایل HTML تو تلگرام یا ایتا؛ مخاطب دانلود می‌کنه و با مرورگر باز می‌کنه (بدون هاست، رایگان). <b>۲.</b> سرویس‌های هاست رایگان صفحه‌ی ثابت مثل GitHub Pages، Netlify یا Cloudflare Pages؛ فایل رو آپلود می‌کنی و آدرس می‌گیری. <b>۳.</b> هاست و دامنه‌ی ایرانی با پرداخت. ممکنه بعضی سرویس‌های خارجی از ایران محدودیت داشته باشن، پس قبل از شروع شرایطشون رو چک کن. اگه ابزارت اپ اندروید داره، فایل HTML رو می‌تونی داخل WebView بذاری و آنلاین‌نشدنی هم کار کنه."}, {"t": "چک‌لیست قبل از انتشار", "h": "قبل از اینکه صفحه رو به کسی بدی، این موارد رو تست کن (تیک بزن تا به یادت بمونه):", "c": "<h3>چک‌لیست انتشار</h3>\n<label><input type=\"checkbox\"> تو گوشی خوب دیده می‌شه (meta viewport)</label><br>\n<label><input type=\"checkbox\"> متن فارسی راست‌چینه (dir=\"rtl\")</label><br>\n<label><input type=\"checkbox\"> همه‌ی دکمه‌ها و لینک‌ها کار می‌کنن</label><br>\n<label><input type=\"checkbox\"> بدون اینترنت هم خراب نمی‌شه (try/catch)</label><br>\n<label><input type=\"checkbox\"> عکس‌ها و فایل‌ها کنار index.html هستن</label><br>\n<label><input type=\"checkbox\"> اطلاعات خصوصی (رمز و کلید) تو کد نیست</label>"}, {"t": "مسیر بعدی تو", "h": "تبریک! از صفر تا ساختن و منتشر کردن یه ابزار واقعی رسیدی. برای ادامه: <b>طراحی حرفه‌ای‌تر</b> (فریم‌ورک‌هایی مثل Tailwind)، <b>فریم‌ورک جاوااسکریپت</b> (مثل React یا Vue)، <b>سمت سرور و دیتابیس</b> (Node.js، Python) تا کاربرها اطلاعات مشترک داشته باشن، و <b>اپ اندروید</b> که خودت داری می‌سازی. مهم‌تر از همه: هر هفته یه پروژه‌ی کوچیک واقعی بساز؛ یادگیری برنامه‌نویسی با ساختن اتفاق می‌افته."}];
+const LV = [['شروع: HTML و CSS و جاوااسکریپت اولیه', T], ['جاوااسکریپت میانی: آرایه، شیء، تابع، پروژه', T2], ['CSS و طراحی: کلاس، grid، موبایل، پروژه', T3], ['ذخیره‌ی اطلاعات: localStorage و JSON', T4], ['اتصال به اینترنت: fetch و API', T5], ['ساخت یه اپ کامل: ابزار هزینه‌ی کافی‌نت', T6], ['انتشار و مسیر ادامه', T7]];
+const tut = document.getElementById('tut'), tb = document.getElementById('tbody');
+function show(k) {
+  tb.innerHTML = '';
+  const tabs = document.createElement('div'); tabs.id = 'idx';
+  LV.forEach((lv, j) => { const x = document.createElement('button'); x.textContent = 'سطح ' + (j + 1); if (j === k) x.className = 'sel'; x.onclick = () => show(j); tabs.appendChild(x); });
+  tb.appendChild(tabs);
+  const h = document.createElement('h3'); h.textContent = 'سطح ' + (k + 1) + ': ' + LV[k][0]; tb.appendChild(h);
+  LV[k][1].forEach((l, i) => {
+    const s = document.createElement('section');
+    s.innerHTML = '<h3>' + (i + 1) + '. ' + l.t + '</h3><div>' + l.h + '</div>' + (l.g || '');
+    if (l.c) {
+      const pre = document.createElement('pre'); pre.textContent = l.c;
+      const b = document.createElement('button'); b.className = 'try'; b.textContent = '▶ بذار تو ویرایشگر و امتحان کن';
+      b.onclick = () => { code.value = l.c; update(); suggest(); tut.classList.remove('on'); };
+      s.append(pre, b);
+    }
+    tb.appendChild(s);
+  });
+  const so = document.createElement('p'); so.style.color = '#666';
+  so.textContent = 'آفرین! دوره تموم شد. حالا پروژه‌های خودت رو بساز.';
+  tb.appendChild(so); tb.scrollTop = 0;
+}
+show(0);
+document.getElementById('learn').onclick = () => tut.classList.add('on');
+document.getElementById('tclose').onclick = () => tut.classList.remove('on');
+
+// ارتفاع صفحه با باز شدن کیبورد تنظیم شود
+function fit(){ document.body.style.height = (window.visualViewport ? visualViewport.height : innerHeight) + 'px'; }
+if (window.visualViewport) visualViewport.addEventListener('resize', fit);
+fit();
+
+code.addEventListener('input', () => { update(); suggest(); });
+code.addEventListener('click', suggest);
+code.addEventListener('keyup', suggest);
+update();
+</script>
+</body>
+</html>
