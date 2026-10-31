@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T10:58:18.743Z",
+ "updated": "2026-10-31T10:30:40.739Z",
  "items": [
   {
    "name": "گوشت مرغ",
@@ -2990,6 +2990,604 @@
    "date": "2026-10-30",
    "reportDate": "2026-10-30",
    "kind": "scraped"
+  },
+  {
+   "name": "گوشت مرغ",
+   "unit": "کیلوگرم",
+   "min": 320000,
+   "max": 320000,
+   "price": 320000,
+   "cat": "پروتئین",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "گوشت بوقلمون بدون بسته‌بندی",
+   "unit": "کیلوگرم",
+   "min": 525000,
+   "max": 525000,
+   "price": 525000,
+   "cat": "پروتئین",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "تخم‌مرغ (شانه ۳۰ عددی)",
+   "unit": "شانه ۳۰ عددی",
+   "min": 280000,
+   "max": 560000,
+   "price": null,
+   "cat": "پروتئین",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "راسته گوساله بدون استخوان بسته‌بندی در محل داخلی آزاد",
+   "unit": "کیلوگرم",
+   "min": 1790000,
+   "max": 1790000,
+   "price": 1790000,
+   "cat": "پروتئین",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "شقه گوسفندی بسته‌بندی در محل داخلی آزاد",
+   "unit": "کیلوگرم",
+   "min": 1530000,
+   "max": 1530000,
+   "price": 1530000,
+   "cat": "پروتئین",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "شیر بطری ۹۴۶ گرمی کم چرب",
+   "unit": "946 گرم",
+   "min": 100000,
+   "max": 150000,
+   "price": null,
+   "cat": "لبنیات",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "کره ۵۰ گرمی",
+   "unit": "50 گرم",
+   "min": 54900,
+   "max": 64200,
+   "price": null,
+   "cat": "لبنیات",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "خامه ساده ۲۰۰ گرمی",
+   "unit": "200 گرم",
+   "min": 115000,
+   "max": 130000,
+   "price": null,
+   "cat": "لبنیات",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "ماست دبه‌ای ۲.۵ کیلوگرمی کم چرب",
+   "unit": "2.5 کیلوگرم",
+   "min": 295000,
+   "max": 295000,
+   "price": 295000,
+   "cat": "لبنیات",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "پنیر سفید یو اف ۴۰۰ گرمی به اضافه ویتامین دی",
+   "unit": "400 گرم",
+   "min": 186000,
+   "max": 203000,
+   "price": null,
+   "cat": "لبنیات",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج ایرانی",
+   "unit": "کیلوگرم",
+   "min": 296000,
+   "max": 620000,
+   "price": null,
+   "cat": "برنج و غلات",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج خارجی",
+   "unit": "کیلوگرم",
+   "min": 187500,
+   "max": 390000,
+   "price": null,
+   "cat": "برنج و غلات",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "روغن سرخ کردنی ۸۱۰ گرمی",
+   "unit": "810 گرم",
+   "min": 350000,
+   "max": 587000,
+   "price": null,
+   "cat": "روغن",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "روغن مخصوص پخت و پز ۸۱۰ گرمی",
+   "unit": "810 گرم",
+   "min": 377500,
+   "max": 612000,
+   "price": null,
+   "cat": "روغن",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "چای ایرانی بسته‌بندی ۴۵۰ گرمی",
+   "unit": "450 گرم",
+   "min": 750000,
+   "max": 799000,
+   "price": null,
+   "cat": "نوشیدنی",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "چای خارجی ۵۰۰ گرمی",
+   "unit": "500 گرم",
+   "min": 1299000,
+   "max": 1400000,
+   "price": null,
+   "cat": "نوشیدنی",
+   "source": "اقتصادنیوز",
+   "url": "https://www.eghtesadnews.com/%D8%A8%D8%AE%D8%B4-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-67/814696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%A9%D8%A7%D9%84%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%D8%B3%D8%A7%D8%B3%DB%8C-%D8%A7%D8%B9%D9%84%D8%A7%D9%85-%D8%B4%D8%AF-%D8%A8%D8%B1%D9%86%D8%AC-%DA%AF%D9%88%D8%B4%D8%AA-%D9%85%D8%B1%D8%BA-%DA%86%D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "ران گوسفندی بدون استخوان",
+   "unit": "۱ کیلوگرم",
+   "min": 1880000,
+   "max": 1880000,
+   "price": 1880000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "قلوه‌گاه گوسفندی بدون استخوان",
+   "unit": "۱ کیلوگرم",
+   "min": 1187500,
+   "max": 1187500,
+   "price": 1187500,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "گوشت خورشتی گوسفندی",
+   "unit": "وزن مشخص نشده",
+   "min": 1200000,
+   "max": 1200000,
+   "price": 1200000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "راسته گوسفندی با استخوان",
+   "unit": "وزن مشخص نشده",
+   "min": 2375000,
+   "max": 2375000,
+   "price": 2375000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "دنبه گوسفندی",
+   "unit": "وزن مشخص نشده",
+   "min": 1150000,
+   "max": 1150000,
+   "price": 1150000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "گوشت چرخ‌کرده گوسفندی خالص",
+   "unit": "۱ کیلوگرم",
+   "min": 1399000,
+   "max": 1399000,
+   "price": 1399000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "سردست گوسفندی بدون استخوان",
+   "unit": "۲ کیلوگرم",
+   "min": 3955000,
+   "max": 3955000,
+   "price": 3955000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "گردن گوسفندی",
+   "unit": "وزن مشخص نشده",
+   "min": 2200000,
+   "max": 2200000,
+   "price": 2200000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "گوشت گردن گوسفندی ممتاز",
+   "unit": "۱ کیلوگرم",
+   "min": 1653000,
+   "max": 1653000,
+   "price": 1653000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "ماهیچه گوسفندی",
+   "unit": "وزن مشخص نشده",
+   "min": 2685500,
+   "max": 2685500,
+   "price": 2685500,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "گوشت چرخ‌کرده مخلوط گوساله و گوسفند",
+   "unit": "۱ کیلوگرم",
+   "min": 1600000,
+   "max": 1600000,
+   "price": 1600000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "راسته شیشلیک گوسفندی",
+   "unit": "۱ کیلوگرم",
+   "min": 2427250,
+   "max": 2427250,
+   "price": 2427250,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "مغز ران گوسفندی",
+   "unit": "وزن مشخص نشده",
+   "min": 2588800,
+   "max": 2588800,
+   "price": 2588800,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "ران گوسفندی وارداتی",
+   "unit": "۳ کیلوگرم",
+   "min": 5578000,
+   "max": 5578000,
+   "price": 5578000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "مغز گوسفندی",
+   "unit": "وزن مشخص نشده",
+   "min": 420000,
+   "max": 420000,
+   "price": 420000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "فیله گوسفندی",
+   "unit": "وزن مشخص نشده",
+   "min": 2690000,
+   "max": 2690000,
+   "price": 2690000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "راسته بدون استخوان گوسفندی",
+   "unit": "وزن مشخص نشده",
+   "min": 2700000,
+   "max": 2700000,
+   "price": 2700000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "گوشت خورشتی ران گوسفندی نر با استخوان",
+   "unit": "۲ کیلوگرم",
+   "min": 4803200,
+   "max": 4803200,
+   "price": 4803200,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "نیم‌شقه سردست گوسفندی",
+   "unit": "وزن مشخص نشده",
+   "min": 1820000,
+   "max": 1820000,
+   "price": 1820000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "گردن گوسفندی",
+   "unit": "وزن مشخص نشده",
+   "min": 1858800,
+   "max": 1858800,
+   "price": 1858800,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "قلوه‌گاه گوسفندی منجمد",
+   "unit": "۲۰ گرم",
+   "min": 1100000,
+   "max": 1100000,
+   "price": 1100000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "چنجه گوسفندی",
+   "unit": "۱ کیلوگرم",
+   "min": 3911700,
+   "max": 3911700,
+   "price": 3911700,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b4%d9%86%d8%a8%d9%87-%db%b9-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "تخم‌مرغ فله‌ای هر کیلوگرم در میادین",
+   "unit": "کیلوگرم",
+   "min": 280000,
+   "max": 280000,
+   "price": 280000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%aa%d8%ae%d9%85-%d9%85%d8%b1%d8%ba-%db%b1%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5-%e2%94%82/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "تخم‌مرغ فله‌ای هر کیلوگرم",
+   "unit": "کیلوگرم",
+   "min": 280000,
+   "max": 280000,
+   "price": 280000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%aa%d8%ae%d9%85-%d9%85%d8%b1%d8%ba-%db%b1%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5-%e2%94%82/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "هر عدد تخم‌مرغ بر مبنای شانه پیش‌بینی‌شده",
+   "unit": "شانه ۳۰ عددی",
+   "min": 22500,
+   "max": 22500,
+   "price": 22500,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%aa%d8%ae%d9%85-%d9%85%d8%b1%d8%ba-%db%b1%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5-%e2%94%82/",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "مرغ کامل",
+   "unit": "کیلوگرم",
+   "min": 350000,
+   "max": 350000,
+   "price": 350000,
+   "cat": "پروتئین",
+   "source": "وانا نیوز",
+   "url": "https://vananews.com/fa/news/669499/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%B1%D8%BA-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-9-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%B1%D8%BA-%DA%A9%D8%A7%D9%85%D9%84-350-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B4%D8%AF-%D9%81%DB%8C%D9%84%D9%87-873-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%AB%D8%A8%D8%A7%D8%AA-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%B2%DB%8C%D8%B1-%D8%B3%D8%A4%D8%A7%D9%84-%D8%B1%D9%81%D8%AA",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "فیله مرغ",
+   "unit": "کیلوگرم",
+   "min": 873000,
+   "max": 873000,
+   "price": 873000,
+   "cat": "پروتئین",
+   "source": "وانا نیوز",
+   "url": "https://vananews.com/fa/news/669499/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%B1%D8%BA-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-9-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%B1%D8%BA-%DA%A9%D8%A7%D9%85%D9%84-350-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B4%D8%AF-%D9%81%DB%8C%D9%84%D9%87-873-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%AB%D8%A8%D8%A7%D8%AA-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%B2%DB%8C%D8%B1-%D8%B3%D8%A4%D8%A7%D9%84-%D8%B1%D9%81%D8%AA",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "ران مرغ با پوست و کمر",
+   "unit": "کیلوگرم",
+   "min": 280000,
+   "max": 280000,
+   "price": 280000,
+   "cat": "پروتئین",
+   "source": "وانا نیوز",
+   "url": "https://vananews.com/fa/news/669499/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%B1%D8%BA-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-9-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%B1%D8%BA-%DA%A9%D8%A7%D9%85%D9%84-350-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B4%D8%AF-%D9%81%DB%8C%D9%84%D9%87-873-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%AB%D8%A8%D8%A7%D8%AA-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%B2%DB%8C%D8%B1-%D8%B3%D8%A4%D8%A7%D9%84-%D8%B1%D9%81%D8%AA",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "ران مرغ بدون پوست و بدون کمر",
+   "unit": "کیلوگرم",
+   "min": 424800,
+   "max": 424800,
+   "price": 424800,
+   "cat": "پروتئین",
+   "source": "وانا نیوز",
+   "url": "https://vananews.com/fa/news/669499/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%B1%D8%BA-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-9-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%B1%D8%BA-%DA%A9%D8%A7%D9%85%D9%84-350-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B4%D8%AF-%D9%81%DB%8C%D9%84%D9%87-873-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%AB%D8%A8%D8%A7%D8%AA-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%B2%DB%8C%D8%B1-%D8%B3%D8%A4%D8%A7%D9%84-%D8%B1%D9%81%D8%AA",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
+  },
+  {
+   "name": "سینه مرغ با استخوان",
+   "unit": "کیلوگرم",
+   "min": 603000,
+   "max": 603000,
+   "price": 603000,
+   "cat": "پروتئین",
+   "source": "وانا نیوز",
+   "url": "https://vananews.com/fa/news/669499/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%B1%D8%BA-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-9-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%B1%D8%BA-%DA%A9%D8%A7%D9%85%D9%84-350-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B4%D8%AF-%D9%81%DB%8C%D9%84%D9%87-873-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%AB%D8%A8%D8%A7%D8%AA-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%B2%DB%8C%D8%B1-%D8%B3%D8%A4%D8%A7%D9%84-%D8%B1%D9%81%D8%AA",
+   "date": "2026-10-31",
+   "reportDate": "2026-10-31",
+   "kind": "scraped"
   }
  ],
  "log": [
@@ -2998,112 +3596,105 @@
    "name": "اقتصادنیوز",
    "status": "ok",
    "msg": "1 گزارش پیدا شد",
-   "at": "2026-10-30T10:57:27.878Z"
+   "at": "2026-10-31T10:29:55.884Z"
   },
   {
    "id": "didbaniran",
    "name": "دیدبان ایران",
-   "status": "error",
-   "msg": "لینکی با عنوان قیمت کالا در صفحه فهرست نبود (آدرس فهرست یا قالب صفحه را بررسی کنید)",
-   "at": "2026-10-30T10:57:32.689Z"
+   "status": "ok",
+   "msg": "1 گزارش پیدا شد",
+   "at": "2026-10-31T10:30:00.246Z"
   },
   {
    "id": "ecoiran",
    "name": "اکوایران",
    "status": "ok",
    "msg": "3 گزارش پیدا شد",
-   "at": "2026-10-30T10:57:37.166Z"
+   "at": "2026-10-31T10:30:05.050Z"
   },
   {
    "id": "nabzgheymat",
    "name": "نبض قیمت",
    "status": "ok",
    "msg": "2 گزارش پیدا شد",
-   "at": "2026-10-30T10:57:45.713Z"
+   "at": "2026-10-31T10:30:09.203Z"
   },
   {
    "id": "vananews",
    "name": "وانا نیوز",
    "status": "ok",
-   "msg": "3 گزارش پیدا شد",
-   "at": "2026-10-30T10:57:50.296Z"
+   "msg": "2 گزارش پیدا شد",
+   "at": "2026-10-31T10:30:13.379Z"
   },
   {
    "id": "avash",
    "name": "آواش",
-   "status": "ok",
-   "msg": "1 گزارش پیدا شد",
-   "at": "2026-10-30T10:57:55.110Z"
+   "status": "error",
+   "msg": "لینکی با عنوان قیمت کالا در صفحه فهرست نبود (آدرس فهرست یا قالب صفحه را بررسی کنید)",
+   "at": "2026-10-31T10:30:17.561Z"
   },
   {
-   "id": "eghtesadnews:D9%86-%D8%B1%D8%B3%DB%8C%D8%AF",
+   "id": "eghtesadnews:D9%82%D8%AF%D8%B1-%D8%B4%D8%AF",
    "name": "اقتصادنیوز",
+   "status": "ok",
+   "msg": "16 قلم · 2026-10-31",
+   "at": "2026-10-31T10:30:21.698Z"
+  },
+  {
+   "id": "didbaniran:D8%AF-%D8%AC%D8%AF%D9%88%D9%84",
+   "name": "دیدبان ایران",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-10-30T10:57:59.289Z"
+   "at": "2026-10-31T10:30:25.659Z"
   },
   {
    "id": "ecoiran:D9%86-%D8%B1%D8%B3%DB%8C%D8%AF",
    "name": "اکوایران",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-10-30T10:58:00.559Z"
+   "at": "2026-10-31T10:30:26.447Z"
   },
   {
    "id": "ecoiran:D9%85%DB%8C-%D8%B4%D9%88%D8%AF",
    "name": "اکوایران",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-10-30T10:58:01.278Z"
+   "at": "2026-10-31T10:30:26.766Z"
   },
   {
    "id": "ecoiran:D9%88%D8%B1-%DA%A9%D8%B1%D8%AF",
    "name": "اکوایران",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-10-30T10:58:01.988Z"
+   "at": "2026-10-31T10:30:27.345Z"
   },
   {
-   "id": "nabzgheymat:9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "id": "nabzgheymat:8%a7%d9%86-%db%b1%db%b4%db%b0/",
    "name": "نبض قیمت",
    "status": "ok",
-   "msg": "5 قلم · 2026-10-30",
-   "at": "2026-10-30T10:58:04.679Z"
+   "msg": "22 قلم · 2026-10-31",
+   "at": "2026-10-31T10:30:29.413Z"
   },
   {
-   "id": "nabzgheymat:%db%b0%db%b5-%e2%94%82-%d8%a2/",
+   "id": "nabzgheymat:1%db%b4%db%b0%db%b5-%e2%94%82/",
    "name": "نبض قیمت",
    "status": "ok",
-   "msg": "14 قلم · 2026-10-30",
-   "at": "2026-10-30T10:58:09.555Z"
+   "msg": "3 قلم · 2026-10-31",
+   "at": "2026-10-31T10:30:33.274Z"
   },
   {
    "id": "vananews:DB%8C-%D8%AF%D8%A7%D9%85%DB%8C",
    "name": "وانا نیوز",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-10-30T10:58:14.006Z"
+   "at": "2026-10-31T10:30:37.392Z"
   },
   {
-   "id": "vananews:D8%AA-%DA%AF%D9%88%D8%B4%D8%AA",
-   "name": "وانا نیوز",
-   "status": "error",
-   "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-10-30T10:58:14.396Z"
-  },
-  {
-   "id": "vananews:D9%86-%D8%B1%D8%B3%DB%8C%D8%AF",
+   "id": "vananews:D8%A7%D9%84-%D8%B1%D9%81%D8%AA",
    "name": "وانا نیوز",
    "status": "ok",
-   "msg": "6 قلم · 2026-10-30",
-   "at": "2026-10-30T10:58:14.787Z"
-  },
-  {
-   "id": "avash:D9%85%D8%A7%D9%86-%D8%B4%D8%AF",
-   "name": "آواش",
-   "status": "error",
-   "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-10-30T10:58:18.742Z"
+   "msg": "5 قلم · 2026-10-31",
+   "at": "2026-10-31T10:30:37.736Z"
   }
  ]
 }
