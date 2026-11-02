@@ -331,11 +331,6 @@
   <button id="googleSignOutBtn" type="button" style="display:none; background:#f3f4f6; color:#374151; border:1px solid #d1d5db; border-radius:8px; padding:6px 14px; font-size:13px; font-family:inherit; cursor:pointer;">
     خروج از گوگل
   </button>
-  <div id="signInHint" style="display:none; width:100%; text-align:center; background:#fef3c7; color:#92400e; border-radius:8px; padding:8px 12px; font-size:13px; line-height:1.9;">
-    اگه هنگام ورود، صفحه‌ی خطای «Couldn't sign you in» دیدید، یعنی گوگل اجازه نمی‌ده داخل این برنامه وارد بشید.
-    صفحه رو توی مرورگر <b>کروم</b> باز کنید و همون‌جا وارد بشید:
-    <a id="openInChromeLink" href="#" style="color:#1d4ed8; font-weight:700;">باز کردن در کروم</a>
-  </div>
   <button id="backupDownloadBtn" type="button" style="background:#f3f4f6; color:#374151; border:1px solid #d1d5db; border-radius:8px; padding:6px 14px; font-size:13px; font-family:inherit; cursor:pointer;">
     📥 دانلود پشتیبان
   </button>
@@ -647,7 +642,7 @@
       <li>اگه اشتباهی یه ردیف رو حذف کردید، متأسفانه راه برگردوندنش نیست — پس قبل از زدن «×» مطمئن بشید.</li>
     </ul>
 
-    <p style="text-align:center; font-size:11px; color:#9ca3af; margin-top:24px;">نسخه‌ی صفحه: 2026-11-01-f</p>
+    <p style="text-align:center; font-size:11px; color:#9ca3af; margin-top:24px;">نسخه‌ی صفحه: 2026-11-01-g</p>
 
     <div style="text-align:center; margin-top:8px;">
       <button id="helpCloseBtn2" type="button" style="
@@ -1777,17 +1772,10 @@
         if (resp && resp.access_token) {
           accessToken = resp.access_token;
           try { localStorage.setItem(GOOGLE_FLAG_KEY, '1'); } catch (e) {}
-          signInHint.style.display = 'none';
           syncFromDrive();
         } else {
           setStorageStatus('local-only');
         }
-      },
-      // Fires when the sign-in popup can't open or is closed (for example
-      // when Google refuses to sign in inside an in-app browser). Only show
-      // the hint if the person tapped the sign-in button themselves.
-      error_callback: () => {
-        if (userTappedSignIn) signInHint.style.display = 'block';
       }
     });
     // Deliberately NOT requesting a token here: doing it automatically on
@@ -1795,19 +1783,7 @@
     // The person connects by tapping the button instead.
   }
 
-  const signInHint = document.getElementById('signInHint');
-  const openInChromeLink = document.getElementById('openInChromeLink');
-  let userTappedSignIn = false;
-
-  // Android link that asks Chrome to open this same page.
-  openInChromeLink.href = 'intent://' + location.host + location.pathname +
-    '#Intent;scheme=https;package=com.android.chrome;end';
-
-  // In-app browsers (Android WebView) identify themselves with "; wv)".
-  if (/; wv\)/.test(navigator.userAgent)) signInHint.style.display = 'block';
-
   googleSignInBtn.addEventListener('click', () => {
-    userTappedSignIn = true;
     if (!tokenClient) initGoogleAuth();
     if (!tokenClient) return; // Google's script hasn't finished loading yet
     // After the first approval, an empty prompt reconnects without asking again.
