@@ -593,7 +593,10 @@
         مبلغی که می‌گیره خودکار نمایش داده می‌شه. فقط کافیه اسم ماه رو برای ردیف اول بنویسید (مثلاً «مهر»)؛ ماه‌های بقیه‌ی ردیف‌ها خودکار به ترتیب پر می‌شن و بعد از اسفند دوباره از فروردین ادامه پیدا می‌کنن. با زدن دکمه‌ی قرمز «×» می‌تونید اون ردیف رو پاک کنید.</li>
       <li><b>۵ — افزودن ردیف:</b> هر بار بزنید، یه نفر دیگه به لیست اضافه می‌شه.</li>
       <li><b>۶ — دانلود عکس / اشتراک‌گذاری:</b> با این دکمه‌ها می‌تونید از کل جدول یه عکس بگیرید
-        و برای بقیه (مثلاً توی گروه تلگرام) بفرستید. هر عکس حداکثر ۱۲ نفر رو نشون می‌ده؛ اگه نفرات بیشتر باشن، چند عکس جدا ساخته می‌شه اگه بیشتر از یه عکس بشه، با اولین بار زدن «اشتراک‌گذاری» عکس‌ها آماده می‌شن و نوشته‌ی دکمه می‌شه «ارسال ۲ عکس (دوباره بزنید)»؛ بار دوم که بزنید، همه‌ی عکس‌ها با هم برای ارسال باز می‌شن. اگه فقط یکی رفت، نوشته‌ی کوچیک «فقط یه عکس رفت؟» زیر دکمه رو بزنید تا هر عکس رو جدا بفرستید.</li>
+        و برای بقیه (مثلاً توی گروه تلگرام یا ایتا) بفرستید. هر عکس حداکثر ۱۰ نفر رو نشون می‌ده؛ اگه نفرات بیشتر باشن، چند عکس جدا ساخته می‌شه.
+        اگه بیشتر از یه عکس بشه، یه پنل باز می‌شه که می‌تونید «امتحان ارسال همه با هم» رو بزنید یا هر عکس رو جدا با دکمه‌ی زیرش بفرستید.
+        <br><span style="color:#b45309;">⚠️ نکته: خیلی از پیام‌رسان‌ها (ایتا، تلگرام، بله و …) فقط <b>یک عکس</b> را از مرورگر قبول می‌کنند.
+        اگر «ارسال همه» فقط یکی را فرستاد، از دکمه‌های زیر هر عکس را تک‌تک بفرستید.</span></li>
     </ol>
 
     <h2 style="font-size:16.5px; color:#2563eb; margin-top:26px;">🎲 تب «قرعه‌کشی» چیه؟</h2>
@@ -661,8 +664,9 @@
     <p id="sharePanelNote" style="font-size:13px; color:#6b7280; line-height:1.9; margin:0 0 12px;"></p>
     <div style="text-align:center;">
       <button id="shareAllBtn" type="button" style="background:#7c3aed; color:#fff; border:none; border-radius:8px; padding:10px 18px; font-size:14px; font-family:inherit; cursor:pointer;">
-        📤 ارسال همه با هم
+        📤 امتحان ارسال همه با هم
       </button>
+      <p style="font-size:12px; color:#9ca3af; margin:6px 0 0; line-height:1.7;">اگر اپ مقصد فقط یکی را گرفت، از دکمه‌های زیر هر عکس را جدا بفرستید</p>
     </div>
     <div id="sharePanelList" style="margin-top:14px;"></div>
     <div style="text-align:center; margin-top:14px;">
@@ -1994,9 +1998,9 @@
   const installmentsExportImageBtn = document.getElementById('installmentsExportImageBtn');
   const installmentsExportShareBtn = document.getElementById('installmentsExportShareBtn');
 
-  // Pictures are split so each one shows at most 12 people (keeps them short
-  // enough to read and share). More than 12 people = several pictures.
-  const ROWS_PER_IMAGE = 12;
+  // Pictures are split so each one shows at most 10 people (keeps them short
+  // enough to read and share). More than 10 people = several pictures.
+  const ROWS_PER_IMAGE = 10;
 
   // One picture of `target`, keeping only the table rows from index `from` up to (not including) `to`.
   // The picture-taking library is loaded only when needed (and quietly in the
@@ -2096,42 +2100,43 @@
   }
 
   // Opens the phone's share sheet with the given pictures.
-  // Same approach as the Eitaa sticker maker, which is known to deliver several
-  // pictures at once in this app: pass only `files` and `title` (no `text`),
-  // and if the all-at-once call fails, try one picture at a time.
+  // Many messaging apps (Eitaa, Telegram, Bale, Instagram, …) only accept ONE
+  // file from the Web Share API even when the browser offers several. So for
+  // multiple pictures we prefer the share panel (one-by-one buttons). When the
+  // person explicitly asks for "send all", we still try multi-file share first.
   async function shareFiles(fileList, title) {
-    if (navigator.share) {
-      if (navigator.canShare && navigator.canShare({ files: fileList })) {
-        try {
-          await navigator.share({ files: fileList, title: title });
-          return;
-        } catch (err) {
-          if (err && err.name === 'AbortError') return; // closed the share sheet
-        }
-      }
+    if (!fileList || fileList.length === 0) return;
 
-      let failedAt = -1;
-      for (let i = 0; i < fileList.length; i++) {
+    // Single file — simplest path.
+    if (fileList.length === 1) {
+      if (navigator.share) {
         try {
-          if (navigator.canShare && navigator.canShare({ files: [fileList[i]] })) {
-            await navigator.share({ files: [fileList[i]], title: title });
-          } else {
-            failedAt = i;
-            break;
+          if (!navigator.canShare || navigator.canShare({ files: fileList })) {
+            await navigator.share({ files: fileList, title: title });
+            return;
           }
         } catch (err) {
           if (err && err.name === 'AbortError') return;
-          failedAt = i;
-          break;
         }
-        await new Promise((r) => setTimeout(r, 300));
       }
-      if (failedAt === -1) return;
-      fileList = fileList.slice(failedAt);
+      downloadFiles(fileList);
+      alert('اشتراک‌گذاری مستقیم انجام نشد؛ عکس دانلود شد تا خودتان به اشتراک بگذارید.');
+      return;
+    }
+
+    // Multiple files: try true multi-file share once.
+    if (navigator.share && navigator.canShare && navigator.canShare({ files: fileList })) {
+      try {
+        await navigator.share({ files: fileList, title: title });
+        // Even on "success", many apps only keep the first file.
+        return;
+      } catch (err) {
+        if (err && err.name === 'AbortError') return;
+      }
     }
 
     downloadFiles(fileList);
-    alert('اشتراک‌گذاری مستقیم انجام نشد؛ عکس‌ها دانلود شدن تا خودتان به اشتراک بگذارید.');
+    alert('این برنامه چند عکس را با هم قبول نمی‌کند. عکس‌ها دانلود شدند؛ از گالری بفرستید یا از پنل، تک‌تک ارسال کنید.');
   }
 
   // With more than one picture we show them first, so the person can send them
@@ -2158,8 +2163,10 @@
     closeSharePanel();
     sharePanelFiles = fileList;
     sharePanelTitle = title;
-    sharePanelNote.textContent = toPersianDigits(fileList.length) +
-      ' عکس ساخته شد (هر عکس حداکثر ۱۲ نفر). می‌تونید همه رو با هم یا هر عکس رو جدا بفرستید.';
+    sharePanelNote.innerHTML = toPersianDigits(fileList.length) +
+      ' عکس ساخته شد (هر عکس حداکثر ۱۰ نفر).<br>' +
+      '<b style="color:#92400e;">توجه:</b> خیلی از پیام‌رسان‌ها (ایتا، تلگرام، بله و …) فقط <b>یک عکس</b> را قبول می‌کنند. ' +
+      'اگر «ارسال همه با هم» فقط یکی را فرستاد، از دکمه‌های زیر هر عکس را جدا بفرستید.';
 
     fileList.forEach((file, i) => {
       const url = URL.createObjectURL(file);
@@ -2179,7 +2186,7 @@
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.textContent = '📤 ارسال این عکس';
-      btn.style.cssText = 'background:#2563eb; color:#fff; border:none; border-radius:8px; padding:8px 16px; font-size:13px; font-family:inherit; cursor:pointer;';
+      btn.style.cssText = 'background:#2563eb; color:#fff; border:none; border-radius:8px; padding:10px 18px; font-size:14px; font-family:inherit; cursor:pointer; width:90%; max-width:260px;';
       btn.addEventListener('click', () => shareFiles([file], sharePanelTitle));
 
       item.appendChild(img);
@@ -2213,7 +2220,7 @@
         });
         downloadFiles(files);
         if (files.length > 1) {
-          alert('جدول توی ' + toPersianDigits(files.length) + ' عکس جدا ذخیره شد (هر عکس حداکثر ۱۲ نفر). اگه مرورگر پرسید، اجازه‌ی دانلود چند فایل رو تأیید کنید.');
+          alert('جدول توی ' + toPersianDigits(files.length) + ' عکس جدا ذخیره شد (هر عکس حداکثر ۱۰ نفر). اگه مرورگر پرسید، اجازه‌ی دانلود چند فایل رو تأیید کنید.');
         }
       } catch (e) {
         alert('ساخت عکس با خطا مواجه شد. اتصال اینترنت رو چک کنید (برای ساخت عکس، یه ابزار از اینترنت گرفته می‌شه) و دوباره امتحان کنید.');
@@ -2222,65 +2229,29 @@
       imageBtn.textContent = IMAGE_IDLE;
     });
 
-    // Same order of events as the Eitaa sticker maker: the pictures are made first,
-    // and the share sheet is opened by a SEPARATE tap that finds them already ready.
-    // (With a single picture it is shared straight away.)
-    let prepared = null; // { files, counter }
-
+    // Single picture → share immediately.
+    // Several pictures → open the share panel so the person can send all at
+    // once (if the target app allows) or each photo one-by-one. Many messaging
+    // apps only keep the first file of a multi-file share.
     shareBtn.addEventListener('click', async () => {
-      // Second tap: pictures are ready and nothing changed since, so share right now.
-      if (prepared && prepared.counter === changeCounter) {
-        const readyFiles = prepared.files;
-        prepared = null;
-        shareBtn.textContent = SHARE_IDLE;
-        await shareFiles(readyFiles, shareTitle);
-        return;
-      }
-
-      prepared = null;
       shareBtn.disabled = true;
       try {
-        const counterAtStart = changeCounter;
         const files = await captureAllChunks(target, rowSelector, baseName, hideSelectors, (d, t) => {
           shareBtn.textContent = progressText(d, t);
         }, asciiBase);
         if (files.length === 0) throw new Error('no images');
 
+        shareBtn.textContent = SHARE_IDLE;
         if (files.length === 1) {
-          shareBtn.textContent = SHARE_IDLE;
           await shareFiles(files, shareTitle);
         } else {
-          prepared = { files: files, counter: counterAtStart };
-          shareBtn.textContent = '📤 ارسال ' + toPersianDigits(files.length) + ' عکس (دوباره بزنید)';
+          openSharePanel(files, shareTitle);
         }
       } catch (e) {
         shareBtn.textContent = SHARE_IDLE;
         alert('ساخت عکس با خطا مواجه شد. اتصال اینترنت رو چک کنید (برای ساخت عکس، یه ابزار از اینترنت گرفته می‌شه) و دوباره امتحان کنید.');
       }
       shareBtn.disabled = false;
-    });
-
-    // Fallback by hand: if sharing everything at once only delivers one picture
-    // in the app being used, this lets each picture be sent on its own.
-    const oneByOneBtn = document.createElement('button');
-    oneByOneBtn.type = 'button';
-    oneByOneBtn.textContent = 'فقط یه عکس رفت؟ عکس‌ها رو تک‌تک بفرستید';
-    oneByOneBtn.style.cssText = 'width:100%; background:none; border:none; color:#6b7280; font-size:12px; font-family:inherit; text-decoration:underline; cursor:pointer; margin-top:2px;';
-    shareBtn.parentElement.appendChild(oneByOneBtn);
-
-    oneByOneBtn.addEventListener('click', async () => {
-      const idleText = oneByOneBtn.textContent;
-      oneByOneBtn.disabled = true;
-      try {
-        const files = await captureAllChunks(target, rowSelector, baseName, hideSelectors, (d, t) => {
-          oneByOneBtn.textContent = progressText(d, t);
-        }, asciiBase);
-        if (files.length > 0) openSharePanel(files, shareTitle);
-      } catch (e) {
-        alert('ساخت عکس با خطا مواجه شد. اتصال اینترنت رو چک کنید (برای ساخت عکس، یه ابزار از اینترنت گرفته می‌شه) و دوباره امتحان کنید.');
-      }
-      oneByOneBtn.disabled = false;
-      oneByOneBtn.textContent = idleText;
     });
   }
 
