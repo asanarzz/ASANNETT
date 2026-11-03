@@ -2061,9 +2061,9 @@
     return new Promise((resolve) => canvas.toBlob(resolve, mime || 'image/png', quality));
   }
 
-  // Pictures for downloading are PNG with Persian names. Pictures for sharing
-  // (asciiBase given) are WebP with plain English names: the same kind of file the
-  // Eitaa sticker maker shares several at a time in this app.
+  // Always PNG. WebP used to be used for share (smaller), but on Android
+  // (especially installed PWA / standalone) multi-file Web Share often drops
+  // every file after the first when the type is image/webp. PNG is more reliable.
   async function captureAllChunks(target, rowSelector, baseName, hideSelectors, onProgress, asciiBase) {
     const total = Math.max(1, Math.ceil(rows.length / ROWS_PER_IMAGE));
     const files = [];
@@ -2071,12 +2071,11 @@
     for (let i = 0; i < total; i++) {
       if (onProgress) onProgress(i + 1, total);
       const canvas = await captureChunk(target, rowSelector, i * ROWS_PER_IMAGE, (i + 1) * ROWS_PER_IMAGE, hideSelectors);
-      const forShare = !!asciiBase;
-      const blob = await canvasToBlob(canvas, forShare ? 'image/webp' : 'image/png', 0.92);
-      if (!blob) continue;
-      if (forShare) {
-        const ext = blob.type === 'image/webp' ? 'webp' : 'png'; // old browsers can't make WebP
-        files.push(new File([blob], asciiBase + '-' + stamp + '-' + (i + 1) + '.' + ext, { type: blob.type || 'image/png' }));
+      const blob = await canvasToBlob(canvas, 'image/png', 0.92);
+      if (!blob || blob.size < 100) continue;
+      if (asciiBase) {
+        // ASCII filename — some share targets mishandle Persian names.
+        files.push(new File([blob], asciiBase + '-' + stamp + '-' + (i + 1) + '.png', { type: 'image/png' }));
       } else {
         const name = total === 1 ? baseName + '.png' : baseName + '-' + (i + 1) + '.png';
         files.push(new File([blob], name, { type: 'image/png' }));
@@ -2100,43 +2099,79 @@
   }
 
   // Opens the phone's share sheet with the given pictures.
-  // Many messaging apps (Eitaa, Telegram, Bale, Instagram, …) only accept ONE
-  // file from the Web Share API even when the browser offers several. So for
-  // multiple pictures we prefer the share panel (one-by-one buttons). When the
-  // person explicitly asks for "send all", we still try multi-file share first.
+  // On Android, multi-file Web Share is unreliable outside a normal Chrome tab
+  // (installed PWA / standalone / in-app browsers often deliver only the first
+  // file — the system sheet itself may even show "1 image"). We still try
+  // multi-share, but rebuild clean PNG File objects first.
+  function isStandaloneApp() {
+    try {
+      if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) return true;
+      if (window.matchMedia && window.matchMedia('(display-mode: fullscreen)').matches) return true;
+      if (typeof navigator.standalone === 'boolean' && navigator.standalone) return true;
+    } catch (e) {}
+    return false;
+  }
+
+  function cleanImageFiles(fileList) {
+    const out = [];
+    for (let i = 0; i < fileList.length; i++) {
+      const f = fileList[i];
+      if (!f || !f.size) continue;
+      // Re-wrap so type/name are always image/png with an ASCII name.
+      const name = (f.name && /\.png$/i.test(f.name)) ? f.name : ('photo-' + (i + 1) + '.png');
+      out.push(new File([f], name, { type: 'image/png' }));
+    }
+    return out;
+  }
+
   async function shareFiles(fileList, title) {
-    if (!fileList || fileList.length === 0) return;
+    const files = cleanImageFiles(fileList || []);
+    if (files.length === 0) return;
 
     // Single file — simplest path.
-    if (fileList.length === 1) {
+    if (files.length === 1) {
       if (navigator.share) {
         try {
-          if (!navigator.canShare || navigator.canShare({ files: fileList })) {
-            await navigator.share({ files: fileList, title: title });
+          if (!navigator.canShare || navigator.canShare({ files: files })) {
+            await navigator.share({ files: files, title: title });
             return;
           }
         } catch (err) {
           if (err && err.name === 'AbortError') return;
         }
       }
-      downloadFiles(fileList);
+      downloadFiles(files);
       alert('اشتراک‌گذاری مستقیم انجام نشد؛ عکس دانلود شد تا خودتان به اشتراک بگذارید.');
       return;
     }
 
-    // Multiple files: try true multi-file share once.
-    if (navigator.share && navigator.canShare && navigator.canShare({ files: fileList })) {
+    // Multiple files.
+    if (navigator.share) {
+      // 1) Prefer a real multi-file share when the browser says it can.
+      let canMulti = false;
       try {
-        await navigator.share({ files: fileList, title: title });
-        // Even on "success", many apps only keep the first file.
-        return;
-      } catch (err) {
-        if (err && err.name === 'AbortError') return;
+        canMulti = !navigator.canShare || navigator.canShare({ files: files });
+      } catch (e) {
+        canMulti = true; // some WebViews throw on canShare — still try
+      }
+
+      if (canMulti) {
+        try {
+          await navigator.share({ files: files, title: title });
+          // NOTE: On many Android PWAs the sheet opens but only the first file
+          // is actually handed to the target app — even though share() resolves.
+          return;
+        } catch (err) {
+          if (err && err.name === 'AbortError') return;
+        }
       }
     }
 
-    downloadFiles(fileList);
-    alert('این برنامه چند عکس را با هم قبول نمی‌کند. عکس‌ها دانلود شدند؛ از گالری بفرستید یا از پنل، تک‌تک ارسال کنید.');
+    downloadFiles(files);
+    const hint = isStandaloneApp()
+      ? 'این صفحه به‌صورت اپ نصب‌شده باز است و اندروید معمولاً فقط یک عکس را از اپ می‌فرستد. عکس‌ها دانلود شدند؛ از گالری بفرستید، یا در پنل هر عکس را جدا ارسال کنید، یا صفحه را در کروم (نه از آیکون اپ) باز کنید.'
+      : 'چند عکس با هم ارسال نشد. عکس‌ها دانلود شدند؛ از گالری بفرستید یا در پنل هر عکس را جدا ارسال کنید.';
+    alert(hint);
   }
 
   // With more than one picture we show them first, so the person can send them
@@ -2165,8 +2200,9 @@
     sharePanelTitle = title;
     sharePanelNote.innerHTML = toPersianDigits(fileList.length) +
       ' عکس ساخته شد (هر عکس حداکثر ۱۰ نفر).<br>' +
-      '<b style="color:#92400e;">توجه:</b> خیلی از پیام‌رسان‌ها (ایتا، تلگرام، بله و …) فقط <b>یک عکس</b> را قبول می‌کنند. ' +
-      'اگر «ارسال همه با هم» فقط یکی را فرستاد، از دکمه‌های زیر هر عکس را جدا بفرستید.';
+      '<b style="color:#92400e;">توجه:</b> اگر صفحه را از <b>آیکون اپ</b> باز کرده باشید، اندروید اغلب فقط <b>یک عکس</b> می‌فرستد ' +
+      '(در تب معمولی کروم معمولاً چندتایی درست کار می‌کند). ' +
+      'اگر «ارسال همه» فقط یکی رفت، از دکمه‌های زیر هر عکس را جدا بفرستید.';
 
     fileList.forEach((file, i) => {
       const url = URL.createObjectURL(file);
