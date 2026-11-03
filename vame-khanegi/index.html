@@ -593,7 +593,7 @@
         مبلغی که می‌گیره خودکار نمایش داده می‌شه. فقط کافیه اسم ماه رو برای ردیف اول بنویسید (مثلاً «مهر»)؛ ماه‌های بقیه‌ی ردیف‌ها خودکار به ترتیب پر می‌شن و بعد از اسفند دوباره از فروردین ادامه پیدا می‌کنن. با زدن دکمه‌ی قرمز «×» می‌تونید اون ردیف رو پاک کنید.</li>
       <li><b>۵ — افزودن ردیف:</b> هر بار بزنید، یه نفر دیگه به لیست اضافه می‌شه.</li>
       <li><b>۶ — دانلود عکس / اشتراک‌گذاری:</b> با این دکمه‌ها می‌تونید از کل جدول یه عکس بگیرید
-        و برای بقیه (مثلاً توی گروه تلگرام) بفرستید. هر عکس حداکثر ۱۲ نفر رو نشون می‌ده؛ اگه نفرات بیشتر باشن، چند عکس جدا ساخته می‌شه و موقع اشتراک‌گذاری همه‌ی عکس‌ها با هم فرستاده می‌شن. اگه فقط یکی رفت، نوشته‌ی کوچیک «فقط یه عکس رفت؟» زیر دکمه رو بزنید تا هر عکس رو جدا بفرستید.</li>
+        و برای بقیه (مثلاً توی گروه تلگرام) بفرستید. هر عکس حداکثر ۱۲ نفر رو نشون می‌ده؛ اگه نفرات بیشتر باشن، چند عکس جدا ساخته می‌شه اگه بیشتر از یه عکس بشه، با اولین بار زدن «اشتراک‌گذاری» عکس‌ها آماده می‌شن و نوشته‌ی دکمه می‌شه «ارسال ۲ عکس (دوباره بزنید)»؛ بار دوم که بزنید، همه‌ی عکس‌ها با هم برای ارسال باز می‌شن. اگه فقط یکی رفت، نوشته‌ی کوچیک «فقط یه عکس رفت؟» زیر دکمه رو بزنید تا هر عکس رو جدا بفرستید.</li>
     </ol>
 
     <h2 style="font-size:16.5px; color:#2563eb; margin-top:26px;">🎲 تب «قرعه‌کشی» چیه؟</h2>
@@ -642,7 +642,7 @@
       <li>اگه اشتباهی یه ردیف رو حذف کردید، متأسفانه راه برگردوندنش نیست — پس قبل از زدن «×» مطمئن بشید.</li>
     </ul>
 
-    <p style="text-align:center; font-size:11px; color:#9ca3af; margin-top:24px;">نسخه‌ی صفحه: 2026-11-01-g</p>
+    <p style="text-align:center; font-size:11px; color:#9ca3af; margin-top:24px;">نسخه‌ی صفحه: 2026-11-01-h</p>
 
     <div style="text-align:center; margin-top:8px;">
       <button id="helpCloseBtn2" type="button" style="
@@ -676,6 +676,7 @@
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 
 <script>
+  var changeCounter = 0; // goes up on every change, so pictures prepared earlier can be told apart from stale ones
   const toPersianDigits = (num) => num.toString().replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
   const MAX_ROWS = 100;
   let nextRowId = 0;
@@ -1717,6 +1718,7 @@
   }
 
   function scheduleSave() {
+    changeCounter++;
     if (saveTimer) clearTimeout(saveTimer);
     saveTimer = setTimeout(doSave, 600);
   }
@@ -2056,10 +2058,8 @@
   }
 
   // Pictures for downloading are PNG with Persian names. Pictures for sharing
-  // (asciiBase given) are smaller JPEGs with plain English names, because sharing
-  // several big files with Persian names through the app's built-in browser only
-  // ever delivered one of them (the sticker maker that works there uses small
-  // files with plain names).
+  // (asciiBase given) are WebP with plain English names: the same kind of file the
+  // Eitaa sticker maker shares several at a time in this app.
   async function captureAllChunks(target, rowSelector, baseName, hideSelectors, onProgress, asciiBase) {
     const total = Math.max(1, Math.ceil(rows.length / ROWS_PER_IMAGE));
     const files = [];
@@ -2068,10 +2068,11 @@
       if (onProgress) onProgress(i + 1, total);
       const canvas = await captureChunk(target, rowSelector, i * ROWS_PER_IMAGE, (i + 1) * ROWS_PER_IMAGE, hideSelectors);
       const forShare = !!asciiBase;
-      const blob = await canvasToBlob(canvas, forShare ? 'image/jpeg' : 'image/png', 0.9);
+      const blob = await canvasToBlob(canvas, forShare ? 'image/webp' : 'image/png', 0.92);
       if (!blob) continue;
       if (forShare) {
-        files.push(new File([blob], asciiBase + '-' + stamp + '-' + (i + 1) + '.jpg', { type: 'image/jpeg' }));
+        const ext = blob.type === 'image/webp' ? 'webp' : 'png'; // old browsers can't make WebP
+        files.push(new File([blob], asciiBase + '-' + stamp + '-' + (i + 1) + '.' + ext, { type: blob.type || 'image/png' }));
       } else {
         const name = total === 1 ? baseName + '.png' : baseName + '-' + (i + 1) + '.png';
         files.push(new File([blob], name, { type: 'image/png' }));
@@ -2221,20 +2222,42 @@
       imageBtn.textContent = IMAGE_IDLE;
     });
 
+    // Same order of events as the Eitaa sticker maker: the pictures are made first,
+    // and the share sheet is opened by a SEPARATE tap that finds them already ready.
+    // (With a single picture it is shared straight away.)
+    let prepared = null; // { files, counter }
+
     shareBtn.addEventListener('click', async () => {
+      // Second tap: pictures are ready and nothing changed since, so share right now.
+      if (prepared && prepared.counter === changeCounter) {
+        const readyFiles = prepared.files;
+        prepared = null;
+        shareBtn.textContent = SHARE_IDLE;
+        await shareFiles(readyFiles, shareTitle);
+        return;
+      }
+
+      prepared = null;
       shareBtn.disabled = true;
       try {
+        const counterAtStart = changeCounter;
         const files = await captureAllChunks(target, rowSelector, baseName, hideSelectors, (d, t) => {
           shareBtn.textContent = progressText(d, t);
         }, asciiBase);
         if (files.length === 0) throw new Error('no images');
 
-        await shareFiles(files, shareTitle);
+        if (files.length === 1) {
+          shareBtn.textContent = SHARE_IDLE;
+          await shareFiles(files, shareTitle);
+        } else {
+          prepared = { files: files, counter: counterAtStart };
+          shareBtn.textContent = '📤 ارسال ' + toPersianDigits(files.length) + ' عکس (دوباره بزنید)';
+        }
       } catch (e) {
+        shareBtn.textContent = SHARE_IDLE;
         alert('ساخت عکس با خطا مواجه شد. اتصال اینترنت رو چک کنید (برای ساخت عکس، یه ابزار از اینترنت گرفته می‌شه) و دوباره امتحان کنید.');
       }
       shareBtn.disabled = false;
-      shareBtn.textContent = SHARE_IDLE;
     });
 
     // Fallback by hand: if sharing everything at once only delivers one picture
