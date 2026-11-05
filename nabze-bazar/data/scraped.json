@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T12:22:16.153Z",
+ "updated": "2026-11-05T12:36:57.846Z",
  "items": [
   {
    "name": "گوشت مرغ",
@@ -4550,92 +4550,620 @@
    "date": "2026-11-04",
    "reportDate": "2026-11-04",
    "kind": "scraped"
+  },
+  {
+   "name": "برنج ارگانیک",
+   "unit": "کیلوگرم",
+   "min": 710000,
+   "max": 710000,
+   "price": 710000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "شیرودی اعلا",
+   "unit": "کیلوگرم",
+   "min": 380000,
+   "max": 380000,
+   "price": 380000,
+   "cat": "لبنیات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "قهوه‌ای صدری",
+   "unit": "کیلوگرم",
+   "min": 530000,
+   "max": 530000,
+   "price": 530000,
+   "cat": "نوشیدنی",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج ارگانیک",
+   "unit": "۷۱۰,۰۰۰",
+   "min": 710000,
+   "max": 710000,
+   "price": 710000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "شیرودی اعلا",
+   "unit": "۳۸۰,۰۰۰",
+   "min": 380000,
+   "max": 380000,
+   "price": 380000,
+   "cat": "لبنیات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "قهوه‌ای صدری",
+   "unit": "۵۳۰,۰۰۰",
+   "min": 530000,
+   "max": 530000,
+   "price": 530000,
+   "cat": "نوشیدنی",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج هاشمی فوق اعلا",
+   "unit": "۱۰ کیلوگرم",
+   "min": 3450000,
+   "max": 3450000,
+   "price": 3450000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج ایرانی هاشمی ممتاز معطر",
+   "unit": "۱۰ کیلوگرم",
+   "min": 5400000,
+   "max": 5400000,
+   "price": 5400000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج طارم ممتاز معطر گلستان",
+   "unit": "۴.۵ کیلوگرم",
+   "min": 2650000,
+   "max": 2650000,
+   "price": 2650000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج طارم گرگان معطر",
+   "unit": "۱۰ کیلوگرم",
+   "min": 2205000,
+   "max": 2205000,
+   "price": 2205000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج طارم ممتاز معطر گلستان",
+   "unit": "۱۰ کیلوگرم",
+   "min": 5800000,
+   "max": 5800000,
+   "price": 5800000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج عنبربو شوشتر درجه یک",
+   "unit": "۱۰ کیلوگرم",
+   "min": 2550000,
+   "max": 2550000,
+   "price": 2550000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج عنبربو درجه یک",
+   "unit": "اعلام نشده",
+   "min": 4390000,
+   "max": 4390000,
+   "price": 4390000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج هاشمی ممتاز طبیعت",
+   "unit": "۵ کیلوگرم",
+   "min": 2800000,
+   "max": 2800000,
+   "price": 2800000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج هاشمی گیلان خوش‌پخت",
+   "unit": "۱۰ کیلوگرم",
+   "min": 2990000,
+   "max": 2990000,
+   "price": 2990000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج هاشمی ممتاز طبیعت",
+   "unit": "۴.۵ کیلوگرم",
+   "min": 2609550,
+   "max": 2609550,
+   "price": 2609550,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج کامفیروزی درجه یک",
+   "unit": "۱۰ کیلوگرم",
+   "min": 4450000,
+   "max": 4450000,
+   "price": 4450000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج عنبربو عزیزان",
+   "unit": "۱۰ کیلوگرم",
+   "min": 3376400,
+   "max": 3376400,
+   "price": 3376400,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج خوش‌پخت اعلا باب منزل",
+   "unit": "۱۰ کیلوگرم",
+   "min": 2400000,
+   "max": 2400000,
+   "price": 2400000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج هندی خاطره ۱۱۲۱",
+   "unit": "۱۰ کیلوگرم",
+   "min": 2930000,
+   "max": 2930000,
+   "price": 2930000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج کامفیروزی",
+   "unit": "۱۰ کیلوگرم",
+   "min": 2950000,
+   "max": 2950000,
+   "price": 2950000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج هاشمی",
+   "unit": "۱۰ کیلوگرم",
+   "min": 5085000,
+   "max": 5085000,
+   "price": 5085000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج محلی عنبربو درجه یک",
+   "unit": "۱۰ کیلوگرم",
+   "min": 3450000,
+   "max": 3450000,
+   "price": 3450000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج طارم هاشمی ارگانیک",
+   "unit": "۱۰ کیلوگرم",
+   "min": 5170000,
+   "max": 5170000,
+   "price": 5170000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "برنج طارم هاشمی",
+   "unit": "۵ کیلوگرم",
+   "min": 2397000,
+   "max": 2397000,
+   "price": 2397000,
+   "cat": "برنج و غلات",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%a8%d8%b1%d9%86%d8%ac-%d8%a7%db%8c%d8%b1%d8%a7%d9%86%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b1%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "ماهیچه گوسفندی",
+   "unit": "کیلوگرم",
+   "min": 2150000,
+   "max": 2150000,
+   "price": 2150000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "راسته گوسفندی با استخوان",
+   "unit": "کیلوگرم",
+   "min": 2250000,
+   "max": 2250000,
+   "price": 2250000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "قلوه‌گاه گوسفندی",
+   "unit": "کیلوگرم",
+   "min": 1000000,
+   "max": 1000000,
+   "price": 1000000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "راسته گوسفندی مغزشده",
+   "unit": "کیلوگرم",
+   "min": 1100000,
+   "max": 1100000,
+   "price": 1100000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "گوشت آبگوشتی گوسفندی",
+   "unit": "کیلوگرم",
+   "min": 1680000,
+   "max": 1680000,
+   "price": 1680000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "ماهیچه گوسفندی",
+   "unit": "کیلوگرم",
+   "min": 2150000,
+   "max": 2150000,
+   "price": 2150000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "راسته گوسفندی با استخوان",
+   "unit": "کیلوگرم",
+   "min": 2250000,
+   "max": 2250000,
+   "price": 2250000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "قلوه‌گاه گوسفندی",
+   "unit": "کیلوگرم",
+   "min": 1000000,
+   "max": 1000000,
+   "price": 1000000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "راسته گوسفندی مغزشده",
+   "unit": "کیلوگرم",
+   "min": 1100000,
+   "max": 1100000,
+   "price": 1100000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "گوشت آبگوشتی گوسفندی",
+   "unit": "کیلوگرم",
+   "min": 1680000,
+   "max": 1680000,
+   "price": 1680000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "ماهیچه گوسفندی",
+   "unit": "کیلوگرم",
+   "min": 2385000,
+   "max": 2385000,
+   "price": 2385000,
+   "cat": "پروتئین",
+   "source": "وانا نیوز",
+   "url": "https://vananews.com/fa/news/669877/%D9%82%DB%8C%D9%85%D8%AA-%DA%AF%D9%88%D8%B4%D8%AA-%D9%82%D8%B1%D9%85%D8%B2-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-14-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%A7%D9%87%DB%8C%DA%86%D9%87-%DA%AF%D9%88%D8%B3%D9%81%D9%86%D8%AF%DB%8C-2-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D9%88-385-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B4%D8%AF-%DA%AF%D8%B1%D8%A7%D9%86%DB%8C-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%AF%D8%A7%D8%B1%D8%AF",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "ران گوسفندی",
+   "unit": "کیلوگرم",
+   "min": 2375000,
+   "max": 2375000,
+   "price": 2375000,
+   "cat": "پروتئین",
+   "source": "وانا نیوز",
+   "url": "https://vananews.com/fa/news/669877/%D9%82%DB%8C%D9%85%D8%AA-%DA%AF%D9%88%D8%B4%D8%AA-%D9%82%D8%B1%D9%85%D8%B2-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-14-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%A7%D9%87%DB%8C%DA%86%D9%87-%DA%AF%D9%88%D8%B3%D9%81%D9%86%D8%AF%DB%8C-2-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D9%88-385-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B4%D8%AF-%DA%AF%D8%B1%D8%A7%D9%86%DB%8C-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%AF%D8%A7%D8%B1%D8%AF",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "راسته گوساله",
+   "unit": "کیلوگرم",
+   "min": 2150000,
+   "max": 2150000,
+   "price": 2150000,
+   "cat": "پروتئین",
+   "source": "وانا نیوز",
+   "url": "https://vananews.com/fa/news/669877/%D9%82%DB%8C%D9%85%D8%AA-%DA%AF%D9%88%D8%B4%D8%AA-%D9%82%D8%B1%D9%85%D8%B2-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-14-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%A7%D9%87%DB%8C%DA%86%D9%87-%DA%AF%D9%88%D8%B3%D9%81%D9%86%D8%AF%DB%8C-2-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D9%88-385-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B4%D8%AF-%DA%AF%D8%B1%D8%A7%D9%86%DB%8C-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%AF%D8%A7%D8%B1%D8%AF",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
+  },
+  {
+   "name": "ران گوساله",
+   "unit": "کیلوگرم",
+   "min": 2100000,
+   "max": 2100000,
+   "price": 2100000,
+   "cat": "پروتئین",
+   "source": "وانا نیوز",
+   "url": "https://vananews.com/fa/news/669877/%D9%82%DB%8C%D9%85%D8%AA-%DA%AF%D9%88%D8%B4%D8%AA-%D9%82%D8%B1%D9%85%D8%B2-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-14-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%A7%D9%87%DB%8C%DA%86%D9%87-%DA%AF%D9%88%D8%B3%D9%81%D9%86%D8%AF%DB%8C-2-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D9%88-385-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B4%D8%AF-%DA%AF%D8%B1%D8%A7%D9%86%DB%8C-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%AF%D8%A7%D8%B1%D8%AF",
+   "date": "2026-11-05",
+   "reportDate": "2026-11-05",
+   "kind": "scraped"
   }
  ],
  "log": [
   {
    "id": "eghtesadnews",
    "name": "اقتصادنیوز",
-   "status": "error",
-   "msg": "لینکی با عنوان قیمت کالا در صفحه فهرست نبود (آدرس فهرست یا قالب صفحه را بررسی کنید)",
-   "at": "2026-11-04T12:21:44.245Z"
+   "status": "ok",
+   "msg": "1 گزارش پیدا شد",
+   "at": "2026-11-05T12:35:59.743Z"
   },
   {
    "id": "didbaniran",
    "name": "دیدبان ایران",
    "status": "error",
    "msg": "لینکی با عنوان قیمت کالا در صفحه فهرست نبود (آدرس فهرست یا قالب صفحه را بررسی کنید)",
-   "at": "2026-11-04T12:21:48.767Z"
+   "at": "2026-11-05T12:36:04.689Z"
   },
   {
    "id": "ecoiran",
    "name": "اکوایران",
    "status": "ok",
    "msg": "3 گزارش پیدا شد",
-   "at": "2026-11-04T12:21:53.089Z"
+   "at": "2026-11-05T12:36:09.574Z"
   },
   {
    "id": "nabzgheymat",
    "name": "نبض قیمت",
-   "status": "error",
-   "msg": "لینکی با عنوان قیمت کالا در صفحه فهرست نبود (آدرس فهرست یا قالب صفحه را بررسی کنید)",
-   "at": "2026-11-04T12:21:57.657Z"
+   "status": "ok",
+   "msg": "3 گزارش پیدا شد",
+   "at": "2026-11-05T12:36:19.470Z"
   },
   {
    "id": "vananews",
    "name": "وانا نیوز",
    "status": "ok",
-   "msg": "3 گزارش پیدا شد",
-   "at": "2026-11-04T12:22:02.056Z"
+   "msg": "2 گزارش پیدا شد",
+   "at": "2026-11-05T12:36:24.068Z"
   },
   {
    "id": "avash",
    "name": "آواش",
    "status": "error",
    "msg": "لینکی با عنوان قیمت کالا در صفحه فهرست نبود (آدرس فهرست یا قالب صفحه را بررسی کنید)",
-   "at": "2026-11-04T12:22:06.358Z"
+   "at": "2026-11-05T12:36:28.672Z"
+  },
+  {
+   "id": "eghtesadnews:D9%86-%D8%B1%D8%B3%DB%8C%D8%AF",
+   "name": "اقتصادنیوز",
+   "status": "error",
+   "msg": "جدول قیمت قابل تشخیص نبود",
+   "at": "2026-11-05T12:36:32.968Z"
   },
   {
    "id": "ecoiran:DB%8C-%D8%B4%DA%A9%D9%86%D8%AF",
    "name": "اکوایران",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-11-04T12:22:10.306Z"
+   "at": "2026-11-05T12:36:34.600Z"
   },
   {
    "id": "ecoiran:%D8%AA%D9%88%D9%85%D8%A7%D9%86",
    "name": "اکوایران",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-11-04T12:22:10.599Z"
+   "at": "2026-11-05T12:36:35.224Z"
   },
   {
    "id": "ecoiran:D9%86-%D8%B1%D8%B3%DB%8C%D8%AF",
    "name": "اکوایران",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-11-04T12:22:11.196Z"
+   "at": "2026-11-05T12:36:35.626Z"
   },
   {
-   "id": "vananews:D8%AE-%D9%85%D8%B5%D9%88%D8%A8",
-   "name": "وانا نیوز",
-   "status": "error",
-   "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-11-04T12:22:12.390Z"
+   "id": "nabzgheymat:8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "name": "نبض قیمت",
+   "status": "ok",
+   "msg": "6 قلم · 2026-11-05",
+   "at": "2026-11-05T12:36:38.222Z"
+  },
+  {
+   "id": "nabzgheymat:8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "name": "نبض قیمت",
+   "status": "ok",
+   "msg": "19 قلم · 2026-11-05",
+   "at": "2026-11-05T12:36:43.929Z"
+  },
+  {
+   "id": "nabzgheymat:9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "name": "نبض قیمت",
+   "status": "ok",
+   "msg": "10 قلم · 2026-11-05",
+   "at": "2026-11-05T12:36:50.007Z"
   },
   {
    "id": "vananews:D9%87-%D8%AF%D8%A7%D8%B1%D8%AF",
    "name": "وانا نیوز",
-   "status": "error",
-   "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-11-04T12:22:12.780Z"
+   "status": "ok",
+   "msg": "4 قلم · 2026-11-05",
+   "at": "2026-11-05T12:36:54.417Z"
   },
   {
-   "id": "vananews:DB%8C-%DB%8C%D8%A7%D8%A8%D8%AF",
+   "id": "vananews:D8%A7%D9%87-%D8%A7%D8%B3%D8%AA",
    "name": "وانا نیوز",
-   "status": "ok",
-   "msg": "7 قلم · 2026-11-04",
-   "at": "2026-11-04T12:22:13.151Z"
+   "status": "error",
+   "msg": "جدول قیمت قابل تشخیص نبود",
+   "at": "2026-11-05T12:36:57.845Z"
   }
  ]
 }
