@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T06:35:29+00:00",
+ "updated": "2026-11-06T16:44:43+00:00",
  "items": [
   {
    "name": "وانت آریسان",
@@ -242,76 +242,6 @@
    "kind": "scraped"
   },
   {
-   "name": "فیدلیتی الیت 7 سفید",
-   "price": 8085000000,
-   "agency": 0,
-   "cat": "بهمن موتور",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "فیدلیتی الیت 7 مشکی",
-   "price": 8110000000,
-   "agency": 0,
-   "cat": "بهمن موتور",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "فیدلیتی سفید طوسی",
-   "price": 10850000000,
-   "agency": 0,
-   "cat": "بهمن موتور",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "فیدلیتی مشکی طوسی",
-   "price": 11050000000,
-   "agency": 0,
-   "cat": "بهمن موتور",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "فیدلیتی سفید نسکافه‌ای",
-   "price": 11600000000,
-   "agency": 0,
-   "cat": "بهمن موتور",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "فیدلیتی مشکی نسکافه‌ای",
-   "price": 11550000000,
-   "agency": 0,
-   "cat": "بهمن موتور",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "رسپکت",
-   "price": 5760000000,
-   "agency": 0,
-   "cat": "بهمن موتور",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
    "name": "رسپکت (نیو)",
    "price": 5780000000,
    "agency": 3930000000,
@@ -382,133 +312,253 @@
    "kind": "scraped"
   },
   {
-   "name": "اکستریم VX مشکی",
-   "price": 15900000000,
+   "name": "کاهش یافت و در سطح سه میلیارد و",
+   "price": 455000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
+   "source": "hamshahrionline.ir",
+   "url": "https://www.hamshahrionline.ir/news/1083403/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%DB%8C%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%DA%AF%D8%B1%D8%A7%D9%86-%D8%AA%D8%B1-%D8%B4%D8%AF%D9%86%D8%AF",
    "reportDate": "2026-11-05",
    "kind": "scraped"
   },
   {
-   "name": "اکستریم LX مشکی",
-   "price": 8620000000,
+   "name": "ی در بازار چهار میلیارد و",
+   "price": 350000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
+   "source": "hamshahrionline.ir",
+   "url": "https://www.hamshahrionline.ir/news/1083403/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%DB%8C%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%DA%AF%D8%B1%D8%A7%D9%86-%D8%AA%D8%B1-%D8%B4%D8%AF%D9%86%D8%AF",
    "reportDate": "2026-11-05",
    "kind": "scraped"
   },
   {
-   "name": "لوکانو 710120000000لوکانو 8 مشکی",
-   "price": 14650000000,
+   "name": "ی به سه میلیارد و",
+   "price": 320000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
+   "source": "hamshahrionline.ir",
+   "url": "https://www.hamshahrionline.ir/news/1083403/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%DB%8C%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%DA%AF%D8%B1%D8%A7%D9%86-%D8%AA%D8%B1-%D8%B4%D8%AF%D9%86%D8%AF",
    "reportDate": "2026-11-05",
    "kind": "scraped"
   },
   {
-   "name": "ایما",
-   "price": 8760000000,
+   "name": "ی در بازار یک میلیارد و",
+   "price": 800000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
+   "source": "hamshahrionline.ir",
+   "url": "https://www.hamshahrionline.ir/news/1083403/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%DB%8C%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%DA%AF%D8%B1%D8%A7%D9%86-%D8%AA%D8%B1-%D8%B4%D8%AF%D9%86%D8%AF",
    "reportDate": "2026-11-05",
    "kind": "scraped"
   },
   {
-   "name": "اکو",
-   "price": 6050000000,
+   "name": "کاهش داشت و یک میلیارد و",
+   "price": 835000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
+   "source": "hamshahrionline.ir",
+   "url": "https://www.hamshahrionline.ir/news/1083403/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%DB%8C%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%DA%AF%D8%B1%D8%A7%D9%86-%D8%AA%D8%B1-%D8%B4%D8%AF%D9%86%D8%AF",
    "reportDate": "2026-11-05",
    "kind": "scraped"
   },
   {
-   "name": "تیسان مشکی",
-   "price": 5955000000,
+   "name": "ی به هفت میلیارد و",
+   "price": 390000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
+   "source": "hamshahrionline.ir",
+   "url": "https://www.hamshahrionline.ir/news/1083403/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%DB%8C%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%DA%AF%D8%B1%D8%A7%D9%86-%D8%AA%D8%B1-%D8%B4%D8%AF%D9%86%D8%AF",
    "reportDate": "2026-11-05",
    "kind": "scraped"
   },
   {
-   "name": "شوال مشکی مارون",
-   "price": 10000000000,
+   "name": "ارزان شد و در سطح",
+   "price": 12350000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
+   "source": "hamshahrionline.ir",
+   "url": "https://www.hamshahrionline.ir/news/1083403/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%DB%8C%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%DA%AF%D8%B1%D8%A7%D9%86-%D8%AA%D8%B1-%D8%B4%D8%AF%D9%86%D8%AF",
    "reportDate": "2026-11-05",
    "kind": "scraped"
   },
   {
-   "name": "اینووی مشکی",
-   "price": 4680000000,
+   "name": "ی با نرخ",
+   "price": 11050000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
+   "source": "hamshahrionline.ir",
+   "url": "https://www.hamshahrionline.ir/news/1083403/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%DB%8C%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%DA%AF%D8%B1%D8%A7%D9%86-%D8%AA%D8%B1-%D8%B4%D8%AF%D9%86%D8%AF",
    "reportDate": "2026-11-05",
    "kind": "scraped"
   },
   {
-   "name": "یونی‌تی",
-   "price": 11150000000,
-   "agency": 0,
+   "name": "X77 (الیت)",
+   "price": 7500000000,
+   "agency": 4346000000,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
    "kind": "scraped"
   },
   {
-   "name": "بایک BJ3014200000000بایک X7 مشکی",
-   "price": 8180000000,
-   "agency": 0,
+   "name": "اکستریم SX",
+   "price": 8830000000,
+   "agency": 6247000000,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
    "kind": "scraped"
   },
   {
-   "name": "ی قیمت آن به",
-   "price": 4540000000,
+   "name": "اکستریم TX",
+   "price": 12750000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
    "kind": "scraped"
   },
   {
-   "name": "ی به قیمت",
-   "price": 8085000000,
-   "agency": 0,
+   "name": "اکستریم QX",
+   "price": 15300000000,
+   "agency": 9484000000,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
    "kind": "scraped"
   },
   {
-   "name": "سرقت",
-   "price": 90000000000,
+   "name": "ون اینرودز",
+   "price": 2920000000,
+   "agency": 2700000000,
+   "cat": "سایر",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
+   "kind": "scraped"
+  },
+  {
+   "name": "هونگچی H5",
+   "price": 9800000000,
+   "agency": 4200000000,
+   "cat": "سایر",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
+   "kind": "scraped"
+  },
+  {
+   "name": "شوال H6",
+   "price": 10170000000,
+   "agency": 4885000000,
+   "cat": "سایر",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
+   "kind": "scraped"
+  },
+  {
+   "name": "بیجینگ U5",
+   "price": 5000000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
+   "kind": "scraped"
+  },
+  {
+   "name": "تیگارد X35+",
+   "price": 4350000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
+   "kind": "scraped"
+  },
+  {
+   "name": "تیسان S05",
+   "price": 6000000000,
+   "agency": 3668000000,
+   "cat": "سایر",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
+   "kind": "scraped"
+  },
+  {
+   "name": "لاماکو فلو",
+   "price": 5500000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
+   "kind": "scraped"
+  },
+  {
+   "name": "لاماری اکو",
+   "price": 5900000000,
+   "agency": 4628000000,
+   "cat": "سایر",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
+   "kind": "scraped"
+  },
+  {
+   "name": "لاماری ایما",
+   "price": 8815000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
+   "kind": "scraped"
+  },
+  {
+   "name": "لاماری نئو",
+   "price": 5720000000,
+   "agency": 4329000000,
+   "cat": "سایر",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
+   "kind": "scraped"
+  },
+  {
+   "name": "لاماری هیبرید",
+   "price": 9800000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
+   "kind": "scraped"
+  },
+  {
+   "name": "فردا SX5",
+   "price": 4820000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
+   "kind": "scraped"
+  },
+  {
+   "name": "فردا 511",
+   "price": 3330000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-04",
    "kind": "scraped"
   },
   {
@@ -772,46 +822,6 @@
    "kind": "scraped"
   },
   {
-   "name": "ایکس 777520000000آریزو 810470000000آریزو 6 GT",
-   "price": 7300000000,
-   "agency": 0,
-   "cat": "مدیران خودرو",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "تیگو 7 دو دیفرانسیل مشکی",
-   "price": 9100000000,
-   "agency": 0,
-   "cat": "مدیران خودرو",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "تیگو 7 هیبرید مشکی",
-   "price": 9140000000,
-   "agency": 0,
-   "cat": "مدیران خودرو",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "تیگو 812580000000فونیکس FX مشکی",
-   "price": 7960000000,
-   "agency": 0,
-   "cat": "مدیران خودرو",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
    "name": "X33 کراس (اتوماتیک)",
    "price": 4400000000,
    "agency": 3021000000,
@@ -912,96 +922,6 @@
    "kind": "scraped"
   },
   {
-   "name": "نام خودروقیمت بازار (تومان)مزدا 3 مشکی بهمن",
-   "price": 13750000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "مزدا 3 سفید آفتاب",
-   "price": 13100000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "کیا اسپورتیج کوشا 26 بدون پلاک",
-   "price": 19400000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "هیوندای سوناتا 25 پانوراما",
-   "price": 14800000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "هیوندای النترا زاوینا",
-   "price": 8820000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا کرولا الیت 2610300000000تویوتا کرولا کراس 26 ایرتویا",
-   "price": 11300000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "نیسان تک‌سوز",
-   "price": 2690000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "نیسان دوگانه‌سوز",
-   "price": 2870000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "تویوتا کرولا کراس: با کاهش بیش از",
-   "price": 200000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
    "name": "مزدا3",
    "price": 13200000000,
    "agency": 6173000000,
@@ -1012,23 +932,13 @@
    "kind": "scraped"
   },
   {
-   "name": "جک X5 مشکی 4046550000000جک J",
-   "price": 77450000000,
+   "name": "لندکروزر",
+   "price": 62000000000,
    "agency": 0,
-   "cat": "کرمان موتور",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
-   "kind": "scraped"
-  },
-  {
-   "name": "جک T9 مشکی",
-   "price": 10400000000,
-   "agency": 0,
-   "cat": "کرمان موتور",
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "reportDate": "2026-11-05",
+   "cat": "وارداتی",
+   "source": "snn.ir",
+   "url": "https://snn.ir/fa/news/1483076/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-13-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D8%AF%D9%86%D8%A7-%D9%BE%D9%84%D8%A7%D8%B3-80-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%DA%AF%D8%B1%D8%A7%D9%86-%D8%B4%D8%AF-%D8%AC%D8%AF%D9%88%D9%84-%D9%82%DB%8C%D9%85%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7",
+   "reportDate": "2026-11-04",
    "kind": "scraped"
   },
   {
@@ -1124,12 +1034,12 @@
  ],
  "log": [
   {
-   "source": "khabaronline.ir",
-   "url": "https://www.khabaronline.ir/news/2297322/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B1%DB%B3-%D8%A2%D8%A8%D8%A7%D9%86-%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b1%db%b3-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5",
    "status": "ok",
-   "count": 44,
+   "count": 10,
    "date": "2026-11-04",
-   "title": "قیمت خودرو امروز ۱۳ آبان‌ماه ۱۴۰۵/ افزایش قیمت خودرو در بازار؛ تارا ۱۱"
+   "title": "قیمت خودرو امروز چهارشنبه ۱۳ آبان ۱۴۰۵ / شوک قیمتی به بازار؛ رکوردشکنی"
   },
   {
    "source": "hamshahrionline.ir",
@@ -1140,12 +1050,12 @@
    "title": "قیمت خودرو امروز پنجشنبه ۱۴ آبان ۱۴۰۵ | این خودروها گران‌تر شدند"
   },
   {
-   "source": "tejaratnews.com",
-   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b1%db%b3-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5",
+   "source": "snn.ir",
+   "url": "https://snn.ir/fa/news/1483076/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-13-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D8%AF%D9%86%D8%A7-%D9%BE%D9%84%D8%A7%D8%B3-80-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%DA%AF%D8%B1%D8%A7%D9%86-%D8%B4%D8%AF-%D8%AC%D8%AF%D9%88%D9%84-%D9%82%DB%8C%D9%85%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7",
    "status": "ok",
-   "count": 8,
+   "count": 11,
    "date": "2026-11-04",
-   "title": "قیمت خودرو امروز چهارشنبه ۱۳ آبان ۱۴۰۵ / شوک قیمتی به بازار؛ رکوردشکنی"
+   "title": "قیمت خودرو امروز ۱۳ آبان ۱۴۰۵؛ دنا پلاس ۸۰ میلیون تومان گران شد + جدول"
   },
   {
    "source": "tejaratnews.com",
@@ -1156,14 +1066,6 @@
    "title": "قیمت خودرو‌های ایران خودرو امروز پنجشنبه ۱۴ آبان ۱۴۰۵ + جدول"
   },
   {
-   "source": "snn.ir",
-   "url": "https://snn.ir/fa/news/1483076/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-13-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D8%AF%D9%86%D8%A7-%D9%BE%D9%84%D8%A7%D8%B3-80-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%DA%AF%D8%B1%D8%A7%D9%86-%D8%B4%D8%AF-%D8%AC%D8%AF%D9%88%D9%84-%D9%82%DB%8C%D9%85%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7",
-   "status": "ok",
-   "count": 15,
-   "date": "2026-11-04",
-   "title": "قیمت خودرو امروز ۱۳ آبان ۱۴۰۵؛ دنا پلاس ۸۰ میلیون تومان گران شد + جدول"
-  },
-  {
    "source": "entekhab.ir",
    "url": "https://www.entekhab.ir/fa/news/946433/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-13-%D8%A2%D8%A8%D8%A7%D9%86-1405",
    "status": "ok",
@@ -1172,20 +1074,12 @@
    "title": "قیمت خودرو امروز چهارشنبه ۱۳ آبان ۱۴۰۵"
   },
   {
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1173696/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B2-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AA%D8%A7%D8%B1%D8%A7-%DB%B4",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/176572/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B3-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
    "status": "ok",
-   "count": 12,
-   "date": "2026-11-03",
-   "title": "قیمت محصولات ایران‌ خودرو امروز سه‌شنبه ۱۲ آبان ۱۴۰۵/ تارا ۴ میلیارد و"
-  },
-  {
-   "source": "tejaratnews.com",
-   "url": "https://tejaratnews.com/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87%D8%B4%D9%86%D8%A8%D9%87-1-13",
-   "status": "ok",
-   "count": 27,
-   "date": "2026-11-03",
-   "title": "قیمت خودرو‌های سایپا امروز سه‌شنبه 12 آبان 1405"
+   "count": 24,
+   "date": "2026-11-04",
+   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز چهارشنبه ۱۳ آبان ۱۴۰۵ +جدول"
   },
   {
    "source": "tejaratnews.com",
@@ -1196,12 +1090,12 @@
    "title": "قیمت خودرو‌های سایپا امروز پنجشنبه ۱۴ آبان ۱۴۰۵ + جدول"
   },
   {
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1173891/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B3-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AB%D8%A8%D8%A7%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%AF%D8%B1",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87%D8%B4%D9%86%D8%A8%D9%87-1-13",
    "status": "ok",
-   "count": 16,
-   "date": "2026-11-04",
-   "title": "قیمت محصولات سایپا امروز چهارشنبه ۱۳ آبان ۱۴۰۵/ ثبات قیمت در بازار خود"
+   "count": 27,
+   "date": "2026-11-03",
+   "title": "قیمت خودرو‌های سایپا امروز سه‌شنبه 12 آبان 1405"
   },
   {
    "source": "khodrobank.com",
@@ -1212,29 +1106,36 @@
    "error": "'ascii' codec can't encode characters in position 19-22: ordinal not in range(128)"
   },
   {
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%d8%ac%d8%af%db%8c%d8%af%d8%aa%d8%b1%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%b1%d9%88%d8%b2-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86/",
-   "status": "ok",
-   "count": 74,
-   "date": "2026-11-05",
-   "title": "جدیدترین قیمت روز خودروهای داخلی و مونتاژی پنج‌شنبه ۱۴ آبان ۱۴۰۵ همراه"
+   "source": "rokna.net",
+   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1264230-%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AC%D9%85%D8%B9%D9%87-%D8%A2%D8%A8%D8%A7%D9%86",
+   "status": "error",
+   "count": 0,
+   "date": "2026-11-06",
+   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
   },
   {
-   "source": "eghtesadonline.com",
-   "url": "https://www.eghtesadonline.com/fa/news/2173572/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-14-%D8%A2%D8%A8%D8%A7%D9%86-%D9%85%D8%A7%D9%87-1405-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%AF%D9%88%D8%B1%D8%A7%D9%87%DB%8C-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%88-%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D9%87%D8%A7-%D8%AC%D8%AF%D9%88%D9%84",
+   "source": "khabaronline.ir",
+   "url": "https://www.khabaronline.ir/news/2297322/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B1%DB%B3-%D8%A2%D8%A8%D8%A7%D9%86-%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1",
    "status": "ok",
    "count": 44,
-   "date": "2026-11-05",
-   "title": "قیمت محصولات ایران‌خودرو و سایپا امروز ۱۴ آبان‌ماه ۱۴۰۵/ بازار خودرو د"
+   "date": "2026-11-04",
+   "title": "قیمت خودرو امروز ۱۳ آبان‌ماه ۱۴۰۵/ افزایش قیمت خودرو در بازار؛ تارا ۱۱"
   },
   {
    "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1174067/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC-%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AF%D9%86%D8%A7-%D9%BE%D9%84%D8%A7%D8%B3",
-   "status": "error",
-   "count": 2,
-   "date": "2026-11-05",
-   "title": "قیمت محصولات ایران‌ خودرو امروز پنج‌شنبه ۱۴ آبان ۱۴۰۵/ دنا پلاس و پژو ",
-   "error": "جدول قیمت کافی پیدا نشد"
+   "url": "https://www.qudsonline.ir/news/1173891/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B3-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AB%D8%A8%D8%A7%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%AF%D8%B1",
+   "status": "ok",
+   "count": 16,
+   "date": "2026-11-04",
+   "title": "قیمت محصولات سایپا امروز چهارشنبه ۱۳ آبان ۱۴۰۵/ ثبات قیمت در بازار خود"
+  },
+  {
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/176571/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B3-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "status": "ok",
+   "count": 27,
+   "date": "2026-11-04",
+   "title": "قیمت خودروهای سایپا امروز چهارشنبه ۱۳ آبان ۱۴۰۵ +جدول"
   },
   {
    "source": "rokna.net",
@@ -1245,18 +1146,35 @@
    "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
   },
   {
-   "source": "rokna.net",
-   "url": "https://www.rokna.net/%D8%A8%D8%AE%D8%B4-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1263463-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%A2%D8%A8%D8%A7%D9%86-%DA%A9%D8%B1%D9%88%D9%84%D8%A7-%DA%A9%D8%B1%D8%A7%D8%B3-%D9%87%DB%8C%D8%A8%D8%B1%DB%8C%D8%AF-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%B1%D8%A7-%D8%B1%D8%AF-%DA%A9%D8%B1%D8%AF-%D8%AC%D8%AF%D9%88%D9%84-%D8%AC%D8%B2%D8%A6%DB%8C%D8%A7%D8%AA",
+   "source": "khabaronline.ir",
+   "url": "https://www.khabaronline.ir/news/2296831/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B1%DB%B2-%D8%A2%D8%A8%D8%A7%D9%86-%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D9%85%D9%88%D8%AC-%D8%AC%D8%AF%DB%8C%D8%AF-%DA%AF%D8%B1%D8%A7%D9%86%DB%8C-%DA%A9%D9%84%DB%8C%D8%AF-%D8%AE%D9%88%D8%B1%D8%AF",
    "status": "ok",
-   "count": 37,
+   "count": 44,
    "date": "2026-11-03",
-   "title": "قیمت خودروهای وارداتی امروز ۱۲ آبان ۱۴۰۵ /کرولا کراس هیبرید 11 میلیارد"
+   "title": "قیمت خودرو امروز ۱۲ آبان‌ماه ۱۴۰۵/ موج جدید گرانی کلید خورد؛ شاهین ۳ م"
+  },
+  {
+   "source": "rasadeghtesadi.com",
+   "url": "https://rasadeghtesadi.com/اقتصادی-13/1793892404694-مهم-ترین-اخبار-اقتصادی-امروز-پنجشنبه-آبان-از-بازار-دلار-و-طلا-تا-بورس-و-خودرو",
+   "status": "error",
+   "count": 0,
+   "date": "2026-11-05",
+   "error": "'ascii' codec can't encode characters in position 5-11: ordinal not in range(128)"
+  },
+  {
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1174067/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC-%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AF%D9%86%D8%A7-%D9%BE%D9%84%D8%A7%D8%B3",
+   "status": "error",
+   "count": 3,
+   "date": "2026-11-05",
+   "title": "قیمت محصولات ایران‌ خودرو امروز پنج‌شنبه ۱۴ آبان ۱۴۰۵/ دنا پلاس و پژو ",
+   "error": "جدول قیمت کافی پیدا نشد"
   },
   {
    "source": "nournews.ir",
    "url": "https://nournews.ir/fa/news/358265/%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%A8%D8%A7%D9%86-%D8%B3%D9%82%D9%88%D8%B7-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86%DB%8C-%D9%BE%DA%98%D9%88-%D8%A7%D8%AA%D9%88%D9%85%D8%A7%D8%AA%DB%8C%DA%A9-%D8%AC%D8%AF%D9%88%D9%84-%D9%82%DB%8C%D9%85%D8%AA-%D9%87%D8%A7",
    "status": "ok",
-   "count": 11,
+   "count": 9,
    "date": "2026-11-05",
    "title": "آخرین قیمت محصولات ایران‌خودرو و سایپا امروز پنجشنبه 14 آبان 1405 ؛ سق"
   }
