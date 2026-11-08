@@ -1,14 +1,194 @@
 {
- "updated": "2026-11-08T10:14:03+00:00",
+ "updated": "2026-11-08T17:55:28+00:00",
  "items": [
   {
-   "name": "درخواست گرانی 55 درصدی ایران‌خودرو/ دنا پلاس",
-   "price": 7000000000,
+   "name": "دنا پلاس شش‌دنده‌‌ مدل",
+   "price": 390000000,
+   "agency": 340000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "دنا پلاس اتوماتیک آپشنال مدل",
+   "price": 550000000,
+   "agency": 550000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "رانا پلاس با موتور TU5 مدل",
+   "price": 350000000,
+   "agency": 380000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "رانا پلاس با موتور TU5P مدل",
+   "price": 430000000,
+   "agency": 460000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "تارا دنده‌ای V1 پلاس مدل",
+   "price": 300000000,
+   "agency": 300000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "تارا اتوماتیک V4 با موتور TU5P ال‌ایکس مدل",
+   "price": 350000000,
+   "agency": 350000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "ری‌را توربو 6 سرعته مدل",
+   "price": 600000000,
+   "agency": 650000000,
+   "cat": "ایران‌خودرو",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "پژو 207 دستی",
+   "price": 2800000000,
    "agency": 0,
    "cat": "ایران‌خودرو",
-   "source": "snn.ir",
-   "url": "https://snn.ir/fa/news/1484935/%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-16-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%81%DB%8C%D8%AF%D9%84%DB%8C%D8%AA%DB%8C-%DA%86%D9%86%D8%AF-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D9%82%DB%8C%D9%85%D8%AA-%D8%AF%D8%A7%D8%B4%D8%AA%D9%87-%D8%A7%D8%B3%D8%AA",
-   "reportDate": "2026-11-07",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "پژو 207 اتوماتیک",
+   "price": 4450000000,
+   "agency": 0,
+   "cat": "ایران‌خودرو",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "پژو 207 TU3",
+   "price": 2800000000,
+   "agency": 0,
+   "cat": "ایران‌خودرو",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "دنا پلاس",
+   "price": 3200000000,
+   "agency": 0,
+   "cat": "ایران‌خودرو",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "دنا پلاس با رینگ آلومینیومی",
+   "price": 3450000000,
+   "agency": 0,
+   "cat": "ایران‌خودرو",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "دنا پلاس توربو اتوماتیک",
+   "price": 4600000000,
+   "agency": 0,
+   "cat": "ایران‌خودرو",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "سورن پلاس",
+   "price": 3250000000,
+   "agency": 0,
+   "cat": "ایران‌خودرو",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "تارا اتوماتیک V4",
+   "price": 4050000000,
+   "agency": 0,
+   "cat": "ایران‌خودرو",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "207 با موتور TU3 مدل",
+   "price": 760000000,
+   "agency": 750000000,
+   "cat": "سایر",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "207 دنده‌ای با موتور TU5P مدل",
+   "price": 930000000,
+   "agency": 930000000,
+   "cat": "سایر",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "207 اتوماتیک سقف‌شیشه‌ای مدل",
+   "price": 570000000,
+   "agency": 550000000,
+   "cat": "سایر",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "پارس نوآ مدل",
+   "price": 350000000,
+   "agency": 350000000,
+   "cat": "سایر",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
    "kind": "scraped"
   },
   {
@@ -72,65 +252,237 @@
    "kind": "scraped"
   },
   {
-   "name": "ی به سه میلیارد و",
-   "price": 380000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "sarmayevabourse.ir",
-   "url": "https://sarmayevabourse.ir/26942/%d8%b1%db%8c%d8%b2%d8%b4-%d8%b3%d9%86%da%af%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86%d8%aa%d8%a7",
+   "name": "کوییک GX L دنده‌ای مدل",
+   "price": 800000000,
+   "agency": 810000000,
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
    "reportDate": "2026-11-08",
    "kind": "scraped"
   },
   {
-   "name": "ی سه میلیارد و",
-   "price": 280000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "sarmayevabourse.ir",
-   "url": "https://sarmayevabourse.ir/26942/%d8%b1%db%8c%d8%b2%d8%b4-%d8%b3%d9%86%da%af%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86%d8%aa%d8%a7",
+   "name": "اطلس G مدل",
+   "price": 200000000,
+   "agency": 230000000,
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
    "reportDate": "2026-11-08",
    "kind": "scraped"
   },
   {
-   "name": "ی به هفت میلیارد و",
+   "name": "سهند S مدل",
+   "price": 990000000,
+   "agency": 990000000,
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "سهند پلاس اتوماتیک E مدل",
+   "price": 900000000,
+   "agency": 0,
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "شاهین دنده‌ای مدل",
    "price": 200000000,
    "agency": 0,
-   "cat": "سایر",
-   "source": "sarmayevabourse.ir",
-   "url": "https://sarmayevabourse.ir/26942/%d8%b1%db%8c%d8%b2%d8%b4-%d8%b3%d9%86%da%af%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86%d8%aa%d8%a7",
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
    "reportDate": "2026-11-08",
    "kind": "scraped"
   },
   {
-   "name": "ارزان شد و با قیمت",
-   "price": 10900000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "sarmayevabourse.ir",
-   "url": "https://sarmayevabourse.ir/26942/%d8%b1%db%8c%d8%b2%d8%b4-%d8%b3%d9%86%da%af%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86%d8%aa%d8%a7",
+   "name": "شاهین اتوماتیک مدل",
+   "price": 350000000,
+   "agency": 450000000,
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
    "reportDate": "2026-11-08",
    "kind": "scraped"
   },
   {
-   "name": "ی هفت میلیارد و",
-   "price": 370000000,
+   "name": "شاهین پلاس مدل",
+   "price": 300000000,
+   "agency": 300000000,
+   "cat": "سایپا",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "ساینا S",
+   "price": 1845000000,
    "agency": 0,
-   "cat": "سایر",
-   "source": "sarmayevabourse.ir",
-   "url": "https://sarmayevabourse.ir/26942/%d8%b1%db%8c%d8%b2%d8%b4-%d8%b3%d9%86%da%af%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86%d8%aa%d8%a7",
+   "cat": "سایپا",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "کوییک S",
+   "price": 1785000000,
+   "agency": 0,
+   "cat": "سایپا",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "سورن پلاس بنزینی XU7P مدل",
+   "price": 570000000,
+   "agency": 570000000,
+   "cat": "وارداتی",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "ساینا S دنده‌ای بنزینی مدل",
+   "price": 840000000,
+   "agency": 840000000,
+   "cat": "وارداتی",
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا یاریس صندوق دار",
+   "price": 6700000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا کرولا 1200",
+   "price": 8700000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا کرولا هیبرید",
+   "price": 9500000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا کرولا کراس هیبرید",
+   "price": 10800000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا راوفور هیبرید",
+   "price": 20000000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا ونزا",
+   "price": 16500000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "سوزوکی گرند ویتارا تک دیفرانسیل",
+   "price": 7500000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "سوزوکی گرند ویتارا دو دیفرانسیل",
+   "price": 8100000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "کیا K5 توربو",
+   "price": 14500000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "کیا اسپورتیج توربو",
+   "price": 11700000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "کیا سلتوس توربو",
+   "price": 8300000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "reportDate": "2026-11-08",
+   "kind": "scraped"
+  },
+  {
+   "name": "کیا سونت",
+   "price": 6700000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
    "reportDate": "2026-11-08",
    "kind": "scraped"
   }
  ],
  "log": [
-  {
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1083403/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%DB%8C%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%DA%AF%D8%B1%D8%A7%D9%86-%D8%AA%D8%B1-%D8%B4%D8%AF%D9%86%D8%AF",
-   "status": "ok",
-   "count": 12,
-   "date": "2026-11-05",
-   "title": "قیمت خودرو امروز پنجشنبه ۱۴ آبان ۱۴۰۵ | این خودروها گران‌تر شدند"
-  },
   {
    "source": "tejaratnews.com",
    "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%a7%db%8c%d8%b1%d8%a7%d9%86-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d9%be%d9%86%d8%ac%d8%b4-15",
@@ -140,29 +492,20 @@
    "title": "قیمت خودرو‌های ایران خودرو امروز پنجشنبه ۱۴ آبان ۱۴۰۵ + جدول"
   },
   {
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1174067/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC-%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AF%D9%86%D8%A7-%D9%BE%D9%84%D8%A7%D8%B3",
-   "status": "error",
-   "count": 3,
-   "date": "2026-11-05",
-   "title": "قیمت محصولات ایران‌ خودرو امروز پنج‌شنبه ۱۴ آبان ۱۴۰۵/ دنا پلاس و پژو ",
-   "error": "جدول قیمت کافی پیدا نشد"
-  },
-  {
-   "source": "tejaratnews.com",
-   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d9%be%d9%86%d8%ac%d8%b4%d9%86%d8%a8%d9%87-%db%b1%db%b4-2",
+   "source": "hamshahrionline.ir",
+   "url": "https://www.hamshahrionline.ir/news/1083403/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%DB%8C%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%DA%AF%D8%B1%D8%A7%D9%86-%D8%AA%D8%B1-%D8%B4%D8%AF%D9%86%D8%AF",
    "status": "ok",
-   "count": 27,
+   "count": 12,
    "date": "2026-11-05",
-   "title": "قیمت خودرو‌های سایپا امروز پنجشنبه ۱۴ آبان ۱۴۰۵ + جدول"
+   "title": "قیمت خودرو امروز پنجشنبه ۱۴ آبان ۱۴۰۵ | این خودروها گران‌تر شدند"
   },
   {
-   "source": "rokna.net",
-   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1264230-%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AC%D9%85%D8%B9%D9%87-%D8%A2%D8%A8%D8%A7%D9%86",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-06",
-   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "status": "ok",
+   "count": 26,
+   "date": "2026-11-08",
+   "title": "قیمت خودروهای داخلی و وارداتی امروز یکشنبه ۱۷ آبان ۱۴۰۵ | آخرین قیمت پ"
   },
   {
    "source": "sarmayevabourse.ir",
@@ -192,7 +535,7 @@
    "source": "snn.ir",
    "url": "https://snn.ir/fa/news/1484935/%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-16-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%81%DB%8C%D8%AF%D9%84%DB%8C%D8%AA%DB%8C-%DA%86%D9%86%D8%AF-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D9%82%DB%8C%D9%85%D8%AA-%D8%AF%D8%A7%D8%B4%D8%AA%D9%87-%D8%A7%D8%B3%D8%AA",
    "status": "ok",
-   "count": 10,
+   "count": 8,
    "date": "2026-11-07",
    "title": "آخرین قیمت محصولات ایران خودرو و سایپا امروز شنبه ۱۶ آبان ۱۴۰۵ / فیدلی"
   },
@@ -203,6 +546,14 @@
    "count": 44,
    "date": "2026-11-06",
    "title": "قیمت خودرو امروز ۱۵ آبان‌ماه ۱۴۰۵/ ریزش قیمت خودرو آغاز شد/ سمند سورن "
+  },
+  {
+   "source": "rokna.net",
+   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1264230-%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AC%D9%85%D8%B9%D9%87-%D8%A2%D8%A8%D8%A7%D9%86",
+   "status": "error",
+   "count": 0,
+   "date": "2026-11-06",
+   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
   },
   {
    "source": "ettelaat.com",
@@ -219,6 +570,46 @@
    "count": 0,
    "date": "2026-11-07",
    "error": "'ascii' codec can't encode characters in position 20-23: ordinal not in range(128)"
+  },
+  {
+   "source": "nournews.ir",
+   "url": "https://nournews.ir/fa/news/358923/%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%A8%D8%A7%D9%86-%D9%BE%DA%98%D9%88-%D8%AF%D9%86%D8%A7-%D9%87%D8%A7%DB%8C%D9%85%D8%A7-%D8%B1%DA%A9%D9%88%D8%B1%D8%AF-%D8%B2%D8%AF%D9%86%D8%AF",
+   "status": "ok",
+   "count": 6,
+   "date": "2026-11-07",
+   "title": "آخرین قیمت محصولات ایران خودرو و سایپا امروز شنبه 16 آبان 1405 ؛ پژو ۲"
+  },
+  {
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1174297/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B6-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AF%D9%86%D8%A7-%D9%BE%D9%84%D8%A7%D8%B3-%D9%88",
+   "status": "ok",
+   "count": 7,
+   "date": "2026-11-07",
+   "title": "قیمت محصولات ایران‌ خودرو امروز شنبه ۱۶ آبان ۱۴۰۵/ دنا پلاس و پژو ۲۰۷ "
+  },
+  {
+   "source": "nabzgheymat.ir",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d8%ac%d9%85%d8%b9%d9%87-%db%b1%db%b5-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5-%e2%94%82-%d8%a2%d8%ae%d8%b1%db%8c%d9%86-%d9%86%d8%b1/",
+   "status": "ok",
+   "count": 48,
+   "date": "2026-11-06",
+   "title": "قیمت خودرو جمعه ۱۵ آبان ۱۴۰۵ │ آخرین نرخ ایران‌خودرو و سایپا از فاصله "
+  },
+  {
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015126/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-16-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "status": "ok",
+   "count": 19,
+   "date": "2026-11-07",
+   "title": "قیمت محصولات ایران‌خودرو و سایپا امروز شنبه ۱۶ آبان ۱۴۰۵"
+  },
+  {
+   "source": "fararu.com",
+   "url": "https://fararu.com/fa/news/1015417/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-17-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "status": "ok",
+   "count": 20,
+   "date": "2026-11-08",
+   "title": "قیمت محصولات ایران‌خودرو و سایپا امروز یکشنبه ۱۷ آبان ۱۴۰۵"
   }
  ]
 }
