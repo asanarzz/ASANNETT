@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T06:17:44+00:00",
+ "updated": "2026-11-09T19:46:41+00:00",
  "items": [
   {
    "name": "وانت آریسان",
@@ -252,6 +252,56 @@
    "kind": "scraped"
   },
   {
+   "name": "فیدلیتی سفید طوسی",
+   "price": 10800000000,
+   "agency": 0,
+   "cat": "بهمن موتور",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "فیدلیتی مشکی طوسی",
+   "price": 10950000000,
+   "agency": 0,
+   "cat": "بهمن موتور",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "فیدلیتی سفید نسکافه‌ای",
+   "price": 11500000000,
+   "agency": 0,
+   "cat": "بهمن موتور",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "فیدلیتی مشکی نسکافه‌ای",
+   "price": 11420000000,
+   "agency": 0,
+   "cat": "بهمن موتور",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "رسپکت",
+   "price": 5680000000,
+   "agency": 0,
+   "cat": "بهمن موتور",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
    "name": "پارس نوآ",
    "price": 3240000000,
    "agency": 1459000000,
@@ -262,142 +312,172 @@
    "kind": "scraped"
   },
   {
-   "name": "ی از",
-   "price": 3398000000,
+   "name": "ایگل",
+   "price": 3475000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1174683/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B8-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "کاهش از",
-   "price": 4530000000,
+   "name": "الیت 7 سفید",
+   "price": 7970000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1174683/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B8-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "ارزان شد و از",
-   "price": 2915000000,
+   "name": "الیت 7 مشکی",
+   "price": 7995000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1174683/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B8-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "ی را ثبت کرد و از",
-   "price": 4520000000,
+   "name": "X77 مشکی",
+   "price": 7350000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1174683/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B8-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "دستگیری پنج مأمورنما پس از سرقت",
-   "price": 6000000000,
+   "name": "اکستریم VX مشکی",
+   "price": 15900000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1174683/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B8-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "ارزان شد و روی رقم سه میلیارد و",
-   "price": 210000000,
+   "name": "لوکانو 7",
+   "price": 10450000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "ecoeghtesad.ir",
-   "url": "https://ecoeghtesad.ir/news/399324",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "افت قیمت داشت و به سه میلیارد و",
-   "price": 365000000,
+   "name": "لوکانو 7 مشکی",
+   "price": 10250000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "ecoeghtesad.ir",
-   "url": "https://ecoeghtesad.ir/news/399324",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "کاهش یافت و چهار میلیارد و",
-   "price": 270000000,
+   "name": "لوکانو 8",
+   "price": 16100000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "ecoeghtesad.ir",
-   "url": "https://ecoeghtesad.ir/news/399324",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "ارزان شد و در سطح سه میلیارد و",
-   "price": 260000000,
+   "name": "لوکانو 8 مشکی",
+   "price": 15300000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "ecoeghtesad.ir",
-   "url": "https://ecoeghtesad.ir/news/399324",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "گران شد و به یک میلیارد و",
-   "price": 799000000,
+   "name": "ایما",
+   "price": 8700000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "ecoeghtesad.ir",
-   "url": "https://ecoeghtesad.ir/news/399324",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "ی نسبت به روز گذشته یک میلیارد و",
-   "price": 812000000,
+   "name": "اکو مشکی",
+   "price": 6020000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "ecoeghtesad.ir",
-   "url": "https://ecoeghtesad.ir/news/399324",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "ی همراه شد و به ده میلیارد و",
-   "price": 770000000,
+   "name": "تیسان مشکی",
+   "price": 5865000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "ecoeghtesad.ir",
-   "url": "https://ecoeghtesad.ir/news/399324",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "کاهش پیدا کرد و در سطح",
-   "price": 12490000000,
+   "name": "شوال مشکی مارون",
+   "price": 9650000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "ecoeghtesad.ir",
-   "url": "https://ecoeghtesad.ir/news/399324",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "بالا رفت و هفت میلیارد و",
-   "price": 400000000,
+   "name": "اینووی مشکی",
+   "price": 4660000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "ecoeghtesad.ir",
-   "url": "https://ecoeghtesad.ir/news/399324",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "سابرینا U5",
+   "price": 5090000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "بایک BJ30",
+   "price": 14380000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "بایک X7",
+   "price": 8600000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "reportDate": "2026-11-09",
    "kind": "scraped"
   },
@@ -662,198 +742,234 @@
    "kind": "scraped"
   },
   {
-   "name": "تویوتا یاریس صندوق دار",
-   "price": 6700000000,
+   "name": "آریزو 8",
+   "price": 10300000000,
    "agency": 0,
-   "cat": "وارداتی",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "reportDate": "2026-11-08",
+   "cat": "مدیران خودرو",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "تویوتا کرولا 1200",
+   "name": "آریزو 6 GT",
+   "price": 7135000000,
+   "agency": 0,
+   "cat": "مدیران خودرو",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "تیگو 7 دو دیفرانسیل مشکی",
+   "price": 9050000000,
+   "agency": 0,
+   "cat": "مدیران خودرو",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "تیگو 7 هیبرید مشکی",
+   "price": 9050000000,
+   "agency": 0,
+   "cat": "مدیران خودرو",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "تیگو 8",
+   "price": 12100000000,
+   "agency": 0,
+   "cat": "مدیران خودرو",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "فونیکس FX مشکی",
+   "price": 7990000000,
+   "agency": 0,
+   "cat": "مدیران خودرو",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "فونیکس FX خاکستری",
+   "price": 7950000000,
+   "agency": 0,
+   "cat": "مدیران خودرو",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "مزدا 3",
+   "price": 12700000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "مزدا CX30",
+   "price": 12500000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "مزدا EZ6 ناردو گری شتری 25",
+   "price": 18100000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "کیا K5 کوشا مدل 2026 بدون پلاک",
+   "price": 21600000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "کیا اسپورتیج کوشا مدل",
+   "price": 19900000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "هیوندای سوناتا",
+   "price": 14050000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
+   "kind": "scraped"
+  },
+  {
+   "name": "هیوندای النترا زاوینا",
    "price": 8700000000,
    "agency": 0,
    "cat": "وارداتی",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "reportDate": "2026-11-08",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "تویوتا کرولا هیبرید",
-   "price": 9500000000,
+   "name": "تویوتا کرولا الیت مدل 2026 نامی",
+   "price": 10050000000,
    "agency": 0,
    "cat": "وارداتی",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "reportDate": "2026-11-08",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "تویوتا کرولا کراس هیبرید",
-   "price": 10800000000,
+   "name": "تویوتا کرولا کراس مدل 2026 ایرتویا",
+   "price": 11150000000,
    "agency": 0,
    "cat": "وارداتی",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "reportDate": "2026-11-08",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "تویوتا راوفور هیبرید",
-   "price": 20000000000,
+   "name": "تویوتا کمری 2000 هیبرید",
+   "price": 14900000000,
    "agency": 0,
    "cat": "وارداتی",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "reportDate": "2026-11-08",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "تویوتا ونزا",
-   "price": 16500000000,
+   "name": "تویوتا کمری چین مدل",
+   "price": 18920000000,
    "agency": 0,
    "cat": "وارداتی",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "reportDate": "2026-11-08",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "سوزوکی گرند ویتارا تک دیفرانسیل",
-   "price": 7500000000,
+   "name": "نیسان تک‌سوز",
+   "price": 2653000000,
    "agency": 0,
    "cat": "وارداتی",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "reportDate": "2026-11-08",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "سوزوکی گرند ویتارا دو دیفرانسیل",
-   "price": 8100000000,
+   "name": "نیسان دوگانه‌سوز",
+   "price": 2845000000,
    "agency": 0,
    "cat": "وارداتی",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "reportDate": "2026-11-08",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "کیا K5 توربو",
-   "price": 14500000000,
+   "name": "جک J7 مشکی، برج 4",
+   "price": 7300000000,
    "agency": 0,
-   "cat": "وارداتی",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "reportDate": "2026-11-08",
+   "cat": "کرمان موتور",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
    "kind": "scraped"
   },
   {
-   "name": "کیا اسپورتیج توربو",
-   "price": 11700000000,
+   "name": "جک T9 مشکی",
+   "price": 10430000000,
    "agency": 0,
-   "cat": "وارداتی",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "reportDate": "2026-11-08",
-   "kind": "scraped"
-  },
-  {
-   "name": "کیا سلتوس توربو",
-   "price": 8300000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "reportDate": "2026-11-08",
-   "kind": "scraped"
-  },
-  {
-   "name": "کیا سونت",
-   "price": 6700000000,
-   "agency": 0,
-   "cat": "وارداتی",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "reportDate": "2026-11-08",
+   "cat": "کرمان موتور",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "reportDate": "2026-11-09",
    "kind": "scraped"
   }
  ],
  "log": [
   {
-   "source": "rokna.net",
-   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1264230-%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AC%D9%85%D8%B9%D9%87-%D8%A2%D8%A8%D8%A7%D9%86",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-06",
-   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
-  },
-  {
-   "source": "ecoeghtesad.ir",
-   "url": "https://ecoeghtesad.ir/news/399324",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
    "status": "ok",
-   "count": 9,
+   "count": 86,
    "date": "2026-11-09",
-   "title": "قیمت خودرو امروز ۱۸ آبان ۱۴۰۵ / سردرگمی قیمت‌ها در بازار خودرو، کدام م"
-  },
-  {
-   "source": "aftabnews.ir",
-   "url": "https://aftabnews.ir/fa/news/1076494/قیمت-خودرو-امروز-دوشنبه-18-آبان-1405-کدام-مدل-ها-ارزان-و-کدام-گران-شدند",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-09",
-   "error": "'ascii' codec can't encode characters in position 21-24: ordinal not in range(128)"
-  },
-  {
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
-   "status": "ok",
-   "count": 26,
-   "date": "2026-11-08",
-   "title": "قیمت خودروهای داخلی و وارداتی امروز یکشنبه ۱۷ آبان ۱۴۰۵ | آخرین قیمت پ"
-  },
-  {
-   "source": "sarmayevabourse.ir",
-   "url": "https://sarmayevabourse.ir/26942/%d8%b1%db%8c%d8%b2%d8%b4-%d8%b3%d9%86%da%af%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86%d8%aa%d8%a7",
-   "status": "ok",
-   "count": 5,
-   "date": "2026-11-08",
-   "title": "ریزش سنگین قیمت خودروهای داخلی و مونتاژی امروز ۱۷ آبان ۱۴۰۵"
-  },
-  {
-   "source": "baztab.ir",
-   "url": "https://baztab.ir/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B8-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%B2-%DA%AF%D8%B1%D8%A7%D9%86/",
-   "status": "ok",
-   "count": 9,
-   "date": "2026-11-09",
-   "title": "قیمت خودرو دوشنبه ۱۸ آبان ۱۴۰۵ / از گرانی تا ارزانی در بازار خودرو"
-  },
-  {
-   "source": "ecoeghtesad.ir",
-   "url": "https://ecoeghtesad.ir/news/399232",
-   "status": "ok",
-   "count": 6,
-   "date": "2026-11-08",
-   "title": "قیمت خودرو امروز ۱۷ آبان ۱۴۰۵ / شوک ریزشی به بازار؛ وقت خرید خودرو رسی"
-  },
-  {
-   "source": "snn.ir",
-   "url": "https://snn.ir/fa/news/1484935/%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-16-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%81%DB%8C%D8%AF%D9%84%DB%8C%D8%AA%DB%8C-%DA%86%D9%86%D8%AF-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D9%82%DB%8C%D9%85%D8%AA-%D8%AF%D8%A7%D8%B4%D8%AA%D9%87-%D8%A7%D8%B3%D8%AA",
-   "status": "ok",
-   "count": 8,
-   "date": "2026-11-07",
-   "title": "آخرین قیمت محصولات ایران خودرو و سایپا امروز شنبه ۱۶ آبان ۱۴۰۵ / فیدلی"
-  },
-  {
-   "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/177414/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B8-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
-   "status": "ok",
-   "count": 25,
-   "date": "2026-11-09",
-   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز دوشنبه ۱۸ آبان ۱۴۰۵ +جدول"
+   "title": "قیمت خودرو امروز ۱۸ آبان ۱۴۰۵ | آخرین قیمت ساینا، پژو ۲۰۷، دنا و خودرو"
   },
   {
    "source": "ettelaat.com",
@@ -864,12 +980,76 @@
    "title": "قیمت خودروهای سایپا بروز شد/ جدول امروز دوشنبه ۱۸ آبان ۱۴۰۵ را ببینید"
   },
   {
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%88%d8%a7%d8%b1%d8%af%d8%a7%d8%aa%db%8c-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%8c%da%a9-2/",
+   "status": "ok",
+   "count": 26,
+   "date": "2026-11-08",
+   "title": "قیمت خودروهای داخلی و وارداتی امروز یکشنبه ۱۷ آبان ۱۴۰۵ | آخرین قیمت پ"
+  },
+  {
+   "source": "ecoeghtesad.ir",
+   "url": "https://ecoeghtesad.ir/news/399324",
+   "status": "ok",
+   "count": 9,
+   "date": "2026-11-09",
+   "title": "قیمت خودرو امروز ۱۸ آبان ۱۴۰۵ / سردرگمی قیمت‌ها در بازار خودرو، کدام م"
+  },
+  {
+   "source": "ecoeghtesad.ir",
+   "url": "https://ecoeghtesad.ir/news/399232",
+   "status": "error",
+   "count": 0,
+   "date": "2026-11-08",
+   "error": "The read operation timed out"
+  },
+  {
+   "source": "sarmayevabourse.ir",
+   "url": "https://sarmayevabourse.ir/26942/%d8%b1%db%8c%d8%b2%d8%b4-%d8%b3%d9%86%da%af%db%8c%d9%86-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d9%85%d9%88%d9%86%d8%aa%d8%a7",
+   "status": "ok",
+   "count": 5,
+   "date": "2026-11-08",
+   "title": "ریزش سنگین قیمت خودروهای داخلی و مونتاژی امروز ۱۷ آبان ۱۴۰۵"
+  },
+  {
+   "source": "snn.ir",
+   "url": "https://snn.ir/fa/news/1486150/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-18-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%BE%DA%98%D9%88-207-%D9%88-%D8%AF%D9%86%D8%A7-%DA%86%D9%82%D8%AF%D8%B1-%D8%A7%D8%B1%D8%B2%D8%A7%D9%86-%D8%B4%D8%AF%D9%86%D8%AF",
+   "status": "ok",
+   "count": 8,
+   "date": "2026-11-09",
+   "title": "قیمت خودرو امروز ۱۸ آبان ۱۴۰۵ / پژو ۲۰۷ و دنا چقدر ارزان شدند؟"
+  },
+  {
+   "source": "rokna.net",
+   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1264230-%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AC%D9%85%D8%B9%D9%87-%D8%A2%D8%A8%D8%A7%D9%86",
+   "status": "error",
+   "count": 0,
+   "date": "2026-11-06",
+   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
+  },
+  {
+   "source": "snn.ir",
+   "url": "https://snn.ir/fa/news/1484935/%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-16-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%81%DB%8C%D8%AF%D9%84%DB%8C%D8%AA%DB%8C-%DA%86%D9%86%D8%AF-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D9%82%DB%8C%D9%85%D8%AA-%D8%AF%D8%A7%D8%B4%D8%AA%D9%87-%D8%A7%D8%B3%D8%AA",
+   "status": "ok",
+   "count": 8,
+   "date": "2026-11-07",
+   "title": "آخرین قیمت محصولات ایران خودرو و سایپا امروز شنبه ۱۶ آبان ۱۴۰۵ / فیدلی"
+  },
+  {
    "source": "qudsonline.ir",
    "url": "https://www.qudsonline.ir/news/1174683/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B8-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA",
    "status": "ok",
    "count": 10,
    "date": "2026-11-09",
    "title": "قیمت محصولات ایران‌ خودرو امروز دوشنبه ۱۸ آبان ۱۴۰۵/ کاهش قیمت پرفروش‌"
+  },
+  {
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/177414/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B8-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "status": "ok",
+   "count": 25,
+   "date": "2026-11-09",
+   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز دوشنبه ۱۸ آبان ۱۴۰۵ +جدول"
   },
   {
    "source": "khabaronline.ir",
@@ -880,6 +1060,14 @@
    "title": "قیمت خودرو امروز ۱۵ آبان‌ماه ۱۴۰۵/ ریزش قیمت خودرو آغاز شد/ سمند سورن "
   },
   {
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/176849/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AC%D9%85%D8%B9%D9%87-%DB%B1%DB%B5-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "status": "ok",
+   "count": 27,
+   "date": "2026-11-06",
+   "title": "تغییر شدید قیمت خودروهای سایپا امروز جمعه ۱۵ آبان ۱۴۰۵ +جدول"
+  },
+  {
    "source": "rokna.net",
    "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1264711-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%A8%D8%A7%D9%86-%D9%BE%DA%98%D9%88-%D8%AF%D9%86%D8%A7-%D8%A7%D8%B1%D8%B2%D8%A7%D9%86-%D8%B4%D8%AF%D9%86%D8%AF-%D8%AC%D8%AF%D9%88%D9%84",
    "status": "error",
@@ -888,12 +1076,12 @@
    "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
   },
   {
-   "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/176849/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AC%D9%85%D8%B9%D9%87-%DB%B1%DB%B5-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1174500/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B7-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%82%DB%8C%D9%85%D8%AA",
    "status": "ok",
-   "count": 27,
-   "date": "2026-11-06",
-   "title": "تغییر شدید قیمت خودروهای سایپا امروز جمعه ۱۵ آبان ۱۴۰۵ +جدول"
+   "count": 13,
+   "date": "2026-11-08",
+   "title": "قیمت محصولات ایران‌ خودرو امروز یکشنبه ۱۷ آبان ۱۴۰۵/ افزایش قیمت سورن "
   }
  ]
 }
