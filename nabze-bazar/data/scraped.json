@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T12:51:28.800Z",
+ "updated": "2026-11-11T12:00:07.487Z",
  "items": [
   {
    "name": "گوشت مرغ",
@@ -7893,6 +7893,253 @@
    "kind": "scraped"
   },
   {
+   "name": "ران گوسفندی بدون استخوان، ۱ کیلوگرم",
+   "unit": "ران گوسفندی بدون استخوان، ۱ کیلوگرم",
+   "min": 1855000,
+   "max": 1855000,
+   "price": 1855000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "گوشت خورشتی گوسفندی",
+   "unit": "گوشت خورشتی گوسفندی",
+   "min": 1200000,
+   "max": 1200000,
+   "price": 1200000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "قلوه‌گاه گوسفندی بدون استخوان، ۱ کیلوگرم",
+   "unit": "قلوه‌گاه گوسفندی بدون استخوان، ۱ کیلوگرم",
+   "min": 2097600,
+   "max": 2097600,
+   "price": 2097600,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "گوشت چرخ‌کرده گوسفندی خالص، ۱ کیلوگرم",
+   "unit": "گوشت چرخ‌کرده گوسفندی خالص، ۱ کیلوگرم",
+   "min": 1399000,
+   "max": 1399000,
+   "price": 1399000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "راسته گوسفندی با استخوان",
+   "unit": "راسته گوسفندی با استخوان",
+   "min": 2500000,
+   "max": 2500000,
+   "price": 2500000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "دنبه گوسفندی",
+   "unit": "دنبه گوسفندی",
+   "min": 1250000,
+   "max": 1250000,
+   "price": 1250000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "گردن گوسفندی",
+   "unit": "گردن گوسفندی",
+   "min": 2320000,
+   "max": 2320000,
+   "price": 2320000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "گل ماهیچه گوسفندی",
+   "unit": "گل ماهیچه گوسفندی",
+   "min": 2750000,
+   "max": 2750000,
+   "price": 2750000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "فیله گوسفندی",
+   "unit": "فیله گوسفندی",
+   "min": 2920000,
+   "max": 2920000,
+   "price": 2920000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "استیک گردن گوسفندی",
+   "unit": "استیک گردن گوسفندی",
+   "min": 2200000,
+   "max": 2200000,
+   "price": 2200000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "گوشت خورشتی ران گوسفندی نر با استخوان، ۲ کیلوگرم",
+   "unit": "گوشت خورشتی ران گوسفندی نر با استخوان، ۲ کیلوگرم",
+   "min": 5441600,
+   "max": 5441600,
+   "price": 5441600,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "مغز گوسفندی",
+   "unit": "مغز گوسفندی",
+   "min": 420000,
+   "max": 420000,
+   "price": 420000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "ران گوسفندی وارداتی، ۳ کیلوگرم",
+   "unit": "ران گوسفندی وارداتی، ۳ کیلوگرم",
+   "min": 6091200,
+   "max": 6091200,
+   "price": 6091200,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "راسته بدون استخوان گوسفندی",
+   "unit": "راسته بدون استخوان گوسفندی",
+   "min": 2700000,
+   "max": 2700000,
+   "price": 2700000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "گردن گوسفندی مغولی",
+   "unit": "گردن گوسفندی مغولی",
+   "min": 2255500,
+   "max": 2255500,
+   "price": 2255500,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "کف دست گوسفندی مغول",
+   "unit": "کف دست گوسفندی مغول",
+   "min": 1680000,
+   "max": 1680000,
+   "price": 1680000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "نیم‌شقه سردست گوسفندی",
+   "unit": "نیم‌شقه سردست گوسفندی",
+   "min": 1820000,
+   "max": 1820000,
+   "price": 1820000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "ران و قلوه‌گاه گوسفندی",
+   "unit": "ران و قلوه‌گاه گوسفندی",
+   "min": 2087000,
+   "max": 2087000,
+   "price": 2087000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
+   "name": "چنجه گوسفندی",
+   "unit": "چنجه گوسفندی",
+   "min": 3957000,
+   "max": 3957000,
+   "price": 3957000,
+   "cat": "پروتئین",
+   "source": "نبض قیمت",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%da%af%d9%88%d8%b4%d8%aa-%da%af%d9%88%d8%b3%d9%81%d9%86%d8%af%db%8c-%da%86%d9%87%d8%a7%d8%b1%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b0-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0/",
+   "date": "2026-11-11",
+   "reportDate": "2026-11-11",
+   "kind": "scraped"
+  },
+  {
    "name": "مرغ کامل",
    "unit": "۳۳۰٬۰۰۰ تومان",
    "min": 330000,
@@ -7901,7 +8148,7 @@
    "cat": "پروتئین",
    "source": "وانا نیوز",
    "url": "https://vananews.com/fa/news/670234/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%B1%D8%BA-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-19-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%B1%D8%BA-%DA%A9%D8%A7%D9%85%D9%84-%DA%A9%DB%8C%D9%84%D9%88%DB%8C%DB%8C-330-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D9%87%D8%B4%D8%AF%D8%A7%D8%B1-%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D9%82%DB%8C%D9%85%D8%AA-%D9%87%D8%A7-%D8%A7%D8%B2-%D9%81%D8%B1%D8%AF%D8%A7",
-   "date": "2026-11-10",
+   "date": "2026-11-11",
    "reportDate": "2026-11-10",
    "kind": "scraped"
   },
@@ -7914,7 +8161,7 @@
    "cat": "پروتئین",
    "source": "وانا نیوز",
    "url": "https://vananews.com/fa/news/670234/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%B1%D8%BA-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-19-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%B1%D8%BA-%DA%A9%D8%A7%D9%85%D9%84-%DA%A9%DB%8C%D9%84%D9%88%DB%8C%DB%8C-330-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D9%87%D8%B4%D8%AF%D8%A7%D8%B1-%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D9%82%DB%8C%D9%85%D8%AA-%D9%87%D8%A7-%D8%A7%D8%B2-%D9%81%D8%B1%D8%AF%D8%A7",
-   "date": "2026-11-10",
+   "date": "2026-11-11",
    "reportDate": "2026-11-10",
    "kind": "scraped"
   },
@@ -7927,7 +8174,7 @@
    "cat": "پروتئین",
    "source": "وانا نیوز",
    "url": "https://vananews.com/fa/news/670234/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%B1%D8%BA-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-19-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%B1%D8%BA-%DA%A9%D8%A7%D9%85%D9%84-%DA%A9%DB%8C%D9%84%D9%88%DB%8C%DB%8C-330-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D9%87%D8%B4%D8%AF%D8%A7%D8%B1-%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D9%82%DB%8C%D9%85%D8%AA-%D9%87%D8%A7-%D8%A7%D8%B2-%D9%81%D8%B1%D8%AF%D8%A7",
-   "date": "2026-11-10",
+   "date": "2026-11-11",
    "reportDate": "2026-11-10",
    "kind": "scraped"
   },
@@ -7940,7 +8187,7 @@
    "cat": "پروتئین",
    "source": "وانا نیوز",
    "url": "https://vananews.com/fa/news/670234/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%B1%D8%BA-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-19-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%85%D8%B1%D8%BA-%DA%A9%D8%A7%D9%85%D9%84-%DA%A9%DB%8C%D9%84%D9%88%DB%8C%DB%8C-330-%D9%87%D8%B2%D8%A7%D8%B1-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D9%87%D8%B4%D8%AF%D8%A7%D8%B1-%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D9%82%DB%8C%D9%85%D8%AA-%D9%87%D8%A7-%D8%A7%D8%B2-%D9%81%D8%B1%D8%AF%D8%A7",
-   "date": "2026-11-10",
+   "date": "2026-11-11",
    "reportDate": "2026-11-10",
    "kind": "scraped"
   }
@@ -7951,112 +8198,98 @@
    "name": "اقتصادنیوز",
    "status": "ok",
    "msg": "2 گزارش پیدا شد",
-   "at": "2026-11-10T12:50:38.780Z"
+   "at": "2026-11-11T11:59:27.327Z"
   },
   {
    "id": "didbaniran",
    "name": "دیدبان ایران",
    "status": "error",
    "msg": "لینکی با عنوان قیمت کالا در صفحه فهرست نبود (آدرس فهرست یا قالب صفحه را بررسی کنید)",
-   "at": "2026-11-10T12:50:44.046Z"
+   "at": "2026-11-11T11:59:31.654Z"
   },
   {
    "id": "ecoiran",
    "name": "اکوایران",
    "status": "ok",
    "msg": "3 گزارش پیدا شد",
-   "at": "2026-11-10T12:50:48.828Z"
+   "at": "2026-11-11T11:59:35.851Z"
   },
   {
    "id": "nabzgheymat",
    "name": "نبض قیمت",
    "status": "ok",
-   "msg": "3 گزارش پیدا شد",
-   "at": "2026-11-10T12:50:53.716Z"
+   "msg": "1 گزارش پیدا شد",
+   "at": "2026-11-11T11:59:40.081Z"
   },
   {
    "id": "vananews",
    "name": "وانا نیوز",
    "status": "ok",
    "msg": "2 گزارش پیدا شد",
-   "at": "2026-11-10T12:50:58.251Z"
+   "at": "2026-11-11T11:59:44.203Z"
   },
   {
    "id": "avash",
    "name": "آواش",
    "status": "error",
    "msg": "لینکی با عنوان قیمت کالا در صفحه فهرست نبود (آدرس فهرست یا قالب صفحه را بررسی کنید)",
-   "at": "2026-11-10T12:51:02.897Z"
+   "at": "2026-11-11T11:59:52.233Z"
   },
   {
    "id": "eghtesadnews:DA%86%D9%86%D8%AF-%D8%B4%D8%AF",
    "name": "اقتصادنیوز",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-11-10T12:51:07.287Z"
+   "at": "2026-11-11T11:59:56.135Z"
   },
   {
-   "id": "eghtesadnews:DA%86%D9%86%D8%AF-%D8%B4%D8%AF",
+   "id": "eghtesadnews:DA%A9-%DA%A9%D8%B4%DB%8C%D8%AF",
    "name": "اقتصادنیوز",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-11-10T12:51:07.729Z"
+   "at": "2026-11-11T11:59:56.445Z"
+  },
+  {
+   "id": "ecoiran:D9%88%D8%B1-%DA%A9%D8%B1%D8%AF",
+   "name": "اکوایران",
+   "status": "error",
+   "msg": "جدول قیمت قابل تشخیص نبود",
+   "at": "2026-11-11T11:59:57.365Z"
   },
   {
    "id": "ecoiran:DB%8C-%D8%B4%DA%A9%D9%86%D8%AF",
    "name": "اکوایران",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-11-10T12:51:09.235Z"
+   "at": "2026-11-11T11:59:57.599Z"
   },
   {
    "id": "ecoiran:%D8%AA%D9%88%D9%85%D8%A7%D9%86",
    "name": "اکوایران",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-11-10T12:51:09.638Z"
+   "at": "2026-11-11T11:59:57.887Z"
   },
   {
-   "id": "ecoiran:D9%86-%D8%B1%D8%B3%DB%8C%D8%AF",
-   "name": "اکوایران",
-   "status": "error",
-   "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-11-10T12:51:10.272Z"
-  },
-  {
-   "id": "nabzgheymat:9%86-%db%b1%db%b4%db%b0%db%b5/",
+   "id": "nabzgheymat:8%a7%d9%86-%db%b1%db%b4%db%b0/",
    "name": "نبض قیمت",
    "status": "ok",
-   "msg": "10 قلم · 2026-11-10",
-   "at": "2026-11-10T12:51:12.381Z"
+   "msg": "19 قلم · 2026-11-11",
+   "at": "2026-11-11T11:59:59.709Z"
   },
   {
-   "id": "nabzgheymat:%b3%d9%87-%d8%af%d9%87-%da%a9/",
-   "name": "نبض قیمت",
-   "status": "ok",
-   "msg": "5 قلم · 2026-11-10",
-   "at": "2026-11-10T12:51:17.468Z"
-  },
-  {
-   "id": "nabzgheymat:9%86-%db%b1%db%b4%db%b0%db%b5/",
-   "name": "نبض قیمت",
+   "id": "vananews:%D8%AA%D9%88%D9%84%DB%8C%D8%AF",
+   "name": "وانا نیوز",
    "status": "error",
    "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-11-10T12:51:23.793Z"
+   "at": "2026-11-11T12:00:04.124Z"
   },
   {
    "id": "vananews:D8%B2-%D9%81%D8%B1%D8%AF%D8%A7",
    "name": "وانا نیوز",
    "status": "ok",
    "msg": "4 قلم · 2026-11-10",
-   "at": "2026-11-10T12:51:25.331Z"
-  },
-  {
-   "id": "vananews:%D8%B1-%D8%B3%D8%A7%D9%84-1405",
-   "name": "وانا نیوز",
-   "status": "error",
-   "msg": "جدول قیمت قابل تشخیص نبود",
-   "at": "2026-11-10T12:51:28.799Z"
+   "at": "2026-11-11T12:00:04.483Z"
   }
  ]
 }
