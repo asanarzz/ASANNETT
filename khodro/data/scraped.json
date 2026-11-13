@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T23:34:17+00:00",
+ "updated": "2026-11-13T06:35:27+00:00",
  "items": [
   {
    "name": "وانت آریسان",
@@ -744,14 +744,6 @@
  ],
  "log": [
   {
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1085496/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B1-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%DB%8C%D9%86-%D9%85%D8%A7%D8%B4%DB%8C%D9%86-%D9%87%D8%A7-%D8%A7%D8%B1%D8%B2%D8%A7%D9%86-%D8%B4%D8%AF%D9%86%D8%AF",
-   "status": "ok",
-   "count": 6,
-   "date": "2026-11-12",
-   "title": "قیمت خودرو امروز پنجشنبه ۲۱ آبان ۱۴۰۵ | این ماشین‌ها ارزان شدند"
-  },
-  {
    "source": "khabaronline.ir",
    "url": "https://www.khabaronline.ir/news/2300547/قیمت-خودرو-امروز-۲۰-آبان-ماه-۱۴۰۵-بازار-خودرو-قرمزپوش-شد-تارا",
    "status": "error",
@@ -760,12 +752,12 @@
    "error": "'ascii' codec can't encode characters in position 18-21: ordinal not in range(128)"
   },
   {
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-18-aban-1405.p124913",
+   "source": "hamshahrionline.ir",
+   "url": "https://www.hamshahrionline.ir/news/1085496/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B1-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%DB%8C%D9%86-%D9%85%D8%A7%D8%B4%DB%8C%D9%86-%D9%87%D8%A7-%D8%A7%D8%B1%D8%B2%D8%A7%D9%86-%D8%B4%D8%AF%D9%86%D8%AF",
    "status": "ok",
-   "count": 86,
-   "date": "2026-11-09",
-   "title": "قیمت خودرو امروز ۱۸ آبان ۱۴۰۵ | آخرین قیمت ساینا، پژو ۲۰۷، دنا و خودرو"
+   "count": 5,
+   "date": "2026-11-12",
+   "title": "قیمت خودرو امروز پنجشنبه ۲۱ آبان ۱۴۰۵ | این ماشین‌ها ارزان شدند"
   },
   {
    "source": "qudsonline.ir",
@@ -777,35 +769,11 @@
   },
   {
    "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/177621/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B9-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
-   "status": "ok",
-   "count": 26,
-   "date": "2026-11-10",
-   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز سه‌شنبه ۱۹ آبان ۱۴۰۵ +جدول"
-  },
-  {
-   "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/177417/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A8%D8%B1%D9%88%D8%B2-%D8%B4%D8%AF-%D8%AC%D8%AF%D9%88%D9%84-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B8-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%B1%D8%A7",
-   "status": "ok",
-   "count": 27,
-   "date": "2026-11-09",
-   "title": "قیمت خودروهای سایپا بروز شد/ جدول امروز دوشنبه ۱۸ آبان ۱۴۰۵ را ببینید"
-  },
-  {
-   "source": "ettelaat.com",
    "url": "https://www.ettelaat.com/news/177622/%D8%AC%D9%87%D8%B4-%D8%AA%D9%86%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B1%DB%B9-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
    "status": "ok",
    "count": 27,
    "date": "2026-11-10",
    "title": "جهش تند قیمت خودروهای سایپا امروز سه‌شنبه ۱۹ آبان ۱۴۰۵ +جدول"
-  },
-  {
-   "source": "iranjib.ir",
-   "url": "https://www.iranjib.ir/shownews/149757/تحلیل-بازار-خودرو-امروز-سه-شنبه-19-آبان-1405/",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-10",
-   "error": "'ascii' codec can't encode characters in position 21-25: ordinal not in range(128)"
   },
   {
    "source": "6asr.ir",
@@ -816,12 +784,12 @@
    "title": "جدول قیمت روز خودرو سه‌شنبه ۱۹ آبان ۱۴۰۵؛ نرخ جدید ایران‌خودرو، سایپا "
   },
   {
-   "source": "tehrannews.ir",
-   "url": "https://www.tehrannews.ir/story/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D8%AE%D9%84%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B1-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "source": "eghtesadonline.com",
+   "url": "https://www.eghtesadonline.com/fa/news/2175296/قیمت-محصولات-ایران-خودرو-و-سایپا-امروز-22-آبان-ماه-1405-نوسان-قیمت-خودرو-شدت-گرفت-جدول",
    "status": "error",
    "count": 0,
-   "date": "2026-11-12",
-   "error": "HTTP Error 403: Forbidden"
+   "date": "2026-11-13",
+   "error": "'ascii' codec can't encode characters in position 21-24: ordinal not in range(128)"
   },
   {
    "source": "saat24.news",
@@ -832,6 +800,30 @@
    "title": "قیمت محصولات ایران‌خودرو و سایپا امروز پنجشنبه ۲۱ آبان ۱۴۰۵"
   },
   {
+   "source": "etemadonline.com",
+   "url": "https://www.etemadonline.com/بخش-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-22/799506-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%A8%D8%A7%D9%86",
+   "status": "error",
+   "count": 0,
+   "date": "2026-11-12",
+   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
+  },
+  {
+   "source": "nabzgheymat.ir",
+   "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d9%be%d9%86%d8%ac%d8%b4%d9%86%d8%a8%d9%87-%db%b2%db%b1-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4/",
+   "status": "ok",
+   "count": 27,
+   "date": "2026-11-12",
+   "title": "قیمت خودرو های سایپا پنجشنبه ۲۱ آبان ۱۴۰۵ │ افت ثبت‌شده ۲۳۰ میلیونی اط"
+  },
+  {
+   "source": "tehrannews.ir",
+   "url": "https://www.tehrannews.ir/story/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%AF%D8%A7%D8%AE%D9%84%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B1-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "status": "error",
+   "count": 0,
+   "date": "2026-11-12",
+   "error": "HTTP Error 403: Forbidden"
+  },
+  {
    "source": "gilkhabar.ir",
    "url": "https://gilkhabar.ir/519087",
    "status": "robots",
@@ -840,12 +832,13 @@
    "error": "robots.txt اجازه نمی‌دهد"
   },
   {
-   "source": "rokna.net",
-   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1266058-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%A8%D8%A7%D9%86-%D8%B3%D9%82%D9%88%D8%B7-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%88%D8%B1%D9%86-%D8%AA%D8%A7%D8%B1%D8%A7-%D8%AC%D8%AF%D9%88%D9%84",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/177925/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B0-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D9%82%DB%8C%D9%85%D8%AA-%DA%A9%D9%88%DB%8C%DB%8C%DA%A9-%D8%AF%D9%86%D8%A7-%D9%88-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C",
    "status": "error",
    "count": 0,
-   "date": "2026-11-12",
-   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
+   "date": "2026-11-11",
+   "title": "قیمت خودرو امروز چهارشنبه ۲۰ آبان ۱۴۰۵؛ قیمت کوییک، دنا و خودروهای ایر",
+   "error": "جدول قیمت کافی پیدا نشد"
   },
   {
    "source": "rouydad24.ir",
@@ -856,37 +849,12 @@
    "title": "قیمت روز خودرو ۲۱ آبان ۱۴۰۵"
   },
   {
-   "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/177925/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B0-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D9%82%DB%8C%D9%85%D8%AA-%DA%A9%D9%88%DB%8C%DB%8C%DA%A9-%D8%AF%D9%86%D8%A7-%D9%88-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C",
-   "status": "error",
-   "count": 1,
-   "date": "2026-11-11",
-   "title": "قیمت خودرو امروز چهارشنبه ۲۰ آبان ۱۴۰۵؛ قیمت کوییک، دنا و خودروهای ایر",
-   "error": "جدول قیمت کافی پیدا نشد"
-  },
-  {
    "source": "nabzgheymat.ir",
    "url": "https://nabzgheymat.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ac%d8%af%db%8c%d8%af-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%87%d8%a7%db%8c-%d8%a8%d9%87%d9%85%d9%86-%d9%85%d9%88%d8%aa%d9%88%d8%b1-%db%b2%db%b1-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1/",
    "status": "ok",
    "count": 20,
    "date": "2026-11-12",
    "title": "قیمت جدید خودرو های بهمن موتور ۲۱ آبان ۱۴۰۵ │ جهش هزینه ناوگان سنگین چ"
-  },
-  {
-   "source": "nournews.ir",
-   "url": "https://nournews.ir/fa/news/360016/%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%A8%D8%A7%D9%86-%D8%B1%DB%8C%D8%B2%D8%B4-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D9%BE%DA%98%D9%88-%D8%AA%DB%8C%DA%AF%D9%88-%D9%BE%D8%B1%D9%88%D9%85%DA%A9%D8%B3",
-   "status": "ok",
-   "count": 7,
-   "date": "2026-11-10",
-   "title": "آخرین قیمت محصولات ایران خودرو و سایپا امروز سه شنبه ۱۹ آبان ۱۴۰۵؛ ریز"
-  },
-  {
-   "source": "eghtesaad24.ir",
-   "url": "https://eghtesaad24.ir/fa/news/387141/قیمت-خودرو-های-سایپا-امروز-چهارشنبه-20-آبان-1405-جدول",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-11",
-   "error": "'ascii' codec can't encode characters in position 20-23: ordinal not in range(128)"
   }
  ]
 }
