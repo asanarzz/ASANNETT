@@ -29,7 +29,7 @@ h3{color:var(--g);border-right:4px solid var(--g);padding-right:8px;margin:18px 
 .ch input{margin-left:6px}
 label.f{display:block;margin:10px 0 4px;color:var(--m);font-size:13px}
 input[type=text],input[type=number],select{width:100%;padding:10px;border-radius:10px;border:1px solid var(--g);background:var(--cd);color:var(--tx);font:15px Vazirmatn,Tahoma,sans-serif}
-#cv{width:100%;height:auto;border:1px solid var(--g);border-radius:10px;margin-top:10px;background:#000}
+#cv{width:100%;height:auto;border:1px solid var(--g);border-radius:10px;margin-top:10px;background:#fff}
 </style></head><body>
 <header><div class="lg">PRICE</div><h1>قیمت روز دلار و طلا</h1><div id="hc" class="br"></div><div id="dt" class="mt"></div></header>
 <nav><button data-t="d" class="on">قیمت‌ها</button><button data-t="i">ساخت تصویر قیمت روز</button><button data-t="s">تنظیمات</button></nav>
@@ -47,7 +47,7 @@ input[type=text],input[type=number],select{width:100%;padding:10px;border-radius
 <label class="f"><input type="checkbox" data-s="ft"> نمایش پاورقی</label>
 <label class="f">اقلام تصویر</label><div id="chi"></div>
 <div class="row"><button id="mk" class="btn">ساخت تصویر</button><button id="dl">دانلود PNG</button><button id="sh">اشتراک‌گذاری</button></div>
-<canvas id="cv" width="1200" height="1600"></canvas>
+<canvas id="cv" width="1200" height="2000"></canvas>
 </section>
 <section id="t-s" hidden>
 <h3>تنظیمات</h3>
@@ -155,37 +155,41 @@ $('#cl').onclick=()=>{try{localStorage.removeItem('pc')}catch(e){}D=null;cache=f
 function rr(x,a,b,w,h,r){x.beginPath();x.moveTo(a+r,b);x.arcTo(a+w,b,a+w,b+h,r);x.arcTo(a+w,b+h,a,b+h,r);x.arcTo(a,b+h,a,b,r);x.arcTo(a,b,a+w,b,r);x.closePath()}
 async function draw(){
  try{await document.fonts.load('700 40px Vazirmatn');await document.fonts.load('900 40px Vazirmatn')}catch(e){}
- const W=1200,H=1600,c=$('#cv');c.width=W;c.height=H;const x=c.getContext('2d');
+ const W=1200,H=2000,c=$('#cv');c.width=W;c.height=H;const x=c.getContext('2d');
  const FN='Vazirmatn,Tahoma,"Noto Naskh Arabic",Arial,sans-serif';
- const g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#0b1a45');g.addColorStop(1,'#050b22');
- x.fillStyle=g;x.fillRect(0,0,W,H);
- x.strokeStyle='#d4af37';x.lineWidth=3;rr(x,30,30,W-60,H-60,28);x.stroke();
- x.lineWidth=1;x.globalAlpha=.4;rr(x,46,46,W-92,H-92,20);x.stroke();x.globalAlpha=1;
+ x.fillStyle='#eaf6ec';x.fillRect(0,0,W,H);
+ x.strokeStyle='#c9a227';x.lineWidth=4;rr(x,14,14,W-28,H-28,24);x.stroke();
  x.direction='rtl';
- const T=(s,px,py,sz,col,al,wt)=>{x.font=(wt||700)+' '+sz+'px '+FN;x.fillStyle=col;x.textAlign=al||'right';x.textBaseline='middle';x.fillText(s,px,py)};
+ const T=(s,px,py,sz,col,al,wt,mw)=>{wt=wt||700;x.font=wt+' '+sz+'px '+FN;
+  if(mw){while(x.measureText(s).width>mw&&sz>20){sz-=2;x.font=wt+' '+sz+'px '+FN}}
+  x.fillStyle=col;x.textAlign=al||'right';x.textBaseline='middle';x.fillText(s,px,py)};
  const at=D?D.at:Date.now();
- T('PRICE',W/2,135,110,'#d4af37','center',900);
- T(S.ti,W/2,235,54,'#f4f1e6','center');
- T(jd(new Date(at))+' — ساعت '+tm2(at),W/2,305,32,'#9aa6c7','center');
- if(!D)T('داده‌ای در دسترس نیست',W/2,352,30,'#ff8a80','center');
- else if(cache)T('توجه: آخرین اطلاعات ذخیره‌شده است، نه قیمت زنده',W/2,352,30,'#ff8a80','center');
- else if(Object.values(D.d).some(r=>r&&r.stale))T('توجه: برخی قیمت‌ها قدیمی هستند (علامت *)',W/2,352,30,'#ffd666','center');
- x.strokeStyle='#d4af37';x.globalAlpha=.5;x.beginPath();x.moveTo(100,395);x.lineTo(W-100,395);x.stroke();x.globalAlpha=1;
- const sel=ITEMS.filter(i=>S.img.includes(i.id)),top=420,bot=H-(S.ft?240:90);
- if(!sel.length)T('هیچ قلمی انتخاب نشده',W/2,800,40,'#9aa6c7','center');
- const rh=Math.min(118,(bot-top)/Math.max(sel.length,1));
- sel.forEach((i,k)=>{const y=top+k*rh,h=rh-14,cy=y+h/2,r=D&&D.d[i.id];
-  x.fillStyle='#121f55';rr(x,70,y,W-140,h,18);x.fill();
-  x.strokeStyle='rgba(212,175,55,.35)';x.lineWidth=1.5;rr(x,70,y,W-140,h,18);x.stroke();
-  T(i.n,W-100,cy,42,'#f4f1e6','right');
-  if(!r){T('داده در دسترس نیست',100,cy,32,'#9aa6c7','left');return}
-  T(F(r.p,i.u)+' '+(i.u==='D'?'دلار':'تومان')+(r.stale?' *':''),100,cy,44,'#f2d77b','left',900);
-  if(S.pct&&r.pct!=null)T((r.pct>=0?'▲ ':'▼ ')+PC(r.pct),640,cy,32,r.pct>=0?'#2ecc71':'#ff5252','center')});
+ T(S.ti,W/2,76,70,'#0a1330','center',900,1060);
+ T(jd(new Date(at))+' — ساعت '+tm2(at),W/2,142,38,'#5a6584','center',700,1060);
+ if(!D)T('داده‌ای در دسترس نیست',W/2,184,28,'#d32f2f','center');
+ else if(cache)T('توجه: آخرین اطلاعات ذخیره‌شده است، نه قیمت زنده',W/2,184,28,'#d32f2f','center',700,1060);
+ else if(Object.values(D.d).some(r=>r&&r.stale))T('توجه: برخی قیمت‌ها قدیمی هستند (علامت *)',W/2,184,28,'#b26a00','center',700,1060);
+ const sel=ITEMS.filter(i=>S.img.includes(i.id)),top=215,bot=H-(S.ft?120:40);
+ if(!sel.length)T('هیچ قلمی انتخاب نشده',W/2,800,52,'#5a6584','center');
+ const rh=Math.min(190,(bot-top)/Math.max(sel.length,1));
+ sel.forEach((i,k)=>{const y=top+k*rh,h=rh-14,r=D&&D.d[i.id];
+  x.fillStyle='#e8f3ff';rr(x,40,y,W-80,h,20);x.fill();
+  x.strokeStyle='#b9d8f5';x.lineWidth=2;rr(x,40,y,W-80,h,20);x.stroke();
+  const y1=y+h*(S.pct?0.36:0.5),y2=y+h*0.78;
+  T(i.n,W-70,y1,64,'#0a1330','right',900,560);
+  if(!r){T('داده در دسترس نیست',70,y+h/2,40,'#8a93ab','left',700,520);return}
+  T(F(r.p,i.u),70,y1,68,'#0b2a6f','left',900,520);
+  T((i.u==='D'?'دلار':'تومان')+(r.stale?' (قدیمی) *':''),70,y2,34,'#5a6584','left',700,520);
+  if(S.pct&&r.pct!=null)T((r.pct>=0?'▲ ':'▼ ')+PC(r.pct),W-70,y2,38,r.pct>=0?'#1e9e4f':'#d32f2f','right',900,500)});
  if(S.ft){
-  x.strokeStyle='#d4af37';x.globalAlpha=.5;x.beginPath();x.moveTo(100,H-262);x.lineTo(W-100,H-262);x.stroke();x.globalAlpha=1;
-  T(S.ch,W/2,H-195,46,'#d4af37','center',900);
-  T(S.id,W/2,H-135,36,'#f4f1e6','center');
-  T('«با آسان نت کافی نت تو جیبتته»',W/2,H-80,32,'#9aa6c7','center')}
+  const parts=[{t:S.ch,col:'#8a6d0a',d:'rtl'},{t:S.id,col:'#0a1330',d:'ltr'},{t:'«با آسان نت کافی نت تو جیبتته»',col:'#5a6584',d:'rtl'}];
+  let sz=40,gap=56,tot;
+  for(;sz>18;sz-=2){x.font='700 '+sz+'px '+FN;tot=parts.reduce((s,p)=>{x.direction=p.d;return s+x.measureText(p.t).width},0)+gap*2;if(tot<=W-100)break}
+  let cur=(W+tot)/2;const fy=H-62;
+  parts.forEach((p,k)=>{x.direction=p.d;x.font='700 '+sz+'px '+FN;const w=x.measureText(p.t).width;
+   x.fillStyle=p.col;x.textAlign='right';x.textBaseline='middle';x.fillText(p.t,cur,fy);cur-=w;
+   if(k<2){x.strokeStyle='#c9a227';x.lineWidth=2;x.beginPath();x.moveTo(cur-gap/2,fy-sz*0.6);x.lineTo(cur-gap/2,fy+sz*0.6);x.stroke();cur-=gap}});
+  x.direction='rtl'}
 }
 const blob=()=>new Promise(r=>$('#cv').toBlob(r,'image/png'));
 $('#mk').onclick=draw;
