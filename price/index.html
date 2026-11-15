@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PRICE | قیمت روز دلار و طلا</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a1330;--cd:#121c44;--tx:#f4f1e6;--g:#d4af37;--m:#9aa6c7;--up:#2ecc71;--dn:#ff5252}
+[data-th=light]{--bg:#f4f1e6;--cd:#fff;--tx:#0a1330;--g:#8a6d0a;--m:#5a6584}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px Vazirmatn,Tahoma,sans-serif}
+header{text-align:center;padding:18px 10px 6px;border-bottom:2px solid var(--g)}
+.lg{font:900 44px Vazirmatn,sans-serif;color:var(--g);letter-spacing:6px;direction:ltr}
+h1{margin:0;font-size:20px}.br{color:var(--g);font-weight:700}.mt{color:var(--m);font-size:13px}
+nav{display:flex;gap:6px;padding:10px;position:sticky;top:0;background:var(--bg);z-index:5}
+nav button{flex:1}
+button,.btn{font:700 14px Vazirmatn,Tahoma,sans-serif;background:var(--cd);color:var(--tx);border:1px solid var(--g);border-radius:10px;padding:10px 12px;cursor:pointer}
+button.on,.btn{background:var(--g);color:#0a1330}button:disabled{opacity:.5}
+main{padding:0 10px 30px;max-width:900px;margin:auto}
+.bn{padding:10px;border-radius:10px;margin:6px 0;font-size:14px}
+.ok{background:#12351f;color:#8fe6ae}.warn{background:#4a3a0a;color:#ffd666}.bad{background:#4a1414;color:#ff9a9a}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:8px 0}
+h3{color:var(--g);border-right:4px solid var(--g);padding-right:8px;margin:18px 0 8px}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.cd{background:var(--cd);border:1px solid rgba(212,175,55,.4);border-radius:14px;padding:12px}
+.cd b{font-size:16px}.pr{font:900 28px Vazirmatn,sans-serif;color:var(--g);margin:6px 0 0}
+.cd small{color:var(--m)}.na{color:var(--m);margin:14px 0}.st{color:#ffd666;font-weight:700}
+.pc{float:left;font-weight:700;font-size:14px;direction:ltr}.u{color:var(--up)}.d{color:var(--dn)}
+.ch{display:inline-block;margin:4px;padding:6px 10px;border:1px solid var(--g);border-radius:20px;font-size:13px}
+.ch input{margin-left:6px}
+label.f{display:block;margin:10px 0 4px;color:var(--m);font-size:13px}
+input[type=text],input[type=number],select{width:100%;padding:10px;border-radius:10px;border:1px solid var(--g);background:var(--cd);color:var(--tx);font:15px Vazirmatn,Tahoma,sans-serif}
+#cv{width:100%;height:auto;border:1px solid var(--g);border-radius:10px;margin-top:10px;background:#000}
+</style></head><body>
+<header><div class="lg">PRICE</div><h1>قیمت روز دلار و طلا</h1><div id="hc" class="br"></div><div id="dt" class="mt"></div></header>
+<nav><button data-t="d" class="on">قیمت‌ها</button><button data-t="i">ساخت تصویر قیمت روز</button><button data-t="s">تنظیمات</button></nav>
+<main>
+<section id="t-d">
+<div id="bn" class="bn"></div>
+<div class="row"><button id="rf" class="btn">به‌روزرسانی دستی</button></div>
+<div class="mt" id="sa"></div><div class="mt" id="sb"></div>
+<div id="cards"></div>
+</section>
+<section id="t-i" hidden>
+<h3>ساخت تصویر قیمت روز</h3>
+<label class="f">عنوان تصویر</label><input type="text" data-s="ti">
+<label class="f"><input type="checkbox" data-s="pct"> نمایش درصد تغییرات ۲۴ ساعته</label>
+<label class="f"><input type="checkbox" data-s="ft"> نمایش پاورقی</label>
+<label class="f">اقلام تصویر</label><div id="chi"></div>
+<div class="row"><button id="mk" class="btn">ساخت تصویر</button><button id="dl">دانلود PNG</button><button id="sh">اشتراک‌گذاری</button></div>
+<canvas id="cv" width="1200" height="1600"></canvas>
+</section>
+<section id="t-s" hidden>
+<h3>تنظیمات</h3>
+<label class="f">فاصلهٔ به‌روزرسانی خودکار (دقیقه، حداقل ۵)</label><input type="number" data-s="int" min="5">
+<label class="f">تم</label><select data-s="th"><option value="dark">تیره</option><option value="light">روشن</option></select>
+<label class="f">نام کانال</label><input type="text" data-s="ch">
+<label class="f">آیدی کانال</label><input type="text" data-s="id" dir="ltr">
+<label class="f">واحد پول داخلی</label><input type="text" value="تومان (ثابت)" disabled>
+<label class="f">اقلام قابل نمایش در داشبورد</label><div id="chs"></div>
+<label class="f">وضعیت منابع</label><div id="ss" class="mt"></div>
+<div class="row"><button id="cl">پاک کردن حافظهٔ ذخیره‌شده</button></div>
+</section>
+</main>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const SA='https://nerkhara.com/api/v1/latest.json',SB='https://raw.githubusercontent.com/hidevs/tabloo/main/data/latest-toman.json';
+const ITEMS=[
+['usd','دلار آزاد','ارز','T','usd',['دلار','دلار آمریکا','دلار آزاد','دلار بازار آزاد'],['us dollar','usd']],
+['eur','یورو','ارز','T','eur',['یورو'],['euro','eur']],
+['g18','طلای ۱۸ عیار','طلا','T','gold-18k',['طلای 18 عیار','طلای 18 عیار گرم','طلا 18 عیار'],['18k gold']],
+['em','سکه امامی','سکه','T','coin-emami',['سکه امامی'],['emami coin']],
+['ba','سکه بهار آزادی','سکه','T','coin-bahar-azadi',['سکه بهار آزادی'],['bahar azadi coin']],
+['hf','نیم سکه','سکه','T','coin-half',['نیم سکه'],['half coin']],
+['qt','ربع سکه','سکه','T','coin-quarter',['ربع سکه'],['quarter coin']],
+['btc','بیت‌کوین (BTC)','ارز دیجیتال','D','btc',['بیت کوین','بیتکوین'],['bitcoin','btc']],
+['eth','اتریوم (ETH)','ارز دیجیتال','D','eth',['اتریوم'],['ethereum','eth']],
+['usdt','تتر (USDT)','ارز دیجیتال','T','usdt',['تتر'],['tether','usdt']]
+].map(([id,n,c,u,k,fa,en])=>({id,n,c,u,k,fa,en}));
+const DEF={int:60,th:'dark',ch:'کافی‌نت آسان‌نت',id:'@ASANNETT',ti:'قیمت روز دلار و طلا',show:ITEMS.map(i=>i.id),img:ITEMS.map(i=>i.id),pct:1,ft:1};
+let S=Object.assign({},DEF);try{Object.assign(S,JSON.parse(localStorage.getItem('ps')||'{}'))}catch(e){}
+const sv=()=>{try{localStorage.setItem('ps',JSON.stringify(S))}catch(e){}};
+let busy=0,D=null,cache=false,ST={a:'—',b:'—'},tmr;
+const fd=s=>s.replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
+const N=s=>fd(String(s||'')).replace(/ي/g,'ی').replace(/ك/g,'ک').replace(/[\u200c\u200f()]/g,' ').replace(/\s+/g,' ').trim().toLowerCase();
+const ts=s=>{if(!s)return NaN;s=String(s);if(!/[zZ]|[+-]\d\d:?\d\d$/.test(s))s+='Z';return Date.parse(s)};
+const OLD=6*3600e3;
+const jd=d=>new Intl.DateTimeFormat('fa-IR-u-ca-persian',{year:'numeric',month:'long',day:'numeric',weekday:'long'}).format(d);
+const tm2=t=>(!t||isNaN(t))?'':new Date(t).toLocaleTimeString('fa-IR',{hour:'2-digit',minute:'2-digit'});
+const F=(p,u)=>u==='D'?p.toLocaleString('fa-IR',{minimumFractionDigits:2,maximumFractionDigits:2}):Math.round(p).toLocaleString('fa-IR');
+const UN=i=>i.u==='D'?'دلار (USD)':i.id==='g18'?'تومان / هر گرم':'تومان';
+const PC=p=>(p>0?'+':'')+p.toLocaleString('fa-IR',{maximumFractionDigits:2})+'٪';
+function toT(p,cur,u){cur=String(cur).toUpperCase();
+ if(u==='T'){if(cur==='IRR'||cur==='RIAL')p/=10;else if(cur!=='IRT'&&cur!=='TOMAN')return null}
+ else if(cur!=='USD'&&cur!=='USDT')return null;
+ return p>0&&isFinite(p)?p:null}
+function fromA(a,i){const it=(a.items||[]).find(x=>x.id===i.k);if(!it)return null;
+ const p=toT(+it.price,it.unit,i.u);if(p==null)return null;
+ const t=ts(it.updated_utc);
+ return{p,pct:typeof it.change_pct==='number'?it.change_pct:null,t,src:'A',stale:it.stale===true||a.stale===true||(Date.now()-t>OLD)}}
+const flat=b=>{const c=b&&b.data&&b.data.categories;return c?Object.values(c).flat():(Array.isArray(b&&b.data)?b.data:[])};
+function fromB(l,i){const nm=[...i.fa,...i.en].map(N);
+ const m=l.filter(x=>[x.name_fa,x.name_en,x.symbol].some(v=>v&&nm.includes(N(v)))&&toT(+x.price,x.currency,i.u)!=null);
+ const it=m.find(x=>!x.stale)||m[0];if(!it)return null;
+ const t=ts(it.timestamp||it.checked_at);
+ return{p:toT(+it.price,it.currency,i.u),pct:typeof it.change_pct==='number'?it.change_pct:null,t,src:'B',stale:it.stale===true||(Date.now()-t>OLD)}}
+async function J(u){const c=new AbortController(),k=setTimeout(()=>c.abort(),15000);
+ try{const r=await fetch(u,{signal:c.signal,cache:'no-store'});
+  if(r.status==429)throw{m:'محدودیت درخواست (۴۲۹)'};
+  if(!r.ok)throw{m:'خطای HTTP '+r.status};
+  return await r.json()}
+ catch(e){throw e.m?e:{m:e.name==='AbortError'?'پایان مهلت اتصال':e.name==='SyntaxError'?'پاسخ نامعتبر':'خطای اینترنت یا CORS'}}
+ finally{clearTimeout(k)}}
+async function refresh(){
+ if(busy)return;busy=1;$('#rf').disabled=true;
+ let a=null,l=null;
+ try{a=await J(SA);ST.a='متصل ✓'}catch(e){ST.a='خطا: '+e.m}
+ const ca=i=>a&&fromA(a,i);
+ if(!a||ITEMS.some(i=>{const r=ca(i);return !r||r.stale})){
+  try{l=flat(await J(SB));ST.b='متصل ✓'}catch(e){ST.b='خطا: '+e.m}
+ }else ST.b='نیازی نشد';
+ const out={};let n=0;
+ ITEMS.forEach(i=>{const c=[ca(i),l&&fromB(l,i)].filter(Boolean);const r=c.find(x=>!x.stale)||c[0]||null;out[i.id]=r;if(r)n++});
+ if(n){D={at:Date.now(),d:out};cache=false;try{localStorage.setItem('pc',JSON.stringify(D))}catch(e){}}
+ else{try{const o=JSON.parse(localStorage.getItem('pc'));if(o&&o.d){D=o;cache=true}}catch(e){}}
+ busy=0;$('#rf').disabled=false;render()}
+function sched(){clearInterval(tmr);tmr=setInterval(refresh,Math.max(5,+S.int||60)*60000)}
+function card(i){const r=D&&D.d[i.id];
+ if(!r)return`<div class="cd"><b>${i.n}</b><p class="na">داده در دسترس نیست</p></div>`;
+ const pc=(S.pct&&r.pct!=null)?`<span class="pc ${r.pct>=0?'u':'d'}">${r.pct>=0?'▲':'▼'} ${PC(r.pct)}</span>`:'';
+ return`<div class="cd">${pc}<b>${i.n}</b><div class="pr">${F(r.p,i.u)}</div><small>${UN(i)}</small><br><small>${r.src==='A'?'نرخ‌آرا':'tabloo'} · ${tm2(r.t)}${r.stale?' · <span class="st">قدیمی</span>':''}</small></div>`}
+function render(){
+ document.documentElement.dataset.th=S.th;
+ $('#hc').textContent=S.ch;$('#dt').textContent=jd(new Date())+' — '+tm2(Date.now());
+ const b=$('#bn');
+ if(!D){b.className='bn bad';b.textContent='داده‌ای در دسترس نیست؛ اتصال اینترنت را بررسی کنید.'}
+ else if(cache){b.className='bn warn';b.textContent='⚠️ آخرین اطلاعات ذخیره‌شده ('+jd(new Date(D.at))+' ساعت '+tm2(D.at)+') — قیمت زنده نیست.'}
+ else{const old=Object.values(D.d).some(r=>r&&r.stale);b.className='bn '+(old?'warn':'ok');
+  b.textContent=(old?'⚠️ بخشی از قیمت‌ها قدیمی است. ':'')+'آخرین دریافت: '+tm2(D.at)}
+ const sa='منبع اصلی (نرخ‌آرا): '+ST.a,sb='منبع پشتیبان (tabloo): '+ST.b;
+ $('#sa').textContent=sa;$('#sb').textContent=sb;$('#ss').innerHTML=sa+'<br>'+sb;
+ $('#cards').innerHTML=[...new Set(ITEMS.map(i=>i.c))].map(c=>{
+  const it=ITEMS.filter(i=>i.c===c&&S.show.includes(i.id));
+  return it.length?`<h3>${c}</h3><div class="g">${it.map(card).join('')}</div>`:''}).join('')}
+function chips(el,key){el.innerHTML=ITEMS.map(i=>`<label class="ch"><input type="checkbox" data-k="${key}" value="${i.id}" ${S[key].includes(i.id)?'checked':''}>${i.n}</label>`).join('')}
+document.addEventListener('change',e=>{const k=e.target.dataset.k;if(!k)return;
+ S[k]=$$('input[data-k="'+k+'"]:checked').map(x=>x.value);sv();render()});
+$$('[data-s]').forEach(e=>{const k=e.dataset.s;
+ if(e.type==='checkbox')e.checked=!!S[k];else e.value=S[k];
+ e.onchange=()=>{S[k]=e.type==='checkbox'?+e.checked:e.type==='number'?Math.max(5,+e.value||60):e.value;
+  if(e.type==='number')e.value=S[k];sv();if(k==='int')sched();render()}});
+$$('nav button').forEach(b=>b.onclick=()=>{$$('nav button').forEach(x=>x.classList.toggle('on',x===b));
+ ['d','i','s'].forEach(t=>$('#t-'+t).hidden=t!==b.dataset.t)});
+$('#rf').onclick=refresh;
+$('#cl').onclick=()=>{try{localStorage.removeItem('pc')}catch(e){}D=null;cache=false;render();alert('حافظهٔ ذخیره‌شده پاک شد.')};
+function rr(x,a,b,w,h,r){x.beginPath();x.moveTo(a+r,b);x.arcTo(a+w,b,a+w,b+h,r);x.arcTo(a+w,b+h,a,b+h,r);x.arcTo(a,b+h,a,b,r);x.arcTo(a,b,a+w,b,r);x.closePath()}
+async function draw(){
+ try{await document.fonts.load('700 40px Vazirmatn');await document.fonts.load('900 40px Vazirmatn')}catch(e){}
+ const W=1200,H=1600,c=$('#cv');c.width=W;c.height=H;const x=c.getContext('2d');
+ const FN='Vazirmatn,Tahoma,"Noto Naskh Arabic",Arial,sans-serif';
+ const g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#0b1a45');g.addColorStop(1,'#050b22');
+ x.fillStyle=g;x.fillRect(0,0,W,H);
+ x.strokeStyle='#d4af37';x.lineWidth=3;rr(x,30,30,W-60,H-60,28);x.stroke();
+ x.lineWidth=1;x.globalAlpha=.4;rr(x,46,46,W-92,H-92,20);x.stroke();x.globalAlpha=1;
+ x.direction='rtl';
+ const T=(s,px,py,sz,col,al,wt)=>{x.font=(wt||700)+' '+sz+'px '+FN;x.fillStyle=col;x.textAlign=al||'right';x.textBaseline='middle';x.fillText(s,px,py)};
+ const at=D?D.at:Date.now();
+ T('PRICE',W/2,135,110,'#d4af37','center',900);
+ T(S.ti,W/2,235,54,'#f4f1e6','center');
+ T(jd(new Date(at))+' — ساعت '+tm2(at),W/2,305,32,'#9aa6c7','center');
+ if(!D)T('داده‌ای در دسترس نیست',W/2,352,30,'#ff8a80','center');
+ else if(cache)T('توجه: آخرین اطلاعات ذخیره‌شده است، نه قیمت زنده',W/2,352,30,'#ff8a80','center');
+ else if(Object.values(D.d).some(r=>r&&r.stale))T('توجه: برخی قیمت‌ها قدیمی هستند (علامت *)',W/2,352,30,'#ffd666','center');
+ x.strokeStyle='#d4af37';x.globalAlpha=.5;x.beginPath();x.moveTo(100,395);x.lineTo(W-100,395);x.stroke();x.globalAlpha=1;
+ const sel=ITEMS.filter(i=>S.img.includes(i.id)),top=420,bot=H-(S.ft?240:90);
+ if(!sel.length)T('هیچ قلمی انتخاب نشده',W/2,800,40,'#9aa6c7','center');
+ const rh=Math.min(118,(bot-top)/Math.max(sel.length,1));
+ sel.forEach((i,k)=>{const y=top+k*rh,h=rh-14,cy=y+h/2,r=D&&D.d[i.id];
+  x.fillStyle='#121f55';rr(x,70,y,W-140,h,18);x.fill();
+  x.strokeStyle='rgba(212,175,55,.35)';x.lineWidth=1.5;rr(x,70,y,W-140,h,18);x.stroke();
+  T(i.n,W-100,cy,42,'#f4f1e6','right');
+  if(!r){T('داده در دسترس نیست',100,cy,32,'#9aa6c7','left');return}
+  T(F(r.p,i.u)+' '+(i.u==='D'?'دلار':'تومان')+(r.stale?' *':''),100,cy,44,'#f2d77b','left',900);
+  if(S.pct&&r.pct!=null)T((r.pct>=0?'▲ ':'▼ ')+PC(r.pct),640,cy,32,r.pct>=0?'#2ecc71':'#ff5252','center')});
+ if(S.ft){
+  x.strokeStyle='#d4af37';x.globalAlpha=.5;x.beginPath();x.moveTo(100,H-262);x.lineTo(W-100,H-262);x.stroke();x.globalAlpha=1;
+  T(S.ch,W/2,H-195,46,'#d4af37','center',900);
+  T(S.id,W/2,H-135,36,'#f4f1e6','center');
+  T('«با آسان نت کافی نت تو جیبتته»',W/2,H-80,32,'#9aa6c7','center')}
+}
+const blob=()=>new Promise(r=>$('#cv').toBlob(r,'image/png'));
+$('#mk').onclick=draw;
+$('#dl').onclick=async()=>{await draw();const b=await blob(),a=document.createElement('a');
+ a.href=URL.createObjectURL(b);a.download='price-'+Date.now()+'.png';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),9000)};
+$('#sh').onclick=async()=>{await draw();const b=await blob(),f=new File([b],'price.png',{type:'image/png'});
+ if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:S.ti})}catch(e){}}
+ else alert('اشتراک‌گذاری مستقیم در این مرورگر پشتیبانی نمی‌شود؛ از دکمهٔ دانلود استفاده کنید.')};
+chips($('#chi'),'img');chips($('#chs'),'show');
+try{const o=JSON.parse(localStorage.getItem('pc'));if(o&&o.d){D=o;cache=true}}catch(e){}
+render();refresh();sched();
+addEventListener('online',refresh);
+</script></body></html>
