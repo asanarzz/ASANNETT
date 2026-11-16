@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T18:47:45+00:00",
+ "updated": "2026-11-16T00:59:31+00:00",
  "items": [
   {
    "name": "وانت آریسان",
@@ -944,12 +944,53 @@
  ],
  "log": [
   {
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-23-aban-1405.p125176",
+   "status": "ok",
+   "count": 47,
+   "date": "2026-11-14",
+   "title": "ریزش قیمت خودرو امروز ۲۳ آبان ۱۴۰۵؛ ایران‌خودرو و سایپا ارزان شدند"
+  },
+  {
+   "source": "snn.ir",
+   "url": "https://snn.ir/fa/news/1488597/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-22-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%86%D9%88%D8%B3%D8%A7%D9%86-%D9%82%DB%8C%D9%85%D8%AA%DB%8C-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B4%D8%AF%DB%8C%D8%AF%D8%AA%D8%B1-%D8%B4%D8%AF-%D8%AC%D8%AF%D9%88%D9%84",
+   "status": "ok",
+   "count": 47,
+   "date": "2026-11-13",
+   "title": "قیمت خودرو امروز ۲۲ آبان ۱۴۰۵ ؛ نوسان قیمتی خودرو شدیدتر شد+ جدول"
+  },
+  {
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B3-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AD%D8%A8%D8%A7",
+   "status": "ok",
+   "count": 5,
+   "date": "2026-11-14",
+   "title": "قیمت خودرو امروز شنبه ۲۳ آبان ۱۴۰۵ / حباب قیمت خودرو ترکید؛ عقب‌نشینی "
+  },
+  {
+   "source": "khabaronline.ir",
+   "url": "https://www.khabaronline.ir/news/2301712/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B3-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D9%82%DB%8C%D9%85%D8%AA-%D9%BE%DA%98%D9%88%DB%B2%DB%B0%DB%B7-%D8%A8%D9%87-%DB%B4-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF",
+   "status": "error",
+   "count": 2,
+   "date": "2026-11-14",
+   "title": "قیمت خودرو امروز شنبه ۲۳ آبان ۱۴۰۵/ قیمت پژو۲۰۷ به ۴ میلیارد و ۲۰۰ میل",
+   "error": "جدول قیمت کافی پیدا نشد"
+  },
+  {
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/947872/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-23-%D8%A2%D8%A8%D8%A7%D9%86-1405",
+   "status": "ok",
+   "count": 97,
+   "date": "2026-11-14",
+   "title": "قیمت خودرو امروز شنبه ۲۳ آبان ۱۴۰۵"
+  },
+  {
    "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/178450/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "url": "https://www.ettelaat.com/news/178448/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%DA%A9%D8%B1%D8%AF-%D9%84%DB%8C%D8%B3%D8%AA-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
    "status": "ok",
    "count": 27,
    "date": "2026-11-15",
-   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز یکشنبه ۲۴ آبان ۱۴۰۵ +جدول"
+   "title": "قیمت خودروهای سایپا تغییر کرد/ لیست امروز یکشنبه ۲۴ آبان ۱۴۰۵ را ببینی"
   },
   {
    "source": "gadgetnews.net",
@@ -960,12 +1001,12 @@
    "title": "قیمت محصولات ایران‌خودرو و سایپا – امروز یکشنبه ۲۴ آبان ۱۴۰۵"
   },
   {
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-23-aban-1405.p125176",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/178450/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
    "status": "ok",
-   "count": 47,
-   "date": "2026-11-14",
-   "title": "ریزش قیمت خودرو امروز ۲۳ آبان ۱۴۰۵؛ ایران‌خودرو و سایپا ارزان شدند"
+   "count": 27,
+   "date": "2026-11-15",
+   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز یکشنبه ۲۴ آبان ۱۴۰۵ +جدول"
   },
   {
    "source": "rokna.net",
@@ -974,14 +1015,6 @@
    "count": 0,
    "date": "2026-11-15",
    "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
-  },
-  {
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1175244/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D9%BE%D9%86%D8%AC-%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B1-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
-   "status": "ok",
-   "count": 11,
-   "date": "2026-11-12",
-   "title": "قیمت محصولات ایران‌ خودرو امروز پنج‌شنبه ۲۱ آبان ۱۴۰۵/ امروز کدام خودر"
   },
   {
    "source": "sarmayevabourse.ir",
@@ -1000,22 +1033,6 @@
    "title": "قیمت محصولات ایران خودرو و سایپا امروز یکشنبه ۲۴ آبان ۱۴۰۵؛ پژو ۲۰۷ و "
   },
   {
-   "source": "vananews.com",
-   "url": "https://vananews.com/fa/news/670535/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-24-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D8%A7%D9%86%D9%81%D8%AC%D8%A7%D8%B1-%D9%82%DB%8C%D9%85%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%B3%D9%88%D8%B1%D9%86-305-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D9%88-%D9%BE%DA%98%D9%88-207-%D8%AD%D8%AF%D9%88%D8%AF-180-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%DA%AF%D8%B1%D8%A7%D9%86-%D8%B4%D8%AF",
-   "status": "ok",
-   "count": 11,
-   "date": "2026-11-15",
-   "title": "قیمت خودرو امروز یکشنبه ۲۴ آبان ۱۴۰۵؛ انفجار قیمت ایران‌خودرو و سایپا "
-  },
-  {
-   "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/178448/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%DA%A9%D8%B1%D8%AF-%D9%84%DB%8C%D8%B3%D8%AA-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
-   "status": "ok",
-   "count": 27,
-   "date": "2026-11-15",
-   "title": "قیمت خودروهای سایپا تغییر کرد/ لیست امروز یکشنبه ۲۴ آبان ۱۴۰۵ را ببینی"
-  },
-  {
    "source": "khabaronline.ir",
    "url": "https://www.khabaronline.ir/news/2301420/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B2-%D8%A2%D8%A8%D8%A7%D9%86-%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D9%86%D9%88%D8%B3%D8%A7%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B4%D8%AF%D8%AA-%DA%AF%D8%B1%D9%81%D8%AA",
    "status": "ok",
@@ -1024,53 +1041,12 @@
    "title": "قیمت خودرو امروز ۲۲ آبان‌ماه ۱۴۰۵/ نوسان قیمت خودرو شدت گرفت؛ هایما ۶ "
   },
   {
-   "source": "khabaronline.ir",
-   "url": "https://www.khabaronline.ir/news/2301712/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B3-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D9%82%DB%8C%D9%85%D8%AA-%D9%BE%DA%98%D9%88%DB%B2%DB%B0%DB%B7-%D8%A8%D9%87-%DB%B4-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF",
-   "status": "ok",
-   "count": 7,
-   "date": "2026-11-14",
-   "title": "قیمت خودرو امروز شنبه ۲۳ آبان ۱۴۰۵/ قیمت پژو۲۰۷ به ۴ میلیارد و ۲۰۰ میل"
-  },
-  {
-   "source": "tejaratnews.com",
-   "url": "https://tejaratnews.com/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B3-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AD%D8%A8%D8%A7",
-   "status": "ok",
-   "count": 5,
-   "date": "2026-11-14",
-   "title": "قیمت خودرو امروز شنبه ۲۳ آبان ۱۴۰۵ / حباب قیمت خودرو ترکید؛ عقب‌نشینی "
-  },
-  {
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1175461/قیمت-محصولات-ایران-خودرو-امروز-شنبه-۲۳-آبان-۱۴۰۵-۲۰۷-ارزان-شد",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-14",
-   "error": "'ascii' codec can't encode characters in position 18-21: ordinal not in range(128)"
-  },
-  {
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/947872/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-23-%D8%A2%D8%A8%D8%A7%D9%86-1405",
-   "status": "ok",
-   "count": 97,
-   "date": "2026-11-14",
-   "title": "قیمت خودرو امروز شنبه ۲۳ آبان ۱۴۰۵"
-  },
-  {
-   "source": "rokna.net",
-   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1266368-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%A8%D8%A7%D9%86-%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%AF%D8%A7%D8%B1%D8%AF-%D8%AC%D8%AF%D9%88%D9%84",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-14",
-   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
-  },
-  {
    "source": "vananews.com",
-   "url": "https://vananews.com/fa/news/670515/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%DA%A9%D8%A7%D8%B1%DA%A9%D8%B1%D8%AF%D9%87-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-23-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D9%BE%D8%B1%D8%A7%DB%8C%D8%AF-690-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D9%BE%DA%98%D9%88-206-%D8%AF%D8%B1-%D8%A2%D8%B3%D8%AA%D8%A7%D9%86%D9%87-%DB%8C%DA%A9-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%D8%AC%D8%AF%D9%88%D9%84-%D9%82%DB%8C%D9%85%D8%AA-%D9%88-%D9%85%D9%82%D8%A7%DB%8C%D8%B3%D9%87-%D8%B3%D9%88%D8%B1%D9%86-%D8%A8%D8%A7-%D8%B4%D8%A7%D9%87%DB%8C%D9%86",
-   "status": "error",
-   "count": 3,
-   "date": "2026-11-14",
-   "title": "قیمت خودروهای کارکرده امروز ۲۳ آبان ۱۴۰۵؛ پراید ۶۹۰ میلیون، پژو ۲۰۶ در",
-   "error": "جدول قیمت کافی پیدا نشد"
+   "url": "https://vananews.com/fa/news/670535/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-24-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D8%A7%D9%86%D9%81%D8%AC%D8%A7%D8%B1-%D9%82%DB%8C%D9%85%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%B3%D9%88%D8%B1%D9%86-305-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D9%88-%D9%BE%DA%98%D9%88-207-%D8%AD%D8%AF%D9%88%D8%AF-180-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D8%AA%D9%88%D9%85%D8%A7%D9%86-%DA%AF%D8%B1%D8%A7%D9%86-%D8%B4%D8%AF",
+   "status": "ok",
+   "count": 11,
+   "date": "2026-11-15",
+   "title": "قیمت خودرو امروز یکشنبه ۲۴ آبان ۱۴۰۵؛ انفجار قیمت ایران‌خودرو و سایپا "
   }
  ]
 }
