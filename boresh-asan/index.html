@@ -1,1 +1,1208 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>برش آسان</title>
+<style>
+html,body{margin:0;height:100%;background:#0b1a44;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-tap-highlight-color:transparent}
+body{display:flex;align-items:center;justify-content:center}
+canvas{display:block;border-radius:12px}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+(function () {
+'use strict';
 
+var W = 400, H = 700;
+var cv = document.getElementById('c');
+var ctx = cv.getContext('2d');
+
+var Q = 1;
+function resize() {
+  var dpr = Math.min(window.devicePixelRatio || 1, 1.75) * Q;
+  var scale = Math.min(window.innerWidth / W, window.innerHeight / H);
+  cv.style.width = (W * scale) + 'px';
+  cv.style.height = (H * scale) + 'px';
+  cv.width = Math.round(W * scale * dpr);
+  cv.height = Math.round(H * scale * dpr);
+  ctx.setTransform(cv.width / W, 0, 0, cv.height / H, 0, 0);
+}
+window.addEventListener('resize', resize);
+resize();
+
+var BRAND = 'کافی نت آسان نت';
+var BRAND_EN = '@ASANNETT';
+var TEXT_FONT = 'Vazirmatn, Tahoma, "Noto Sans Arabic", "Segoe UI", Arial, sans-serif';
+function rnd(a, b) { return a + Math.random() * (b - a); }
+function clamp(v, a, b) { return v < a ? a : (v > b ? b : v); }
+function fa(n) { return String(n).replace(/\d/g, function (d) { return '۰۱۲۳۴۵۶۷۸۹'[d]; }); }
+function hash(i) { var s = Math.sin(i * 12.9898 + 78.233) * 43758.5453; return s - Math.floor(s); }
+
+/* ---------------- sound ---------------- */
+var audio = null;
+function beep(freq, dur, type, vol, slide) {
+  try {
+    if (!audio) audio = new (window.AudioContext || window.webkitAudioContext)();
+    if (audio.state === 'suspended') audio.resume();
+    var o = audio.createOscillator(), g = audio.createGain(), t = audio.currentTime;
+    o.type = type || 'sine';
+    o.frequency.setValueAtTime(freq, t);
+    if (slide) o.frequency.exponentialRampToValueAtTime(Math.max(30, freq * slide), t + dur);
+    g.gain.setValueAtTime(vol || 0.07, t);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g); g.connect(audio.destination);
+    o.start(t); o.stop(t + dur);
+  } catch (e) {}
+}
+
+/* ---------------- brand textures ---------------- */
+function rrect(c, x, y, w, h, r) {
+  c.beginPath();
+  c.moveTo(x + r, y);
+  c.lineTo(x + w - r, y); c.quadraticCurveTo(x + w, y, x + w, y + r);
+  c.lineTo(x + w, y + h - r); c.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  c.lineTo(x + r, y + h); c.quadraticCurveTo(x, y + h, x, y + h - r);
+  c.lineTo(x, y + r); c.quadraticCurveTo(x, y, x + r, y);
+  c.closePath();
+}
+
+function fitText(c, text, cx, cy, maxW, size, weight, color, dir) {
+  c.direction = dir || 'rtl';
+  c.textAlign = 'center';
+  c.textBaseline = 'middle';
+  c.font = weight + ' ' + size + 'px ' + TEXT_FONT;
+  var w = c.measureText(text).width;
+  if (w > maxW) { size = size * maxW / w; c.font = weight + ' ' + size + 'px ' + TEXT_FONT; }
+  c.fillStyle = color;
+  c.fillText(text, cx, cy);
+}
+
+function makeTex(w, h, theme, layout) {
+  var cvs = document.createElement('canvas');
+  cvs.width = w; cvs.height = h;
+  var c = cvs.getContext('2d');
+  var navy = theme === 'navy';
+  var g = c.createLinearGradient(0, 0, 0, h);
+  if (navy) { g.addColorStop(0, '#14409a'); g.addColorStop(1, '#071b52'); }
+  else { g.addColorStop(0, '#ffa63a'); g.addColorStop(1, '#f26a0a'); }
+  c.fillStyle = g;
+  c.fillRect(0, 0, w, h);
+  var acc = navy ? '#ff8a1f' : '#0b2a6f';
+  var txt = '#ffffff';
+  // diagonal sheen stripes
+  c.fillStyle = 'rgba(255,255,255,0.07)';
+  for (var sx = -h; sx < w; sx += h * 0.9) {
+    c.beginPath();
+    c.moveTo(sx, h); c.lineTo(sx + h * 0.35, h); c.lineTo(sx + h * 0.35 + h, 0); c.lineTo(sx + h, 0);
+    c.closePath(); c.fill();
+  }
+  c.fillStyle = acc;
+  c.fillRect(0, 0, w, Math.max(4, h * 0.05));
+  c.fillRect(0, h - Math.max(4, h * 0.05), w, Math.max(4, h * 0.05));
+
+  if (layout === 'one') {
+    var ls = h * 0.66;
+    rrect(c, w * 0.035, (h - ls) / 2, ls, ls, ls * 0.24);
+    c.fillStyle = navy ? '#ff8a1f' : '#ffffff'; c.fill();
+    c.font = 'bold ' + (ls * 0.78) + 'px Arial, sans-serif';
+    c.direction = 'ltr'; c.textAlign = 'center'; c.textBaseline = 'middle';
+    c.fillStyle = navy ? '#ffffff' : '#f26a0a';
+    c.fillText('e', w * 0.035 + ls / 2, h / 2 + ls * 0.03);
+    fitText(c, BRAND, w * 0.55, h * 0.5, w * 0.5, h * 0.56, 'bold', txt);
+    fitText(c, BRAND_EN, w * 0.9, h * 0.5, w * 0.17, h * 0.2, 'bold', acc, 'ltr');
+  } else {
+    var lg = h * 0.46;
+    rrect(c, w * 0.04, h * 0.08, lg * 0.78, lg * 0.78, lg * 0.19);
+    c.fillStyle = navy ? '#ff8a1f' : '#ffffff'; c.fill();
+    c.font = 'bold ' + (lg * 0.6) + 'px Arial, sans-serif';
+    c.direction = 'ltr'; c.textAlign = 'center'; c.textBaseline = 'middle';
+    c.fillStyle = navy ? '#ffffff' : '#f26a0a';
+    c.fillText('e', w * 0.04 + lg * 0.39, h * 0.08 + lg * 0.41);
+    fitText(c, BRAND, w * 0.5, h * 0.4, w * 0.74, h * 0.4, 'bold', txt);
+    fitText(c, BRAND_EN, w * 0.5, h * 0.8, w * 0.5, h * 0.2, 'bold', acc, 'ltr');
+  }
+  return cvs;
+}
+
+var TEX = {};
+function buildTextures() {
+  TEX.boardN = makeTex(768, 120, 'navy', 'one');
+  TEX.boardO = makeTex(768, 120, 'orange', 'one');
+  TEX.wallN = makeTex(768, 208, 'navy', 'two');
+  TEX.wallO = makeTex(768, 208, 'orange', 'two');
+  TEX.tableN = makeTex(640, 192, 'navy', 'two');
+}
+buildTextures();
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(function () { buildTextures(); });
+}
+
+/* ---------------- tiny 3D engine ---------------- */
+var FOCAL = 666, CX = W / 2, CY = 398;
+var CAM_EX = -313, CAM_EY = 179, CAM_EZ = -336, CAM_TX = 125, CAM_TY = 39;
+var cam = { x: 0, y: 0 };
+var ex, ey, ez, fx, fy, fz, rx, rz, ux, uy, uz;
+
+function setCam() {
+  ex = cam.x + CAM_EX; ey = CAM_EY + cam.y; ez = CAM_EZ;
+  var tx = cam.x + CAM_TX, ty = CAM_TY + cam.y, tz = 0;
+  var dx = tx - ex, dy = ty - ey, dz = tz - ez;
+  var l = Math.sqrt(dx * dx + dy * dy + dz * dz);
+  fx = dx / l; fy = dy / l; fz = dz / l;
+  var rl = Math.sqrt(fz * fz + fx * fx);
+  rx = fz / rl; rz = -fx / rl;
+  ux = fy * rz; uy = fz * rx - fx * rz; uz = -fy * rx;
+}
+
+var tmp = [0, 0, 0];
+function proj(x, y, z, out) {
+  var dx = x - ex, dy = y - ey, dz = z - ez;
+  var zc = dx * fx + dy * fy + dz * fz;
+  out[2] = zc;
+  if (zc < 1) zc = 1;
+  var xc = dx * rx + dz * rz;
+  var yc = dx * ux + dy * uy + dz * uz;
+  out[0] = CX + FOCAL * xc / zc;
+  out[1] = CY - FOCAL * yc / zc;
+}
+
+var LL = Math.sqrt(0.45 * 0.45 + 0.8 * 0.8 + 0.45 * 0.45);
+var LX = 0.45 / LL, LY = 0.8 / LL, LZ = -0.45 / LL;
+var HAZE = [208, 236, 250];
+var MAT_METAL = { s: 0.85, p: 26 }, MAT_GLOSS = { s: 0.34, p: 18 }, MAT_SOFT = { s: 0.08, p: 8 };
+
+var POOL = [], FN = 0, FLs = [];
+var WV = new Float64Array(160);
+
+function getCand() {
+  var cand = POOL[FN];
+  if (!cand) { cand = { x: new Float64Array(40), y: new Float64Array(40), n: 0, z: 0, col: '', ns: false, tex: null, sx: 0, sw: 0, al: 1, sz: 0 }; POOL[FN] = cand; }
+  return cand;
+}
+
+function addPolyW(n, c, bias, m, colStr, ns) {
+  var cand = getCand();
+  var X = cand.x, Y = cand.y, j, zsum = 0;
+  var minx = 1e9, maxx = -1e9, miny = 1e9, maxy = -1e9;
+  for (j = 0; j < n; j++) {
+    var dx = WV[j * 3] - ex, dy = WV[j * 3 + 1] - ey, dz = WV[j * 3 + 2] - ez;
+    var zc = dx * fx + dy * fy + dz * fz;
+    if (zc < 40) return;
+    var xc = dx * rx + dz * rz, yc = dx * ux + dy * uy + dz * uz;
+    var sx = CX + FOCAL * xc / zc, sy = CY - FOCAL * yc / zc;
+    X[j] = sx; Y[j] = sy; zsum += zc;
+    if (sx < minx) minx = sx;
+    if (sx > maxx) maxx = sx;
+    if (sy < miny) miny = sy;
+    if (sy > maxy) maxy = sy;
+  }
+  if (maxx < -50 || minx > W + 50 || maxy < -50 || miny > H + 50) return;
+  var depth = zsum / n;
+  if (colStr) {
+    cand.col = colStr;
+  } else {
+    var nx = 0, ny = 0, nz = 0, a, b;
+    for (j = 0; j < n; j++) {
+      a = j * 3; b = ((j + 1) % n) * 3;
+      nx += (WV[a + 1] - WV[b + 1]) * (WV[a + 2] + WV[b + 2]);
+      ny += (WV[a + 2] - WV[b + 2]) * (WV[a] + WV[b]);
+      nz += (WV[a] - WV[b]) * (WV[a + 1] + WV[b + 1]);
+    }
+    var nl = Math.sqrt(nx * nx + ny * ny + nz * nz) || 1;
+    nx /= nl; ny /= nl; nz /= nl;
+    var vx = ex - WV[0], vy = ey - WV[1], vz = ez - WV[2];
+    if (nx * vx + ny * vy + nz * vz < 0) { nx = -nx; ny = -ny; nz = -nz; }
+    var d = nx * LX + ny * LY + nz * LZ;
+    var sh = 0.5 + 0.2 * (ny * 0.5 + 0.5) + 0.55 * Math.max(0, d);
+    var r = c[0] * sh, g = c[1] * sh, bl = c[2] * sh;
+    if (m) {
+      var vl = Math.sqrt(vx * vx + vy * vy + vz * vz) || 1;
+      var hx = LX + vx / vl, hy = LY + vy / vl, hz = LZ + vz / vl;
+      var hl = Math.sqrt(hx * hx + hy * hy + hz * hz) || 1;
+      var nh = (nx * hx + ny * hy + nz * hz) / hl;
+      if (nh > 0) {
+        var sp = Math.pow(nh, m.p) * m.s * 255;
+        r += sp; g += sp; bl += sp;
+      }
+    }
+    var fog = clamp((depth - 480) / 1000, 0, 0.55);
+    if (fog > 0) {
+      r += (HAZE[0] - r) * fog; g += (HAZE[1] - g) * fog; bl += (HAZE[2] - bl) * fog;
+    }
+    cand.col = 'rgb(' + (r > 255 ? 255 : r | 0) + ',' + (g > 255 ? 255 : g | 0) + ',' + (bl > 255 ? 255 : bl | 0) + ')';
+  }
+  cand.n = n; cand.z = depth - bias; cand.ns = !!ns; cand.tex = null; cand.sz = (maxx - minx) + (maxy - miny);
+  FN++;
+  FLs.push(cand);
+}
+
+/* textured strip: texture slice (sx..sx+sw) mapped onto world parallelogram tl,tr,bl */
+function addStrip(tex, sx, sw, ax, ay, bx, by, cx, cy, z, bias) {
+  var cand = getCand(), X = cand.x, Y = cand.y, zs = 0, k2;
+  var P = [ax, ay, bx, by, cx, cy];
+  for (k2 = 0; k2 < 3; k2++) {
+    var dx = P[k2 * 2] - ex, dy = P[k2 * 2 + 1] - ey, dz = z - ez;
+    var zc = dx * fx + dy * fy + dz * fz;
+    if (zc < 40) return;
+    var xc = dx * rx + dz * rz, yc = dx * ux + dy * uy + dz * uz;
+    X[k2] = CX + FOCAL * xc / zc; Y[k2] = CY - FOCAL * yc / zc; zs += zc;
+  }
+  var X3 = X[1] + X[2] - X[0];
+  var mn = Math.min(X[0], X[1], X[2], X3), mx = Math.max(X[0], X[1], X[2], X3);
+  if (mx < -40 || mn > W + 40) return;
+  var depth = zs / 3;
+  cand.tex = tex; cand.sx = sx; cand.sw = sw; cand.n = 3; cand.ns = true;
+  cand.al = 1 - clamp((depth - 480) / 1000, 0, 0.55) * 0.75;
+  cand.z = depth - bias;
+  FN++;
+  FLs.push(cand);
+}
+
+function addModel(faces, px, py, pz, ang, bias) {
+  var c = Math.cos(ang), s = Math.sin(ang);
+  for (var i = 0; i < faces.length; i++) {
+    var f = faces[i], v = f.v, n = f.n;
+    for (var j = 0; j < n; j++) {
+      var lx = v[j * 3], ly = v[j * 3 + 1], lz = v[j * 3 + 2];
+      WV[j * 3] = px + lx * c - ly * s;
+      WV[j * 3 + 1] = py + lx * s + ly * c;
+      WV[j * 3 + 2] = pz + lz;
+    }
+    addPolyW(n, f.c, bias, f.m, null, false);
+  }
+}
+
+function addWorldPoly(pts, c, bias, m) {
+  for (var j = 0; j < pts.length; j++) {
+    WV[j * 3] = pts[j][0]; WV[j * 3 + 1] = pts[j][1]; WV[j * 3 + 2] = pts[j][2];
+  }
+  addPolyW(pts.length, c, bias, m || null, null, false);
+}
+
+function addShadow(x, y, z, r, a) {
+  var n = 16, pass, j;
+  for (pass = 0; pass < 2; pass++) {
+    var rr = r * (1 - pass * 0.35), al = a * (0.5 + pass * 0.2);
+    for (j = 0; j < n; j++) {
+      var t = j / n * Math.PI * 2;
+      WV[j * 3] = x + Math.cos(t) * rr;
+      WV[j * 3 + 1] = y + 0.6 + pass * 0.05;
+      WV[j * 3 + 2] = z + Math.sin(t) * rr * 0.85;
+    }
+    addPolyW(n, null, 30 + pass, null, 'rgba(14,44,30,' + al.toFixed(2) + ')', true);
+  }
+}
+
+/* ---------------- model builders ---------------- */
+function mk(pts, c, m) {
+  var n = pts.length, v = new Float64Array(n * 3);
+  for (var i = 0; i < n; i++) { v[i * 3] = pts[i][0]; v[i * 3 + 1] = pts[i][1]; v[i * 3 + 2] = pts[i][2]; }
+  return { n: n, v: v, c: c, m: m || null };
+}
+
+function boxFaces(x0, x1, y0, y1, z0, z1, col, m, capCol, capZ) {
+  var A = [x0, y0, z0], B = [x1, y0, z0], C = [x1, y1, z0], D = [x0, y1, z0];
+  var E = [x0, y0, z1], F = [x1, y0, z1], G = [x1, y1, z1], Hh = [x0, y1, z1];
+  return [
+    mk([A, B, C, D], capZ === 'z0' ? capCol : col, m),
+    mk([E, F, G, Hh], capZ === 'z1' ? capCol : col, m),
+    mk([A, B, F, E], col, m), mk([D, C, G, Hh], col, m),
+    mk([A, D, Hh, E], col, m), mk([B, C, G, F], col, m)
+  ];
+}
+
+function prismFaces(poly, z0, z1, colFront, colBack, colSide, m) {
+  var n = poly.length, fr = [], bk = [], f = [], i;
+  for (i = 0; i < n; i++) { fr.push([poly[i][0], poly[i][1], z0]); bk.push([poly[i][0], poly[i][1], z1]); }
+  f.push(mk(fr, colFront, m));
+  f.push(mk(bk, colBack, m));
+  for (i = 0; i < n; i++) {
+    var j = (i + 1) % n;
+    f.push(mk([fr[i], fr[j], bk[j], bk[i]], colSide, m));
+  }
+  return f;
+}
+
+function discPoly(cx, cy, z, r, n) {
+  var p = [];
+  for (var i = 0; i < n; i++) { var t = i / n * Math.PI * 2; p.push([cx + Math.cos(t) * r, cy + Math.sin(t) * r, z]); }
+  return p;
+}
+
+function cylX(x0, x1, ry, rz, nSeg, nSec, colA, colB, half, m, endCol) {
+  var f = [], i, s, P = [];
+  for (s = 0; s <= nSeg; s++) {
+    var psi = s / nSeg * Math.PI * 2;
+    P.push([ry * Math.cos(psi), rz * Math.sin(psi)]);
+  }
+  for (i = 0; i < nSec; i++) {
+    var xa = x0 + (x1 - x0) * i / nSec, xb = x0 + (x1 - x0) * (i + 1) / nSec;
+    var col = (i % 2) ? colB : colA;
+    for (s = 0; s < nSeg; s++) {
+      if (half > 0 && s >= nSeg / 2) continue;
+      if (half < 0 && s < nSeg / 2) continue;
+      f.push(mk([[xa, P[s][0], P[s][1]], [xb, P[s][0], P[s][1]], [xb, P[s + 1][0], P[s + 1][1]], [xa, P[s + 1][0], P[s + 1][1]]], col, m));
+    }
+  }
+  var ring = function (xx) {
+    var pts = [], from = 0, to = nSeg;
+    if (half > 0) to = nSeg / 2; else if (half < 0) from = nSeg / 2;
+    for (s = from; s <= to; s++) pts.push([xx, P[s][0], P[s][1]]);
+    return pts;
+  };
+  f.push(mk(ring(x0), endCol || colA, m));
+  f.push(mk(ring(x1), endCol || colA, m));
+  return f;
+}
+
+function coneY(cx, cz, y0, r, h, n, col, m) {
+  var f = [], i;
+  for (i = 0; i < n; i++) {
+    var a0 = i / n * Math.PI * 2, a1 = (i + 1) / n * Math.PI * 2;
+    f.push(mk([[cx + r * Math.cos(a0), y0, cz + r * Math.sin(a0)], [cx + r * Math.cos(a1), y0, cz + r * Math.sin(a1)], [cx, y0 + h, cz]], col, m));
+  }
+  return f;
+}
+
+function treeModel(sc, shade) {
+  var f = boxFaces(-4 * sc, 4 * sc, 0, 22 * sc, -4 * sc, 4 * sc, [112, 78, 50]);
+  f = f.concat(coneY(0, 0, 14 * sc, 31 * sc, 46 * sc, 8, [50 + shade, 148 + shade, 84], MAT_SOFT));
+  f = f.concat(coneY(0, 0, 38 * sc, 25 * sc, 42 * sc, 8, [44 + shade, 136 + shade, 78], MAT_SOFT));
+  f = f.concat(coneY(0, 0, 60 * sc, 18 * sc, 40 * sc, 8, [62 + shade, 164 + shade, 98], MAT_SOFT));
+  return f;
+}
+var TREES = [treeModel(0.9, 0), treeModel(1.15, 10), treeModel(1.45, -6)];
+
+/* ---------- knife ---------- */
+var KNIFE = (function () {
+  var A = [0, 11], B = [46, 11], C = [64, -3], D = [48, -10], E = [0, -10], M = [0, -0.5];
+  function p(pt, z) { return [pt[0], pt[1], z]; }
+  var up = [128, 196, 232], lo = [208, 238, 252], upB = [104, 172, 212], loB = [186, 224, 244], spine = [86, 150, 190], edge = [240, 252, 255];
+  var f = [];
+  f.push(mk([p(A, -3), p(B, -3), p(C, -3), p(M, -3)], up, MAT_METAL));
+  f.push(mk([p(M, -3), p(C, -3), p(D, -0.7), p(E, -0.7)], lo, MAT_METAL));
+  f.push(mk([p(A, 3), p(B, 3), p(C, 3), p(M, 3)], upB, MAT_METAL));
+  f.push(mk([p(M, 3), p(C, 3), p(D, 0.7), p(E, 0.7)], loB, MAT_METAL));
+  f.push(mk([p(A, -3), p(B, -3), p(B, 3), p(A, 3)], spine, MAT_METAL));
+  f.push(mk([p(B, -3), p(C, -3), p(C, 3), p(B, 3)], spine, MAT_METAL));
+  f.push(mk([p(C, -3), p(D, -0.7), p(D, 0.7), p(C, 3)], edge, MAT_METAL));
+  f.push(mk([p(D, -0.7), p(E, -0.7), p(E, 0.7), p(D, 0.7)], edge, MAT_METAL));
+  f = f.concat(boxFaces(-3, 5, -9.5, 9.5, -4.5, 4.5, [188, 198, 210], MAT_METAL));
+  f = f.concat(cylX(-38, -3, 7, 6.5, 10, 1, [206, 62, 202], [206, 62, 202], 0, MAT_GLOSS, [170, 40, 170]));
+  f.push(mk(discPoly(-28, 0, -6.9, 2.2, 8), [255, 226, 120], MAT_METAL));
+  f.push(mk(discPoly(-14, 0, -6.9, 2.2, 8), [255, 226, 120], MAT_METAL));
+  return f;
+})();
+var SAM = [[-34, 0], [-18, 0], [0, 0], [18, 0], [38, 0], [58, -2], [46, -9], [20, -9]];
+var BLADE_PTS = [0, 14, 28, 42, 56];
+
+var SPIKE = (function () {
+  var f = boxFaces(-18, 18, 0, 5, -56, 56, [96, 44, 170], MAT_GLOSS);
+  var zs = [-42, -14, 14, 42], i;
+  for (i = 0; i < zs.length; i++) f = f.concat(coneY(0, zs[i], 5, 13, 34, 8, [176, 96, 255], MAT_GLOSS));
+  return f;
+})();
+
+/* ---------- food ---------- */
+var ITEMS = {
+  apple:  { k: 'f', r: 19, ys: 0.94, c: [228, 50, 50], c2: [186, 28, 40], hh: 18, seed: 1, shape: 'apple',
+            layers: [[0.93, [255, 244, 222]], [0.5, [255, 252, 240]]], val: 1, stem: 'apple' },
+  orange: { k: 'f', r: 21, ys: 1, c: [255, 156, 36], c2: [240, 120, 14], hh: 21, seed: 2, rough: 0.035,
+            layers: [[0.95, [255, 238, 200]], [0.88, [255, 178, 64]], [0.4, [255, 214, 130]]], val: 1, stem: 'orange' },
+  tomato: { k: 'f', r: 18, ys: 0.86, c: [240, 66, 42], c2: [206, 40, 28], hh: 15, seed: 3,
+            layers: [[0.92, [255, 118, 88]], [0.58, [255, 176, 146]]], val: 1, stem: 'tomato' },
+  melon:  { k: 'f', r: 28, ys: 0.92, c: [74, 170, 84], c2: [26, 96, 50], stripe: true, hh: 26, seed: 4,
+            layers: [[0.95, [226, 242, 206]], [0.88, [240, 68, 80]], [0.45, [252, 112, 116]]], val: 2 },
+  cheese: { k: 'c', hx: 30, hy: 22, hz: 22, hh: 22, val: 2 },
+  bread:  { k: 'b', hx: 50, hy: 11, hz: 12, hh: 11, val: 2 }
+};
+var FOODS = ['apple', 'orange', 'tomato', 'melon', 'cheese', 'bread'];
+var MODELS = {};
+
+function fruitFaces(d, half, lod) {
+  var r = d.r, nLat = lod ? 5 : 8, nLon = lod ? 9 : 14, ys = d.ys || 1, P = [], faces = [], i, j;
+  var mat = d.mat || MAT_GLOSS, sd = d.seed || 0;
+  for (i = 0; i <= nLat; i++) {
+    P[i] = [];
+    var phi = Math.PI * i / nLat;
+    for (j = 0; j < nLon; j++) {
+      var th = 2 * Math.PI * j / nLon;
+      var nz = 1 + (hash(i * 31 + j * 7 + sd * 13) - 0.5) * (d.rough || 0.012);
+      if (i === 0 || i === nLat) nz = 1;
+      var rr = r * nz, rho = rr * Math.sin(phi), yy = rr * ys * Math.cos(phi);
+      if (d.shape === 'apple') {
+        rho *= 1 + 0.1 * Math.cos(phi);
+        if (i === 0) yy -= 4.5;
+        if (i === 1) yy -= 1.2;
+        if (i === nLat) yy += 2.5;
+      }
+      P[i][j] = [rho * Math.cos(th), yy, rho * Math.sin(th)];
+    }
+  }
+  for (i = 0; i < nLat; i++) {
+    for (j = 0; j < nLon; j++) {
+      if (half > 0 && j >= nLon / 2) continue;
+      if (half < 0 && j < nLon / 2) continue;
+      var j2 = (j + 1) % nLon, col, t = (i + 0.5) / nLat, nv = (hash(i * 17 + j * 5 + sd * 29) - 0.5) * 16;
+      if (d.stripe) {
+        var base = (j % 2) ? d.c2 : d.c;
+        col = [base[0] + nv, base[1] + nv, base[2] + nv];
+      } else {
+        col = [d.c[0] + (d.c2[0] - d.c[0]) * t + nv, d.c[1] + (d.c2[1] - d.c[1]) * t + nv * 0.6, d.c[2] + (d.c2[2] - d.c[2]) * t + nv * 0.6];
+      }
+      faces.push(mk([P[i][j], P[i][j2], P[i + 1][j2], P[i + 1][j]], col, mat));
+    }
+  }
+  if (half > 0 && d.layers) {
+    var ring = [];
+    for (i = 0; i <= nLat; i++) ring.push([P[i][0][0], P[i][0][1], 0]);
+    for (i = nLat; i >= 0; i--) ring.push([P[i][nLon / 2][0], P[i][nLon / 2][1], 0]);
+    faces.push(mk(ring, d.c, MAT_SOFT));
+    for (var li = 0; li < d.layers.length; li++) {
+      var sc = d.layers[li][0], inner = [];
+      for (j = 0; j < ring.length; j++) inner.push([ring[j][0] * sc, ring[j][1] * sc, -0.35 * (li + 1)]);
+      faces.push(mk(inner, d.layers[li][1], MAT_SOFT));
+    }
+  }
+  if (!lod && half >= 0 && d.stem) {
+    var top = r * ys - (d.shape === 'apple' ? 4 : 0);
+    if (d.stem === 'apple') {
+      faces = faces.concat(boxFaces(-1.4, 1.4, top - 2, top + 9, -1.4, 1.4, [96, 64, 36]));
+      faces.push(mk([[1.2, top + 6, 0], [11, top + 12, 3], [16, top + 6, 0], [10, top + 4, -3]], [72, 172, 70], MAT_GLOSS));
+    } else if (d.stem === 'tomato') {
+      for (i = 0; i < 5; i++) {
+        var a0 = i / 5 * Math.PI * 2;
+        faces.push(mk([[0, top + 2, 0], [Math.cos(a0) * 11, top + 0.5, Math.sin(a0) * 11], [Math.cos(a0 + 0.6) * 5, top + 1.5, Math.sin(a0 + 0.6) * 5]], [58, 150, 62], MAT_GLOSS));
+      }
+      faces = faces.concat(boxFaces(-1.4, 1.4, top, top + 6, -1.4, 1.4, [70, 120, 50]));
+    } else if (d.stem === 'orange') {
+      faces = faces.concat(boxFaces(-1.2, 1.2, top - 1, top + 4, -1.2, 1.2, [90, 130, 50]));
+    }
+  }
+  return faces;
+}
+
+function cheeseFaces(d, half) {
+  var poly = [[-30, -22], [30, -22], [30, 6], [-30, 22]], hz = d.hz, z0 = -hz, z1 = hz;
+  var body = [250, 208, 80], cap = [255, 238, 150], rind = [236, 180, 60];
+  var frontCol = body, backCol = body, faceZ = -hz;
+  if (half > 0) { z0 = 0; frontCol = cap; faceZ = 0; }
+  else if (half < 0) { z1 = 0; backCol = cap; }
+  var f = prismFaces(poly, z0, z1, frontCol, backCol, rind, MAT_GLOSS);
+  if (half >= 0) {
+    f.push(mk(discPoly(-12, -6, faceZ - 0.3, 5.5, 8), [222, 172, 48], MAT_SOFT));
+    f.push(mk(discPoly(10, 2, faceZ - 0.3, 4, 8), [222, 172, 48], MAT_SOFT));
+    f.push(mk(discPoly(-4, 12, faceZ - 0.3, 3, 8), [222, 172, 48], MAT_SOFT));
+    f.push(mk(discPoly(18, -9, faceZ - 0.3, 3.2, 8), [222, 172, 48], MAT_SOFT));
+  }
+  return f;
+}
+
+function breadFaces(d, half) {
+  var f = cylX(-d.hx, d.hx, d.hy, d.hz, 10, 6, [204, 138, 62], [226, 164, 88], half, MAT_SOFT, [226, 164, 88]);
+  if (half > 0) {
+    var cap = [[-d.hx, -d.hy, 0], [d.hx, -d.hy, 0], [d.hx, d.hy, 0], [-d.hx, d.hy, 0]];
+    f.push(mk(cap, [204, 138, 62], MAT_SOFT));
+    f.push(mk([[-d.hx * 0.96, -d.hy * 0.8, -0.35], [d.hx * 0.96, -d.hy * 0.8, -0.35], [d.hx * 0.96, d.hy * 0.8, -0.35], [-d.hx * 0.96, d.hy * 0.8, -0.35]], [252, 236, 196], MAT_SOFT));
+  }
+  return f;
+}
+
+function getModel(t, half, lod) {
+  var key = t + '|' + (half || 0) + '|' + (lod ? 1 : 0);
+  if (MODELS[key]) return MODELS[key];
+  var d = ITEMS[t], m;
+  if (d.k === 'f') m = fruitFaces(d, half || 0, lod);
+  else if (d.k === 'c') m = cheeseFaces(d, half || 0);
+  else m = breadFaces(d, half || 0);
+  MODELS[key] = m;
+  return m;
+}
+
+var BUSHES = [
+  fruitFaces({ r: 24, ys: 0.72, c: [78, 168, 80], c2: [44, 122, 62], seed: 5, rough: 0.09, mat: MAT_SOFT }, 0, true),
+  fruitFaces({ r: 17, ys: 0.75, c: [92, 180, 86], c2: [52, 134, 66], seed: 8, rough: 0.09, mat: MAT_SOFT }, 0, true)
+];
+
+/* ---------------- world ---------------- */
+var GRAV = 2000, JUMP = 580, JX = 245;
+var TS = 24, GY = -95, BH = 30, STRIP = 48;
+var T, tables, items, spikes, pieces, particles, texts, trail;
+var genX, baseH, chunkCount;
+var k, score = 0, state = 'ready', overAt = 0, shakeT = 0;
+var best = 0;
+try { best = parseInt(localStorage.getItem('sm3d_best') || '0', 10) || 0; } catch (e) {}
+
+function terrain(x) {
+  if (x <= 0) return T[0];
+  var i = Math.floor(x / TS), f = x / TS - i;
+  var a = T[i], b = T[i + 1];
+  if (a === undefined) a = 0;
+  if (b === undefined) b = a;
+  return a + (b - a) * f;
+}
+function surfaceAt(x) {
+  var h = terrain(x);
+  for (var i = 0; i < tables.length; i++) {
+    var t = tables[i];
+    if (x >= t.x0 && x <= t.x1 && t.top > h) h = t.top;
+  }
+  return h;
+}
+function fillTerrain(xa, xb, fn) {
+  for (var i = Math.ceil(xa / TS); i * TS <= xb + TS; i++) T[i] = fn(i * TS);
+}
+function flatFill(xa, xb) { fillTerrain(xa, xb, function () { return baseH; }); }
+
+function itemExt(d) { return d.k === 'f' ? d.r : d.hx; }
+function randFood() { return FOODS[Math.floor(Math.random() * FOODS.length)]; }
+
+function addStack(x, list, lift0) {
+  var s = -1e9, i, d, ext = 0;
+  for (i = 0; i < list.length; i++) ext = Math.max(ext, itemExt(ITEMS[list[i]]));
+  for (var xx = x - ext; xx <= x + ext + 0.1; xx += 12) s = Math.max(s, surfaceAt(xx));
+  var cur = lift0 || 0;
+  for (i = 0; i < list.length; i++) {
+    d = ITEMS[list[i]];
+    items.push({
+      t: list[i], x: x, y: s + cur + d.hh + 1, gy: s, alive: true,
+      cr: (d.k === 'f' ? d.r : Math.max(d.hx * 0.75, d.hy)) + 8
+    });
+    cur += d.hh * 2 + 1;
+  }
+}
+function randStack() {
+  var n = 1 + Math.floor(Math.random() * 3), l = [];
+  for (var i = 0; i < n; i++) l.push(randFood());
+  return l;
+}
+
+function pickKind() {
+  if (chunkCount === 0) return 'fruit';
+  if (chunkCount === 1) return 'table';
+  var ps = Math.min(0.5, 0.3 + genX / 25000);
+  var r = Math.random();
+  if (r < ps) return 'spikes';
+  r = (r - ps) / (1 - ps);
+  if (r < 0.3) return 'fruit';
+  if (r < 0.5) return 'hill';
+  return 'table';
+}
+
+function genChunk() {
+  var x = genX, kind = pickKind(), i, len;
+  chunkCount++;
+  if (kind === 'fruit') {
+    var n = 3 + Math.floor(Math.random() * 2);
+    len = n * 120 + 220;
+    flatFill(x, x + len);
+    for (i = 0; i < n; i++) addStack(x + 140 + i * 120, randStack());
+  } else if (kind === 'hill') {
+    len = 460;
+    var amp = rnd(30, 55), x0 = x;
+    fillTerrain(x, x + len, function (xx) {
+      return baseH + amp * Math.sin(Math.PI * clamp((xx - x0) / len, 0, 1));
+    });
+    for (i = 0; i < 3; i++) addStack(x + 110 + i * 120, randStack());
+  } else if (kind === 'table') {
+    var th = rnd(40, 66), tl = rnd(150, 200), tx = x + 220;
+    len = 220 + tl + 300;
+    flatFill(x, x + len);
+    tables.push({ x0: tx, x1: tx + tl, top: baseH + th, y0: baseH, faces: null });
+    addStack(x + 100, randStack());
+    addStack(tx + tl * 0.3, randStack());
+    addStack(tx + tl * 0.75, randStack());
+  } else {
+    var nc = 1 + Math.floor(Math.random() * 3);
+    var sx = x + 260;
+    len = 260 + nc * 36 + 360;
+    flatFill(x, x + len);
+    for (i = 0; i < nc; i++) spikes.push({ x: sx + i * 36, g: baseH });
+    var cxm = sx + (nc - 1) * 18;
+    for (i = -1; i <= 1; i++) addStack(cxm + i * 58, [randFood()], 62 + (1 - Math.abs(i)) * 34);
+    addStack(x + 110, randStack());
+  }
+  genX = x + len;
+}
+function genAhead() { while (genX < k.x + 1900) genChunk(); }
+
+function stickPose(instant) {
+  k.stA = -0.95 + Math.PI * 2 * Math.round((k.a + 0.95) / (Math.PI * 2));
+  var c = Math.cos(k.stA), s = Math.sin(k.stA);
+  var tipX = k.x + 58 * c + 2 * s;
+  k.ty = surfaceAt(tipX) - 7 - (58 * s - 2 * c);
+  if (instant) { k.a = k.stA; k.y = k.ty; }
+}
+
+function reset() {
+  k = { x: 0, y: 30, vx: 0, vy: 0, a: -0.95, w: 0, stuck: true, stT: 0, stA: -0.95, ty: 0, wob: 0, tgt: -0.95 };
+  T = []; tables = []; items = []; spikes = []; pieces = []; particles = []; texts = []; trail = [];
+  for (var i = 0; i <= 24; i++) T[i] = 0;
+  genX = 520; baseH = 0; chunkCount = 0;
+  score = 0; shakeT = 0;
+  stickPose(true);
+  cam.x = 0; cam.y = 0;
+  genAhead();
+}
+
+/* ---------------- actions ---------------- */
+function predictT() {
+  var vy = k.vy, g = GRAV, T = Math.max(0.12, 2 * vy / g), i;
+  for (i = 0; i < 3; i++) {
+    var surf = surfaceAt(k.x + k.vx * T + 35);
+    var disc = vy * vy + 2 * g * (k.y - surf - 48);
+    T = disc > 0 ? (vy + Math.sqrt(disc)) / g : 0.12;
+  }
+  return Math.max(0.12, T);
+}
+function aimSet(first) {
+  var T = predictT();
+  var d0 = (k.a + 0.95) % (Math.PI * 2);
+  if (d0 < 0) d0 += Math.PI * 2;
+  var delta = d0 + ((T > 0.42 || first) ? Math.PI * 2 : 0);
+  if (delta < 1.2) delta += Math.PI * 2;
+  k.tgt = k.a - delta;
+}
+function act() {
+  var now = performance.now();
+  if (state === 'over') {
+    if (now - overAt > 500) { reset(); state = 'ready'; }
+    return;
+  }
+  if (state === 'ready') state = 'play';
+  if (k.stuck) {
+    k.stuck = false; k.vx = JX + Math.min(k.x / 80, 55); k.vy = JUMP;
+    aimSet(true);
+    beep(420, 0.12, 'triangle', 0.05, 1.6);
+  } else {
+    k.vy = Math.max(k.vy, 0) + 300;
+    aimSet(false);
+    beep(560, 0.09, 'triangle', 0.045, 1.4);
+  }
+}
+
+function burst(x, y, cols, n, spd) {
+  for (var i = 0; i < n; i++) {
+    particles.push({
+      x: x, y: y, z: rnd(-10, 10),
+      vx: rnd(-1, 1) * spd, vy: rnd(-0.2, 1.2) * spd, vz: rnd(-0.7, 0.7) * spd,
+      life: rnd(0.4, 0.9), c: cols[Math.floor(Math.random() * cols.length)]
+    });
+  }
+}
+
+function sliceItem(it) {
+  var d = ITEMS[it.t];
+  it.alive = false;
+  score += d.val;
+  pieces.push({ t: it.t, half: 1, x: it.x, y: it.y, z: 2, vx: 80, vy: 170, vz: 80, a: 0, w: 3.5, life: 1.1 });
+  pieces.push({ t: it.t, half: -1, x: it.x, y: it.y, z: -2, vx: 45, vy: 190, vz: -70, a: 0, w: -3.5, life: 1.1 });
+  var pc = d.k === 'f' ? [d.c, d.layers[1][1], [255, 255, 255]] : [[250, 210, 90], [255, 240, 170], [255, 255, 255]];
+  burst(it.x, it.y, pc, 12, 170);
+  texts.push({ x: it.x, y: it.y + 30, v: '+' + d.val, life: 0.85 });
+  beep(660 + Math.min(score, 40) * 14, 0.09, 'square', 0.04);
+}
+
+function die() {
+  state = 'over';
+  overAt = performance.now();
+  shakeT = 0.4;
+  burst(k.x + 30, k.y, [[176, 96, 255], [255, 255, 255], [96, 205, 240]], 28, 220);
+  if (score > best) {
+    best = score;
+    try { localStorage.setItem('sm3d_best', String(best)); } catch (e) {}
+  }
+  beep(140, 0.5, 'sawtooth', 0.09, 0.4);
+}
+
+function landStick() {
+  k.stuck = true; k.vx = 0; k.vy = 0; k.w = 0; k.stT = 0;
+  stickPose(false);
+  var c = Math.cos(k.stA), s = Math.sin(k.stA);
+  var tx = k.x + 58 * c + 2 * s, ty = k.ty + 58 * s - 2 * c;
+  burst(tx, ty + 4, [[255, 255, 255], [220, 236, 244], [190, 215, 228]], 9, 90);
+  shakeT = Math.max(shakeT, 0.1);
+  beep(180, 0.09, 'square', 0.06, 0.5);
+}
+
+/* ---------------- simulation ---------------- */
+function samplePen() {
+  var c = Math.cos(k.a), s = Math.sin(k.a), pen = 0;
+  for (var j = 0; j < SAM.length; j++) {
+    var px = k.x + SAM[j][0] * c - SAM[j][1] * s;
+    var py = k.y + SAM[j][0] * s + SAM[j][1] * c;
+    var d = surfaceAt(px) - py;
+    if (d > pen) pen = d;
+  }
+  return pen;
+}
+
+function hazards() {
+  var c = Math.cos(k.a), s = Math.sin(k.a), i, j, px, py;
+  for (i = 0; i < spikes.length; i++) {
+    var sk = spikes[i];
+    if (Math.abs(sk.x - k.x) > 90) continue;
+    for (j = 0; j < SAM.length; j++) {
+      px = k.x + SAM[j][0] * c - SAM[j][1] * s;
+      py = k.y + SAM[j][0] * s + SAM[j][1] * c;
+      if (Math.hypot(px - sk.x, py - (sk.g + 15)) < 19) { die(); return true; }
+    }
+  }
+  for (i = 0; i < items.length; i++) {
+    var it = items[i];
+    if (!it.alive || Math.abs(it.x - k.x) > 130) continue;
+    for (j = 0; j < BLADE_PTS.length; j++) {
+      px = k.x + BLADE_PTS[j] * c; py = k.y + BLADE_PTS[j] * s;
+      if (Math.hypot(px - it.x, py - it.y) < it.cr) { sliceItem(it); break; }
+    }
+  }
+  return false;
+}
+
+function step(h) {
+  if (state !== 'play') return;
+  if (k.stuck) {
+    k.stT += h;
+    var kk = Math.min(1, h * 24);
+    k.a += (k.stA - k.a) * kk;
+    k.y += (k.ty - k.y) * kk;
+    k.wob = Math.sin(k.stT * 36) * 0.11 * Math.exp(-k.stT * 9);
+    hazards();
+    return;
+  }
+  k.vy -= GRAV * h;
+  k.x += k.vx * h;
+  k.y += k.vy * h;
+  var ww = (k.tgt - k.a) / Math.max(0.03, predictT() - 0.09);
+  k.w = ww > 0 ? 0 : (ww < -34 ? -34 : ww);
+  k.a += k.w * h;
+  var pen = k.vy <= 0 ? samplePen() : 0;
+  if (pen > 0) {
+    if (pen <= 14) {
+      k.y += pen;
+    } else {
+      for (var n = 0; n < 40 && pen > 0; n++) { k.x -= 3; pen = samplePen(); }
+    }
+    landStick();
+  }
+  hazards();
+}
+
+function updateFx(dt) {
+  var i;
+  for (i = pieces.length - 1; i >= 0; i--) {
+    var p = pieces[i];
+    p.x += p.vx * dt; p.y += p.vy * dt; p.z += p.vz * dt; p.vy -= 1100 * dt; p.a += p.w * dt; p.life -= dt;
+    if (p.life <= 0) pieces.splice(i, 1);
+  }
+  for (i = particles.length - 1; i >= 0; i--) {
+    var q = particles[i];
+    q.x += q.vx * dt; q.y += q.vy * dt; q.z += q.vz * dt; q.vy -= 800 * dt; q.life -= dt;
+    if (q.life <= 0) particles.splice(i, 1);
+  }
+  for (i = texts.length - 1; i >= 0; i--) {
+    texts[i].y += 70 * dt; texts[i].life -= dt;
+    if (texts[i].life <= 0) texts.splice(i, 1);
+  }
+  if (shakeT > 0) shakeT = Math.max(0, shakeT - dt);
+
+  if (state === 'play' && !k.stuck) {
+    var c = Math.cos(k.a), s = Math.sin(k.a);
+    trail.push({ x: k.x + 58 * c + 2 * s, y: k.y + 58 * s - 2 * c, z: 0, t: 0 });
+  }
+  for (i = trail.length - 1; i >= 0; i--) {
+    trail[i].t += dt;
+    if (trail[i].t > 0.28) trail.splice(i, 1);
+  }
+}
+
+var acc = 0;
+function update(dt) {
+  updateFx(dt);
+  if (state === 'play') {
+    genAhead();
+    acc += dt;
+    var h = 1 / 120;
+    while (acc >= h) { step(h); acc -= h; if (state !== 'play') break; }
+    cam.x += (k.x - cam.x) * Math.min(1, dt * 8);
+    cam.y += (k.y * 0.4 - cam.y) * Math.min(1, dt * 3);
+    var lim = k.x - 500;
+    while (items.length && items[0].x < lim) items.shift();
+    while (spikes.length && spikes[0].x < lim) spikes.shift();
+    while (tables.length && tables[0].x1 < lim) tables.shift();
+  } else if (state === 'over') {
+    cam.x += (k.x - cam.x) * Math.min(1, dt * 8);
+  }
+}
+
+/* ---------------- drawing ---------------- */
+function drawBackground(hy) {
+  var g = ctx.createLinearGradient(0, 0, 0, hy);
+  g.addColorStop(0, '#3aa9f5');
+  g.addColorStop(0.7, '#a9dcfa');
+  g.addColorStop(1, '#e4f6ff');
+  ctx.fillStyle = g;
+  ctx.fillRect(-30, -30, W + 60, hy + 30);
+
+  var sg = ctx.createRadialGradient(335, 90, 4, 335, 90, 150);
+  sg.addColorStop(0, 'rgba(255,255,236,1)');
+  sg.addColorStop(0.12, 'rgba(255,250,214,0.9)');
+  sg.addColorStop(1, 'rgba(255,250,214,0)');
+  ctx.fillStyle = sg;
+  ctx.fillRect(160, -40, 280, 300);
+
+  var i, span = W + 260;
+  for (i = 0; i < 5; i++) {
+    var cx = (((i * 170 - cam.x * 0.07) % span) + span) % span - 110;
+    var cy = 46 + (i * 47) % 120;
+    ctx.fillStyle = 'rgba(214,234,250,0.7)';
+    ctx.beginPath();
+    ctx.arc(cx, cy + 7, 27, 0, 7); ctx.arc(cx + 30, cy + 11, 21, 0, 7); ctx.arc(cx - 28, cy + 13, 18, 0, 7);
+    ctx.fill();
+    ctx.fillStyle = 'rgba(255,255,255,0.96)';
+    ctx.beginPath();
+    ctx.arc(cx, cy, 27, 0, 7); ctx.arc(cx + 30, cy + 4, 21, 0, 7); ctx.arc(cx - 28, cy + 6, 18, 0, 7);
+    ctx.arc(cx + 8, cy - 12, 19, 0, 7);
+    ctx.fill();
+  }
+
+  var layers = [
+    { par: 0.04, col: '#9fcfe9', cap: '#f0f9ff', w: 170, h: 120, off: 0 },
+    { par: 0.09, col: '#79c1cf', cap: '#e1f3ff', w: 140, h: 92, off: 60 },
+    { par: 0.16, col: '#5fc29a', cap: null, w: 120, h: 62, off: 30 }
+  ];
+  for (var li = 0; li < layers.length; li++) {
+    var L = layers[li], period = L.w * 3;
+    var shift = -((cam.x * L.par + L.off) % period);
+    for (var x = shift - period; x < W + period; x += period) {
+      for (var m = 0; m < 3; m++) {
+        var mx = x + m * L.w, mh = L.h * (m === 1 ? 1 : 0.62 + 0.14 * m);
+        ctx.fillStyle = L.col;
+        ctx.beginPath();
+        ctx.moveTo(mx, hy + 2);
+        ctx.bezierCurveTo(mx, hy - mh * 1.35, mx + L.w, hy - mh * 1.35, mx + L.w, hy + 2);
+        ctx.fill();
+        if (L.cap) {
+          ctx.fillStyle = L.cap;
+          ctx.beginPath();
+          ctx.moveTo(mx + L.w * 0.2, hy - mh * 0.82);
+          ctx.bezierCurveTo(mx + L.w * 0.3, hy - mh * 1.07, mx + L.w * 0.7, hy - mh * 1.07, mx + L.w * 0.8, hy - mh * 0.82);
+          ctx.lineTo(mx + L.w * 0.7, hy - mh * 0.76);
+          ctx.lineTo(mx + L.w * 0.6, hy - mh * 0.86);
+          ctx.lineTo(mx + L.w * 0.5, hy - mh * 0.74);
+          ctx.lineTo(mx + L.w * 0.4, hy - mh * 0.86);
+          ctx.lineTo(mx + L.w * 0.3, hy - mh * 0.76);
+          ctx.closePath();
+          ctx.fill();
+        }
+      }
+    }
+  }
+
+  var hz = ctx.createLinearGradient(0, hy - 90, 0, hy + 2);
+  hz.addColorStop(0, 'rgba(228,246,255,0)');
+  hz.addColorStop(1, 'rgba(228,246,255,0.85)');
+  ctx.fillStyle = hz;
+  ctx.fillRect(-30, hy - 90, W + 60, 92);
+
+  var g2 = ctx.createLinearGradient(0, hy, 0, H);
+  g2.addColorStop(0, '#c4efc0');
+  g2.addColorStop(0.25, '#92dc8c');
+  g2.addColorStop(1, '#58b866');
+  ctx.fillStyle = g2;
+  ctx.fillRect(-30, hy, W + 60, H - hy + 30);
+}
+
+function projectPoint(x, y, z) {
+  proj(x, y, z, tmp);
+  return { x: tmp[0], y: tmp[1], z: tmp[2] };
+}
+
+function drawStripEntry(f) {
+  var X = f.x, Y = f.y, tex = f.tex, th = tex.height;
+  var dw = Math.min(f.sw + 1, tex.width - f.sx);
+  if (dw <= 0) return;
+  ctx.save();
+  ctx.transform((X[1] - X[0]) / f.sw, (Y[1] - Y[0]) / f.sw, (X[2] - X[0]) / th, (Y[2] - Y[0]) / th, X[0], Y[0]);
+  ctx.globalAlpha = f.al;
+  ctx.drawImage(tex, f.sx, 0, dw, th, 0, 0, dw, th);
+  ctx.restore();
+}
+
+function draw() {
+  setCam();
+  ctx.save();
+  if (shakeT > 0) ctx.translate(rnd(-1, 1) * shakeT * 14, rnd(-1, 1) * shakeT * 14);
+
+  var hh = Math.sqrt(fx * fx + fz * fz);
+  proj(ex + fx / hh * 30000, ey, ez + fz / hh * 30000, tmp);
+  var hy = clamp(tmp[1], 120, 420);
+  drawBackground(hy);
+
+  FN = 0; FLs.length = 0;
+  var xa, i, j;
+  var x0 = Math.floor((cam.x - 240) / STRIP) * STRIP, x1 = cam.x + 1050;
+  var gx0 = cam.x - 700, gx1 = cam.x + 1600;
+
+  // ground: mowed stripes
+  var farZ = [60, 140, 240, 380, 560, 820, 1200, 1800];
+  for (i = 0; i < farZ.length - 1; i++) {
+    var gc = (i % 2) ? [132, 206, 108] : [150, 222, 122];
+    addWorldPoly([[gx0, GY, farZ[i]], [gx1, GY, farZ[i]], [gx1, GY, farZ[i + 1]], [gx0, GY, farZ[i + 1]]], gc, -6000 + i);
+  }
+  var nearZ = [-60, -130, -210, -290];
+  for (i = 0; i < nearZ.length - 1; i++) {
+    var gc2 = (i % 2) ? [132, 206, 108] : [150, 222, 122];
+    addWorldPoly([[gx0, GY, nearZ[i]], [gx1, GY, nearZ[i]], [gx1, GY, nearZ[i + 1]], [gx0, GY, nearZ[i + 1]]], gc2, -6000 + i);
+  }
+
+  // trees & bushes (far side)
+  var c0 = Math.floor((cam.x - 300) / 110), c1 = Math.floor((cam.x + 1100) / 110);
+  for (i = c0; i <= c1; i++) {
+    if (hash(i) >= 0.34) {
+      var tz = 135 + hash(i + 97) * 330, tx = i * 110 + (hash(i + 13) - 0.5) * 70;
+      addModel(TREES[Math.floor(hash(i + 7) * 3)], tx, GY, tz, 0, 0);
+      if (hash(i + 41) > 0.62) addModel(TREES[0], tx + 36, GY, tz + 70 + hash(i) * 80, 0, 0);
+    }
+    if (hash(i + 233) > 0.45) {
+      addModel(BUSHES[hash(i + 5) > 0.5 ? 0 : 1], i * 110 + hash(i + 71) * 90, GY + 10, 96 + hash(i + 19) * 50, 0, 0);
+    }
+    if (hash(i + 509) > 0.9) {
+      addModel(BUSHES[1], i * 110 + hash(i + 3) * 60, GY + 8, -110 - hash(i + 29) * 60, 0, 0);
+    }
+  }
+
+  // track platform, wall with brand band, far-edge brand boards
+  for (xa = x0; xa < x1; xa += TS) {
+    var ha = terrain(xa), hb = terrain(xa + TS);
+    var idx = Math.round(xa / TS);
+    var topCol = (idx % 4 < 2) ? [250, 252, 252] : [238, 246, 249];
+    addWorldPoly([[xa, ha, -60], [xa + TS, hb, -60], [xa + TS, hb, 60], [xa, ha, 60]], topCol, 0);
+    addWorldPoly([[xa, ha + 0.3, -60], [xa + TS, hb + 0.3, -60], [xa + TS, hb + 0.3, -52], [xa, ha + 0.3, -52]], [98, 176, 232], 3);
+    if (idx % 3 !== 0) addWorldPoly([[xa, ha + 0.3, -3], [xa + TS, hb + 0.3, -3], [xa + TS, hb + 0.3, 3], [xa, ha + 0.3, 3]], [214, 232, 240], 3);
+    addWorldPoly([[xa, ha, -60], [xa + TS, hb, -60], [xa + TS, hb - 7, -60], [xa, ha - 7, -60]], [244, 247, 250], 0);
+    addWorldPoly([[xa, ha - 7, -60], [xa + TS, hb - 7, -60], [xa + TS, GY, -60], [xa, GY, -60]], [20, 48, 118], 0);
+  }
+  for (xa = x0; xa < x1; xa += STRIP) {
+    var xb = xa + STRIP, ha2 = terrain(xa), hb2 = terrain(xb);
+    var blk = Math.floor(xa / 192), sxp = ((xa - blk * 192) / 192) * 768;
+    // wall brand band
+    addStrip((blk % 2) ? TEX.wallO : TEX.wallN, sxp, STRIP * 4, xa, ha2 - 11, xb, hb2 - 11, xa, ha2 - 63, -60.3, 3);
+    // far boards
+    addWorldPoly([[xa, ha2, 56], [xb, hb2, 56], [xb, hb2 + BH, 56], [xa, ha2 + BH, 56]], [20, 48, 118], 0);
+    addWorldPoly([[xa, ha2 + BH, 56], [xb, hb2 + BH, 56], [xb, hb2 + BH, 61], [xa, ha2 + BH, 61]], [232, 240, 248], 0);
+    addStrip((blk % 2) ? TEX.boardN : TEX.boardO, sxp, STRIP * 4, xa, ha2 + BH - 1, xb, hb2 + BH - 1, xa, ha2 + 1, 55.8, 3);
+  }
+
+  for (i = 0; i < tables.length; i++) {
+    var tb = tables[i];
+    if (tb.x1 < cam.x - 300 || tb.x0 > x1) continue;
+    if (!tb.faces) {
+      tb.faces = boxFaces(tb.x0, tb.x1, tb.y0 - 1, tb.top - 7, -48, 48, [240, 228, 206], MAT_SOFT)
+        .concat(boxFaces(tb.x0 - 4, tb.x1 + 4, tb.top - 7, tb.top, -54, 54, [74, 152, 236], MAT_GLOSS));
+    }
+    addModel(tb.faces, 0, 0, 0, 0, 6);
+    var tl2 = tb.x1 - tb.x0, nS = Math.max(4, Math.round(tl2 / 24));
+    for (j = 0; j < nS; j++) {
+      var ta = tb.x0 + tl2 * j / nS, tbb = tb.x0 + tl2 * (j + 1) / nS;
+      addStrip(TEX.tableN, (j / nS) * 640, 640 / nS, ta, tb.top - 9, tbb, tb.top - 9, ta, tb.y0 + 1, -48.3, 40);
+    }
+  }
+  for (i = 0; i < spikes.length; i++) {
+    var sk = spikes[i];
+    if (sk.x < cam.x - 250 || sk.x > x1) continue;
+    addShadow(sk.x, sk.g, 0, 30, 0.22);
+    addModel(SPIKE, sk.x, sk.g, 0, 0, 24);
+  }
+  for (i = 0; i < items.length; i++) {
+    var it = items[i];
+    if (!it.alive || it.x < cam.x - 250 || it.x > x1) continue;
+    var dd = ITEMS[it.t];
+    var low = (it.x - cam.x) > 260;
+    if (it.y - dd.hh - 1 - it.gy < 4) addShadow(it.x, it.gy, 0, (dd.k === 'f' ? dd.r : dd.hx * 0.8) * 1.12, 0.3);
+    addModel(getModel(it.t, 0, low), it.x, it.y, 0, 0, 40);
+  }
+  for (i = 0; i < pieces.length; i++) {
+    var pc = pieces[i];
+    addModel(getModel(pc.t, pc.half, false), pc.x, pc.y, pc.z, pc.a, 44);
+  }
+  var gy = surfaceAt(k.x + 20), hgt = Math.max(0, k.y - gy);
+  addShadow(k.x + 20, gy, 0, 34 + hgt * 0.05, clamp(0.34 - hgt / 500, 0.08, 0.34));
+  addModel(KNIFE, k.x, k.y, 0, k.a + (k.wob || 0), 70);
+
+  FLs.sort(function (a, b) { return b.z - a.z; });
+  ctx.lineWidth = 1;
+  ctx.lineJoin = 'round';
+  for (i = 0; i < FLs.length; i++) {
+    var f = FLs[i];
+    if (f.tex) { drawStripEntry(f); continue; }
+    var X = f.x, Y = f.y;
+    ctx.fillStyle = f.col;
+    ctx.beginPath();
+    ctx.moveTo(X[0], Y[0]);
+    for (j = 1; j < f.n; j++) ctx.lineTo(X[j], Y[j]);
+    ctx.closePath();
+    ctx.fill();
+    if (!f.ns && f.sz > 14) { ctx.strokeStyle = f.col; ctx.stroke(); }
+  }
+
+  // blade trail
+  if (trail.length > 1) {
+    ctx.lineCap = 'round';
+    for (i = 1; i < trail.length; i++) {
+      var a = projectPoint(trail[i - 1].x, trail[i - 1].y, trail[i - 1].z);
+      var b = projectPoint(trail[i].x, trail[i].y, trail[i].z);
+      var al = clamp(1 - trail[i].t / 0.28, 0, 1);
+      ctx.strokeStyle = 'rgba(255,255,255,' + (al * 0.7).toFixed(2) + ')';
+      ctx.lineWidth = 1 + al * 4;
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.lineTo(b.x, b.y);
+      ctx.stroke();
+    }
+  }
+
+  // particles
+  for (i = 0; i < particles.length; i++) {
+    var q = particles[i];
+    var pp = projectPoint(q.x, q.y, q.z);
+    ctx.globalAlpha = clamp(q.life * 2.5, 0, 1);
+    ctx.fillStyle = 'rgb(' + (q.c[0] | 0) + ',' + (q.c[1] | 0) + ',' + (q.c[2] | 0) + ')';
+    ctx.beginPath();
+    ctx.arc(pp.x, pp.y, Math.max(1.5, 5 * 420 / Math.max(120, pp.z)), 0, 7);
+    ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+  ctx.restore();
+
+  // vignette
+  var vg = ctx.createRadialGradient(W / 2, H * 0.5, H * 0.32, W / 2, H * 0.5, H * 0.78);
+  vg.addColorStop(0, 'rgba(8,18,56,0)');
+  vg.addColorStop(1, 'rgba(8,18,56,0.34)');
+  ctx.fillStyle = vg;
+  ctx.fillRect(0, 0, W, H);
+
+  // floating texts
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.direction = 'ltr';
+  for (i = 0; i < texts.length; i++) {
+    var tx2 = texts[i];
+    var tp = projectPoint(tx2.x, tx2.y, -20);
+    ctx.globalAlpha = clamp(tx2.life * 2, 0, 1);
+    ctx.font = 'bold 26px ' + TEXT_FONT;
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = 'rgba(20,60,20,0.8)';
+    ctx.strokeText(tx2.v, tp.x, tp.y);
+    ctx.fillStyle = '#b6ff7a';
+    ctx.fillText(tx2.v, tp.x, tp.y);
+  }
+  ctx.globalAlpha = 1;
+
+  // HUD
+  var sTxt = String(score), tw = sTxt.length * 30 + 40;
+  var cxh = W / 2 - tw / 2 + 18;
+  ctx.fillStyle = '#ffc928';
+  ctx.beginPath(); ctx.arc(cxh, 60, 21, 0, 7); ctx.fill();
+  ctx.strokeStyle = '#b87a00'; ctx.lineWidth = 3;
+  ctx.beginPath(); ctx.arc(cxh, 60, 21, 0, 7); ctx.stroke();
+  ctx.fillStyle = '#b87a00';
+  ctx.font = 'bold 26px ' + TEXT_FONT;
+  ctx.fillText('$', cxh, 61);
+  ctx.textAlign = 'left';
+  ctx.font = 'bold 56px ' + TEXT_FONT;
+  ctx.lineWidth = 9;
+  ctx.strokeStyle = 'rgba(12,70,110,0.85)';
+  ctx.strokeText(sTxt, cxh + 30, 62);
+  ctx.fillStyle = '#ffffff';
+  ctx.fillText(sTxt, cxh + 30, 62);
+  ctx.textAlign = 'center';
+
+  ctx.direction = 'rtl';
+  if (best > 0) {
+    ctx.font = 'bold 16px ' + TEXT_FONT;
+    ctx.fillStyle = 'rgba(12,42,111,0.9)';
+    ctx.textAlign = 'right';
+    ctx.fillText('رکورد: ' + fa(best), W - 14, 22);
+    ctx.textAlign = 'center';
+  }
+
+  // brand watermark
+  ctx.font = 'bold 14px ' + TEXT_FONT;
+  ctx.fillStyle = 'rgba(255,255,255,0.85)';
+  ctx.strokeStyle = 'rgba(8,24,80,0.55)';
+  ctx.lineWidth = 3;
+  ctx.direction = 'rtl';
+  ctx.strokeText(BRAND, W / 2 + 52, 686);
+  ctx.fillText(BRAND, W / 2 + 52, 686);
+  ctx.direction = 'ltr';
+  ctx.strokeText(BRAND_EN, W / 2 - 62, 686);
+  ctx.fillText(BRAND_EN, W / 2 - 62, 686);
+  ctx.direction = 'rtl';
+
+  if (state === 'ready') {
+    ctx.fillStyle = 'rgba(8,24,80,0.84)';
+    ctx.fillRect(24, 500, W - 48, 170);
+    ctx.fillStyle = '#ff9a2e';
+    ctx.fillRect(24, 500, W - 48, 4);
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 34px ' + TEXT_FONT;
+    ctx.fillText('برش آسان', W / 2, 540);
+    ctx.font = 'bold 18px ' + TEXT_FONT;
+    ctx.fillStyle = '#ffb25c';
+    ctx.fillText(BRAND, W / 2, 574);
+    ctx.fillStyle = '#fff';
+    ctx.font = '16px ' + TEXT_FONT;
+    ctx.fillText('برای پرتاب چاقو لمس کن', W / 2, 610);
+    ctx.fillText('میوه‌ها رو ببر، به خارهای بنفش نخور', W / 2, 636);
+  }
+  if (state === 'over') {
+    ctx.fillStyle = 'rgba(8,24,80,0.78)';
+    ctx.fillRect(30, 230, W - 60, 240);
+    ctx.fillStyle = '#ff9a2e';
+    ctx.fillRect(30, 230, W - 60, 4);
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 36px ' + TEXT_FONT;
+    ctx.fillText('بازی تمام شد', W / 2, 275);
+    ctx.font = '24px ' + TEXT_FONT;
+    ctx.fillText('پول: ' + fa(score), W / 2, 330);
+    ctx.fillText('رکورد: ' + fa(best), W / 2, 370);
+    ctx.font = 'bold 16px ' + TEXT_FONT;
+    ctx.fillStyle = '#ffb25c';
+    ctx.fillText(BRAND, W / 2, 410);
+    ctx.font = '18px ' + TEXT_FONT;
+    ctx.fillStyle = '#ffd24d';
+    ctx.fillText('برای شروع دوباره لمس کن', W / 2, 442);
+  }
+}
+
+/* ---------------- loop & input ---------------- */
+var last = null, ema = 0.016, qCool = 90;
+function loop(now) {
+  if (last === null) last = now;
+  var rdt = (now - last) / 1000;
+  var dt = Math.min(0.05, rdt);
+  last = now;
+  ema += (Math.min(rdt, 0.1) - ema) * 0.05;
+  if (qCool > 0) { qCool--; }
+  else if (ema > 0.021 && Q > 0.5) { Q *= 0.85; resize(); ema = 0.016; qCool = 90; }
+  update(dt);
+  draw();
+  requestAnimationFrame(loop);
+}
+
+window.addEventListener('pointerdown', function (e) { e.preventDefault(); act(); }, { passive: false });
+window.addEventListener('keydown', function (e) {
+  if (e.code === 'Space' || e.code === 'ArrowUp') { e.preventDefault(); if (!e.repeat) act(); }
+});
+window.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+
+reset();
+requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
