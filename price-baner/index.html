@@ -173,15 +173,9 @@
 
 <script>
 // ============================================================
-// لیست کلیدهای API (navasan.tech) — هر کلید رایگان ۱۲۰ درخواست در ماه داره.
-// وقتی سقف یه کلید تموم بشه، صفحه خودکار می‌ره سراغ کلید بعدی.
-// برای ۸ بار در روز (حدود ۲۴۰ تا ۲۵۰ درخواست در ماه) حداقل ۳ کلید بذار.
-// کلید جدید: از بات تلگرام @navasan_contact_bot بگیر و یه خط به لیست اضافه کن.
-const API_CODES = [
-  'freeasNWkJGSuOSDKpRBYY2rgDAQegrg',
-  // 'کلید-دوم-اینجا',
-  // 'کلید-سوم-اینجا',
-];
+// برای عوض کردن کد API، فقط مقدار بین کوتیشن‌های خط زیر رو عوض کن.
+// سرویس فعلی: navasan.tech (کلید رایگان از بات تلگرام @navasan_contact_bot)
+const DEFAULT_API_CODE = 'freeasNWkJGSuOSDKpRBYY2rgDAQegrg';
 // ============================================================
 
 const STORAGE_KEY = 'asannett_nerkh_api_code';
@@ -213,21 +207,11 @@ manualModeToggle.addEventListener('change', ()=>{
   }
 });
 
-function getActiveApiCodes(){
+function getActiveApiCode(){
   if(manualModeToggle.checked){
-    return apiCodeInput.value.split(/[\s,،;]+/).map(x=>x.trim()).filter(Boolean);
+    return apiCodeInput.value.trim();
   }
-  return API_CODES.map(x=>String(x).trim()).filter(Boolean);
-}
-
-// remember which keys hit their monthly quota so we don't waste requests on them
-const EXHAUSTED_KEY = 'asannett_exhausted_keys';
-const EXHAUSTED_TTL_MS = 12 * 60 * 60 * 1000;
-function loadExhausted(){
-  try{ return JSON.parse(localStorage.getItem(EXHAUSTED_KEY) || '{}') || {}; }catch(e){ return {}; }
-}
-function saveExhausted(o){
-  try{ localStorage.setItem(EXHAUSTED_KEY, JSON.stringify(o)); }catch(e){}
+  return DEFAULT_API_CODE;
 }
 
 let currentPrices = []; // [{key, label, value, unit}]
@@ -372,225 +356,156 @@ function extractItemsAny(data){
   return [];
 }
 
-// ---------- Source 1 (default): Iran Market — free static JSON, no key, no quota ----------
-// Data is published on GitHub Pages every ~30 min (source: TGJU).
-const IRAN_MARKET_URLS = [
-  'https://iran-market.github.io/data/latest-toman.json',
-  'https://raw.githubusercontent.com/iran-market/iran-market.github.io/main/data/latest-toman.json',
-  'https://cdn.jsdelivr.net/gh/iran-market/iran-market.github.io@main/data/latest-toman.json',
-  // same data format, smaller set (dollar, euro, pound, 18k gold, emami coin, tether)
-  'https://raw.githubusercontent.com/hidevs/tabloo/main/data/popular.json'
-];
-// our internal key -> [Iran Market symbol, Persian label]
-const IRAN_MARKET_MAP = [
-  ['sekkeh',  'COIN_EMAMI_IRR',   'سکه امامی'],
-  ['bahar',   'COIN_BAHAR_IRR',   'بهار آزادی'],
-  ['nim',     'COIN_HALF_IRR',    'نیم سکه'],
-  ['rob',     'COIN_QUARTER_IRR', 'ربع سکه'],
-  ['gerami',  'COIN_GRAMI_IRR',   'سکه گرمی'],
-  ['18ayar',  'GOLD_18K_IRR',     'طلای ۱۸ عیار'],
-  ['usdt',    'USDT_IRR',         'تتر'],
-  ['usd',     'USD_IRR_FREE',     'دلار آمریکا'],
-  ['eur',     'EUR_IRR_FREE',     'یورو'],
-  ['gbp',     'GBP_IRR_FREE',     'پوند انگلیس'],
-  ['aed',     'AED_IRR_FREE',     'درهم امارات']
+// ============================================================
+// دریافت قیمت بدون کلید API — همون روشِ صفحه‌ی زنده‌ی PRICE.
+// منبع اصلی: نرخ‌آرا | منبع پشتیبان: tabloo (فایل JSON روی گیت‌هاب).
+// خروجی با همون شکل و اسم‌های قبلی ({key, label, value}) ساخته می‌شه، تا ربات قیمت و صفحه‌ی
+// نمایش بنر (price/index.html) بدون هیچ تغییری مثل قبل کار کنن.
+// ============================================================
+const KL_SRC_A = 'https://nerkhara.com/api/v1/latest.json';
+const KL_SRC_B = 'https://raw.githubusercontent.com/hidevs/tabloo/main/data/latest-toman.json';
+const KL_OLD_MS = 6 * 3600e3; // داده‌ی قدیمی‌تر از ۶ ساعت «قدیمی» حساب می‌شه
+
+// key و label همونِ قبلیه (ربات قیمت آیتم‌ها رو از روی همین‌ها انتخاب می‌کنه).
+// u: 'T' = تومان، 'D' = دلار (پایین‌تر به تومان تبدیل می‌شه). coin: مثل navasan، قیمت سکه بر ۱۰۰۰ ثبت می‌شه.
+const KL_ITEMS = [
+  { key:'usd',      label:'دلار آمریکا',  k:'usd',              u:'T', fa:['دلار','دلار آمریکا','دلار آزاد','دلار بازار آزاد'], en:['us dollar','usd'] },
+  { key:'eur',      label:'یورو',          k:'eur',              u:'T', fa:['یورو'], en:['euro','eur'] },
+  { key:'18ayar',   label:'طلای ۱۸ عیار',  k:'gold-18k',         u:'T', fa:['طلای 18 عیار','طلای 18 عیار گرم','طلا 18 عیار'], en:['18k gold'] },
+  { key:'sekkeh',   label:'سکه امامی',     k:'coin-emami',       u:'T', coin:true, fa:['سکه امامی'], en:['emami coin'] },
+  { key:'bahar',    label:'بهار آزادی',    k:'coin-bahar-azadi', u:'T', coin:true, fa:['سکه بهار آزادی'], en:['bahar azadi coin'] },
+  { key:'nim',      label:'نیم سکه',       k:'coin-half',        u:'T', coin:true, fa:['نیم سکه'], en:['half coin'] },
+  { key:'rob',      label:'ربع سکه',       k:'coin-quarter',     u:'T', coin:true, fa:['ربع سکه'], en:['quarter coin'] },
+  { key:'usd_btc',  label:'USD BTC',       k:'btc',              u:'D', fa:['بیت کوین','بیتکوین'], en:['bitcoin','btc'] },
+  { key:'usd_eth',  label:'USD ETH',       k:'eth',              u:'D', fa:['اتریوم'], en:['ethereum','eth'] },
+  { key:'usd_usdt', label:'USD USDT',      k:'usdt',             u:'T', fa:['تتر'], en:['tether','usdt'] }
 ];
 
-function shortErr(e){
-  const m = String((e && e.message) || e);
-  if(/Failed to fetch|NetworkError|Load failed/i.test(m)) return 'اتصال برقرار نشد';
-  if(/^HTTP_/.test(m)) return m.replace('HTTP_', 'خطای ');
-  return m.slice(0, 60);
+const klFd = s => String(s).replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
+const klN = s => klFd(String(s || '')).replace(/ي/g, 'ی').replace(/ك/g, 'ک').replace(/[\u200c\u200f()]/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+const klTs = s => { if(!s) return NaN; s = String(s); if(!/[zZ]|[+-]\d\d:?\d\d$/.test(s)) s += 'Z'; return Date.parse(s); };
+
+// قیمت رو به «تومان» (یا برای ارز دیجیتال به «دلار») برمی‌گردونه؛ اگه واحدش نامعتبر بود null
+function klToT(p, cur, u){
+  cur = String(cur).toUpperCase();
+  if(u === 'T'){
+    if(cur === 'IRR' || cur === 'RIAL') p /= 10;
+    else if(cur !== 'IRT' && cur !== 'TOMAN') return null;
+  } else if(cur !== 'USD' && cur !== 'USDT') return null;
+  return p > 0 && isFinite(p) ? p : null;
 }
 
-async function fetchIranMarket(){
-  let payload = null;
-  const errs = [];
-  for(const base of IRAN_MARKET_URLS){
-    try{
-      const res = await fetch(base + '?_ts=' + Date.now(), { cache: 'no-store' });
-      if(!res.ok) throw new Error('HTTP_' + res.status);
-      const j = await res.json();
-      const arr = Array.isArray(j.data) ? j.data
-                : (j.data && typeof j.data === 'object') ? Object.values(j.data)
-                : (Array.isArray(j) ? j : []);
-      if(!arr.some(e => e && e.symbol)) throw new Error('ساختار داده ناشناخته');
-      payload = { j, arr };
-      break;
-    }catch(e){
-      errs.push(new URL(base).hostname + ': ' + shortErr(e));
-    }
-  }
-  if(!payload) throw new Error(errs.join(' | '));
-
-  const bySymbol = {};
-  payload.arr.forEach(e => { if(e && e.symbol) bySymbol[e.symbol] = e; });
-
-  // Each entry says its own currency (IRT = Toman, IRR = Rial, USD = dollars).
-  // If it is missing, fall back to a sanity check on the dollar rate.
-  const usdEntry = bySymbol['USD_IRR_FREE'];
-  const usdNum = usdEntry ? Number(usdEntry.price) : 0;
-  const guessDiv = (usdNum && usdNum > 1000000) ? 10 : 1;
-  const tomanOf = sym => {
-    const e = bySymbol[sym];
-    if(!e) return null;
-    const v = Number(e.price);
-    if(!(isFinite(v) && v > 0)) return null;
-    const cur = String(e.currency || '').toUpperCase();
-    if(cur === 'IRR') return v / 10;
-    if(cur === 'IRT' || cur === 'TOMAN') return v;
-    return v / guessDiv;
-  };
-  const usdOf = sym => {
-    const e = bySymbol[sym];
-    if(!e) return null;
-    const v = Number(e.price);
-    return (isFinite(v) && v > 0) ? v : null;
-  };
-
-  const items = [];
-  IRAN_MARKET_MAP.forEach(([key, sym, label])=>{
-    const v = tomanOf(sym);
-    if(v) items.push({ key, label, value: Math.round(v), unit: 'تومان' });
-  });
-
-  // crypto: the source gives USD prices, banner wants Toman
-  const usdToman = tomanOf('USD_IRR_FREE');
-  [['usd_btc','BTC_USD','USD BTC'], ['usd_eth','ETH_USD','USD ETH']].forEach(([key, sym, label])=>{
-    const v = usdOf(sym);
-    if(v && usdToman) items.push({ key, label, value: Math.round(v * usdToman), unit: 'تومان' });
-  });
-  const xau = usdOf('XAU_USD');
-  if(xau) items.push({ key: 'xau', label: 'انس جهانی', value: Math.round(xau * 100) / 100, unit: 'دلار' });
-
-  if(items.length === 0){
-    throw new Error('نمادهای شناخته‌شده پیدا نشد (نمونه: ' + payload.arr.slice(0,3).map(e=>e.symbol).join(', ') + ')');
-  }
-  const publishedAt = payload.j.meta && payload.j.meta.published_at ? payload.j.meta.published_at : '';
-  return { items, publishedAt, payload: payload.j };
+function klFromA(a, it){
+  const x = (a.items || []).find(e => e.id === it.k);
+  if(!x) return null;
+  const p = klToT(+x.price, x.unit, it.u);
+  if(p == null) return null;
+  const t = klTs(x.updated_utc);
+  return { p, t, src: 'A', stale: x.stale === true || a.stale === true || (Date.now() - t > KL_OLD_MS) };
 }
 
-// ---------- Source 2 (fallback): navasan.tech with key rotation ----------
-async function fetchNavasanData(codes){
-  const fetchOpts = { cache: 'no-store' };
-  const pageIsHttps = location.protocol === 'https:';
-  const exhausted = loadExhausted();
-  const nowTs = Date.now();
-  const isFresh = k => !(exhausted[k] && nowTs - exhausted[k] < EXHAUSTED_TTL_MS);
-  // keys not known to be exhausted go first; exhausted ones are retried last
-  const order = codes.filter(isFresh).concat(codes.filter(k => !isFresh(k)));
-  let quotaHits = 0;
-  let otherProblem = '';
+const klFlat = b => {
+  const c = b && b.data && b.data.categories;
+  return c ? Object.values(c).flat() : (Array.isArray(b && b.data) ? b.data : []);
+};
 
-  for(const code of order){
-    const q = '/latest/?api_key=' + encodeURIComponent(code) + '&_ts=' + Date.now();
-    let res;
-    try{
-      res = await fetch('https://api.navasan.tech' + q, fetchOpts);
-    }catch(e){
-      if(pageIsHttps) throw e; // http would be blocked here anyway (Mixed Content)
-      res = await fetch('http://api.navasan.tech' + q, fetchOpts);
-    }
-    const txt = await res.text();
-    let json = null;
-    try{ json = JSON.parse(txt); }catch(e){}
+function klFromB(list, it){
+  const names = [...it.fa, ...it.en].map(klN);
+  const m = list.filter(x => [x.name_fa, x.name_en, x.symbol].some(v => v && names.includes(klN(v))) && klToT(+x.price, x.currency, it.u) != null);
+  const x = m.find(e => !e.stale) || m[0];
+  if(!x) return null;
+  const t = klTs(x.timestamp || x.checked_at);
+  return { p: klToT(+x.price, x.currency, it.u), t, src: 'B', stale: x.stale === true || (Date.now() - t > KL_OLD_MS) };
+}
 
-    const looksLikePrices = json && typeof json === 'object' && !Array.isArray(json) && Object.keys(json).length > 10;
-    if(res.ok && looksLikePrices) return { data: json };
+async function klJson(url){
+  const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 15000);
+  try{
+    const r = await fetch(url, { signal: ctl.signal, cache: 'no-store' });
+    if(r.status === 429) throw new Error('محدودیت درخواست (429)');
+    if(!r.ok) throw new Error('خطای HTTP ' + r.status);
+    return await r.json();
+  }catch(e){
+    throw new Error(e && e.name === 'AbortError' ? 'پایان مهلت اتصال'
+      : e && e.name === 'SyntaxError' ? 'پاسخ نامعتبر'
+      : (e && e.message) || 'خطای اینترنت یا CORS');
+  }finally{
+    clearTimeout(timer);
+  }
+}
 
-    if(/quota/i.test(txt)){
-      quotaHits++;
-      exhausted[code] = Date.now();
-      saveExhausted(exhausted);
+// اول نرخ‌آرا؛ اگه نیومد یا بعضی قیمت‌ها قدیمی بودن، tabloo هم گرفته می‌شه.
+async function klCollect(){
+  let a = null, list = null;
+  const status = { a: '—', b: '—' };
+  try{ a = await klJson(KL_SRC_A); status.a = 'متصل ✓'; }catch(e){ status.a = 'خطا: ' + e.message; }
+  const fromA = it => a && klFromA(a, it);
+  if(!a || KL_ITEMS.some(it => { const r = fromA(it); return !r || r.stale; })){
+    try{ list = klFlat(await klJson(KL_SRC_B)); status.b = 'متصل ✓'; }catch(e){ status.b = 'خطا: ' + e.message; }
+  }else{
+    status.b = 'نیازی نشد';
+  }
+  const found = {};
+  KL_ITEMS.forEach(it => {
+    const c = [fromA(it), list && klFromB(list, it)].filter(Boolean);
+    found[it.key] = c.find(r => !r.stale) || c[0] || null;
+  });
+  return { found, status };
+}
+
+// همون قراردادِ مقدارهای قبلی: دلار/طلا/تتر به تومان؛ سکه‌ها بر ۱۰۰۰؛ بیت‌کوین و اتریوم به تومان.
+function klToCurrentPrices(found){
+  const usdRate = found.usd ? found.usd.p : (found.usd_usdt ? found.usd_usdt.p : null);
+  const out = [];
+  KL_ITEMS.forEach(it => {
+    const r = found[it.key];
+    if(!r) return;
+    let value;
+    if(it.u === 'D'){
+      if(!usdRate) return; // بدون نرخ دلار نمی‌شه به تومان تبدیلش کرد
+      value = Math.round(r.p * usdRate);
+    }else if(it.coin){
+      value = Math.round(r.p / 1000);
     }else{
-      otherProblem = txt.slice(0, 150) || ('HTTP ' + res.status);
+      value = Math.round(r.p);
     }
-  }
-  const msg = (quotaHits > 0 && !otherProblem)
-    ? 'سقف ماهانه‌ی ' + (quotaHits === 1 ? 'کلید' : 'همه‌ی ' + quotaHits + ' کلید') + ' نوسان تموم شده.'
-    : 'سرویس نوسان خطا داد: ' + otherProblem;
-  return { error: msg };
+    const entry = { key: it.key, label: it.label, value };
+    if(it.u === 'D'){
+      // فقط برای نمایش تو همین صفحه (لیست و بنر): قیمت به دلار. ربات قیمت فقط key/label/value رو برمی‌داره، پس اون بدون تغییر می‌مونه.
+      entry.usd = Math.round(r.p * 100) / 100;
+      entry.unit = 'دلار';
+    }
+    out.push(entry);
+  });
+  return out;
 }
 
 async function fetchPrices(){
-  const manual = manualModeToggle.checked;
-  const codes = getActiveApiCodes();
-  if(manual && codes.length === 0){
-    setStatus('حالت دستی روشنه ولی کد API خالیه — یه کد وارد کن', 'error');
-    return;
-  }
-  if(manual){
-    try{ localStorage.setItem(STORAGE_KEY, apiCodeInput.value.trim()); }catch(e){}
-  }
-
   fetchBtn.disabled = true;
   setStatus('در حال دریافت قیمت‌ها…', 'loading');
   priceCard.style.display = 'none';
   bannerCard.style.display = 'none';
 
   try{
-    let items = null;
-    let rawForDebug = null;
-    let okMsg = '';
-    let iranMarketFailed = false;
-    let iranMarketReason = '';
+    const res = await klCollect();
+    const items = klToCurrentPrices(res.found);
 
-    // 1) Iran Market first (no key, no quota). Skipped in manual-key mode.
-    if(!manual){
-      try{
-        const r = await fetchIranMarket();
-        items = r.items;
-        rawForDebug = r.payload;
-        okMsg = 'قیمت‌ها از Iran Market (منبع TGJU) دریافت شد';
-        if(r.publishedAt){
-          const t = Date.parse(r.publishedAt);
-          if(!isNaN(t)){
-            const ageMin = Math.round((Date.now() - t) / 60000);
-            if(ageMin > 180) okMsg += ' — توجه: آخرین به‌روزرسانی منبع حدود ' + Math.round(ageMin/60) + ' ساعت پیشه';
-          }
-        }
-      }catch(e){
-        console.warn('Iran Market failed, falling back to navasan', e);
-        iranMarketFailed = true;
-        iranMarketReason = (e && e.message) ? e.message : String(e);
-      }
-    }
-
-    // 2) Fallback: navasan.tech with key rotation (also used directly in manual mode)
-    if(!items){
-      if(codes.length === 0){
-        setStatus('منبع بدون کلید در دسترس نبود و کلید نوسان هم تنظیم نشده.', 'error');
-        return;
-      }
-      const r = await fetchNavasanData(codes);
-      if(r.error){
-        const localHint = (['content:','file:'].includes(location.protocol))
-          ? ' — صفحه از داخل حافظه‌ی گوشی (Downloads) باز شده؛ اگه این خطا ادامه داشت، فایل رو روی GitHub Pages بذار و از آدرس https بازش کن.'
-          : '';
-        setStatus((iranMarketFailed ? 'Iran Market: ' + iranMarketReason + localHint + ' ‖ ' : '') + r.error + ' یه کلید جدید به لیست API_CODES اضافه کن.', 'error');
-        return;
-      }
-      rawForDebug = r.data;
-      items = extractItemsAny(r.data);
-      okMsg = 'قیمت‌ها از نوسان دریافت شد';
-    }
-
-    rawOutput.textContent = JSON.stringify(rawForDebug, null, 2);
+    rawOutput.textContent = JSON.stringify({ sources: res.status, items }, null, 2);
     debugDetails.style.display = 'block';
 
-    currentPrices = items.map(it => ({ ...it, selected: DEFAULT_SELECTED_KEYS.includes(it.key) }));
+    currentPrices = items.map(it => ({ ...it, selected: true }));
     renderPriceGrid();
 
     if(currentPrices.length === 0){
-      setStatus('داده دریافت شد ولی فیلدهای شناخته‌شده پیدا نشد — خروجی خام رو باز کن و برام بفرست تا مپینگ رو تنظیم کنم', 'error');
+      setStatus('قیمتی دریافت نشد — منبع اصلی: ' + res.status.a + ' | منبع پشتیبان: ' + res.status.b, 'error');
     } else {
-      setStatus(okMsg, 'ok');
+      setStatus('قیمت‌ها با موفقیت دریافت شد', 'ok');
     }
     priceCard.style.display = 'block';
 
   }catch(err){
     console.error(err);
-    setStatus('اتصال به سرویس قیمت برقرار نشد (اینترنت، فیلترینگ یا مرورگر). دوباره امتحان کن یا شبکه رو عوض کن.', 'error');
+    setStatus('دریافت قیمت ناموفق بود: ' + ((err && err.message) || err), 'error');
   }finally{
     fetchBtn.disabled = false;
   }
@@ -607,7 +522,7 @@ function renderPriceGrid(){
       <input type="checkbox" data-idx="${idx}" ${it.selected ? 'checked' : ''}>
       <div class="pi-body">
         <div class="pi-label">${it.label}</div>
-        <div class="pi-value">${fmtNumber(it.value)}</div>
+        <div class="pi-value">${it.usd != null ? fmtNumber(it.usd) + ' دلار' : fmtNumber(it.value)}</div>
       </div>
     </label>
   `).join('');
@@ -699,10 +614,13 @@ makeBannerBtn.addEventListener('click', ()=>{
 
 // ---- Card style classification: currency / gold / coin ----
 function getCardStyle(key){
+  const k = String(key).toLowerCase();
   const goldKeys = ['ir_gold_18k','ir_gold_24k','ir_gold_melted','xauusd','geram18','geram24','gol18','gol24','gold18','gold24','mesghal','ons','ounce','18ayar','abshodeh','xau'];
   const coinKeys = ['ir_coin_1g','ir_coin_quarter','ir_coin_half','ir_coin_emami','ir_coin_bahar','sekee_emami','emami','sekee','seke_bahar','azadi1','bahar','nim','rob','gerami','sekkeh'];
-  if(goldKeys.includes(key)) return { type:'gold', border:'#d4af37', text:'#b8860b', icon:'gold' };
-  if(coinKeys.includes(key)) return { type:'coin', border:'#2563eb', text:'#1d4ed8', icon:'coin' };
+  if(goldKeys.includes(k)) return { type:'gold', border:'#d4af37', text:'#b8860b', icon:'gold' };
+  if(coinKeys.includes(k)) return { type:'coin', border:'#2563eb', text:'#1d4ed8', icon:'coin' };
+  if(k.includes('btc')) return { type:'btc', border:'#f7931a', text:'#c2720a', icon:'btc' };
+  if(k.includes('eth')) return { type:'eth', border:'#627eea', text:'#3c4fb0', icon:'eth' };
   return { type:'currency', border:'#16a34a', text:'#15803d', icon:'cash' };
 }
 
@@ -721,6 +639,7 @@ function unitFor(key){
 // which is trusted as-is.
 const NAVASAN_COIN_KEYS = ['sekkeh','bahar','azadi1','seke_bahar','nim','rob','gerami','emami','sekee','sekee_emami','ir_coin_1g','ir_coin_quarter','ir_coin_half','ir_coin_emami','ir_coin_bahar'];
 function displayValueFor(item){
+  if(item.usd != null) return item.usd;
   if(item.unit) return item.value;
   const num = Number(item.value);
   if(isNaN(num)) return item.value;
@@ -728,283 +647,181 @@ function displayValueFor(item){
   return num;
 }
 
-// ---- Simple drawn icons (flat style, no external images) ----
+// ---- Modern banner rendering (appearance only) ----
 function drawIcon(c, type, cx, cy, r){
   c.save();
-  if(type === 'cash'){
-    c.fillStyle = '#e8f5e9';
-    roundRect(c, cx-r, cy-r*0.62, r*2, r*1.24, 8);
-    c.fill();
-    c.strokeStyle = '#2e7d32'; c.lineWidth = 3;
-    roundRect(c, cx-r, cy-r*0.62, r*2, r*1.24, 8);
-    c.stroke();
-    c.fillStyle = '#2e7d32';
-    c.font = `700 ${r*0.9}px "JetBrains Mono", monospace`;
-    c.textAlign = 'center'; c.textBaseline = 'middle';
-    c.fillText('$', cx, cy+2);
-  } else if(type === 'gold'){
-    c.strokeStyle = '#d4af37'; c.lineWidth = r*0.22;
-    c.beginPath(); c.arc(cx, cy+r*0.15, r*0.62, 0.15*Math.PI, 1.5*Math.PI); c.stroke();
-    c.beginPath(); c.arc(cx+r*0.15, cy-r*0.25, r*0.32, 0, Math.PI*2); c.stroke();
-    c.fillStyle = '#d4af37';
+  const white='#ffffff';
+  let accent = type==='gold' ? '#c9972b' : type==='coin' ? '#4c78d8' : type==='btc' ? '#f7931a' : type==='eth' ? '#627eea' : '#238b63';
+  c.shadowColor='rgba(23,53,43,.16)'; c.shadowBlur=16; c.shadowOffsetY=5;
+  c.fillStyle='rgba(255,255,255,.96)'; c.beginPath(); c.arc(cx,cy,r,0,Math.PI*2); c.fill();
+  c.shadowColor='transparent'; c.lineWidth=4; c.strokeStyle=accent; c.stroke();
+  c.fillStyle=accent;
+  c.beginPath(); c.arc(cx,cy,r*.58,0,Math.PI*2); c.fill();
+
+  if(type==='cash'){
+    c.fillStyle=white; c.font=`900 ${r*.55}px Arial,sans-serif`; c.textAlign='center'; c.textBaseline='middle'; c.fillText('$',cx,cy+2);
+  }else if(type==='gold'){
+    // gold ingot/bar shape with a shine highlight
+    const bw=r*.66, bh=r*.34, bx=cx-bw/2, by=cy-bh/2;
+    c.fillStyle=white;
     c.beginPath();
-    c.moveTo(cx-r*0.05, cy-r*0.6);
-    c.lineTo(cx+r*0.28, cy-r*0.25);
-    c.lineTo(cx-r*0.02, cy+r*0.02);
-    c.lineTo(cx-r*0.32, cy-r*0.28);
-    c.closePath();
-    c.fill();
-  } else if(type === 'coin'){
-    let grad = c.createLinearGradient(cx-r,cy-r,cx+r,cy+r);
-    grad.addColorStop(0,'#ffe27a'); grad.addColorStop(1,'#c99b1f');
-    c.fillStyle = grad;
-    c.beginPath(); c.arc(cx, cy, r*0.85, 0, Math.PI*2); c.fill();
-    c.strokeStyle = '#8a6d1a'; c.lineWidth = 3;
-    c.beginPath(); c.arc(cx, cy, r*0.85, 0, Math.PI*2); c.stroke();
-    c.strokeStyle = 'rgba(138,109,26,0.5)'; c.lineWidth = 2;
-    c.beginPath(); c.arc(cx, cy, r*0.6, 0, Math.PI*2); c.stroke();
-    c.fillStyle = '#8a6d1a';
+    c.moveTo(bx+bw*0.12, by); c.lineTo(bx+bw*0.88, by);
+    c.lineTo(bx+bw, by+bh); c.lineTo(bx, by+bh);
+    c.closePath(); c.fill();
+    c.strokeStyle=accent; c.lineWidth=2.5; c.stroke();
+    c.strokeStyle='rgba(255,255,255,.9)'; c.lineWidth=2;
+    c.beginPath(); c.moveTo(bx+bw*0.28, by+bh*0.28); c.lineTo(bx+bw*0.5, by+bh*0.28); c.stroke();
+  }else if(type==='coin'){
+    // coin emblem: outer ring, dot rosette, center boss
+    c.strokeStyle=white; c.lineWidth=3;
+    c.beginPath(); c.arc(cx,cy,r*.40,0,Math.PI*2); c.stroke();
+    c.fillStyle=white;
+    for(let i=0;i<8;i++){
+      const ang=(Math.PI*2/8)*i;
+      c.beginPath(); c.arc(cx+Math.cos(ang)*r*.40, cy+Math.sin(ang)*r*.40, r*.05,0,Math.PI*2); c.fill();
+    }
+    c.beginPath(); c.arc(cx,cy,r*.13,0,Math.PI*2); c.fill();
+  }else if(type==='btc'){
+    c.fillStyle=white; c.font=`900 ${r*.5}px Arial,sans-serif`; c.textAlign='center'; c.textBaseline='middle'; c.fillText('₿',cx,cy+2);
+  }else if(type==='eth'){
+    // faceted diamond, the classic Ethereum silhouette
+    const s=r*.36;
+    c.fillStyle=white;
     c.beginPath();
-    c.moveTo(cx-r*0.32, cy+r*0.18);
-    c.lineTo(cx-r*0.32, cy-r*0.08);
-    c.lineTo(cx, cy-r*0.32);
-    c.lineTo(cx+r*0.32, cy-r*0.08);
-    c.lineTo(cx+r*0.32, cy+r*0.18);
-    c.closePath();
-    c.fill();
+    c.moveTo(cx, cy-s); c.lineTo(cx+s*.62, cy+s*.05); c.lineTo(cx, cy+s); c.lineTo(cx-s*.62, cy+s*.05);
+    c.closePath(); c.fill();
+    c.globalAlpha=.5; c.fillStyle=accent;
+    c.beginPath(); c.moveTo(cx, cy-s); c.lineTo(cx+s*.62, cy+s*.05); c.lineTo(cx, cy+s*.18); c.closePath(); c.fill();
+    c.globalAlpha=1;
   }
   c.restore();
 }
 
-function drawCalendarIcon(c, x, y, s){
-  c.strokeStyle = '#00e5c7'; c.lineWidth = 2.5;
-  roundRect(c, x, y, s, s*0.85, 4); c.stroke();
-  c.beginPath(); c.moveTo(x, y+s*0.28); c.lineTo(x+s, y+s*0.28); c.stroke();
-  c.beginPath(); c.moveTo(x+s*0.25, y-s*0.12); c.lineTo(x+s*0.25, y+s*0.12); c.stroke();
-  c.beginPath(); c.moveTo(x+s*0.75, y-s*0.12); c.lineTo(x+s*0.75, y+s*0.12); c.stroke();
-}
-function drawClockIcon(c, x, y, r){
-  c.strokeStyle = '#00e5c7'; c.lineWidth = 2.5;
-  c.beginPath(); c.arc(x, y, r, 0, Math.PI*2); c.stroke();
-  c.beginPath(); c.moveTo(x, y); c.lineTo(x, y-r*0.55); c.stroke();
-  c.beginPath(); c.moveTo(x, y); c.lineTo(x+r*0.4, y+r*0.15); c.stroke();
+function drawModernBackground(c,W,H){
+  const bg=c.createLinearGradient(0,0,W,H); bg.addColorStop(0,'#eafff1'); bg.addColorStop(.55,'#c9f3d6'); bg.addColorStop(1,'#a9e8c0');
+  c.fillStyle=bg; c.fillRect(0,0,W,H);
+  // soft decorative blobs
+  c.save(); c.globalAlpha=.42;
+  c.fillStyle='#ffffff'; c.beginPath(); c.arc(W-35,55,150,0,Math.PI*2); c.fill();
+  c.fillStyle='#b8dfc8'; c.beginPath(); c.arc(30,H-20,170,0,Math.PI*2); c.fill();
+  c.restore();
+  // subtle grid
+  c.save(); c.globalAlpha=.055; c.strokeStyle='#17352b'; c.lineWidth=1;
+  for(let x=0;x<W;x+=36){c.beginPath();c.moveTo(x,0);c.lineTo(x,H);c.stroke();}
+  for(let y=0;y<H;y+=36){c.beginPath();c.moveTo(0,y);c.lineTo(W,y);c.stroke();}
+  c.restore();
+  // diagonal accent lines
+  c.save(); c.globalAlpha=.10; c.strokeStyle='#238b63'; c.lineWidth=8;
+  c.beginPath(); c.moveTo(-80,H*.35); c.lineTo(W*.32,-40); c.stroke();
+  c.beginPath(); c.moveTo(W*.72,H+40); c.lineTo(W+90,H*.55); c.stroke();
+  c.restore();
 }
 
-function drawCandlestickBg(c, W, H){
-  const bandH = Math.min(H*0.32, 360);
-  let bg = c.createLinearGradient(0,0,0,bandH);
-  bg.addColorStop(0,'#0d1b2a'); bg.addColorStop(1,'#0a0d13');
-  c.fillStyle = bg; c.fillRect(0,0,W,bandH);
-
-  const n = 26;
-  const colW = W / n;
-  for(let i=0;i<n;i++){
-    const cx = i*colW + colW*0.5;
-    const up = Math.random() > 0.45;
-    const bodyH = 20 + Math.random()*90;
-    const baseY = bandH*0.35 + Math.random()*bandH*0.4;
-    const color = up ? 'rgba(0,229,199,0.35)' : 'rgba(255,45,120,0.3)';
-    c.strokeStyle = color; c.fillStyle = color; c.lineWidth = 1.5;
-    c.beginPath();
-    c.moveTo(cx, baseY - bodyH*0.5 - 14);
-    c.lineTo(cx, baseY + bodyH*0.5 + 14);
-    c.stroke();
-    c.fillRect(cx-colW*0.24, baseY-bodyH*0.5, colW*0.48, bodyH);
-  }
-  // fade the candlestick band into the background
-  let fade = c.createLinearGradient(0,bandH*0.5,0,bandH);
-  fade.addColorStop(0,'rgba(10,13,19,0)'); fade.addColorStop(1,'rgba(10,13,19,1)');
-  c.fillStyle = fade; c.fillRect(0,bandH*0.5,W,bandH*0.5);
+function drawTrendLine(c,x,y,w,h){
+  c.save(); c.strokeStyle='rgba(35,139,99,.26)'; c.lineWidth=4; c.lineCap='round';
+  const pts=[[x,y+h*.72],[x+w*.18,y+h*.58],[x+w*.34,y+h*.64],[x+w*.51,y+h*.35],[x+w*.67,y+h*.46],[x+w*.82,y+h*.20],[x+w,y+h*.28]];
+  c.beginPath(); pts.forEach((p,i)=>i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1])); c.stroke();
+  c.fillStyle='#238b63'; const p=pts[pts.length-1]; c.beginPath(); c.arc(p[0],p[1],6,0,Math.PI*2); c.fill(); c.restore();
 }
 
 function drawBanner(selected){
-  const W = 1080;
-  // Calibrated so 8 selected prices ⇒ ~2000px total. Height is otherwise fully
-  // variable: more items ⇒ taller, fewer items ⇒ shorter (topH/bottomH/gap are
-  // fixed; only the number of cards changes the total).
-  const cardH = 175;
-  const gap = 18;
-  const topH = 310;   // title + one compact merged date/time bar
-  const discH = 46;   // disclaimer bar height
-  const discGap = 12;
-  const footH = 190;  // channel footer height — fixed, sized to fit icon + 3 lines
-  const bottomMargin = 16;
-  const bottomH = discH + discGap + footH + bottomMargin;
+  const W=1080, cardH=170, gap=16, topH=344, discH=52, discGap=14, footH=215, bottomMargin=22;
+  const n=Math.max(selected.length,1);
+  const H=topH+n*cardH+(n-1)*gap+discH+discGap+footH+bottomMargin;
+  hiddenCanvas.width=W; hiddenCanvas.height=H;
+  const c=hctx; c.clearRect(0,0,W,H); drawModernBackground(c,W,H);
 
-  const n = Math.max(selected.length, 1);
-  const H = topH + n*cardH + (n-1)*gap + bottomH;
+  // HERO
+  c.save(); c.shadowColor='rgba(23,53,43,.20)'; c.shadowBlur=28; c.shadowOffsetY=12;
+  const hero=c.createLinearGradient(28,24,W-28,280); hero.addColorStop(0,'#17352b'); hero.addColorStop(1,'#245c47');
+  c.fillStyle=hero; roundRect(c,28,24,W-56,300,34); c.fill(); c.restore();
+  // hero decorative ring
+  c.save(); c.globalAlpha=.12; c.strokeStyle='#ffffff'; c.lineWidth=2;
+  c.beginPath(); c.arc(W-95,105,86,0,Math.PI*2); c.stroke(); c.beginPath(); c.arc(W-95,105,112,0,Math.PI*2); c.stroke(); c.restore();
+  drawTrendLine(c,W-300,55,220,100);
 
-  hiddenCanvas.width = W; hiddenCanvas.height = H;
-  const c = hctx;
+  c.direction='rtl'; c.textAlign='center';
+  c.fillStyle='#bde6cd'; c.font='800 20px Vazirmatn,sans-serif'; c.fillText('آسان‌نت  •  گزارش لحظه‌ای بازار',W/2,65);
+  c.fillStyle='#ffffff'; c.font='900 78px Vazirmatn,sans-serif'; c.fillText('قیمت روز',W/2,137);
+  c.fillStyle='#d9f5e4'; c.font='800 40px Vazirmatn,sans-serif'; c.fillText('ارز  •  طلا  •  سکه',W/2,188);
+  c.fillStyle='#bde6cd'; c.font='600 24px Vazirmatn,sans-serif'; c.fillText('نرخ‌های به‌روز | مرجع اطلاع‌رسانی آسان‌نت',W/2,222);
 
-  // base background
-  c.fillStyle = '#0a0d13';
-  c.fillRect(0,0,W,H);
-  drawCandlestickBg(c, W, H);
+  const chipY=244, chipH=64, chipW=(W-126)/2, chipPad=32;
+  c.fillStyle='rgba(255,255,255,.12)'; roundRect(c,48,chipY,chipW,chipH,20); c.fill(); roundRect(c,78+chipW,chipY,chipW,chipH,20); c.fill();
+  c.fillStyle='#ffffff';
+  const dateText=todayJalaliString(), timeStr='ساعت '+toFaDigits(String(new Date().getHours()).padStart(2,'0'))+':'+toFaDigits(String(new Date().getMinutes()).padStart(2,'0'));
+  const dateSize=fitFontSize(c,dateText,chipW-chipPad,40,700,'Vazirmatn,sans-serif',24);
+  c.font=`700 ${dateSize}px Vazirmatn,sans-serif`; c.fillText(dateText,48+chipW/2,chipY+45);
+  const timeSize=fitFontSize(c,timeStr,chipW-chipPad,40,700,'Vazirmatn,sans-serif',24);
+  c.font=`700 ${timeSize}px Vazirmatn,sans-serif`; c.fillText(timeStr,78+chipW+chipW/2,chipY+45);
 
-  // ---- Title ----
-  c.textAlign = 'center';
-  c.direction = 'rtl';
-  c.fillStyle = '#f4f6f8';
-  c.font = '900 72px Vazirmatn, sans-serif';
-  c.fillText('قیمت روز', W/2, 88);
-  c.fillStyle = '#f2c14e';
-  c.font = '900 72px Vazirmatn, sans-serif';
-  c.fillText('ارز و طلا', W/2, 158);
-
-  // ---- Date + time merged into a single compact bar ----
-  const badgeX = 16;
-  const badgeW = W - 32;
-  const badgeY = 195;
-  const badgeH = 96;
-  c.strokeStyle = 'rgba(0,229,199,0.45)'; c.lineWidth = 3;
-  roundRect(c, badgeX, badgeY, badgeW, badgeH, 20); c.stroke();
-
-  const midX = badgeX + badgeW/2;
-  c.strokeStyle = 'rgba(0,229,199,0.25)'; c.lineWidth = 2;
-  c.beginPath(); c.moveTo(midX, badgeY+16); c.lineTo(midX, badgeY+badgeH-16); c.stroke();
-
-  drawCalendarIcon(c, badgeX+56, badgeY+badgeH/2-14, 34);
-  const dateStr = todayJalaliString();
-  const dateMaxW = (badgeW/2) - 110;
-  const dateSize = fitFontSize(c, dateStr, dateMaxW, 40, 700, 'Vazirmatn, sans-serif', 22);
-  c.fillStyle = '#e8ecf1';
-  c.font = `700 ${dateSize}px Vazirmatn, sans-serif`;
-  c.textAlign = 'center';
-  c.fillText(dateStr, badgeX+96+(badgeW/2-96)/2, badgeY+badgeH/2+dateSize*0.32);
-
-  const now = new Date();
-  const hh = toFaDigits(String(now.getHours()).padStart(2,'0'));
-  const mm = toFaDigits(String(now.getMinutes()).padStart(2,'0'));
-  const timeStr = 'ساعت ' + hh + ':' + mm;
-  drawClockIcon(c, midX+56, badgeY+badgeH/2, 24);
-  const timeMaxW = (badgeW/2) - 110;
-  const timeSize = fitFontSize(c, timeStr, timeMaxW, 40, 700, 'Vazirmatn, sans-serif', 22);
-  c.fillStyle = '#e8ecf1';
-  c.font = `700 ${timeSize}px Vazirmatn, sans-serif`;
-  c.fillText(timeStr, midX+96+(badgeW/2-96)/2, badgeY+badgeH/2+timeSize*0.32);
-
-  // ---- Price cards ----
-  const startY = topH;
-  const cardW = W - 32;
-  const cardX = 16;
-
-  selected.forEach((item, i)=>{
-    const y = startY + i * (cardH + gap);
-    const style = getCardStyle(item.key);
-
-    // card shadow + bg
-    c.save();
-    c.shadowColor = 'rgba(0,0,0,0.35)';
-    c.shadowBlur = 20;
-    c.shadowOffsetY = 8;
-    c.fillStyle = '#fafafa';
-    roundRect(c, cardX, y, cardW, cardH, 20);
-    c.fill();
-    c.restore();
-
-    c.strokeStyle = style.border; c.lineWidth = 4;
-    roundRect(c, cardX, y, cardW, cardH, 20); c.stroke();
-
-    // icon
-    drawIcon(c, style.icon, cardX + 100, y + cardH/2, 58);
-
-    // label — doubled and bolder, shifted left (away from the divider/price)
-    // so the name never crowds the numbers, still shrinks to fit its box
-    const labelLeftBound = 200;
-    const labelRightBound = cardW*0.68 - 60;
-    const labelMaxW = labelRightBound - labelLeftBound;
-    const labelSize = fitFontSize(c, item.label, labelMaxW, 82, 800, 'Vazirmatn, sans-serif', 30);
-    c.textAlign = 'center';
-    c.direction = 'rtl';
-    c.fillStyle = '#2a2a2a';
-    c.font = `800 ${labelSize}px Vazirmatn, sans-serif`;
-    c.fillText(item.label, cardX + (labelLeftBound+labelRightBound)/2, y + cardH/2 + labelSize*0.32);
-
+  // PRICE CARDS
+  const startY=topH, cardX=28, cardW=W-56;
+  selected.forEach((item,i)=>{
+    const y=startY+i*(cardH+gap), style=getCardStyle(item.key);
+    c.save(); c.shadowColor='rgba(23,53,43,.14)'; c.shadowBlur=20; c.shadowOffsetY=8;
+    c.fillStyle='rgba(255,255,255,.94)'; roundRect(c,cardX,y,cardW,cardH,28); c.fill(); c.restore();
+    // colored top edge
+    c.fillStyle=style.border; roundRect(c,cardX,y,cardW,7,4); c.fill();
+    drawIcon(c,style.icon,cardX+88,y+cardH/2,56);
+    c.direction='rtl'; c.textAlign='center';
+    const ls=fitFontSize(c,item.label,390,42,900,'Vazirmatn,sans-serif',26);
+    c.fillStyle='#17352b'; c.font=`900 ${ls}px Vazirmatn,sans-serif`; c.fillText(item.label,cardX+340,y+72);
+    c.fillStyle='#71847a'; c.font='600 19px Vazirmatn,sans-serif'; c.fillText('آخرین نرخ',cardX+340,y+108);
     // divider
-    c.strokeStyle = 'rgba(0,0,0,0.15)'; c.lineWidth = 2;
-    c.beginPath();
-    c.moveTo(cardX + cardW*0.68, y + 20);
-    c.lineTo(cardX + cardW*0.68, y + cardH - 20);
-    c.stroke();
-
-    // value — doubled and bolder, shrinks to fit the right column so long
-    // numbers like BTC/ETH stay inside the card
-    const valueMaxW = cardW*0.32 - 50;
-    const valueText = toFaDigits(fmtNumber(displayValueFor(item)));
-    const valueSize = fitFontSize(c, valueText, valueMaxW, 100, 900, 'Vazirmatn, sans-serif', 26);
-    c.fillStyle = style.text;
-    c.font = `900 ${valueSize}px Vazirmatn, sans-serif`;
-    c.textAlign = 'center';
-    c.fillText(valueText, cardX + cardW*0.855, y + cardH/2 - 14);
-
-    const unitText = item.unit || unitFor(item.key);
-    const unitSize = fitFontSize(c, unitText, valueMaxW, 40, 700, 'Vazirmatn, sans-serif', 18);
-    c.fillStyle = '#333';
-    c.font = `700 ${unitSize}px Vazirmatn, sans-serif`;
-    c.fillText(unitText, cardX + cardW*0.855, y + cardH/2 + 50);
+    c.fillStyle='#e3ece6'; c.fillRect(cardX+555,y+27,2,cardH-54);
+    const valueText=toFaDigits(fmtNumber(displayValueFor(item)));
+    const vs=fitFontSize(c,valueText,340,64,900,'Vazirmatn,sans-serif',27);
+    c.fillStyle=style.text; c.font=`900 ${vs}px Vazirmatn,sans-serif`; c.fillText(valueText,cardX+760,y+73);
+    const unitText=item.unit||unitFor(item.key), us=fitFontSize(c,unitText,260,23,800,'Vazirmatn,sans-serif',16);
+    c.fillStyle='#60736a'; c.font=`800 ${us}px Vazirmatn,sans-serif`; c.fillText(unitText,cardX+760,y+107);
+    c.fillStyle='#238b63'; c.beginPath(); c.arc(cardX+cardW-43,y+34,7,0,Math.PI*2); c.fill();
+    c.fillStyle='#238b63'; c.font='700 14px Vazirmatn,sans-serif'; c.textAlign='right'; c.fillText('LIVE',cardX+cardW-58,y+39);
   });
 
-  // ---- Disclaimer bar (single compact line) ----
-  const discY = startY + n * (cardH + gap) - gap + 18;
-  c.fillStyle = 'rgba(255,255,255,0.05)';
-  roundRect(c, 16, discY, W-32, discH, 12); c.fill();
-  c.strokeStyle = 'rgba(255,255,255,0.15)'; c.lineWidth = 1.5;
-  roundRect(c, 16, discY, W-32, discH, 12); c.stroke();
-  c.fillStyle = '#c7ccd4';
-  const discText = 'قیمت‌ها بر اساس آخرین نرخ بازار آزاد است و ممکن است تغییر کند.';
-  const discSize = fitFontSize(c, discText, W-70, 22, 500, 'Vazirmatn, sans-serif', 15);
-  c.font = `500 ${discSize}px Vazirmatn, sans-serif`;
-  c.textAlign = 'center';
-  c.fillText(discText, W/2, discY+discH/2+discSize*0.32);
+  const discY=startY+n*cardH+(n-1)*gap+14;
+  c.fillStyle='#17352b'; roundRect(c,28,discY,W-56,discH,18); c.fill();
+  c.fillStyle='#d9f5e4'; const dt='نرخ‌ها ممکن است در طول روز تغییر کنند.'; const ds=fitFontSize(c,dt,W-100,21,700,'Vazirmatn,sans-serif',15); c.font=`700 ${ds}px Vazirmatn,sans-serif`; c.textAlign='center'; c.fillText(dt,W/2,discY+34);
 
-  // ---- Channel footer (fixed height, guaranteed to fit its content) ----
-  const footY = discY + discH + discGap;
-  c.fillStyle = '#f4f4f4';
-  roundRect(c, 16, footY, W-32, footH, 18); c.fill();
+  // FOOTER / BRAND
+  const footY=discY+discH+discGap;
+  c.save(); c.shadowColor='rgba(23,53,43,.16)'; c.shadowBlur=22; c.shadowOffsetY=8; c.fillStyle='#ffffff'; roundRect(c,28,footY,W-56,footH,30); c.fill(); c.restore();
+  c.fillStyle='#17352b'; c.font='900 38px Vazirmatn,sans-serif'; c.direction='rtl'; c.textAlign='center'; c.fillText('قیمت‌ها را سریع ببین؛ فرصت‌ها را از دست نده!',W/2,footY+55);
 
-  const iconR = 44;
-  const iconCx = 96, iconCy = footY + footH/2;
-  let ig = c.createLinearGradient(iconCx-iconR,iconCy-iconR,iconCx+iconR,iconCy+iconR);
-  ig.addColorStop(0,'#ff7a3d'); ig.addColorStop(1,'#e64a19');
-  c.fillStyle = ig;
-  roundRect(c, iconCx-iconR, iconCy-iconR, iconR*2, iconR*2, 18); c.fill();
-  c.fillStyle = '#ffffff';
-  c.font = '700 40px Vazirmatn, sans-serif';
-  c.textAlign = 'center';
-  c.fillText('آ', iconCx, iconCy+14);
+  // brand handle with a messenger-app style logo badge in front of it
+  const brandText='@ASANNETT', brandFontSize=56;
+  c.font=`900 ${brandFontSize}px Vazirmatn,sans-serif`;
+  const brandTextW=c.measureText(brandText).width;
+  const logoR=30, logoGap=16;
+  const groupW=brandTextW+logoGap+logoR*2;
+  const groupX=W/2-groupW/2;
+  drawEitaaLogo(c, groupX+logoR, footY+101, logoR);
+  c.fillStyle='#238b63'; c.direction='ltr'; c.textAlign='left';
+  c.fillText(brandText, groupX+logoR*2+logoGap, footY+119);
 
-  const textCx = (iconCx+iconR+18) + (W-32 - (iconCx+iconR+18-16))/2;
-  const footTextMaxW = W - 40 - (iconCx+iconR+18);
-  c.textAlign = 'center';
-  c.direction = 'rtl';
-  c.fillStyle = '#3a4a63';
-  c.font = '600 26px Vazirmatn, sans-serif';
-  c.fillText('ما را در کانال ایتا دنبال کنید', textCx, footY + footH*0.28);
+  c.fillStyle='#60736a'; c.font='800 32px Vazirmatn,sans-serif'; c.direction='rtl'; c.textAlign='center'; c.fillText('کافی‌نت آسان‌نت  •  کانال اطلاع‌رسانی ایتا',W/2,footY+165);
+  // small brand line
+  c.fillStyle='#d8e9df'; roundRect(c,250,footY+187,580,4,2); c.fill();
 
-  c.fillStyle = '#e64a19';
-  c.font = '900 40px Vazirmatn, sans-serif';
-  c.direction = 'ltr';
-  c.fillText('@ASANNETT', textCx, footY + footH*0.58);
-  c.direction = 'rtl';
+  bannerCanvas.width=W; bannerCanvas.height=H; const vctx=bannerCanvas.getContext('2d'); vctx.clearRect(0,0,W,H); vctx.drawImage(hiddenCanvas,0,0);
+  hiddenCanvas.toBlob(blob=>{downloadBanner.href=URL.createObjectURL(blob);},'image/png');
+}
 
-  const subtitle = 'کافی‌نت آسان‌نت';
-  const subtitleSize = fitFontSize(c, subtitle, footTextMaxW, 30, 700, 'Vazirmatn, sans-serif', 18);
-  c.fillStyle = '#6b7280';
-  c.font = `700 ${subtitleSize}px Vazirmatn, sans-serif`;
-  c.fillText(subtitle, textCx, footY + footH*0.85);
-
-  // ---- render to visible canvas ----
-  bannerCanvas.width = W;
-  bannerCanvas.height = H;
-  const vctx = bannerCanvas.getContext('2d');
-  vctx.clearRect(0,0,W,H);
-  vctx.drawImage(hiddenCanvas, 0, 0);
-
-  hiddenCanvas.toBlob(blob=>{
-    const url = URL.createObjectURL(blob);
-    downloadBanner.href = url;
-  }, 'image/png');
+function drawEitaaLogo(c, cx, cy, r){
+  c.save();
+  c.shadowColor='rgba(23,53,43,.18)'; c.shadowBlur=10; c.shadowOffsetY=3;
+  c.fillStyle='#00A99D';
+  c.beginPath(); c.arc(cx,cy,r,0,Math.PI*2); c.fill();
+  c.shadowColor='transparent';
+  c.fillStyle='#ffffff';
+  c.beginPath();
+  c.moveTo(cx - r*0.5, cy - r*0.02);
+  c.lineTo(cx + r*0.55, cy - r*0.45);
+  c.lineTo(cx - r*0.02, cy + r*0.5);
+  c.lineTo(cx - r*0.14, cy + r*0.02);
+  c.closePath();
+  c.fill();
+  c.restore();
 }
 
 function roundRect(ctx, x, y, w, h, r){
