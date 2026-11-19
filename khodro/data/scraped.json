@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T20:27:12+00:00",
+ "updated": "2026-11-19T02:31:16+00:00",
  "items": [
   {
    "name": "وانت آریسان",
@@ -570,6 +570,86 @@
    "url": "https://www.khabaronline.ir/news/2303667/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2%DB%B7-%D8%A2%D8%A8%D8%A7%D9%86-%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D8%B2-%D8%AA%D8%A8-%D9%88%D8%AA%D8%A7%D8%A8-%D8%A7%D9%81%D8%AA%D8%A7%D8%AF",
    "reportDate": "2026-11-18",
    "kind": "scraped"
+  },
+  {
+   "name": "تویوتا یاریس",
+   "price": 7100000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d8%ae%d8%a7%d8%b1%d8%ac%db%8c-%d9%81-7/",
+   "reportDate": "2026-11-17",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا کرولا",
+   "price": 8400000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d8%ae%d8%a7%d8%b1%d8%ac%db%8c-%d9%81-7/",
+   "reportDate": "2026-11-17",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا لوین هیبرید",
+   "price": 8800000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d8%ae%d8%a7%d8%b1%d8%ac%db%8c-%d9%81-7/",
+   "reportDate": "2026-11-17",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا کرولا هیبرید",
+   "price": 9500000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d8%ae%d8%a7%d8%b1%d8%ac%db%8c-%d9%81-7/",
+   "reportDate": "2026-11-17",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا کرولا کراس هیبرید",
+   "price": 10000000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d8%ae%d8%a7%d8%b1%d8%ac%db%8c-%d9%81-7/",
+   "reportDate": "2026-11-17",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا کمری",
+   "price": 14800000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d8%ae%d8%a7%d8%b1%d8%ac%db%8c-%d9%81-7/",
+   "reportDate": "2026-11-17",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا ونزا",
+   "price": 15000000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d8%ae%d8%a7%d8%b1%d8%ac%db%8c-%d9%81-7/",
+   "reportDate": "2026-11-17",
+   "kind": "scraped"
+  },
+  {
+   "name": "تویوتا راو4 مدل",
+   "price": 13000000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d8%ae%d8%a7%d8%b1%d8%ac%db%8c-%d9%81-7/",
+   "reportDate": "2026-11-17",
+   "kind": "scraped"
   }
  ],
  "log": [
@@ -598,6 +678,14 @@
    "title": "قیمت خودرو امروز سه‌شنبه ۲۶ آبان ۱۴۰۵ / بازگشت موج گرانی به بازار خودر"
   },
   {
+   "source": "rokna.net",
+   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1267303-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%A8%D8%A7%D9%86-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D9%BE%DA%98%D9%88-%D8%B4%D8%A7%D9%87%DB%8C%D9%86-%D8%AC%D8%AF%D9%88%D9%84",
+   "status": "error",
+   "count": 0,
+   "date": "2026-11-17",
+   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
+  },
+  {
    "source": "ettelaat.com",
    "url": "https://www.ettelaat.com/news/178848/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B6-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
    "status": "ok",
@@ -606,44 +694,28 @@
    "title": "قیمت خودروهای ایران خودرو امروز سه‌شنبه ۲۶ آبان ۱۴۰۵ + جدول"
   },
   {
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1232687/ikco-saipa-prices/",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1175870/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B5-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA",
    "status": "ok",
-   "count": 22,
-   "date": "2026-11-15",
-   "title": "قیمت محصولات ایران‌خودرو و سایپا – امروز یکشنبه ۲۴ آبان ۱۴۰۵"
+   "count": 7,
+   "date": "2026-11-16",
+   "title": "قیمت محصولات ایران خودرو امروز دوشنبه ۲۵ آبان ۱۴۰۵/ کاهش قیمت دنا و تا"
   },
   {
    "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/178448/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%DA%A9%D8%B1%D8%AF-%D9%84%DB%8C%D8%B3%D8%AA-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B4-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "url": "https://www.ettelaat.com/news/178648/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B5-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
    "status": "ok",
    "count": 27,
-   "date": "2026-11-15",
-   "title": "قیمت خودروهای سایپا تغییر کرد/ لیست امروز یکشنبه ۲۴ آبان ۱۴۰۵ را ببینی"
+   "date": "2026-11-16",
+   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز دوشنبه ۲۵ آبان ۱۴۰۵ +جدول"
   },
   {
-   "source": "sarmayevabourse.ir",
-   "url": "https://sarmayevabourse.ir/27379/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b2%db%b4-%d8%a2%d8%a8%d8%a7%d9%86-%db%b1%db%b4%db%b0%db%b5-%d9%be%da%98%d9%88-%db%b2%db%b0%db%b7-%d9%88",
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%af%d8%a7%d8%ae%d9%84%db%8c-%d9%88-%d8%ae%d8%a7%d8%b1%d8%ac%db%8c-%d9%81-7/",
    "status": "ok",
-   "count": 6,
-   "date": "2026-11-15",
-   "title": "قیمت خودرو امروز ۲۴ آبان ۱۴۰۵/ پژو ۲۰۷ و آریزو ۶ رکورد افزایش قیمت زدن"
-  },
-  {
-   "source": "nournews.ir",
-   "url": "https://nournews.ir/fa/news/361874/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%A8%D8%A7%D9%86-%D9%BE%DA%98%D9%88-%D8%A2%D8%B1%DB%8C%D8%B2%D9%88-%D8%B1%DA%A9%D9%88%D8%B1%D8%AF-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%B2%D8%AF%D9%86%D8%AF",
-   "status": "ok",
-   "count": 8,
-   "date": "2026-11-15",
-   "title": "قیمت محصولات ایران خودرو و سایپا امروز یکشنبه ۲۴ آبان ۱۴۰۵؛ پژو ۲۰۷ و "
-  },
-  {
-   "source": "rokna.net",
-   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1267591-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%A8%D8%A7%D9%86-%D8%AF%D9%86%D8%A7-%D9%BE%D9%84%D8%A7%D8%B3-%D8%AA%D8%A7%D8%B1%D8%A7-%D8%A7%D8%B1%D8%B2%D8%A7%D9%86-%D8%B4%D8%AF%D9%86%D8%AF-%DA%A9%D9%88%DB%8C%DB%8C%DA%A9-%D8%B3%D8%A7%DB%8C%D9%86%D8%A7-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%AF%D8%A7%D8%B4%D8%AA%D9%86%D8%AF-%D8%AC%D8%AF%D9%88%D9%84",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-18",
-   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
+   "count": 18,
+   "date": "2026-11-17",
+   "title": "پیش بینی قیمت خودروهای داخلی و خارجی فردا سه شنبه ۲۶ آبان ۱۴۰۵؛ بازار "
   },
   {
    "source": "qudsonline.ir",
@@ -655,14 +727,6 @@
   },
   {
    "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/178648/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B5-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
-   "status": "ok",
-   "count": 27,
-   "date": "2026-11-16",
-   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز دوشنبه ۲۵ آبان ۱۴۰۵ +جدول"
-  },
-  {
-   "source": "ettelaat.com",
    "url": "https://www.ettelaat.com/news/178849/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B2%DB%B6-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
    "status": "ok",
    "count": 27,
@@ -670,12 +734,28 @@
    "title": "قیمت خودروهای سایپا امروز سه‌شنبه ۲۶ آبان ۱۴۰۵ + جدول"
   },
   {
-   "source": "plaza.ir",
-   "url": "https://www.plaza.ir/news/iran-car-prices-november-17-2026",
+   "source": "rokna.net",
+   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1267591-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%A8%D8%A7%D9%86-%D8%AF%D9%86%D8%A7-%D9%BE%D9%84%D8%A7%D8%B3-%D8%AA%D8%A7%D8%B1%D8%A7-%D8%A7%D8%B1%D8%B2%D8%A7%D9%86-%D8%B4%D8%AF%D9%86%D8%AF-%DA%A9%D9%88%DB%8C%DB%8C%DA%A9-%D8%B3%D8%A7%DB%8C%D9%86%D8%A7-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%AF%D8%A7%D8%B4%D8%AA%D9%86%D8%AF-%D8%AC%D8%AF%D9%88%D9%84",
+   "status": "error",
+   "count": 0,
+   "date": "2026-11-18",
+   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
+  },
+  {
+   "source": "andishemoaser.ir",
+   "url": "https://andishemoaser.ir/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%a7%db%8c%d8%b1%d8%a7%d9%86-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%88-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1-182/",
    "status": "ok",
-   "count": 49,
-   "date": "2026-11-17",
-   "title": "قیمت خودرو امروز ۲۶ آبان ۱۴۰۵؛ افزایش نرخ محصولات ایران‌خودرو و سایپا"
+   "count": 57,
+   "date": "2026-11-18",
+   "title": "قیمت خودروهای ایران خودرو و سایپا امروز چهارشنبه ۲۷ آبان ۱۴۰۵؛ جدول کا"
+  },
+  {
+   "source": "ilna.ir",
+   "url": "https://www.ilna.ir/بخش-%D8%B3%D8%A7%DB%8C%D8%B1-%D8%B1%D8%B3%D8%A7%D9%86%D9%87-%D9%87%D8%A7-10/1867696-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%A8%D8%A7%D9%86-%D8%AC%D8%AF%D9%88%D9%84",
+   "status": "error",
+   "count": 0,
+   "date": "2026-11-18",
+   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
   }
  ]
 }
