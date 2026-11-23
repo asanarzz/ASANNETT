@@ -1,204 +1,194 @@
 {
- "updated": "2026-11-23T01:38:53+00:00",
+ "updated": "2026-11-23T12:24:37+00:00",
  "items": [
   {
-   "name": "دنا پلاس اتوماتیک",
-   "price": 4520000000,
-   "agency": 0,
+   "name": "وانت آریسان",
+   "price": 2145000000,
+   "agency": 2026400000,
    "cat": "ایران‌خودرو",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
    "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "پژو 207 اتوماتیک",
-   "price": 4190000000,
-   "agency": 0,
+   "name": "وانت آریسان (مانیتور)",
+   "price": 2200000000,
+   "agency": 2050000000,
    "cat": "ایران‌خودرو",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
    "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "پژو 207 دنده‌ای",
-   "price": 2960000000,
-   "agency": 0,
+   "name": "سورن (TU5P)",
+   "price": 3170000000,
+   "agency": 1931370000,
    "cat": "ایران‌خودرو",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
    "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "تارا دستی V1",
-   "price": 3225000000,
-   "agency": 0,
+   "name": "سورن XU7P (رینگ فولادی)",
+   "price": 2468000000,
+   "agency": 1725000000,
    "cat": "ایران‌خودرو",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "سورن پلاس TU5P",
-   "price": 3360000000,
-   "agency": 0,
-   "cat": "ایران‌خودرو",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "رانا پلاس",
-   "price": 2650000000,
-   "agency": 0,
-   "cat": "ایران‌خودرو",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
    "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "سورن XU7P",
-   "price": 2468000000,
+   "price": 2530000000,
    "agency": 0,
    "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "سورن XU7P رینگ فولادی",
-   "price": 2500000000,
-   "agency": 1725000000,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "سورن TU5P",
-   "price": 3165000000,
-   "agency": 1931370000,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "سورن دوگانه‌سوز کپسول کوچک",
-   "price": 3350000000,
+   "name": "سورن پلاس دوگانه‌سوز (کپسول کوچک)",
+   "price": 3337000000,
    "agency": 1924100000,
    "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "سورن دوگانه‌سوز کپسول بزرگ",
-   "price": 3470000000,
+   "name": "سورن پلاس دوگانه‌سوز (کپسول بزرگ)",
+   "price": 3460000000,
    "agency": 0,
    "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "پژو 207 TU3",
-   "price": 2680000000,
-   "agency": 1740000000,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "پژو 207 دنده‌ای هیدرولیک",
-   "price": 2865000000,
-   "agency": 1792000000,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "پژو 207 دنده‌ای فرمان برقی",
-   "price": 3095000000,
-   "agency": 1847700000,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "پژو 207 پانوراما رینگ فولادی",
-   "price": 3430000000,
-   "agency": 1921000000,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "پژو 207 پانوراما رینگ آلومینیومی",
-   "price": 3475000000,
-   "agency": 1967000000,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "پژو 207 اتوماتیک سقف فلزی",
-   "price": 4190000000,
-   "agency": 2177000000,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "پژو 207 اتوماتیک پانوراما",
-   "price": 4480000000,
-   "agency": 2226000000,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "دنا پلاس MT6 رینگ فولادی",
-   "price": 3240000000,
+   "name": "دنا پلاس MT6 (رینگ فولادی)",
+   "price": 3160000000,
    "agency": 2082600000,
    "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "دنا پلاس MT6",
-   "price": 3260000000,
+   "price": 3245000000,
    "agency": 2172700000,
    "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "دنا پلاس اتوماتیک",
+   "price": 4390000000,
+   "agency": 2611000000,
+   "cat": "ایران‌خودرو",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "پژو 207 موتور TU3",
+   "price": 2681000000,
+   "agency": 1740000000,
+   "cat": "ایران‌خودرو",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "پژو 207 دنده‌ای (هیدرولیک)",
+   "price": 2860000000,
+   "agency": 1792000000,
+   "cat": "ایران‌خودرو",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "پژو 207 دنده‌ای (برقی)",
+   "price": 3090000000,
+   "agency": 1847700000,
+   "cat": "ایران‌خودرو",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "پژو 207 دنده‌ای پانوراما (رینگ فولادی)",
+   "price": 3400000000,
+   "agency": 1921000000,
+   "cat": "ایران‌خودرو",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "پژو 207 دنده‌ای پانوراما",
+   "price": 3470000000,
+   "agency": 1967000000,
+   "cat": "ایران‌خودرو",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "پژو 207 اتوماتیک",
+   "price": 4090000000,
+   "agency": 2177000000,
+   "cat": "ایران‌خودرو",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "پژو 207 اتوماتیک پانوراما",
+   "price": 4450000000,
+   "agency": 2226000000,
+   "cat": "ایران‌خودرو",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "راناپلاس",
+   "price": 2515000000,
+   "agency": 1622700000,
+   "cat": "ایران‌خودرو",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "تارا دستی V1",
+   "price": 3125000000,
+   "agency": 2063700000,
+   "cat": "ایران‌خودرو",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
@@ -206,119 +196,89 @@
    "price": 4200000000,
    "agency": 0,
    "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "تارا اتوماتیک توربو",
-   "price": 4480000000,
+   "name": "تارا اتوماتیک (توربو)",
+   "price": 4490000000,
    "agency": 2740000000,
    "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "رانا پلاس دیسکی",
-   "price": 2530000000,
-   "agency": 1622700000,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "ری‌را",
-   "price": 5510000000,
-   "agency": 0,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "هایما S5 پرو",
+   "name": "هایما اس 5 ( S5 ) پرو",
    "price": 5900000000,
    "agency": 0,
    "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "هایما S7 پرو",
-   "price": 7070000000,
+   "name": "هایما اس 7 ( S7 ) پرو",
+   "price": 7050000000,
    "agency": 0,
    "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "هایما S7",
-   "price": 7270000000,
+   "name": "هایما 8 اس ( 8S )",
+   "price": 8100000000,
    "agency": 0,
    "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "هایما 8S",
-   "price": 8300000000,
+   "name": "هایما 7X",
+   "price": 7090000000,
    "agency": 0,
    "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "هایما 8S مشکی مدل",
-   "price": 7610000000,
+   "name": "پیکاپ فوتون (اتوماتیک)",
+   "price": 9860000000,
+   "agency": 6347000000,
+   "cat": "ایران‌خودرو",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ری را",
+   "price": 5495000000,
+   "agency": 3200000000,
+   "cat": "ایران‌خودرو",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "فیدلیتی",
+   "price": 9870000000,
    "agency": 0,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "هایما 7X مشکی",
-   "price": 6900000000,
-   "agency": 0,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "وانت آریسان بدون مولتی‌مدیا",
-   "price": 2135000000,
-   "agency": 2026400000,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
-   "kind": "scraped"
-  },
-  {
-   "name": "وانت آریسان مانیتوردار",
-   "price": 2220000000,
-   "agency": 2050000000,
-   "cat": "ایران‌خودرو",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "cat": "بهمن موتور",
+   "source": "saednews.com",
+   "url": "https://saednews.com/cn/10231/552528",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
@@ -403,12 +363,92 @@
   },
   {
    "name": "پارس نوآ",
-   "price": 3205000000,
+   "price": 3220000000,
    "agency": 1459000000,
    "cat": "سایر",
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "reportDate": "2026-11-22",
+   "source": "khabaronline.ir",
+   "url": "https://www.khabaronline.ir/news/2305768/%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2-%D8%A2%D8%B0%D8%B1%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%B1%DB%8C%D8%B2%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%88%D8%AC-%DA%AF%D8%B1%D9%81%D8%AA",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ارزان شد و از",
+   "price": 3400000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "کاهش قیمت داشت و به",
+   "price": 3160000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ی از",
+   "price": 3295000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ی را تجربه کرد و در بازار",
+   "price": 4390000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ی به",
+   "price": 2681000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ارزان شد و قیمت آن به",
+   "price": 2860000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "کاهش یافت و به",
+   "price": 3400000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ی را تجربه کرد و به",
+   "price": 4450000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
@@ -532,62 +572,12 @@
    "kind": "scraped"
   },
   {
-   "name": "اطلس G",
-   "price": 2205000000,
-   "agency": 0,
-   "cat": "سایپا",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "ساینا S",
-   "price": 1846000000,
-   "agency": 0,
-   "cat": "سایپا",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "کوییک S",
-   "price": 1813000000,
-   "agency": 0,
-   "cat": "سایپا",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "شاهین اتوماتیک G",
-   "price": 3445000000,
-   "agency": 0,
-   "cat": "سایپا",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
    "name": "سهند S",
-   "price": 1975000000,
-   "agency": 0,
+   "price": 1992000000,
+   "agency": 1031400000,
    "cat": "سایپا",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "شاهین G سانروف",
-   "price": 3170000000,
-   "agency": 0,
-   "cat": "سایپا",
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
    "reportDate": "2026-11-23",
    "kind": "scraped"
   },
@@ -596,29 +586,39 @@
    "price": 2815000000,
    "agency": 0,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "اطلس S",
-   "price": 1890000000,
+   "price": 1920000000,
    "agency": 1021736000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "اطلس GL",
-   "price": 2111000000,
+   "price": 2110000000,
    "agency": 1102752000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "اطلس G",
+   "price": 2195000000,
+   "agency": 1136671000,
+   "cat": "سایپا",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
@@ -626,69 +626,109 @@
    "price": 3150000000,
    "agency": 1442100000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "ساینا دوگانه‌سوز",
-   "price": 2330000000,
+   "name": "ساینا S",
+   "price": 1843000000,
+   "agency": 992900000,
+   "cat": "سایپا",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ساینا دوگانه سوز",
+   "price": 2285000000,
    "agency": 1072100000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "کوییک RS",
-   "price": 1823000000,
+   "price": 1815000000,
    "agency": 1045000000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "کوییک S",
+   "price": 1806000000,
+   "agency": 1032500000,
+   "cat": "سایپا",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "کوییک GX",
-   "price": 1830000000,
+   "price": 1815000000,
    "agency": 1063750000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "کوییک GXR (رینگ فولادی)",
-   "price": 1852000000,
+   "price": 1835000000,
    "agency": 0,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "کوییک GXR",
-   "price": 1893000000,
+   "price": 1880000000,
    "agency": 0,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "شاهین GL",
-   "price": 2950000000,
+   "price": 2930000000,
    "agency": 1418020000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "شاهین G (سانروف)",
+   "price": 3200000000,
+   "agency": 1452161000,
+   "cat": "سایپا",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "شاهین اتوماتیک G",
+   "price": 3400000000,
+   "agency": 1560776000,
+   "cat": "سایپا",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
@@ -696,49 +736,49 @@
    "price": 4195000000,
    "agency": 1833657000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "سایپا 151 GX",
-   "price": 1695000000,
+   "price": 1680000000,
    "agency": 1410000000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "سایپا 151 GX پاششی",
-   "price": 1710000000,
+   "name": "سایپا 151 GX (پاششی)",
+   "price": 1698000000,
    "agency": 1440000000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "زامیاد اکستند EX",
-   "price": 2616000000,
+   "price": 2635000000,
    "agency": 2500000000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "زامیاد اکستند EX دوگانه‌سوز",
+   "name": "زامیاد اکستند EX (دوگانه‌سوز)",
    "price": 2820000000,
    "agency": 2690000000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
@@ -746,29 +786,29 @@
    "price": 4120000000,
    "agency": 1552900000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "چانگان CS35 مونتاژ",
+   "name": "چانگان CS35 (مونتاژ)",
    "price": 6615000000,
    "agency": 3304000000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "چانگان CS55 مونتاژ",
-   "price": 8400000000,
+   "name": "چانگان CS55 (مونتاژ)",
+   "price": 8380000000,
    "agency": 3792000000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
@@ -776,9 +816,19 @@
    "price": 8800000000,
    "agency": 5819000000,
    "cat": "سایپا",
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "reportDate": "2026-11-22",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "سیتروئن C3-XR",
+   "price": 5340000000,
+   "agency": 3389300000,
+   "cat": "سایپا",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
@@ -869,6 +919,16 @@
    "source": "6asr.ir",
    "url": "https://6asr.ir/news/economic/%D9%82%DB%8C%D9%85%D8%AA-%D8%B1%D9%88%D8%B2-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%DB%B1-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5%D8%9B-%D8%AC%D8%AF%D9%88%D9%84-%DA%A9%D8%A7%D9%85%D9%84/",
    "reportDate": "2026-11-22",
+   "kind": "scraped"
+  },
+  {
+   "name": "مزدا 3",
+   "price": 12200000000,
+   "agency": 0,
+   "cat": "وارداتی",
+   "source": "saednews.com",
+   "url": "https://saednews.com/cn/10231/552528",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
@@ -1055,11 +1115,51 @@
  "log": [
   {
    "source": "khabaronline.ir",
+   "url": "https://www.khabaronline.ir/news/2305768/%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2-%D8%A2%D8%B0%D8%B1%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%B1%DB%8C%D8%B2%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%88%D8%AC-%DA%AF%D8%B1%D9%81%D8%AA",
+   "status": "ok",
+   "count": 50,
+   "date": "2026-11-23",
+   "title": "قیمت جدید خودرو امروز ۲ آذرماه ۱۴۰۵/ ریزش قیمت خودرو اوج گرفت؛ دنا ۱۰۲"
+  },
+  {
+   "source": "khabaronline.ir",
    "url": "https://www.khabaronline.ir/news/2304851/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B3%DB%B0-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%BE%D8%B1%D9%81%D8%B1%D9%88%D8%B4-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1",
    "status": "ok",
    "count": 50,
    "date": "2026-11-21",
    "title": "قیمت خودرو امروز ۳۰ آبان ۱۴۰۵/ جهش قیمت خودروهای پرفروش در بازار؛ سمند"
+  },
+  {
+   "source": "entekhab.ir",
+   "url": "https://www.entekhab.ir/fa/news/949286/قیمت-خودرو-امروز-دوشنبه-2-آذر-1405",
+   "status": "error",
+   "count": 0,
+   "date": "2026-11-23",
+   "error": "'ascii' codec can't encode characters in position 20-23: ordinal not in range(128)"
+  },
+  {
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "status": "ok",
+   "count": 27,
+   "date": "2026-11-23",
+   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز دوشنبه ۲ آذر ۱۴۰۵ +جدول"
+  },
+  {
+   "source": "vananews.com",
+   "url": "https://vananews.com/fa/news/670934/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-30-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D8%AC%D9%87%D8%B4-410-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D8%AA%D9%88%D9%85%D8%A7%D9%86%DB%8C-%D8%B3%D9%88%D8%B1%D9%86-%D9%BE%D9%84%D8%A7%D8%B3-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A8%D9%87-%DA%A9%D8%A7%D9%87%D8%B4-%D8%AF%D9%84%D8%A7%D8%B1-%D9%88%D8%A7%DA%A9%D9%86%D8%B4-%D9%86%D8%B4%D8%A7%D9%86-%D9%86%D8%AF%D8%A7%D8%AF-%D8%AC%D8%AF%D9%88%D9%84",
+   "status": "ok",
+   "count": 8,
+   "date": "2026-11-21",
+   "title": "قیمت خودرو امروز شنبه ۳۰ آبان ۱۴۰۵؛ جهش ۴۱۰ میلیون تومانی سورن پلاس / "
+  },
+  {
+   "source": "snn.ir",
+   "url": "https://snn.ir/fa/news/1493253/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-30-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-50-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%DB%8C-%D9%BE%D8%B1%D9%81%D8%B1%D9%88%D8%B4-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1",
+   "status": "ok",
+   "count": 9,
+   "date": "2026-11-21",
+   "title": "قیمت خودرو امروز شنبه ۳۰ آبان ۱۴۰۵/ آخرین قیمت ۵۰ خودروی پرفروش بازار"
   },
   {
    "source": "namnak.com",
@@ -1078,21 +1178,12 @@
    "title": "قیمت خودرو امروز شنبه ۳۰ آبان ۱۴۰۵؛ قیمت جدید محصولات ایران‌خودرو و سا"
   },
   {
-   "source": "snn.ir",
-   "url": "https://snn.ir/fa/news/1493253/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-30-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-50-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%DB%8C-%D9%BE%D8%B1%D9%81%D8%B1%D9%88%D8%B4-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1",
-   "status": "error",
-   "count": 3,
-   "date": "2026-11-21",
-   "title": "قیمت خودرو امروز شنبه ۳۰ آبان ۱۴۰۵/ آخرین قیمت ۵۰ خودروی پرفروش بازار",
-   "error": "جدول قیمت کافی پیدا نشد"
-  },
-  {
-   "source": "snn.ir",
-   "url": "https://snn.ir/fa/news/1493273/قیمت-خودروهای-ایران-خودرو-امروز-شنبه-30-آبان-1405-سورن-160-میلیون-تومان-ارزان-شد",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-21",
-   "error": "'ascii' codec can't encode characters in position 21-24: ordinal not in range(128)"
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "status": "ok",
+   "count": 10,
+   "date": "2026-11-23",
+   "title": "قیمت محصولات ایران خودرو امروز دوشنبه ۲ آذر ۱۴۰۵/ ادامه سیر نزولی بازا"
   },
   {
    "source": "qudsonline.ir",
@@ -1104,11 +1195,11 @@
   },
   {
    "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/179314/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AC%D9%85%D8%B9%D9%87-%DB%B2%DB%B9-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
    "status": "ok",
    "count": 27,
-   "date": "2026-11-20",
-   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز جمعه ۲۹ آبان ۱۴۰۵ +جدول"
+   "date": "2026-11-23",
+   "title": "تکان عجیب قیمت خودروهای سایپا امروز دوشنبه ۲ آذر ۱۴۰۵ +جدول"
   },
   {
    "source": "ettelaat.com",
@@ -1119,18 +1210,10 @@
    "title": "تکان شدید قیمت محصولات ایران‌خودرو و سایپا امروز یکشنبه ۱ آذر ۱۴۰۵ +جد"
   },
   {
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1176695/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3%DB%B0-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%DA%A9%D8%AF%D8%A7%D9%85-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%DA%AF%D8%B1%D8%A7%D9%86",
-   "status": "ok",
-   "count": 10,
-   "date": "2026-11-21",
-   "title": "قیمت محصولات سایپا امروز شنبه ۳۰ آبان ۱۴۰۵/ کدام خودروها گران و کدام ا"
-  },
-  {
    "source": "snn.ir",
    "url": "https://snn.ir/fa/news/1493278/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-30-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D8%B4%D8%A7%D9%87%DB%8C%D9%86-%D8%A7%D8%B7%D9%84%D8%B3-%D8%B3%D8%A7%DB%8C%D9%86%D8%A7-%D9%88-%DA%A9%D9%88%DB%8C%DB%8C%DA%A9",
    "status": "ok",
-   "count": 17,
+   "count": 22,
    "date": "2026-11-21",
    "title": "قیمت خودروهای سایپا امروز شنبه ۳۰ آبان ۱۴۰۵/ آخرین قیمت شاهین، اطلس، س"
   },
@@ -1143,52 +1226,20 @@
    "title": "قیمت روز خودرو در ۱ آذر ۱۴۰۵؛ جدول کامل ایران خودرو، سایپا و خودروهای "
   },
   {
+   "source": "saednews.com",
+   "url": "https://saednews.com/cn/10231/552528",
+   "status": "ok",
+   "count": 9,
+   "date": "2026-11-23",
+   "title": "قیمت خودرو امروز دوشنبه 2 آذر 1405؛ سقوط 400 میلیون تومانی مزدا 3 در ب"
+  },
+  {
    "source": "rokna.net",
    "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1268564-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%85%D9%88%D9%86%D8%AA%D8%A7%DA%98%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%A2%D8%B0%D8%B1-%D8%A7%D8%B1%D8%B2%D8%A7%D9%86-%D8%AA%D8%B1%DB%8C%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D9%88%D9%86%D8%AA%D8%A7%DA%98%DB%8C-%DA%86%D9%86%D8%AF-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF-%D8%B4%D8%AF",
    "status": "error",
    "count": 0,
    "date": "2026-11-22",
    "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
-  },
-  {
-   "source": "sarmayevabourse.ir",
-   "url": "https://sarmayevabourse.ir/27883/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B3%DB%B0-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%B3%D9%88%D8%B1%D9%86%D8%8C-%D8%AF%D9%86%D8%A7",
-   "status": "ok",
-   "count": 6,
-   "date": "2026-11-21",
-   "title": "قیمت خودرو امروز ۳۰ آبان ۱۴۰۵/ سورن، دنا و پژو ۲۰۷ دوباره گران شدند"
-  },
-  {
-   "source": "gadgetnews.net",
-   "url": "https://gadgetnews.net/1235823/car-price-today-azar-1405/",
-   "status": "ok",
-   "count": 51,
-   "date": "2026-11-22",
-   "title": "قیمت خودرو امروز ۱ آذر ۱۴۰۵؛ ریزش قیمت ایران‌خودرو و سایپا + جدول"
-  },
-  {
-   "source": "rokna.net",
-   "url": "https://www.rokna.net/بخش-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-69/1268421-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%B0%D8%B1-%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-22",
-   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
-  },
-  {
-   "source": "andishemoaser.ir",
-   "url": "https://andishemoaser.ir/%d9%be%db%8c%d8%b4-%d8%a8%db%8c%d9%86%db%8c-%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d9%81%d8%b1%d8%af%d8%a7-%d8%af%d9%88%d8%b4%d9%86%d8%a8%d9%87-%db%b2-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4/",
-   "status": "ok",
-   "count": 12,
-   "date": "2026-11-23",
-   "title": "پیش بینی قیمت خودرو فردا دوشنبه ۲ آذر ۱۴۰۵ | ایران خودرو و سایپا ارزان"
-  },
-  {
-   "source": "saat24.news",
-   "url": "https://www.saat24.news/news/762447/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B1-%D8%A7%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%B1%DB%8C%D8%B2%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%AC%D8%AF%D9%88%D9%84",
-   "status": "ok",
-   "count": 51,
-   "date": "2026-11-22",
-   "title": "قیمت خودرو امروز ۱ آذر ۱۴۰۵؛ ریزش قیمت ایران‌خودرو و سایپا + جدول"
   }
  ]
 }
