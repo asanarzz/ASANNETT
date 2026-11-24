@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T13:35:49+00:00",
+ "updated": "2026-11-24T23:52:51+00:00",
  "items": [
   {
    "name": "وانت آریسان",
@@ -272,76 +272,6 @@
    "kind": "scraped"
   },
   {
-   "name": "رسپکت (نیو)",
-   "price": 5680000000,
-   "agency": 3930000000,
-   "cat": "بهمن موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "فیدلیتی الیت (7 نفره)",
-   "price": 7780000000,
-   "agency": 6458000000,
-   "cat": "بهمن موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "فیدلیتی پرستیژ (7 نفره)",
-   "price": 9970000000,
-   "agency": 7338000000,
-   "cat": "بهمن موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "کاپرا تک کابین B",
-   "price": 4300000000,
-   "agency": 4200000000,
-   "cat": "بهمن موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "کاپرا دو کابین B",
-   "price": 5520000000,
-   "agency": 4800000000,
-   "cat": "بهمن موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "اینوی هیبریدی",
-   "price": 4530000000,
-   "agency": 3375000000,
-   "cat": "بهمن موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "هاوال H9 (آپشنال)",
-   "price": 16090000000,
-   "agency": 14052000000,
-   "cat": "بهمن موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
    "name": "تیپ دقیق دو مدل فیدلیتی با قیمت‌های",
    "price": 10080000000,
    "agency": 0,
@@ -362,93 +292,143 @@
    "kind": "scraped"
   },
   {
-   "name": "ی از",
-   "price": 3337000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1177272/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%88%D8%B1%D9%86",
-   "reportDate": "2026-11-24",
-   "kind": "scraped"
-  },
-  {
    "name": "ارزان شد و از",
-   "price": 3460000000,
+   "price": 3400000000,
    "agency": 0,
    "cat": "سایر",
    "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1177272/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%88%D8%B1%D9%86",
-   "reportDate": "2026-11-24",
-   "kind": "scraped"
-  },
-  {
-   "name": "افزایش قیمت داشت و از",
-   "price": 3160000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1177272/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%88%D8%B1%D9%86",
-   "reportDate": "2026-11-24",
-   "kind": "scraped"
-  },
-  {
-   "name": "ی به",
-   "price": 3220000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1177272/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%88%D8%B1%D9%86",
-   "reportDate": "2026-11-24",
-   "kind": "scraped"
-  },
-  {
-   "name": "ارزان شد و با قیمت",
-   "price": 2845000000,
-   "agency": 0,
-   "cat": "سایر",
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1177272/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%88%D8%B1%D9%86",
-   "reportDate": "2026-11-24",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "کاهش قیمت داشت و به",
-   "price": 3367000000,
+   "price": 3160000000,
    "agency": 0,
    "cat": "سایر",
    "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1177272/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%88%D8%B1%D9%86",
-   "reportDate": "2026-11-24",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ی از",
+   "price": 3295000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ی را تجربه کرد و در بازار",
+   "price": 4390000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ی به",
+   "price": 2681000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ارزان شد و قیمت آن به",
+   "price": 2860000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "کاهش یافت و به",
+   "price": 3400000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
    "name": "ی را تجربه کرد و به",
-   "price": 4430000000,
+   "price": 4450000000,
    "agency": 0,
    "cat": "سایر",
    "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1177272/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%88%D8%B1%D9%86",
-   "reportDate": "2026-11-24",
+   "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "ارزان شد و قیمت آن از",
-   "price": 3125000000,
+   "name": "لوکانو 8 معادل",
+   "price": 250000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1177272/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%88%D8%B1%D9%86",
-   "reportDate": "2026-11-24",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-2-azar-1405.p125541",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "ی را ثبت کرد و از",
-   "price": 4490000000,
+   "name": "و لاماری ایما",
+   "price": 200000000,
    "agency": 0,
    "cat": "سایر",
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1177272/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%88%D8%B1%D9%86",
-   "reportDate": "2026-11-24",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-2-azar-1405.p125541",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "لوکانو 8 مشکی",
+   "price": 250000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-2-azar-1405.p125541",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "و نسخه مشکی آن",
+   "price": 7810000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-2-azar-1405.p125541",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "و لاماری ایما با کاهش",
+   "price": 200000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-2-azar-1405.p125541",
+   "reportDate": "2026-11-23",
+   "kind": "scraped"
+  },
+  {
+   "name": "ی نسبت به روز گذشته به",
+   "price": 16800000000,
+   "agency": 0,
+   "cat": "سایر",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-2-azar-1405.p125541",
+   "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
@@ -456,8 +436,8 @@
    "price": 1980000000,
    "agency": 1031400000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -466,8 +446,8 @@
    "price": 2740000000,
    "agency": 0,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -476,8 +456,8 @@
    "price": 1888000000,
    "agency": 1021736000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -486,8 +466,8 @@
    "price": 2090000000,
    "agency": 1102752000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -496,8 +476,8 @@
    "price": 2202000000,
    "agency": 1136671000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -506,8 +486,8 @@
    "price": 3150000000,
    "agency": 1442100000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -516,8 +496,8 @@
    "price": 1829000000,
    "agency": 992900000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -526,8 +506,8 @@
    "price": 2260000000,
    "agency": 1072100000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -536,8 +516,8 @@
    "price": 1801000000,
    "agency": 1045000000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -546,8 +526,8 @@
    "price": 1790000000,
    "agency": 1032500000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -556,8 +536,8 @@
    "price": 1815000000,
    "agency": 1063750000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -566,8 +546,8 @@
    "price": 1835000000,
    "agency": 0,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -576,8 +556,8 @@
    "price": 1880000000,
    "agency": 0,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -586,8 +566,8 @@
    "price": 2890000000,
    "agency": 1418020000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -596,8 +576,8 @@
    "price": 3200000000,
    "agency": 1452161000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -606,8 +586,8 @@
    "price": 3383000000,
    "agency": 1560776000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -616,8 +596,8 @@
    "price": 4160000000,
    "agency": 1833657000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -626,8 +606,8 @@
    "price": 1675000000,
    "agency": 1410000000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -636,8 +616,8 @@
    "price": 1690000000,
    "agency": 1440000000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -646,8 +626,8 @@
    "price": 2620000000,
    "agency": 2500000000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -656,8 +636,8 @@
    "price": 2768000000,
    "agency": 2690000000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -666,8 +646,8 @@
    "price": 4120000000,
    "agency": 1552900000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -676,8 +656,8 @@
    "price": 6500000000,
    "agency": 3304000000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -686,8 +666,8 @@
    "price": 8250000000,
    "agency": 3792000000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -696,8 +676,8 @@
    "price": 8750000000,
    "agency": 5819000000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
@@ -706,118 +686,28 @@
    "price": 5280000000,
    "agency": 3389300000,
    "cat": "سایپا",
-   "source": "hamshahrionline.ir",
-   "url": "https://www.hamshahrionline.ir/news/1089011/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D9%88-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D9%88-%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2",
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
    "reportDate": "2026-11-24",
    "kind": "scraped"
   },
   {
-   "name": "X33 کراس (اتوماتیک)",
-   "price": 4590000000,
-   "agency": 4400000000,
-   "cat": "مدیران خودرو",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "X55 پرو",
-   "price": 5800000000,
-   "agency": 3888000000,
-   "cat": "مدیران خودرو",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "آریزو 5",
-   "price": 5450000000,
+   "name": "رسیده است. تیگو 7 دو دیفرانسیل نیز",
+   "price": 8880000000,
    "agency": 0,
    "cat": "مدیران خودرو",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-2-azar-1405.p125541",
    "reportDate": "2026-11-23",
    "kind": "scraped"
   },
   {
-   "name": "آریزو6 (Z6 GT)",
-   "price": 7180000000,
-   "agency": 4320000000,
+   "name": "و تیگو 8 معادل",
+   "price": 11700000000,
+   "agency": 0,
    "cat": "مدیران خودرو",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "آریزو 8 (Z8)",
-   "price": 10150000000,
-   "agency": 6254000000,
-   "cat": "مدیران خودرو",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "تیگو7 (F7) پرومکس AWD",
-   "price": 8820000000,
-   "agency": 5553000000,
-   "cat": "مدیران خودرو",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "تیگو7 (F7) هیبرید",
-   "price": 8930000000,
-   "agency": 5584000000,
-   "cat": "مدیران خودرو",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "فونیکس FX",
-   "price": 7880000000,
-   "agency": 5175000000,
-   "cat": "مدیران خودرو",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "فونیکس FX برقی",
-   "price": 7430000000,
-   "agency": 7250000000,
-   "cat": "مدیران خودرو",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "تیگو 8 (F8) پرومکس",
-   "price": 11680000000,
-   "agency": 7148000000,
-   "cat": "مدیران خودرو",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "مزدا3",
-   "price": 12200000000,
-   "agency": 6173000000,
-   "cat": "وارداتی",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
+   "source": "namnak.com",
+   "url": "https://namnak.com/car-prices-2-azar-1405.p125541",
    "reportDate": "2026-11-23",
    "kind": "scraped"
   },
@@ -838,76 +728,6 @@
    "cat": "وارداتی",
    "source": "namnak.com",
    "url": "https://namnak.com/car-prices-2-azar-1405.p125541",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "بک X3",
-   "price": 4680000000,
-   "agency": 3010000000,
-   "cat": "کرمان موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "جک J4",
-   "price": 3435000000,
-   "agency": 2950000000,
-   "cat": "کرمان موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "جک SR3",
-   "price": 5480000000,
-   "agency": 3141000000,
-   "cat": "کرمان موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "کی‌ام‌سی ایگل",
-   "price": 3350000000,
-   "agency": 2482000000,
-   "cat": "کرمان موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "کی‌ام‌سی J7",
-   "price": 7250000000,
-   "agency": 4572000000,
-   "cat": "کرمان موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "کی‌ام‌سی X5",
-   "price": 6950000000,
-   "agency": 4293000000,
-   "cat": "کرمان موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "reportDate": "2026-11-23",
-   "kind": "scraped"
-  },
-  {
-   "name": "کی‌ام‌سی T9",
-   "price": 10400000000,
-   "agency": 6500000000,
-   "cat": "کرمان موتور",
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
    "reportDate": "2026-11-23",
    "kind": "scraped"
   },
@@ -942,6 +762,14 @@
    "title": "قیمت خودرو امروز ۳ آذرماه ۱۴۰۵/ شاهین ۳ میلیارد و ۳۸۳ میلیون تومان شد "
   },
   {
+   "source": "tejaratnews.com",
+   "url": "https://tejaratnews.com/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d8%b3%d8%a7%db%8c%d9%be%d8%a7-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%d8%b3%d9%87%d8%b4%d9%86%d8%a8%d9%87-%db%b3-5",
+   "status": "ok",
+   "count": 27,
+   "date": "2026-11-24",
+   "title": "قیمت خودرو‌های سایپا امروز سه‌شنبه ۳ آذر ۱۴۰۵ + جدول"
+  },
+  {
    "source": "khabaronline.ir",
    "url": "https://www.khabaronline.ir/news/2305768/%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2-%D8%A2%D8%B0%D8%B1%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%B1%DB%8C%D8%B2%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%88%D8%AC-%DA%AF%D8%B1%D9%81%D8%AA",
    "status": "ok",
@@ -966,6 +794,14 @@
    "title": "قیمت خودرو امروز ۲ آذر ۱۴۰۵؛ قیمت جدید پژو ۲۰۷، دنا، شاهین و تارا"
   },
   {
+   "source": "vananews.com",
+   "url": "https://vananews.com/fa/news/670934/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-30-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D8%AC%D9%87%D8%B4-410-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86-%D8%AA%D9%88%D9%85%D8%A7%D9%86%DB%8C-%D8%B3%D9%88%D8%B1%D9%86-%D9%BE%D9%84%D8%A7%D8%B3-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A8%D9%87-%DA%A9%D8%A7%D9%87%D8%B4-%D8%AF%D9%84%D8%A7%D8%B1-%D9%88%D8%A7%DA%A9%D9%86%D8%B4-%D9%86%D8%B4%D8%A7%D9%86-%D9%86%D8%AF%D8%A7%D8%AF-%D8%AC%D8%AF%D9%88%D9%84",
+   "status": "ok",
+   "count": 9,
+   "date": "2026-11-21",
+   "title": "قیمت خودرو امروز شنبه ۳۰ آبان ۱۴۰۵؛ جهش ۴۱۰ میلیون تومانی سورن پلاس / "
+  },
+  {
    "source": "ettelaat.com",
    "url": "https://www.ettelaat.com/news/180074/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
    "status": "ok",
@@ -974,36 +810,12 @@
    "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز سه‌شنبه ۳ آذر ۱۴۰۵ +جدول"
   },
   {
-   "source": "snn.ir",
-   "url": "https://snn.ir/fa/news/1493273/قیمت-خودروهای-ایران-خودرو-امروز-شنبه-30-آبان-1405-سورن-160-میلیون-تومان-ارزان-شد",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-21",
-   "error": "'ascii' codec can't encode characters in position 21-24: ordinal not in range(128)"
-  },
-  {
-   "source": "snn.ir",
-   "url": "https://snn.ir/fa/news/1493253/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-30-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-50-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%DB%8C-%D9%BE%D8%B1%D9%81%D8%B1%D9%88%D8%B4-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1",
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/179907/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
    "status": "ok",
-   "count": 7,
-   "date": "2026-11-21",
-   "title": "قیمت خودرو امروز شنبه ۳۰ آبان ۱۴۰۵/ آخرین قیمت ۵۰ خودروی پرفروش بازار"
-  },
-  {
-   "source": "entekhab.ir",
-   "url": "https://www.entekhab.ir/fa/news/949286/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-2-%D8%A2%D8%B0%D8%B1-1405",
-   "status": "ok",
-   "count": 96,
+   "count": 27,
    "date": "2026-11-23",
-   "title": "قیمت خودرو امروز دوشنبه ۲ آذر ۱۴۰۵"
-  },
-  {
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1177272/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%88%D8%B1%D9%86",
-   "status": "ok",
-   "count": 13,
-   "date": "2026-11-24",
-   "title": "قیمت محصولات ایران خودرو امروز سه‌شنبه ۳ آذر ۱۴۰۵/ افت قیمت سورن، تارا"
+   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز دوشنبه ۲ آذر ۱۴۰۵ +جدول"
   },
   {
    "source": "rokna.net",
@@ -1023,6 +835,14 @@
   },
   {
    "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/180076/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
+   "status": "ok",
+   "count": 27,
+   "date": "2026-11-24",
+   "title": "تکان عجیب قیمت خودروهای سایپا امروز سه‌شنبه ۳ آذر ۱۴۰۵ +جدول"
+  },
+  {
+   "source": "ettelaat.com",
    "url": "https://www.ettelaat.com/news/179680/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%DB%B1-%D8%A2%D8%B0%D8%B1",
    "status": "ok",
    "count": 8,
@@ -1038,22 +858,6 @@
    "title": "قیمت خودرو امروز ۱ آذر ۱۴۰۵؛ جدول جدید ایران خودرو، سایپا و وارداتی‌ها"
   },
   {
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1176695/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3%DB%B0-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%DA%A9%D8%AF%D8%A7%D9%85-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7-%DA%AF%D8%B1%D8%A7%D9%86",
-   "status": "ok",
-   "count": 10,
-   "date": "2026-11-21",
-   "title": "قیمت محصولات سایپا امروز شنبه ۳۰ آبان ۱۴۰۵/ کدام خودروها گران و کدام ا"
-  },
-  {
-   "source": "snn.ir",
-   "url": "https://snn.ir/fa/news/1493278/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B4%D9%86%D8%A8%D9%87-30-%D8%A2%D8%A8%D8%A7%D9%86-1405-%D8%A2%D8%AE%D8%B1%DB%8C%D9%86-%D9%82%DB%8C%D9%85%D8%AA-%D8%B4%D8%A7%D9%87%DB%8C%D9%86-%D8%A7%D8%B7%D9%84%D8%B3-%D8%B3%D8%A7%DB%8C%D9%86%D8%A7-%D9%88-%DA%A9%D9%88%DB%8C%DB%8C%DA%A9",
-   "status": "ok",
-   "count": 20,
-   "date": "2026-11-21",
-   "title": "قیمت خودروهای سایپا امروز شنبه ۳۰ آبان ۱۴۰۵/ آخرین قیمت شاهین، اطلس، س"
-  },
-  {
    "source": "tehrannews.ir",
    "url": "https://www.tehrannews.ir/story/%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
    "status": "error",
@@ -1065,9 +869,17 @@
    "source": "6asr.ir",
    "url": "https://6asr.ir/news/economic/%D9%82%DB%8C%D9%85%D8%AA-%D8%B1%D9%88%D8%B2-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%DB%B1-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5%D8%9B-%D8%AC%D8%AF%D9%88%D9%84-%DA%A9%D8%A7%D9%85%D9%84/",
    "status": "ok",
-   "count": 49,
+   "count": 47,
    "date": "2026-11-22",
    "title": "قیمت روز خودرو در ۱ آذر ۱۴۰۵؛ جدول کامل ایران خودرو، سایپا و خودروهای "
+  },
+  {
+   "source": "sarmayevabourse.ir",
+   "url": "https://sarmayevabourse.ir/27883/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B3%DB%B0-%D8%A2%D8%A8%D8%A7%D9%86-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%B3%D9%88%D8%B1%D9%86%D8%8C-%D8%AF%D9%86%D8%A7",
+   "status": "ok",
+   "count": 6,
+   "date": "2026-11-21",
+   "title": "قیمت خودرو امروز ۳۰ آبان ۱۴۰۵/ سورن، دنا و پژو ۲۰۷ دوباره گران شدند"
   }
  ]
 }
