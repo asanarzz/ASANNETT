@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T19:12:35+00:00",
+ "updated": "2026-11-26T03:31:21+00:00",
  "items": [
   {
    "name": "وانت آریسان",
@@ -272,12 +272,42 @@
    "kind": "scraped"
   },
   {
-   "name": "پارس نوآ",
-   "price": 3230000000,
-   "agency": 1459000000,
+   "name": "207 با موتور TU3 مدل",
+   "price": 680000000,
+   "agency": 710000000,
    "cat": "سایر",
-   "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/180272/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B4-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A8%D8%B1%D9%88%D8%B2-%D8%B4%D8%AF-%D8%AC%D8%AF%D9%88%D9%84-%D8%B1%D8%A7",
+   "source": "saat24.news",
+   "url": "https://www.saat24.news/news/764382/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B4-%D8%A7%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-25",
+   "kind": "scraped"
+  },
+  {
+   "name": "207 دنده‌ای با موتور TU5P مدل",
+   "price": 870000000,
+   "agency": 930000000,
+   "cat": "سایر",
+   "source": "saat24.news",
+   "url": "https://www.saat24.news/news/764382/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B4-%D8%A7%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-25",
+   "kind": "scraped"
+  },
+  {
+   "name": "207 اتوماتیک سقف‌شیشه‌ای مدل",
+   "price": 480000000,
+   "agency": 580000000,
+   "cat": "سایر",
+   "source": "saat24.news",
+   "url": "https://www.saat24.news/news/764382/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B4-%D8%A7%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-25",
+   "kind": "scraped"
+  },
+  {
+   "name": "پارس نوآ مدل",
+   "price": 230000000,
+   "agency": 250000000,
+   "cat": "سایر",
+   "source": "saat24.news",
+   "url": "https://www.saat24.news/news/764382/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B4-%D8%A7%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
    "reportDate": "2026-11-25",
    "kind": "scraped"
   },
@@ -590,17 +620,29 @@
    "url": "https://www.ettelaat.com/news/180272/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B4-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A8%D8%B1%D9%88%D8%B2-%D8%B4%D8%AF-%D8%AC%D8%AF%D9%88%D9%84-%D8%B1%D8%A7",
    "reportDate": "2026-11-25",
    "kind": "scraped"
+  },
+  {
+   "name": "سورن پلاس بنزینی XU7P مدل",
+   "price": 490000000,
+   "agency": 520000000,
+   "cat": "وارداتی",
+   "source": "saat24.news",
+   "url": "https://www.saat24.news/news/764382/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B4-%D8%A7%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-25",
+   "kind": "scraped"
+  },
+  {
+   "name": "ساینا S دنده‌ای بنزینی مدل",
+   "price": 850000000,
+   "agency": 870000000,
+   "cat": "وارداتی",
+   "source": "saat24.news",
+   "url": "https://www.saat24.news/news/764382/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B4-%D8%A7%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "reportDate": "2026-11-25",
+   "kind": "scraped"
   }
  ],
  "log": [
-  {
-   "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/180271/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B4-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
-   "status": "ok",
-   "count": 26,
-   "date": "2026-11-25",
-   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز چهارشنبه ۴ آذر ۱۴۰۵ +جدول"
-  },
   {
    "source": "khabaronline.ir",
    "url": "https://www.khabaronline.ir/news/2306268/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B3-%D8%A2%D8%B0%D8%B1%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%B4%D8%A7%D9%87%DB%8C%D9%86-%DB%B3-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF-%D9%88-%DB%B3%DB%B8%DB%B3-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86",
@@ -611,11 +653,27 @@
   },
   {
    "source": "vananews.com",
-   "url": "https://vananews.com/fa/news/671244/قیمت-خودرو-امروز-چهارشنبه-4-آذر-1405-جدول-موج-گرانی-در-بازار-خودرو-پژو-207-و-شاهین-پرچمدار-افزایش-قیمت-شدند",
+   "url": "https://vananews.com/fa/news/671244/%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-4-%D8%A2%D8%B0%D8%B1-1405-%D8%AC%D8%AF%D9%88%D9%84-%D9%85%D9%88%D8%AC-%DA%AF%D8%B1%D8%A7%D9%86%DB%8C-%D8%AF%D8%B1-%D8%A8%D8%A7%D8%B2%D8%A7%D8%B1-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%BE%DA%98%D9%88-207-%D9%88-%D8%B4%D8%A7%D9%87%DB%8C%D9%86-%D9%BE%D8%B1%DA%86%D9%85%D8%AF%D8%A7%D8%B1-%D8%A7%D9%81%D8%B2%D8%A7%DB%8C%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%B4%D8%AF%D9%86%D8%AF",
+   "status": "ok",
+   "count": 48,
+   "date": "2026-11-25",
+   "title": "قیمت خودرو امروز چهارشنبه ۴ آذر ۱۴۰۵ + جدول / موج گرانی در بازار خودرو"
+  },
+  {
+   "source": "ettelaat.com",
+   "url": "https://www.ettelaat.com/news/180271/%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B4-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "status": "ok",
+   "count": 26,
+   "date": "2026-11-25",
+   "title": "تغییر شدید قیمت خودروهای ایران خودرو امروز چهارشنبه ۴ آذر ۱۴۰۵ +جدول"
+  },
+  {
+   "source": "rokna.net",
+   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1269473-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%B0%D8%B1-%D8%AC%D9%87%D8%B4-%DA%86%D9%86%D8%AF%D8%B5%D8%AF-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86%DB%8C-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%AC%D8%AF%D9%88%D9%84-%D9%82%DB%8C%D9%85%D8%AA-%D9%87%D8%A7",
    "status": "error",
    "count": 0,
    "date": "2026-11-25",
-   "error": "'ascii' codec can't encode characters in position 20-23: ordinal not in range(128)"
+   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
   },
   {
    "source": "ettelaat.com",
@@ -642,14 +700,6 @@
    "title": "قیمت خودرو امروز ۲ آذر ۱۴۰۵؛ قیمت جدید پژو ۲۰۷، دنا، شاهین و تارا"
   },
   {
-   "source": "rokna.net",
-   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1269473-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%B0%D8%B1-%D8%AC%D9%87%D8%B4-%DA%86%D9%86%D8%AF%D8%B5%D8%AF-%D9%85%DB%8C%D9%84%DB%8C%D9%88%D9%86%DB%8C-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%AC%D8%AF%D9%88%D9%84-%D9%82%DB%8C%D9%85%D8%AA-%D9%87%D8%A7",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-25",
-   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
-  },
-  {
    "source": "qudsonline.ir",
    "url": "https://www.qudsonline.ir/news/1177071/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%B3%DB%8C%D8%B1-%D9%86%D8%B2%D9%88%D9%84%DB%8C",
    "status": "ok",
@@ -658,12 +708,12 @@
    "title": "قیمت محصولات ایران خودرو امروز دوشنبه ۲ آذر ۱۴۰۵/ ادامه سیر نزولی بازا"
   },
   {
-   "source": "qudsonline.ir",
-   "url": "https://www.qudsonline.ir/news/1176888/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%DB%B1-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%B1%DB%8C%D8%B2%D8%B4-%D8%B3%D9%86%DA%AF%DB%8C%D9%86",
-   "status": "ok",
-   "count": 13,
-   "date": "2026-11-22",
-   "title": "قیمت محصولات ایران خودرو امروز یکشنبه ۱ آذر ۱۴۰۵/ ریزش سنگین پس صعود ط"
+   "source": "rokna.net",
+   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1269222-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%B0%D8%B1-%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%AF%D8%A7%D8%B1%D8%AF-%D8%AC%D8%AF%D9%88%D9%84",
+   "status": "error",
+   "count": 0,
+   "date": "2026-11-24",
+   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
   },
   {
    "source": "hamshahrionline.ir",
@@ -682,22 +732,6 @@
    "error": "HTTP Error 403: Forbidden"
   },
   {
-   "source": "namnak.com",
-   "url": "https://namnak.com/car-prices-1-azar-1405.p125502",
-   "status": "ok",
-   "count": 94,
-   "date": "2026-11-22",
-   "title": "قیمت خودرو امروز ۱ آذر ۱۴۰۵؛ جدول جدید ایران خودرو، سایپا و وارداتی‌ها"
-  },
-  {
-   "source": "6asr.ir",
-   "url": "https://6asr.ir/news/economic/%D9%82%DB%8C%D9%85%D8%AA-%D8%B1%D9%88%D8%B2-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%AF%D8%B1-%DB%B1-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5%D8%9B-%D8%AC%D8%AF%D9%88%D9%84-%DA%A9%D8%A7%D9%85%D9%84/",
-   "status": "ok",
-   "count": 47,
-   "date": "2026-11-22",
-   "title": "قیمت روز خودرو در ۱ آذر ۱۴۰۵؛ جدول کامل ایران خودرو، سایپا و خودروهای "
-  },
-  {
    "source": "sarmayevabourse.ir",
    "url": "https://sarmayevabourse.ir/28317/%d9%82%db%8c%d9%85%d8%aa-%d8%ae%d9%88%d8%af%d8%b1%d9%88-%d8%a7%d9%85%d8%b1%d9%88%d8%b2-%db%b4-%d8%a2%d8%b0%d8%b1-%db%b1%db%b4%db%b0%db%b5-%d8%af%d9%84%d8%a7%d8%b1-%db%b2%db%b8%db%b3-%d9%87%d8%b2",
    "status": "ok",
@@ -706,28 +740,36 @@
    "title": "قیمت خودرو امروز ۴ آذر ۱۴۰۵/ دلار ۲۸۳ هزار تومانی بازار خودرو را منفجر"
   },
   {
-   "source": "rokna.net",
-   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1268564-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D9%85%D9%88%D9%86%D8%AA%D8%A7%DA%98%DB%8C-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%A2%D8%B0%D8%B1-%D8%A7%D8%B1%D8%B2%D8%A7%D9%86-%D8%AA%D8%B1%DB%8C%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%85%D9%88%D9%86%D8%AA%D8%A7%DA%98%DB%8C-%DA%86%D9%86%D8%AF-%D9%85%DB%8C%D9%84%DB%8C%D8%A7%D8%B1%D8%AF-%D8%B4%D8%AF",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-22",
-   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
+   "source": "qudsonline.ir",
+   "url": "https://www.qudsonline.ir/news/1177272/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%DB%B3-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%A7%D9%81%D8%AA-%D9%82%DB%8C%D9%85%D8%AA-%D8%B3%D9%88%D8%B1%D9%86",
+   "status": "ok",
+   "count": 13,
+   "date": "2026-11-24",
+   "title": "قیمت محصولات ایران خودرو امروز سه‌شنبه ۳ آذر ۱۴۰۵/ افت قیمت سورن، تارا"
   },
   {
-   "source": "rokna.net",
-   "url": "https://www.rokna.net/بخش-%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%DB%8C-65/1269222-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%B3%D9%87-%D8%B4%D9%86%D8%A8%D9%87-%D8%A2%D8%B0%D8%B1-%DA%A9%D8%A7%D9%87%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%A7%D8%AF%D8%A7%D9%85%D9%87-%D8%AF%D8%A7%D8%B1%D8%AF-%D8%AC%D8%AF%D9%88%D9%84",
-   "status": "error",
-   "count": 0,
-   "date": "2026-11-24",
-   "error": "'ascii' codec can't encode characters in position 5-7: ordinal not in range(128)"
+   "source": "khabaronline.ir",
+   "url": "https://www.khabaronline.ir/news/2305768/%D9%82%DB%8C%D9%85%D8%AA-%D8%AC%D8%AF%DB%8C%D8%AF-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%B2-%D8%A2%D8%B0%D8%B1%D9%85%D8%A7%D9%87-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%B1%DB%8C%D8%B2%D8%B4-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D8%A7%D9%88%D8%AC-%DA%AF%D8%B1%D9%81%D8%AA",
+   "status": "ok",
+   "count": 50,
+   "date": "2026-11-23",
+   "title": "قیمت جدید خودرو امروز ۲ آذرماه ۱۴۰۵/ ریزش قیمت خودرو اوج گرفت؛ دنا ۱۰۲"
+  },
+  {
+   "source": "saat24.news",
+   "url": "https://www.saat24.news/news/764382/%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DA%86%D9%87%D8%A7%D8%B1%D8%B4%D9%86%D8%A8%D9%87-%DB%B4-%D8%A7%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5",
+   "status": "ok",
+   "count": 20,
+   "date": "2026-11-25",
+   "title": "قیمت محصولات ایران‌خودرو و سایپا امروز چهارشنبه ۴ آذر ۱۴۰۵"
   },
   {
    "source": "ettelaat.com",
-   "url": "https://www.ettelaat.com/news/179680/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B4%D8%AF%DB%8C%D8%AF-%D9%82%DB%8C%D9%85%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84%D8%A7%D8%AA-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D8%AE%D9%88%D8%AF%D8%B1%D9%88-%D9%88-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%DB%8C%DA%A9%D8%B4%D9%86%D8%A8%D9%87-%DB%B1-%D8%A2%D8%B0%D8%B1",
+   "url": "https://www.ettelaat.com/news/179906/%D8%AA%DA%A9%D8%A7%D9%86-%D8%B9%D8%AC%DB%8C%D8%A8-%D9%82%DB%8C%D9%85%D8%AA-%D8%AE%D9%88%D8%AF%D8%B1%D9%88%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D9%BE%D8%A7-%D8%A7%D9%85%D8%B1%D9%88%D8%B2-%D8%AF%D9%88%D8%B4%D9%86%D8%A8%D9%87-%DB%B2-%D8%A2%D8%B0%D8%B1-%DB%B1%DB%B4%DB%B0%DB%B5-%D8%AC%D8%AF%D9%88%D9%84",
    "status": "ok",
-   "count": 8,
-   "date": "2026-11-22",
-   "title": "تکان شدید قیمت محصولات ایران‌خودرو و سایپا امروز یکشنبه ۱ آذر ۱۴۰۵ +جد"
+   "count": 27,
+   "date": "2026-11-23",
+   "title": "تکان عجیب قیمت خودروهای سایپا امروز دوشنبه ۲ آذر ۱۴۰۵ +جدول"
   },
   {
    "source": "entekhab.ir",
