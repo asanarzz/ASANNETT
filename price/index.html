@@ -37,12 +37,14 @@ input[type=text],input[type=number],select{width:100%;padding:10px;border-radius
 <section id="t-d">
 <div id="bn" class="bn"></div>
 <div class="row"><button id="rf" class="btn">به‌روزرسانی دستی</button></div>
-<div class="mt" id="sa"></div><div class="mt" id="sb"></div>
 <div id="cards"></div>
 </section>
 <section id="t-i" hidden>
 <h3>ساخت تصویر قیمت روز</h3>
 <label class="f">عنوان تصویر</label><input type="text" data-s="ti">
+<label class="f">نام کانال / کسب‌وکار (پاورقی)</label><input type="text" data-s="ch">
+<label class="f">آیدی (پاورقی)</label><input type="text" data-s="id" dir="ltr">
+<label class="f">شعار پاورقی (خالی بگذارید تا نمایش داده نشود)</label><input type="text" data-s="sl">
 <label class="f"><input type="checkbox" data-s="pct"> نمایش درصد تغییرات ۲۴ ساعته</label>
 <label class="f"><input type="checkbox" data-s="ft"> نمایش پاورقی</label>
 <label class="f">اقلام تصویر</label><div id="chi"></div>
@@ -57,7 +59,6 @@ input[type=text],input[type=number],select{width:100%;padding:10px;border-radius
 <label class="f">آیدی کانال</label><input type="text" data-s="id" dir="ltr">
 <label class="f">واحد پول داخلی</label><input type="text" value="تومان (ثابت)" disabled>
 <label class="f">اقلام قابل نمایش در داشبورد</label><div id="chs"></div>
-<label class="f">وضعیت منابع</label><div id="ss" class="mt"></div>
 <div class="row"><button id="cl">پاک کردن حافظهٔ ذخیره‌شده</button></div>
 </section>
 </main>
@@ -76,7 +77,7 @@ const ITEMS=[
 ['eth','اتریوم (ETH)','ارز دیجیتال','D','eth',['اتریوم'],['ethereum','eth']],
 ['usdt','تتر (USDT)','ارز دیجیتال','T','usdt',['تتر'],['tether','usdt']]
 ].map(([id,n,c,u,k,fa,en])=>({id,n,c,u,k,fa,en}));
-const DEF={int:60,th:'dark',ch:'کافی‌نت آسان‌نت',id:'@ASANNETT',ti:'قیمت روز دلار و طلا',show:ITEMS.map(i=>i.id),img:ITEMS.map(i=>i.id),pct:1,ft:1};
+const DEF={int:60,th:'dark',ch:'کافی‌نت آسان‌نت',id:'@ASANNETT',ti:'قیمت روز دلار و طلا',sl:'با آسان نت کافی نت تو جیبتته',show:ITEMS.map(i=>i.id),img:ITEMS.map(i=>i.id),pct:1,ft:1};
 let S=Object.assign({},DEF);try{Object.assign(S,JSON.parse(localStorage.getItem('ps')||'{}'))}catch(e){}
 const sv=()=>{try{localStorage.setItem('ps',JSON.stringify(S))}catch(e){}};
 let busy=0,D=null,cache=false,ST={a:'—',b:'—'},tmr;
@@ -127,7 +128,7 @@ function sched(){clearInterval(tmr);tmr=setInterval(refresh,Math.max(5,+S.int||6
 function card(i){const r=D&&D.d[i.id];
  if(!r)return`<div class="cd"><b>${i.n}</b><p class="na">داده در دسترس نیست</p></div>`;
  const pc=(S.pct&&r.pct!=null)?`<span class="pc ${r.pct>=0?'u':'d'}">${r.pct>=0?'▲':'▼'} ${PC(r.pct)}</span>`:'';
- return`<div class="cd">${pc}<b>${i.n}</b><div class="pr">${F(r.p,i.u)}</div><small>${UN(i)}</small><br><small>${r.src==='A'?'نرخ‌آرا':'tabloo'} · ${tm2(r.t)}${r.stale?' · <span class="st">قدیمی</span>':''}</small></div>`}
+ return`<div class="cd">${pc}<b>${i.n}</b><div class="pr">${F(r.p,i.u)}</div><small>${UN(i)}</small><br><small>${tm2(r.t)}${r.stale?' · <span class="st">قدیمی</span>':''}</small></div>`}
 function render(){
  document.documentElement.dataset.th=S.th;
  $('#hc').textContent=S.ch;$('#dt').textContent=jd(new Date())+' — '+tm2(Date.now());
@@ -136,8 +137,6 @@ function render(){
  else if(cache){b.className='bn warn';b.textContent='⚠️ آخرین اطلاعات ذخیره‌شده ('+jd(new Date(D.at))+' ساعت '+tm2(D.at)+') — قیمت زنده نیست.'}
  else{const old=Object.values(D.d).some(r=>r&&r.stale);b.className='bn '+(old?'warn':'ok');
   b.textContent=(old?'⚠️ بخشی از قیمت‌ها قدیمی است. ':'')+'آخرین دریافت: '+tm2(D.at)}
- const sa='منبع اصلی (نرخ‌آرا): '+ST.a,sb='منبع پشتیبان (tabloo): '+ST.b;
- $('#sa').textContent=sa;$('#sb').textContent=sb;$('#ss').innerHTML=sa+'<br>'+sb;
  $('#cards').innerHTML=[...new Set(ITEMS.map(i=>i.c))].map(c=>{
   const it=ITEMS.filter(i=>i.c===c&&S.show.includes(i.id));
   return it.length?`<h3>${c}</h3><div class="g">${it.map(card).join('')}</div>`:''}).join('')}
@@ -147,7 +146,7 @@ document.addEventListener('change',e=>{const k=e.target.dataset.k;if(!k)return;
 $$('[data-s]').forEach(e=>{const k=e.dataset.s;
  if(e.type==='checkbox')e.checked=!!S[k];else e.value=S[k];
  e.onchange=()=>{S[k]=e.type==='checkbox'?+e.checked:e.type==='number'?Math.max(5,+e.value||60):e.value;
-  if(e.type==='number')e.value=S[k];sv();if(k==='int')sched();render()}});
+  if(e.type==='number')e.value=S[k];$$('[data-s="'+k+'"]').forEach(o=>{if(o!==e)o.value=S[k]});sv();if(k==='int')sched();render()}});
 $$('nav button').forEach(b=>b.onclick=()=>{$$('nav button').forEach(x=>x.classList.toggle('on',x===b));
  ['d','i','s'].forEach(t=>$('#t-'+t).hidden=t!==b.dataset.t)});
 $('#rf').onclick=refresh;
@@ -182,13 +181,13 @@ async function draw(){
   T((i.u==='D'?'دلار':'تومان')+(r.stale?' (قدیمی) *':''),70,y2,34,'#5a6584','left',700,520);
   if(S.pct&&r.pct!=null)T((r.pct>=0?'▲ ':'▼ ')+PC(r.pct),W-70,y2,38,r.pct>=0?'#1e9e4f':'#d32f2f','right',900,500)});
  if(S.ft){
-  const parts=[{t:S.ch,col:'#8a6d0a',d:'rtl'},{t:S.id,col:'#0a1330',d:'ltr'},{t:'«با آسان نت کافی نت تو جیبتته»',col:'#5a6584',d:'rtl'}];
+  const parts=[{t:S.ch,col:'#8a6d0a',d:'rtl'},{t:S.id,col:'#0a1330',d:'ltr'},{t:S.sl&&S.sl.trim()?'«'+S.sl.trim()+'»':'',col:'#5a6584',d:'rtl'}].filter(p=>p.t.trim());
   let sz=40,gap=56,tot;
-  for(;sz>18;sz-=2){x.font='700 '+sz+'px '+FN;tot=parts.reduce((s,p)=>{x.direction=p.d;return s+x.measureText(p.t).width},0)+gap*2;if(tot<=W-100)break}
+  for(;sz>18;sz-=2){x.font='700 '+sz+'px '+FN;tot=parts.reduce((s,p)=>{x.direction=p.d;return s+x.measureText(p.t).width},0)+gap*(parts.length-1);if(tot<=W-100)break}
   let cur=(W+tot)/2;const fy=H-62;
   parts.forEach((p,k)=>{x.direction=p.d;x.font='700 '+sz+'px '+FN;const w=x.measureText(p.t).width;
    x.fillStyle=p.col;x.textAlign='right';x.textBaseline='middle';x.fillText(p.t,cur,fy);cur-=w;
-   if(k<2){x.strokeStyle='#c9a227';x.lineWidth=2;x.beginPath();x.moveTo(cur-gap/2,fy-sz*0.6);x.lineTo(cur-gap/2,fy+sz*0.6);x.stroke();cur-=gap}});
+   if(k<parts.length-1){x.strokeStyle='#c9a227';x.lineWidth=2;x.beginPath();x.moveTo(cur-gap/2,fy-sz*0.6);x.lineTo(cur-gap/2,fy+sz*0.6);x.stroke();cur-=gap}});
   x.direction='rtl'}
 }
 const blob=()=>new Promise(r=>$('#cv').toBlob(r,'image/png'));
